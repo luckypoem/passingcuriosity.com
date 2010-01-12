@@ -6,8 +6,5 @@ top:
 
 ---
 
-About Me
-========
-
-I am a person who does not nearly enough work on far too many
-projects.
+About the Site
+==============

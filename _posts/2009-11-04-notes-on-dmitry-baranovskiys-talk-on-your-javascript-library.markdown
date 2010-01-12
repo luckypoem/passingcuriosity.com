@@ -6,11 +6,16 @@ excerpt : |
   My notes on Dmitry Baranovskiy's talk "Your JavaScript Library" at
   Edge of the Web, 2009.
 ---
-There are my notes from [Dmitry
-Baranovkiy](http://dmitry.baranovskiy.com/)'s session called *Your
-JavaScript Library*. Dmitry is a JavaScript developer at [Atlassian](http://atlassian.com/),
-creator of [Raphaël](http://raphaeljs.com/) and
-[gRaphaël](http://g.raphaeljs.com/) JavaScript libraries.
+
+There are my notes from [Dmitry Baranovkiy][db]'s session called *Your
+JavaScript Library*. Dmitry is a JavaScript developer at
+[Atlassian][at], creator of [RaphaÃ«l][rph] and [gRaphaÃ«l][grph]
+JavaScript libraries.
+
+[db]: http://dmitry.baranovskiy.com/
+[at]: http://atlassian.com/
+[rph]: http://raphaeljs.com/
+[grph]: http://g.raphaeljs.com/
 
 You can see the [slides on slideshare](http://www.slideshare.net/Dmitry.Baranovskiy/your-javascript-library).
 

@@ -15,14 +15,15 @@ I read. Dead time, no more!
 
 [wp]: http://en.wikipedia.org/wiki/ "Wikipedia, the free encyclopedia"
 
-Alas, I got distracted.
+Alas, I got distracted. Nearly three years have passed and *Passing
+Curiosity* is still just a neglected blog.
 
 Blogs
 =====
 
-I've kept a number of blogs over the years. You can find almost
-everything collected here. 
-Recent posts include:
+This site currently plays host to my blog. Over the years I've
+maintained a few and almost everything I posted to any of them can be
+found here. The most recent posts are:
 
 {% for post in site.posts limit:5 %}
 <div class="section list">
@@ -34,5 +35,4 @@ Recent posts include:
 </div>
 {% endfor %}
 
-And you can find a more comprehensive list in
-[the archives](/archives/).
+The rest, you can find in [the archives](/archives/).
