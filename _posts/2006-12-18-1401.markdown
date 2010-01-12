@@ -1,0 +1,6 @@
+--- 
+wordpress_id: 1401
+layout: post
+wordpress_url: http://passingcuriosity.com/2006/1401/
+---
+<p>I&#39;ve just moved this blog to my new host: <a href="http://thomas-sutton.id.au/blog/">thomas-sutton.id.au</a>. I&#39;m not sure what else to make available here, but for the time being, this will do. I&#39;m planning on importing all my old posts and consolidating all of my  blogs on this one, but that&#39;ll have to wait a few weeks.</p>

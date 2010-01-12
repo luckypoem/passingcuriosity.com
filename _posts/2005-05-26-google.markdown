@@ -1,0 +1,7 @@
+--- 
+wordpress_id: 1593
+layout: post
+title: Google
+wordpress_url: http://passingcuriosity.com/2005/google/
+---
+I'm currently reading up on Google so that I can prepare my presentation on <a href="http://scholar.google.com/scholar?hl=en&lr=&safe=off&cluster=726238533241861127" style="font-style: italic;">The Anatomy of a Large-Scale Hypertextual Web Search Engine by Brin and Page</a>. This paper describes the original implementation of the Google search engine (originally <a href="http://google.stanford.edu">http://google.stanford.edu</a>, but that is now Stanford's search engine, powered by Google though it may be).<br /><br />I'm going to try to cover the original Google architecture described in the paper, and then move on to some more modern material from the <a href="http://scholar.google.com/scholar?hl=en&lr=&safe=off&cluster=12528813212514513702" style="font-style: italic">Google File System</a> and <a href="http://scholar.google.com/scholar?hl=en&lr=&safe=off&cluster=13171193432274178825" style="font-style: italic">MapReduce</a> papers, though I'm not sure how much detail I'll be able to give.<br /><br />Depending on how useful they wind up being, I might put my report and slides on-line.

@@ -1,0 +1,7 @@
+--- 
+wordpress_id: 1598
+layout: post
+title: Neil Gaiman - Stardust
+wordpress_url: http://passingcuriosity.com/2005/neil-gaiman-stardust/
+---
+<a href="http://www.hodderheadline.co.uk/index.asp?url=bookdetails.asp&book=21625" style="font-style: italic;">Stardust</a> by Neil Gaiman<br /><br />After fighting a losing battle against procrastination this morning, I went into town and came back with a few more books to add to my collection (<a href="http://www.dymocks.com.au/">Dymocks</a> are having a sale). Amongst them, was <span style="font-style: italic;">Stardust</span> by Neil Gaiman. After the slight disappointment of <span style="font-style: italic;">The Gene of Isis</span> (which I plan to finish next week), I've been pleased to note that <span style="font-style: italic;">Stardust</span> is a quite pleasant read. The first few dozen pages dragged me in whilst I was eating dinner and, hence I have been unable to give the notes for Software Quality Management (the exam I have tomorrow) one last read over.<br /><br />The characters, what I've seen of them so far, are nice but the most enjoyable aspect of the book (at this point in time) is the <em>language</em>. The Gaiman's prose simply flows off the page. This really, really needs to be an audio book, read by someone like <a href="http://www.amazon.co.uk/exec/obidos/search-handle-url/index=books-uk&field-author=Fry%2C%20Stephen/026-0054012-5787668">Stephen Fry</a>.<br /><br />Do yourself a favour and read <span style="font-style: italic;">Stardust</span>.

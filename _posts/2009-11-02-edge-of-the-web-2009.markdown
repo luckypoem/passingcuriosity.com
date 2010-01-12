@@ -1,0 +1,51 @@
+--- 
+wordpress_id: 2072
+layout: post
+title: Edge of the Web 2009
+wordpress_url: http://passingcuriosity.com/?p=2072
+---
+I'm looking forward to attending [Edge of the Web 2009][1]. [The programme](http://www.edgeoftheweb.org.au/program/) looks pretty interesting, though some of the abstracts are a teensy bit vague. 
+
+I'm currently planning to attend the keynote presentations:
+
+* [Anil Dash – Next Year’s Web][9]
+* [Alex Payne – The Importance of Language: How The Technologies We Use Shape the Web][8]; and 
+* [Derek Powazek – Wisdom of Community][7]. And the panel thingo.
+
+And I've decided on the following sessions:
+
+* [Lachlan Hardy – Building Better, Cheaper Sites on the Open Web][2]
+* [Dmitry Baranovskiy – Writing Better JavaScript Libraries][3]
+* [Kevin Yank – CSS Frameworks: Make the Right Choice][4]
+* [Darcy Laycock & Matt Didcoe – Making your website aware…geoaware][5]
+* [Justin Mclean – A practical guide to connecting hardware to the web][6]
+
+That leaves only the Wednesday afternoon session to decided. I'm not much for lawyers or the law, so I'm going to have to choose between:
+
+* [Nick Cowie – Progressive Enhancement with CSS: Or how I stopped worrying about IE6 and started loving CSS3][10]; and
+* [Myles Eftos – Stuff They Never Taught You at Website School][11].
+
+On Friday I'm going to two of the [workshops](http://www.edgeoftheweb.org.au/workshops/):
+
+* Twitter Platform In-Depth – Alex Payne; and
+* JavaScript: beyond the DOM and AJAX – Dmitry Baranovskiy.
+
+In addition to the conference, I'm going to a few of the [fringe events](http://www.edgeoftheweb.org.au/fringe-events/):
+
+* the [inaugural UX Bookclub](http://forums.port80.asn.au/showthread.php?t=13483)
+* the [Perth Port80](http://www.port80.asn.au/)
+* [Webjam 11](http://webjam.com.au/webjam11)
+
+A busy week.
+
+[1]: http://www.edgeoftheweb.org.au/
+[2]: http://www.edgeoftheweb.org.au/program/lachlan-hardy-building-better-cheaper-sites-on-the-open-web/
+[3]: http://www.edgeoftheweb.org.au/program/dmitry-baranovskiy-writing-better-javascript-libraries/
+[4]: http://www.edgeoftheweb.org.au/program/kevin-yank/
+[5]: http://www.edgeoftheweb.org.au/program/darcy-laycock-matt-didcoe/
+[6]: http://www.edgeoftheweb.org.au/program/justin-mclean/
+[7]: http://www.edgeoftheweb.org.au/program/derek-powazek-wisdom-of-community/ 
+[8]: http://www.edgeoftheweb.org.au/program/alex-payne/
+[9]: http://www.edgeoftheweb.org.au/program/anil-dash/
+[10]: http://www.edgeoftheweb.org.au/program/nick-cowie-progressive-enhancement-with-css-or-how-i-stopped-worrying-about-ie6-and-started-loving-css3/
+[11]: http://www.edgeoftheweb.org.au/program/myles-eftos-stuff-they-never-taught-you-at-website-school/

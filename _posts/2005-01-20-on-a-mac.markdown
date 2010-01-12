@@ -1,0 +1,34 @@
+--- 
+layout: post
+title: On a Mac
+wordpress_id: 1554
+wordpress_url: http://passingcuriosity.com/2005/on-a-mac/
+---
+
+I like this. I'm sitting here at my desk in my room at [Burgmann College][1]
+(paid for by the RSISE as part of my Summer Research Scholarship). I've just
+posted an entry on my other 'blog (*Very Big Graphs*, the content is now
+integrated with *this* blog) to the effect that I've just discovered that I
+needn't have done a lot of the work I have done and that, had I read the
+documentation for the library I'm using, I would've known that.
+
+[1]: http://burgmann.anu.edu.au/ "Burgmann College: The Place To Be"
+
+The part of this situation that I like is that I only realised this because
+I've been working in Xcode on my new iBook for the last two days. The iBook is
+seriously cool. If anyone on the OS X team ever reads this: you rock (and
+could you tell the hardware engineers to read this next bit). If anyone of the
+Apple engineering team ever reads this: you rock (and could you tell the OS X
+people to read that last bit). This is probably, of all the computers I've
+owned, my favourite.
+
+The only problem is the I now have the urge to switch completely: the [Mac
+mini](http://apple.com.au/macmini/) is looking quite tempting. I'll be able to
+hold out for a while (primarily due to a lack of disposable income), but once
+I've got my enrolment, accommodation and various other fees out of the way, I
+think that some small part of my scholarship might become available for
+conversion to a more solid, white, Mac branded form.
+
+Another benefit is the software. I'm starting to get used to everything "just
+working". Unfortunately there are a few bugs in some things I've been using
+(like Bibdesk, a bibTeX database editor), but on the whole, I like it.

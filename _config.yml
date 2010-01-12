@@ -1,10 +1,15 @@
 ---
-destination : /Users/mreid/Sites/mark.reid.name
+name        : Passing Curiosity
+tagline     : Just some stuff
+lang        : en
+charset     : UTF-8
+destination : /var/www/passingcuriosity.com/_site
+server_port : 4567
 auto        : false
 lsi         : false
 pygments    : true
-permalink   : none
-markdown    : maruku
+permalink   : /:year/:title/
+markdown    : rdiscount
 
 maruku:
     use_divs: true

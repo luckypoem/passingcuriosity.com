@@ -1,0 +1,11 @@
+--- 
+wordpress_id: 1589
+layout: post
+title: Clublife
+wordpress_url: http://passingcuriosity.com/2005/clublife/
+---
+<a href="http://standingonthebox.blogspot.com/">Clublife</a>
+<br />
+<br />There are two things that make me love <a href="http://www.blogger.com/">Blogger</a>, the whole 'free blogging' thing and their <strong>Blogs of Note</strong> list.
+<br />
+<br />Some of the funniest stuff I see on the 'net comes from that list. If humour is your thing, stop wasting time with the shitty "joke" sites, and get a Blogger account. Its well worth it.

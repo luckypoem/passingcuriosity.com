@@ -1,0 +1,7 @@
+--- 
+wordpress_id: 1398
+layout: post
+title: The End...
+wordpress_url: http://passingcuriosity.com/2005/the-end/
+---
+Today, the summer research scholarship program comes to an end (a lot of people have already buggered off) and with it, my project. I've given my presentation, have had my exit interview and am writing my report. It would be time to move on if it weren't for that pesky lack of results.<br /><br />Although this was a rather experimental "poke it an see what happens" project, the "results" (or rather "result", or even more correctly "data") that I got is not really satisfactory. To see if I can get any further, I'm going to reimplement the technique using another library (the <a href="http://ivtk.sf.net/" title="The InfoVis Toolkit">InfoVis Toolkit</a>) whose data representation is more suited to these purposes and will, hopefully make the technique fast enough to eliminate the annoying lags the <span style="font-weight: bold; font-family:sans-serif;">prefuse</span> implementation suffered from.<br /><br />Hopefully, I can get the reimplementation done, and finish the work on the log processor quickly enough so that John has time to work the results into a paper for CADE. I'd also like to try and get a paper (or a poster) ready for submission to <a href="http://www.gd2005.org/" title="13th International Symposium on Graph Drawing">GD 2005</a>. I'm not expecting to get anything into the conference, I don't even know if my technique is original, but the paper writing practice can't hurt.

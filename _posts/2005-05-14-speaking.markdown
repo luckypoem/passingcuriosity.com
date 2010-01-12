@@ -1,0 +1,7 @@
+--- 
+wordpress_id: 1477
+layout: post
+title: Speaking
+wordpress_url: http://passingcuriosity.com/2005/speaking/
+---
+It's 2152 on Saturday, and I've just spoken my fourth word for the weekend (In case anyone cares, the were two 'hello's, a 'thanks' and a 'cheers'). One day, I'm going to see just how long I can go without speaking (to another person, as I can't help but speak to myself).

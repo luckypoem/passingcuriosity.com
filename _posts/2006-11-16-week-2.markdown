@@ -1,0 +1,7 @@
+--- 
+wordpress_id: 1421
+layout: post
+title: Week 2
+wordpress_url: http://passingcuriosity.com/2006/week-2/
+---
+The preliminaries out of the way, we began looking at "real" physics in week two -- kinematics. Various definitions, as is often the case, were a useful place to start; before we worked through an example problem. After considering the implications of negative values for some of the measurements we're concerned with, we examined the formul&aelig; relating them to each other.

@@ -1,0 +1,8 @@
+--- 
+wordpress_id: 1403
+layout: post
+wordpress_url: http://passingcuriosity.com/2006/1403/
+---
+<p>I was thinking about how little I understand of type systems today — I know that they tend to be an embedding of a constructive logic, Int for example, but I don't have any sort of intuitive understanding of what this actually means. This is probably because I haven't done much with intuitionistic logics.</p>
+
+<p>I think that I'll start trying to get a better understanding of intuitionistic logics by reading Eleanor Donovan's honours thesis: "<a href="http://cs.anu.edu.au/honours/thesis-2005/Eleanor_DONOVAN.pdf">Automated Proof Search in Bi-Intuitionistic Logic Using Sequent Calculi</a>".</p>

@@ -8,4 +8,4 @@ RewriteRule ^/iem/(.*)/(.*)/(.*)/(.*)$ http://mark.reid.name/iem/$4.html [R=301,
 RewriteRule ^/iem/(.*)/(.*)/(.*)$ http://mark.reid.name/iem/$3.html [R=301,L]
 </IfModule>
 
-ErrorDocument 404 http://mark.reid.name/404.html
+ErrorDocument 404 404.html

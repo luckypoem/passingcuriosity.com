@@ -1,0 +1,7 @@
+--- 
+wordpress_id: 140
+layout: post
+title: Native iPhone/iPod Touch WordPress Client
+wordpress_url: http://passingcuriosity.com/index.php/2008-07/title-2/
+---
+This is my first post using the native client on my WorsPress client. It is very nice (and free) but makes me miss copy and paste even more.

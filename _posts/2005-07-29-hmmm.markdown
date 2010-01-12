@@ -1,0 +1,7 @@
+--- 
+wordpress_id: 1450
+layout: post
+title: Hmmm.
+wordpress_url: http://passingcuriosity.com/2005/hmmm/
+---
+The presentation is over and done with. It didn't go <emph>too</emph> badly, though I did run under-time: I finished my presentation and asked (<emph>begged</emph>) for questions half way through my time slot. I'm not sure how much of it the audience caught, or what sort of comments the assessing academics will give me, but I'm reasonable happy with my performance.<br /><br />Having seen all of the presentations, I find myself wondering at how many of the projects involve writing compilers and optimisers. One is attempting to learn tests to avoid computing expensive functions unless they're required (with collision detection as the experimental framework). Another is doing something with symbolic optimisation of robot dynamics (which looks a lot like <a href="http://en.wikipedia.org/wiki/Static_single_assignment_form">single static assignment</a>). I'm compiling a DSL to Haskell. Someone else is experimenting with <a href="http://en.wikipedia.org/wiki/Interval_arithmetic">interval arithmetic</a> (which I want to implement in Haskell) for scientific computations.

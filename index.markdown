@@ -1,67 +1,38 @@
 ---
-layout: name
-title: Home
-
-section: Home
+layout  : main
+title   : Home
+section : Home
 ---
-
-<img class='inset right' src='/images/mark_reid.jpg' title='Mark Reid' alt='Photo of Mark Reid drinking a coffee' width='120px' />
 
 Welcome
 =======
 
-I'm Mark Reid, a 30-something Australian, academic, husband, programmer, father, 
-snowboarder, and web-nerd -- amongst other things. You can find out more about 
-be by poking around the links above and below.
+I registered the domain *Passing Curiosity* with the intention that it
+become a productive outlet for my rather short attention span. Rather
+than waste man-years clicking "Open Link in New Tab" on
+[Wikipedia][wp], I would make that time productive by summarising what
+I read. Dead time, no more! 
 
-+--	{.section}
-Research
-========
-My day job is as a [Research Fellow](/work) in statistical machine learning at 
-the Australian National University's Research School of Information Sciences and
-Engineering.
-=--
+[wp]: http://en.wikipedia.org/wiki/ "Wikipedia, the free encyclopedia"
 
-+-- {.section}
+Alas, I got distracted.
+
 Blogs
 =====
-I keep a research blog called _[Inductio ex Machina](/iem)_ on 
-machine learning and statistics.
+
+I've kept a number of blogs over the years. You can find almost
+everything collected here. 
 Recent posts include:
-{% for post in site.categories.iem limit:3 %}
-<ul class="compact recent">
-<li>
-	<a href="{{ post.url }}" title="{{ post.excerpt }}">{{ post.title }}</a>
-	<span class="date">{{ post.date | date_to_string }}</span> 
-</li>
-</ul>
+
+{% for post in site.posts limit:5 %}
+<div class="section list">
+  <h1>{{ post.date | date_to_string }}</h1>
+  <p class="line">
+    <a class="title" href="{{ post.url }}">{{ post.title }}</a>
+  </p>
+  <p class="excerpt">{{ post.excerpt }}</p>
+</div>
 {% endfor %}
-=--
 
-+--{.section}
-I have also just started a programming blog called _[Structure & Process](/sap)_.
-{% for sappost in site.categories.sap limit:3 %}
-<ul class="compact recent">
-<li>
-	<a href="{{ sappost.url }}" title="{{ sappost.excerpt }}">{{ sappost.title }}</a>
-	<span class="date">{{ sappost.date | date_to_string }}</span> 
-</li>
-</ul>
-{% endfor %}
-=--
-
-+-- {.section}
-[Twitter](http://twitter.com/mdreid)
-====================================
-
-Contacting Twitter... 
-{:#twitter_update_list }
-
-=--
-
-+-- {.section}
-[Reading](http://librarything.com/home/mdreid)
-==============================================
-
-<script type="text/javascript" src="http://www.librarything.com/jswidget.php?reporton=mdreid&show=recent&header=&num=8&covers=small&text=title&tag=show&css=0&style=2&version=1"> </script>
-=--
+And you can find a more comprehensive list in
+[the archives](/archives/).

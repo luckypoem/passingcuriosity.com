@@ -1,0 +1,7 @@
+--- 
+wordpress_id: 1496
+layout: post
+title: Tai Chi
+wordpress_url: http://passingcuriosity.com/2005/tai-chi/
+---
+I've just had my first Tai Chi lesson. Hopefully I'll manage to remember some of it next week.
