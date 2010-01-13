@@ -202,6 +202,7 @@ header:hover a { color: black; text-shadow: #aaa 2px 2px 3px;}
 header:hover a:hover { text-decoration: none; }
 header a:hover .hover { color: silver; }
 header {
+	display: block;
 	position: relative;
 	font-variant: small-caps;
 	line-height: 1em;
