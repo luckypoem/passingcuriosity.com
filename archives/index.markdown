@@ -2,6 +2,7 @@
 layout  : main
 title   : Archives
 section : Past
+feed    : /atom.xml
 ---
 
 Archives
