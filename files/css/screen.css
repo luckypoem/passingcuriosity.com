@@ -11,9 +11,11 @@
  * a consistent vertical rhythm.
  *
  * Base font height: 16px
- * Base line length: 24px
+ * Base line length: 26px
  * 
  * AUTHOR: Mark Reid <mark@reid.name>
+ *
+ * Reworked for HTML5 by Thomas Sutton <me@thomas-sutton.id.au>
  */
 
 /* @group Reset */
@@ -194,19 +196,19 @@ ul.compact li a {
 /* @end */
 
 /* @group Header */
-#header, #header a { color: silver; }
-#header .hover { color: transparent; }
-#header:hover a { color: black; text-shadow: #aaa 2px 2px 3px;}
-#header:hover a:hover { text-decoration: none; }
-#header a:hover .hover { color: silver; }
-#header {
+header, header a { color: silver; }
+header .hover { color: transparent; }
+header:hover a { color: black; text-shadow: #aaa 2px 2px 3px;}
+header:hover a:hover { text-decoration: none; }
+header a:hover .hover { color: silver; }
+header {
 	position: relative;
 	font-variant: small-caps;
 	line-height: 1em;
 	margin-top: .5em;
 	margin-bottom: 0;
 }
-#header h1 {
+header h1 {
 	font-family: Palatino, georgia, "times new roman", serif;
 	margin-bottom: 0;
 	line-height: 0.9em;
@@ -214,7 +216,7 @@ ul.compact li a {
 	font-weight: normal;
 }
 
-#header ul {
+header ul {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -225,22 +227,22 @@ ul.compact li a {
 	width: 50%;
 	text-align: right;
 }
-#header ul li { display: inline; }
-#header ul li a {
+header ul li { display: inline; }
+header ul li a {
 	padding: 0.4em 0.3em 0 0.3em;
 	display: inline;
 }
-#header ul li a:hover {
+header ul li a:hover {
 	color: blue;
 	border-bottom: 2px solid blue;
 }
-#header .byline {
+header .byline {
 	color: silver;
 	font-size: 10pt;
 	line-height: 75%
 }
-#header:hover .byline a { color: silver; text-shadow: none; }
-#header:hover .byline a:hover { color: black; text-shadow: #aaa 1px 1px 2px;}
+header:hover .byline a { color: silver; text-shadow: none; }
+header:hover .byline a:hover { color: black; text-shadow: #aaa 1px 1px 2px;}
 
 /* @group Twitter */
 #twitter_update_list { display: inline; margin: 0; }
@@ -249,13 +251,13 @@ ul.compact li a {
 .twitter-title a { display: inline; }
 /* @end */
 
-body#Work #header a.work, 
-body#Home #header a.home, 
-body#Play #header a.play,
-body#Info #header a.info,
-body#Code #header a.code,
-body#Past #header a.past,
-body#Kith #header a.kith
+body#Work header a.work, 
+body#Home header a.home, 
+body#Play header a.play,
+body#Info header a.info,
+body#Code header a.code,
+body#Past header a.past,
+body#Kith header a.kith
 { 
 	border-bottom: 2px solid silver; 
 }
@@ -451,30 +453,30 @@ p.delicious-extended:before { content: ' — '; }
 /* @end */
 
 /* @group Footer */
-#footer {
+footer {
 	margin-top: 0;
 	color: grey;
 	font-size: 87.5%;
 	line-height: 1.3em;
 }
-#footer address {
+footer address {
 	position: relative;
 	margin: .5em 0 0 0;
 	text-align: right;
 }
-#footer a {
+footer a {
 	font-variant: small-caps;
 	font-style: normal;
 	color: #77d;
 	text-decoration: none;
 }
-#footer .copyright {
+footer .copyright {
 	position: absolute;
 	left: 0;
 	text-align: left;
 	display: block;
 }
-#footer .engine {
+footer .engine {
 	position: absolute;
 	text-align: right;
 	display: block;
