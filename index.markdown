@@ -19,8 +19,8 @@ I read. Dead time, no more!
 Alas, I got distracted. Nearly three years have passed and *Passing
 Curiosity* is still just a neglected blog.
 
-Blogs
-=====
+Blog
+====
 
 This site currently plays host to my blog. Over the years I've
 maintained a few and almost everything I posted to any of them can be
