@@ -8,10 +8,17 @@ of <http://mark.reid.name/>.
 License
 =======
 
-Unless otherwise attributed, all of the content in this repository is
-released under a Creative Commons ([Attribution-Noncommercial-Share
-Alike 3.0 Unported](http://creativecommons.org/licenses/by-nc-sa/3.0/)
+The design -- including all HTML and other templates, CSS and
+JavaScript in `files/css/` and `files/js/` and other "non-content"
+files -- is released under a Creative Commons
+([Attribution-Noncommercial-Share Alike 3.0 Unported][cc-by-nc-sa]
 licence.
+
+[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/3.0/
+
+The content -- include all Markdown, source code offered for download,
+and all other files -- are copyright Thomas Sutton and may not be used
+without permission.
 
 Thanks
 ======
