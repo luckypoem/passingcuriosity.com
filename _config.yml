@@ -11,3 +11,4 @@ lsi         : false
 pygments    : true
 permalink   : /:year/:title/
 markdown    : rdiscount
+exclude     : [htdocs, jekyll, README.markdown]
