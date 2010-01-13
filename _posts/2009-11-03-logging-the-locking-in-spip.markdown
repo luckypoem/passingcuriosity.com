@@ -3,6 +3,9 @@ wordpress_id: 2077
 layout: post
 title: Logging the locking in SPIP
 wordpress_url: http://passingcuriosity.com/?p=2077
+excerpt  : |
+  The rather hackish way I instrumented SPIP to record debugging
+  information about its file locking to a remote syslog server.
 ---
 
 At [work](http://bouncingorange.com/), we use

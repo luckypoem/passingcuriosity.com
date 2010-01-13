@@ -3,6 +3,9 @@ wordpress_id: 2072
 layout: post
 title: Edge of the Web 2009
 wordpress_url: http://passingcuriosity.com/?p=2072
+excerpt : |
+  A list of the sessions I plan to attend at the Edge of the Web,
+  2009.
 ---
 
 I'm looking forward to attending [Edge of the Web 2009][1]. [The

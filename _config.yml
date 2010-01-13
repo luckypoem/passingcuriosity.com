@@ -4,19 +4,10 @@ tagline     : Just some stuff
 uri         : http://passingcuriosity.com
 lang        : en
 charset     : UTF-8
-destination : /var/www/passingcuriosity.com/_site
+destination : _site
 server_port : 4567
 auto        : false
 lsi         : false
 pygments    : true
 permalink   : /:year/:title/
 markdown    : rdiscount
-
-maruku:
-    use_divs: true
-    use_tex: true
-    png_engine : blahtex
-    png_dir    : images/latex/
-    png_url    : /images/latex/
-
-    
