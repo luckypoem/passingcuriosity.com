@@ -10,6 +10,7 @@ feed    : /atom.xml
 </header>
 
 <div id="page">
+  <article>
 	
   <h1 class="emphnext">{{ page.title }}</h1>
 
@@ -20,4 +21,11 @@ feed    : /atom.xml
     <span class="date">{{ page.date | date_to_long_string }}</span>
     <span class="location">{{ page.location }}</span>
   </address>
+
+  <footer>
+  <p>Want to comment on this post? <a href="mailto:{{ site.email }}?subject={{ page.title | xml_escape }}">Contact me by email</a>
+  or on <a href="http://twitter.com/thsutton">Twitter</a>.</p>
+
+  </footer>
+  </article>
 </div><!-- End Page -->
