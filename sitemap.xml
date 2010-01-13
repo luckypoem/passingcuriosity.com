@@ -2,6 +2,7 @@
 layout : nil
 ---
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="/files/css/atom.css" type="text/css" ?>
 <!-- {{ site.time }} -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
