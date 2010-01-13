@@ -32,7 +32,13 @@ found here. The most recent posts are:
   <p class="line">
     <a class="title" href="{{ post.url }}">{{ post.title }}</a>
   </p>
-  <p class="excerpt">{{ post.excerpt }}</p>
+  <p class="excerpt">
+	{% if post.excerpt %}
+	  {{ post.excerpt }}
+    {% else %}
+      {{ post.content | html_truncate }}
+    {% endif %}
+  </p>
 </div>
 {% endfor %}
 
