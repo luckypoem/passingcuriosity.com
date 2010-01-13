@@ -1,4 +1,6 @@
 _site
+htdocs
 .DS_Store
 ._*
+*~
 **/._*
