@@ -24,7 +24,7 @@ feed    : /atom.xml
   <footer>
     {% if page.tags %}<span class="tags">This post has been about: 
 	{% for tag in page.tags %}
-	<a href="http://forceit.in/tag/{{ tag }}" rel="tag">{{ tag }}</a>{% if forloop.last %}{% else %}, {% endif %}
+        <a href="{{ site.tagspace}}{{ tag }}" rel="tag">{{ tag }}</a>{% if forloop.last %}{% else %}, {% endif %}
     {% endfor %}</span>{% endif %}
   <p>Want to comment on this post? <a href="mailto:{{ site.email }}?subject={{ page.title | xml_escape }}">Contact me by email</a>
   or on <a href="http://twitter.com/thsutton">Twitter</a>.</p>
