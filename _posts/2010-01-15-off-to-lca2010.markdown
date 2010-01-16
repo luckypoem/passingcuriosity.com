@@ -1,0 +1,18 @@
+---
+layout    : post
+title     : Wellington for LCA2010 and DrupalSouth
+tag       : [lca2010, drupalsouth]
+categories: [lca, drupalsouth, drupal]
+location  : Perth, Western Australia
+---
+
+I'm currently in Wellington, New Zealand for [linux.conf.au 2010][lca2010] and
+then [DrupalSouth][drupalsouth]. It's going to be a pretty awesome week!
+
+If you're interested, you can see LCA-specific posts at my [LCA][lca] section
+(with an [LCA-specific Atom feed][lca.atom]).
+
+[lca2010]: http://www.lca2010.org.nz/
+[drupalsouth]: http://wellington2010.drupalsouth.net.nz/
+[lca]: /lca/
+[lca.atom]: /lca/atom.xml

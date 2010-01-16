@@ -24,7 +24,12 @@ Blog
 
 This site currently plays host to my blog. Over the years I've
 maintained a few and almost everything I posted to any of them can be
-found here. The most recent posts are:
+found here. 
+
+You might like to view my [Linux.conf.au](/lca/), [Drupal](/drupal/), or
+[SPIP](/spip) posts.
+
+The most recent posts are:
 
 {% for post in site.posts limit:5 %}
 <div class="section list">

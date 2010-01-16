@@ -3,6 +3,7 @@ wordpress_id: 83
 layout: post
 title: Treatments, Typography, and Markdown for SPIP
 wordpress_url: http://passingcuriosity.com/?p=144
+categories : [php, spip]
 excerpt : |
   A quick and rather hackish way to replace SPIP's built-in text
   markup format with Markdown.
