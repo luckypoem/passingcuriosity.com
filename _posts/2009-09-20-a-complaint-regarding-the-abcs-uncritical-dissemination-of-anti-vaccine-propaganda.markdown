@@ -18,4 +18,4 @@ Here is my complaint to the ABC regarding one of their recent articles regurgita
 > 
 > Thomas Sutton
 
-See Sean the Blogobaut's post [Aunty* gets it wrong – ABC online aids in the promotion of vaccination fears](http://seantheblogonaut.com/2009/09/aunty-gets-it-wrong-abc-online-aids-in-the-promotion-of-vaccination-fears/) (though my ego point's out [I tweeted about it yesterday](http://twitter.com/thsutton/status/4098434839)) and there are plenty more stories at [Podblack](http://podblack.com/?s=avn), [Skeptic Zone](http://skepticzone.wordpress.com/?s=avn), and [Sean the Blogonaut](http://seantheblogonaut.com/?s=avn).
+See Sean the Blogobaut's post [Aunty* gets it wrong Ã± ABC online aids in the promotion of vaccination fears](http://seantheblogonaut.com/2009/09/aunty-gets-it-wrong-abc-online-aids-in-the-promotion-of-vaccination-fears/) (though my ego point's out [I tweeted about it yesterday](http://twitter.com/thsutton/status/4098434839)) and there are plenty more stories at [Podblack](http://podblack.com/?s=avn), [Skeptic Zone](http://skepticzone.wordpress.com/?s=avn), and [Sean the Blogonaut](http://seantheblogonaut.com/?s=avn).
