@@ -1,0 +1,86 @@
+---
+layout     : post
+title      : Notes on Introducing Gearman
+categories : [lca]
+tags       : [lca, oplm, lca2010, oplm2010, notes]
+location   : Wellington, New Zealand
+exception  : |
+  My notes on Giuseppe Maxia's talk at Open Programming Language Miniconf
+  2010: Introducing Gearman -- Distributed server for all languages.
+---
+
+The second talk at the [Open Programming Language Miniconf 2010][oplm2010] was
+by [Giuseppe Maxia][dc]'s *[Introducing Gearman -- Distributed server for all
+languages][talk]*. Though there were a few issues -- the power dropped out,
+taking the projector, audio, and recording gear out -- it was an interesting
+introduction to a system that I want to learn more about.
+
+[oplm2010]: http://blogs.tucs.org.au/oplm/
+[talk]: http://blogs.tucs.org.au/oplm/programme/#gearman
+[dc]: http://datacharmer.blogspot.com
+
+After a bit of background on the mainframe, mini, server, desktop progression,
+Guiseppe introduced the space that Gearman operates in: distributed
+heterogenous system (like the web). Amongst Gearman's peers in the space
+(not to say that they fill the same role 2at all) is `memcached`.
+
+Gearman is a client/server system for distributing jobs from clients to a
+number of workers. Guiseppe drew an analogy to a manager in a company: the
+manager gets a request from a customer, delegates it to one or more employees,
+and hands the result back to the client (monitoring progress along the way and
+assigning the job to new employee/s if the current ones are, e.g., hit by a
+bus).
+
+The Gearman server fills the role of the manager: it accepts connections from
+clients and one or more workers (which can be local to the server or on other
+hosts). The Gearman server is responsible for then farming the jobs submitted
+by the clients out to appropriate worker/s for execution.
+
+There are a numerous ways that this can be useful. It can help to decouple
+applications and features from each other. Rather than re-writing existing
+components for use in projects in another language or on a different platform,
+you can use Gearman to mediate the invocation of the existing code from the
+new system. Similarly, you can use it to offload computationally intensive
+tasks to more capable systems.
+
+Using Gearman is reasonably simple: the `gearmand` server is written in C and
+there are client libraries available for, according to Guiseppe, "everything
+that counts": C/C++, PHP, Python, etc. You just start a server, start one or
+more workers, and then use one (or more) of the available client libraries to
+submit jobs.
+
+{% highlight shell %}
+# Start a server
+PORT=1234
+gearmand -d -v -p $PORT
+
+# Start a worker
+gearman -p $PORT -f count_lines -- wc -l
+
+# Submit a job
+gearman -p $PORT -h localhost -f count_lines < /etc/passwd
+{% endhighlight %}
+
+The above code starts a Gearman server, starts a worker that can compute the
+`count_lines` function (by running `wc -l` on its input), and submits a job.
+
+There are some rather more complex uses. One of those that Guiseppe mentioned
+is using the client in user defined functions in a relational database server
+(he used [MySQL][mysql], but PostgreSQL is also supported). With appropriate
+jobs and workers this can be used to retrieve status information from, e.g.,
+MySQL slave servers and store it in a database on the master (which will then
+be replicated to the slaves giving all nodes knowledge of the health of the
+whole cluster).
+
+[mysql]: http://forge.mysql.com/tools/tool.php?id=235
+
+To help avoid introducing a single point of failure, you can deploy multiple
+servers and use all of them: if one fails, then clients and workers will try
+the next. It wasn't clear, though, if the client libraries do this sensibly
+(re-submitting jobs, etc.)
+
+For more information, your first stop should probably be the official
+[Gearman][gm] web-site. There are also a number of posts on [Guiseppe's
+blog][dc].
+
+[gm]: http://gearman.org/
