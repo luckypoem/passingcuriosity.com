@@ -1,0 +1,50 @@
+---
+layout     : post
+title      : Notes on Haskell, and all the wonderful things it doesn’t let you do
+tags       : [haskell, lca2010, oplm2010, notes]
+categories : [lca]
+location   : Wellington, New Zealand
+excerpt    : |
+  My notes on Stephen Blackheath's talk at Open Programming Language Miniconf
+  2010: Haskell, and all the wonderful things it doesn’t let you do.
+---
+
+The first talk at the [Open Programming Language Miniconf 2010][oplm2010] was
+by Stephen Blackheath's *[Haskell, and all the wonderful things it doesn’t let
+you do][talk]*. This was cool -- given that Haskell is my favourite language
+-- but I didn't get much out of it beyond a link to [Stephen's Arrows
+Tutorial][arr].
+
+[oplm2010]: http://blogs.tucs.org.au/oplm/
+[talk]: http://blogs.tucs.org.au/oplm/programme/#haskell
+[arr]: http://en.wikibooks.org/wiki/Haskell/StephensArrowTutorial
+
+The talk, aimed at newcomers, covered a lot of ground. It started with a
+characterisation of Haskell as a pure, functional, non-strict, strongly,
+statically typed, programming language and gave all the usual reasons that
+those are nice properties for a programming language to have.
+
+After a few examples of the syntax, Stephen talked about recursion and
+mentioned that idiomatic Haskell tends to use a higher-order function
+implementing a particular recursions scheme, but didn't really point any out
+(other than using `map` in example). 
+
+Next was a brief discussion of the type system: it's strong and static, but it
+also features type inference so you don't need to supply signatures for
+everything. It's probably important to note though, that it's still a good
+idea for top level definitions for documentation purposes, if for no other
+reason. Next was a mention of QuickCheck and automatic testing.
+
+Finally, there was a bit about Haskell's non-strict semantics and the usual
+points about concurrency (being hard in imperative languages and rather easier
+in Haskell). Laziness is useful as it makes it possible to represent
+[potentially] infinite data structures and looping data structures without
+destructive updates, alas it can make it hard (or, at least, harder) to reason
+about and predict the time and space behaviour of a program.
+
+It was a pretty good talk, but I though Stephen missed a few opportunities to
+make some important points that the audience might have appreciated. In
+particular, I'd have mentioned the various higher-order recursion operators
+and opportunity they provide for automatic application-specific optimisations
+through fusion. This is the sort of thing that is difficult or impossible in a
+lot of languages but are seriously cool!
