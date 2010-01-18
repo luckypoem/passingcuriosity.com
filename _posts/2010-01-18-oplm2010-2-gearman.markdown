@@ -49,7 +49,7 @@ that counts": C/C++, PHP, Python, etc. You just start a server, start one or
 more workers, and then use one (or more) of the available client libraries to
 submit jobs.
 
-{% highlight shell %}
+{% highlight sh %}
 # Start a server
 PORT=1234
 gearmand -d -v -p $PORT
