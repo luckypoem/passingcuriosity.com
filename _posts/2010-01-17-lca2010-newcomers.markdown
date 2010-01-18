@@ -1,0 +1,82 @@
+---
+layout     : post
+title      : Welcome to LCA2010
+tags       : [lca, lca2010, swag, newcomers, session]
+categories : [lca]
+location   : Wellington, New Zealand
+---
+
+So LCA2010 is underway. It's been busy and it's only day two (day one really),
+so I'll give a brief recap so that I can remember it later. Registration was
+quick and painless and the swag is decent:
+
+1. a nice-ish bag;
+2. a few note books;
+3. a USB flash drive with the programme and such;
+4. the requisite t-shirt (and a hat)
+5. some sunscreen (optimistic) and Lynx stuff (a very good idea!)
+
+and some other stuff that I forget.
+
+The newcomers session afterward with Rusty Russell and a woman whose name I
+didn't catch me was informative and entertaining. They covered the programme
+and talked about past LCAs, but the most useful is likely to be the "Advice,
+Secrets and Lies" that many people wish they'd known before their first LCA.
+
+> Do
+> --
+> 
+> Attend the full conference, especially the keynotes!
+> 
+> Turn up to talks and actually pay attention! Don't turn up and spend the
+> session reading email.
+> 
+> If you see something wrong, help out!
+> 
+> Don't leave rubbish in the theatres or anywhere else!
+> 
+> Get some rest! The week is something of a marathon. You'll need it.
+> 
+> Blog, photograph, tweet, etc. Use the #lca2010 tag so that people can find
+> your stuff.
+> 
+> Do not!
+> ------
+> 
+> See nothing while hanging out on IRC.
+> 
+> Drink more than you usually do. (There's a tradition that at least one
+> attendee or speaker is hospitalised each year: don't be that person.)
+> 
+> Fanboy!!!! the speakers.
+> 
+> Harass others.
+> 
+> Join or start more than one new project. It seems like a good idea, but it's
+> not. Pick *one* thing to get enthusiastic, you'll never have time for more
+> than one anyway.
+> 
+> Believe that your ssh keys have changed.
+> 
+> Secrets
+> -------
+> 
+> The attendees are the conference. They are interesting (and some of them are
+> speakers!) so speak to them.
+> 
+> The badge has annotations on it. There's a colour scheme (orange for
+> hobbyists; blue for professionals; red for speakers or something), the fish
+> heads represent tickets to the Penguin Dinner, the radio thingo to the
+> Professional Networking Session, the map your origin, and a few other
+> things.
+> 
+> Surprises (often at keynotes, yet another reason to attend them)
+> 
+> The in jokes (laugh along, write them down and ask about them later)?
+> 
+> Next year's conference (usually announced at the Penguin Dinner).
+> 
+> All the stories about things that "always happen" at pretty much lies. It's
+> different every time and, while there's a few things that happen often, they're 
+> 
+> Now, we're off to the Green Man pub.
