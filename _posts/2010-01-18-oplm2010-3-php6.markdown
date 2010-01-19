@@ -1,0 +1,116 @@
+---
+layout     : post
+title      : Notes on Preparing for PHP6
+tags       : [lca2010, oplm2010, php, code]
+categories : [lca]
+location   : Wellington, New Zealand
+excerpt    : |
+  My notes on Ben Balbo's talk at Open Programming Language Miniconf
+  2010: Preparing for PHP6.
+---
+
+The third talk at the [Open Programming Language Miniconf 2010][oplm2010] was
+by [Ben Balbo][bb] presentation about *[Preparing for PHP6][talk]*. Though the
+slides were a little hard to read -- Ben used one of those horrible
+hand-writing style fonts -- it was chockablock full of useful information.
+
+[oplm2010]: http://blogs.tucs.org.au/oplm/
+[talk]: http://blogs.tucs.org.au/oplm/programme/#php6
+[bb]: http://benbalbo.com/
+
+He started with a list of things that have been removed or altered in PHP6 and
+then described some of the new features. Some of the things from both lists
+are present in version 5.3.
+
+Removals and changes
+--------------------
+
+In PHP6 `E_ALL` will include `E_STRICT` which may cause errors to be reported
+in code that is OK in PHP5. A new `E_DEPRECATED` has been introduced and is
+also included in `E_ALL`. This new error is raised when you use any deprecated
+functions.
+
+These deprecated functions and features include register globals, magic
+quotes, safe mode and ASP-style `<% %>` tags. Also going/gone are the
+`$HTTP_POST_VARS` and `$HTTP_GET_VARS` variables. 
+
+Other changes include assign-by-reference (using `=&`) and `zend_compat`
+raising `E_STRICT`. Class members defined without a visibility modifier will
+be `public` by default (and will also raise `E_STRICT`).
+
+Dynamically loading extensions is now disabled by default on all SAPIs except
+the command-line interpreter. This needs to be enabled (in `php.ini`, I
+assume) if required.
+
+In a rather acrobatic backflip, the formerly deprecated `$str[1]` is no-longer
+deprecated and its replacement `$str{1}` now *is* deprecated. You can also now
+use the subscript syntax to take a slice of a string -- like `$str[1,3]` -- as
+you in some other languages.
+
+The wacky variable `break` feature (where one breaks out of a variable number
+of looping constructs: `break $anint;`) is deprecated. It's disappearance make
+me wonder (again) why it was added in the first place. I can't help but wonder
+if there was a use-case in mind, or if it was just "because".
+
+The `microtime()` function now returns the float value by default; you'll no
+longer need to use `microtime(TRUE)` in every invocation.
+
+The move to using the PCRE-based [`preg_*`][preg] functions for regular
+expressions is finally complete. The [`ereg_*`][ereg] functions have been
+removed from core and stuck in a PECL extension. At the same time,
+[`mime_magic`][mime_magic] has also been moved to a PECL extension and its
+more useful and popular cousin [`fileinfo`][fileinfo] has replaced it in core.
+
+[preg]: http://php.net/manual/en/book.pcre.php
+[ereg]: http://php.net/manual/en/book.regex.php
+[mime_magic]: http://php.net/manual/en/book.mime-magic.php
+[fileinfo]: http://php.net/manual/en/book.fileinfo.php
+
+Additions
+---------
+
+The big ticket new item must be namespaces. The controversial choice to use
+`\` as the separator was due to the simple fact that it is the only single
+character available. This doesn't make it any less silly, especially because
+of the way that function "references" in PHP are just strings:
+
+{% highlight php %} 
+$func = "\application\names\afunc";
+$func();
+{% endhighlight %}
+
+All names refer to the current namespace, but prefixing a name with `\` will
+make it relative to the "root" namespace. 
+
+You can import things from other name spaces with the `use` keyword and, if
+required -- perhaps there is a clash -- alias them by taking an `as` clause on
+the end:
+
+{% highlight php %}
+use \MyCompany\Blog\User as BlogUser;
+use \MyCompany\CMS\User as CMSUser;
+{% endhighlight %}
+
+Functions and classes both belong to namespaces and definitions are processed
+top-down. Thus the following code defines a `foo()` function and then a
+`bundle\foo()` function:
+
+{% highlight php %}
+function foo() { echo "G"; }
+
+namespace bundle;
+
+function foo() { echo "NS"; }
+
+bundle\foo(); // "NS"
+foo(); // "G"
+{% endhighlight %}
+
+Another important change is the addition of late static binding. In previous
+versions of PHP `self::foo` in the code of a superclass method refers the
+`foo` member of that superclass, even if the subclass defines a `foo` member.
+This problem is ameliorated with the addition of a new `static` keyword.
+`static::foo` will do what you expect: look in subclass, then in the parent/s.
+
+All in all, it looks like PHP6 is a great big leap forward in the evolution of
+PHP. A few more major versions and it might catch up to modern languages.
