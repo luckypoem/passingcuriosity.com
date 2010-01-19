@@ -1,0 +1,115 @@
+---
+layout     : post
+title      : Attribute Oriented Programming in PHP
+categories : [lca]
+tags       : [lca2010, oplm2010, php, code, notes, aop]
+location   : Wellington, New Zealand
+excerpt    : |
+  The third talk at the Open Programming Language Miniconf 2010 was Peter
+  Serwylo's presentation about Attribute Oriented Programming in PHP.
+---
+
+The third talk at the [Open Programming Language Miniconf 2010][oplm2010] was
+Peter Serwylo's presentation about *[Attribute Oriented Programming in
+PHP][talk]*. His [notes][notes] are available online.
+
+[oplm2010]: http://blogs.tucs.org.au/oplm/
+[talk]: http://blogs.tucs.org.au/oplm/programme/#aopphp
+[notes]: http://lca2010.serwylo.com/
+
+Attributes
+==========
+
+Attributes are "extra" bits embedded in source code that doesn't *necessarily*
+mean anything in the language. Common examples include the documentation
+annotations in many comment systems (such as the tags used in Javadoc
+comments), JVM annotations, and .Net attributes.
+
+A testing framework, for example, might use a `TestFunction` attribute to
+identify which methods should be called.
+
+{% highlight java %}
+@TestFunction
+public function testValidation() {...}
+{% endhighlight %}
+
+{% highlight csharp %}
+[TestFunction]
+public function testValidation() {...}
+{% endhighlight %}
+
+Use cases 
+=========
+
+In Java EE you have "beans" which encapsulate business logic. Each bean
+requires a bunch of wrappers for remote access, "home" access (whatever that
+means), XML files, etc. Keeping all this relatively "boiler-plate" code in
+synch is painful. Annotating the bean classes and methods with attributes
+makes it possible to generate most of this automatically. No more manual
+synching XML files.
+
+Java, though, (as of Java 5) has built in support for [annotations][j5ann] and
+is a compiled language. This makes it relatively simple to do this analysis
+and generation at build time. PHP, on the other hand, doesn't have an
+annotation mechanism and doesn't *have* a built time.
+
+[j5ann]: http://java.sun.com/j2se/1.5.0/docs/guide/language/annotations.html
+
+Instead, Peter's approach is to use PHP comments to add the attributes. At
+load time, these comments are processed using the reflection API and this is
+used to build a data structure to use for access control. See the
+[permissions example][perms].
+
+[perms]: http://lca2010.serwylo.com/06_ivt_example.html
+
+A more complex case
+===================
+
+To take this a little further, Peter [wrote a Zend
+extension](http://lca2010.serwylo.com/07_php_zend_example.html) that makes it
+possible to [sort of] do aspect oriented programming (on function points) in
+PHP. The `add_function_hook()` function allows you to register an attribute
+and a callback and the extension will call your callback before a function
+with that attribute is executed:
+
+{% highlight php %}
+class RequiresLogging
+{
+
+	/**
+	 * @log notice "Secret action performed by user [user]
+	 */
+	public function secretAction()
+	{
+		// perform secret action...
+	}
+
+}
+
+// 
+// The callback function
+//
+function performLog( $message )
+{
+	$parts = split( " ", $message, 2 );
+	$level = $parts[0];
+	$message = $parts[1];
+	Logger::log( $level, $message );
+}
+
+// 
+// Register the callback
+// 
+add_function_hook( "log", "performLog" );
+
+// Now code like this will result in a log message being recorded
+$object = new RequiresLogging();
+$object->secretAction();
+{% endhighlight %}
+
+This type approach is flexible and extremely powerful. You can inject
+permission checking code and raise an exception before the real function is
+even called.
+
+There are a bunch of memory leaks and possible bugs in the Zend extension, but
+it is working and in production use!

@@ -70,17 +70,17 @@ Additions
 ---------
 
 The big ticket new item must be namespaces. The controversial choice to use
-`\` as the separator was due to the simple fact that it is the only single
-character available. This doesn't make it any less silly, especially because
-of the way that function "references" in PHP are just strings:
+backslash as the separator was due to the simple fact that it is the only
+single character available. This doesn't make it any less silly, especially
+because of the way that function "references" in PHP are just strings:
 
 {% highlight php %} 
 $func = "\application\names\afunc";
 $func();
 {% endhighlight %}
 
-All names refer to the current namespace, but prefixing a name with `\\` will
-make it relative to the "root" namespace.
+All names refer to the current namespace, but prefixing a name with a
+backslash will make it relative to the "root" namespace.
 
 You can import things from other name spaces with the `use` keyword and, if
 required -- perhaps there is a clash -- alias them by taking an `as` clause on
