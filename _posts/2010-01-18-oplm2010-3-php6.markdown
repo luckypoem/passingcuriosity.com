@@ -79,8 +79,8 @@ $func = "\application\names\afunc";
 $func();
 {% endhighlight %}
 
-All names refer to the current namespace, but prefixing a name with `\` will
-make it relative to the "root" namespace. 
+All names refer to the current namespace, but prefixing a name with `\\` will
+make it relative to the "root" namespace.
 
 You can import things from other name spaces with the `use` keyword and, if
 required -- perhaps there is a clash -- alias them by taking an `as` clause on
