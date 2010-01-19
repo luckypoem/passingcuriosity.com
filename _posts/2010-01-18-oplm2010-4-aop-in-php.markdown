@@ -73,6 +73,7 @@ and a callback and the extension will call your callback before a function
 with that attribute is executed:
 
 {% highlight php %}
+<?php
 class RequiresLogging
 {
 
