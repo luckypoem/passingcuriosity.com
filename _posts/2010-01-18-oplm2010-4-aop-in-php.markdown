@@ -5,11 +5,11 @@ categories : [lca]
 tags       : [lca2010, oplm2010, php, code, notes, aop]
 location   : Wellington, New Zealand
 excerpt    : |
-  The third talk at the Open Programming Language Miniconf 2010 was Peter
+  The fourth talk at the Open Programming Language Miniconf 2010 was Peter
   Serwylo's presentation about Attribute Oriented Programming in PHP.
 ---
 
-The third talk at the [Open Programming Language Miniconf 2010][oplm2010] was
+The fourth talk at the [Open Programming Language Miniconf 2010][oplm2010] was
 Peter Serwylo's presentation about *[Attribute Oriented Programming in
 PHP][talk]*. His [notes][notes] are available online.
 
