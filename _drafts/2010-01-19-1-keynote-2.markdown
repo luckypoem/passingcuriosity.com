@@ -1,0 +1,158 @@
+---
+layout     : post
+title      : LCA Keynote 2
+tags       : [lca2010, keynote, notes]
+categories : [lca]
+location   : Wellington, New Zealand
+---
+
+Please use the hand sanitizer.
+
+Photographic competition closes for the first section this morning.
+
+Use the wiki.
+
+Use the convention wireless.
+
+Apress give aways: Beginning GIMP, Pro Linux system administration, Practical
+Arduino. They had to draw five names.
+
+Keynote
+=======
+
+[Gabriella Coleman][gc], Assistant Professor of Media, Culture, and
+Communication at New York University. Anthropologist who studies hacker
+culture, software development, etc. She *is* lazy and *is* often confused with
+students.
+
+[gc]: http://steinhardt.nyu.edu/faculty_bios/view/Gabriella_Coleman
+
+These are the Best of Times and these are the Worst of Times: Free Software
+and the Global Politics of Intellectual Property Law.
+
+First expose to F/OSS was accidental: went to friends dorm room to find him
+salivating over a CD: Slackware Linux.
+
+Two years later, interested in patents and med. Same friend told about
+copyleft. 12 years average PhD. If she wanted to finish, leave faith healing
+and take to the Internet.
+
+Field work: Total Cultural Immersion. Rocking up to a group you plan to study
+and you'll be around for months or years. This is intimidating. Even in
+English, this was hard due to the jargon, etc.
+
+But aren't they just computer fanatics? But informal humour, language punning,
+easter eggs, intercal and brainfuck shows that there is hacker culture.
+
+Studied cabals and their supposed lack (There Is Not Cabal). The TINC joke is
+part of the culture: reminding those in power to act.
+
+IP Cabal: ACTA Anti-counterfeiting Trade Agreement.
+
+Unprecedented secrecy. Classified, left third world out. Given ACTA's ancestry
+is pretty depressing (DMCA, Sony Bono, etc.) But F/OSS and copyleft give at
+least a little hope.
+
+Opening lines from a tale of two cities. Never before have we been faced with
+so broad a regime, but we've also never had such a bastion as F/OSS and Free
+Culture.
+
+
+1984-1991
+---------
+
+Natural starting place: Richard Stallman needs no introduction. Happy hacker
+at MIT, but this was crushed by 1984. Interview with Stallman: downtrodden and
+resigned (metaphor to fixing your house). He would tell people his wife had
+died (though unmarried): he meant access to software.
+
+His dire views didn't eventuate, at least in part, due to Stallman's own effort. 
+
+How was software able to escape the Second Enclosure Movement? Great timing:
+if Stallman was five years later, we might not be here. When Stallman had
+started his crusade, patents and such hadn't entered the realm of software.
+
+While Stallman was writing Free Software, three trade association forms:
+Intellectual Property Committee, International Intellectual Properties
+Alliance (IIPA, reps'd MPAA, BSA, etc) ***, Software Publishers Association.
+
+1992-1997
+---------
+
+Move to hobbyists: domestic labour, made possible by wide deployment of
+Internet access and PCs.
+
+Linux. 
+
+Political F/OSS (Stallman) found its pragmatic counterpart (Linus using it
+just for pragmatic reasons).
+
+Programmers becoming far more legally literate. "Code is Law" - Larry Lesig.
+Coding is a craft/cultural competency that can translate into legal literacy
+and ability.
+
+In 1992, they deemed some copyright infringement were deemed to be felonies.
+They launched a bunch of propaganda campaigns.
+
+> Time Warners: Cultural Dark Ages.
+> 
+> Terrorist groups sell pirate DVDs to raise funds. (the Federations Against
+> Copyright Theft)
+
+They fucked shit up with treaties and conventions.
+
+1998-2004
+---------
+
+Cygnus, RedHat, etc. made commercial success on F/OSS. Netscape released
+Mozilla. People starting telling their manager that yes, our entire business
+is running on Debian.
+
+Changing name to Open Source to be more business friendly.
+
+Rendered visible the underlying ethics to a much wider audience.
+
+Move to "Open Source" and the way it helped to promote. CreativeCommons
+
+**Red baiting** MS tried to brand F/OSS "communist" (which is what Obama faces
+a lot now). Failed utterly: complete disavowal of political goals, very narrow
+future. Using language about helping your neighbour, then free speech.
+
+> OSS poses a direct revenue platform threat.
+
+Superior engineering effort, not an ethical thing anymore.
+
+DMCA passed after lobbying by scum. DeCSS suites and Dmitry being arrested. By
+now the trade associations were well aware of F/OSS and were mentioning them.
+BSA crowing, blah, blah, blah. But it started solidifying the anti-DMCA
+movement.
+
+In 1981: Soul of a new machine. "Clearly, the machine no longer belonged to
+its maker."
+
+Similar time, people published the Jargon File as a book because they expected
+the culture to die out (to be killed, even).
+
+Pessimism was wrong, but necessary: *because* of the pessimism they were moved
+to resist.
+
+Patent "everything under the sun."
+
+These political/legal clashes have kept everything going, even while the
+movement was partially gutting itself of its explicit politico-ethical
+ideology.
+
+**Clear Sighted Irony** Essay on irony by Randolph Bourne, an American public
+intellectual. Don't feel just optimistic or pessimistic. Irony is thus a cure
+(blind vs hypnotised).
+
+2004-2010
+---------
+
+Web 2.0 discourse (boon and barrier) to talk about IP law.
+
+Questions
+=========
+
+Lots of other critics (medical, drugs, life science patents, etc.) but they
+are disconnected from us. 

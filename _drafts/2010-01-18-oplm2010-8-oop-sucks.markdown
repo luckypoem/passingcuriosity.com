@@ -1,0 +1,127 @@
+---
+layout     : post
+title      : Notes on Object-Oriented Programming Sucks
+tags       : [lca2010, oplm2010, notes, perl, oo]
+categories : [lca]
+location   : Wellington, New Zealand
+---
+
+OOP sucks in pretty much every language. 
+
+Some [smart] people come up with a solution in SmallTalk and it's been ported
+to perl.
+
+**OO's unfulfilled promise of code reuse.** We aren't really reusing code at
+the level we could be. It's too hard to reuse code.
+
+What is an object?
+------------------
+
+Object = Data + Behaviour
+
+Encapsulation of data
+
+Polymorphism with any object that implements the appropriate interface.
+
+Inheritance? Some people believe it isn't a *necessary* component (but it is
+part of the topic of this talk).
+
+What is a class?
+----------------
+
+1. A factory which creates objects.
+2. A unit of code reuse.
+
+Item (1) implies completeness: it needs to implement the complete set of
+behaviours.
+
+Item (2) implied smallness: you want small, flexible easily re-usable
+components.
+
+Traits
+------
+
+A trait is:
+
+1. a collection of methods.
+2. ...
+3. pure behaviour.
+4. flattened into the classes that "use" the trait.
+5. No super class access to the trait (super is of the class, not the trait).
+6.
+7. Dependencies
+
+Applying traits to the Smalltalk Collections Classes, Black, Schärli, etc.
+
+Reuse through inheritance
+-------------------------
+
+1. Single inheritance makes it quite difficult to reuse code. There are few
+   (bad) options for sharing between two classes which share a superclass.
+
+2. Multiple inheritance is too evil for Smalltalk, C#, etc. Even PHP! 
+
+3. Mixin inheritance: the order of composition matters. Conflicts are resolved
+   silently: if you have two mixins with methods of the same name, one will
+   win. They just don't scale.
+
+Traits trump Mixins
+-------------------
+
+Conflicts result at compile time. (Note, though, that this is a lie in the
+perl context.)
+
+Conflict resolution: class methods win; exclude specific methods; alias trait
+methods.
+
+Dependencies: mixins assume, traits require.
+
+In Perl
+-------
+
+In perl, they are called "Roles" ("trait" is already used)
+
+Implemented in a CPAN module called Moose.
+
+{% highlight perl %}
+package Car;
+use Moose;
+with 'Breakable';
+has 'colour' => (is => 'rw', isa => 'Bool);
+
+# The way objects break is class dependent
+sub break {
+	my $self = shift;
+	$self->is_moving(0) if $self->is_moving;
+}
+1;
+{% endhighlight %}
+
+{% highlight perl %}
+package Breakable;
+use Moose::Role;
+requires 'break';
+has 'is_broken' => (is => 'rw', isa => 'Bool);
+sub break {
+	# ...
+}
+
+# Is called after the 'break' method that uses this trait
+after 'break' => sub {
+	my $self = shift;	
+	$self->is_broken(1);
+}
+1;
+{% endhighlight %}
+
+Lets get meta
+-------------
+
+Moose uses/can use roles in defining classes. 
+
+Python
+------
+
+Experimental implementation: Strait. 
+
+http://scg.unibe.ch/research/traits/

@@ -1,0 +1,88 @@
+---
+---
+
+The new perf subsystem.
+
+`perf_event` is a new kern subsystem that gives you access to the performance
+counter in the CPU. Also interface to kernel tracepoints and software events.
+Becoming the primary interface for collecting and reporting all sorts of
+performance data.
+
+New userspace driver program `perf` provides a simple way to measure program
+and system performance.
+
+Supercedes perfmon2, etc.
+
+Initially proposed in Dec 2008
+
+- Posted to LKML
+- response to perfmon3 posting
+
+Developed through 2009 in "tip" tree (Ingo, Peter Ingman, etc)
+
+In official Linux 2.6.31 (sep 09
+
+Initiallay supported x86, Paul? did 64-bit POWER processors. Now have support
+for SH and sparc64. Most architecture now have basic support (it can be useful
+with nothing more than high-res times; just a single system call to
+implement).
+
+Concepts
+--------
+
+Basic abstraction: a counter for some event. Not the whole PMU (unlike
+perfmon2). Was believed to be too complex to teach the kernel to program the
+PMU, so left it up to the (one at a time) user.
+
+Counters are a 64-bit value, incremented every time the associated event is
+fired.
+
+Types of events:
+
+* Hardware: counted in PMU hardware
+* Software: function call placed in kernel code
+* Tracepoint
+* Hardware data breakpoint registers ("trap when something writes to address
+  0XF00BABA2")
+
+Sampling: record information at intervals
+
+* Record information in ring buffer
+* Can record IP, timestamp, addresses, etc.
+* Can sample every N counts or N per second
+
+Events can be per-task, per-cpu events or both:
+
+* per-task: count only while that task is running.
+* per-cpu: monitor performance of the system as a whole [CPU].
+
+Per-task counters can be inherited: on `fork()`, the child process gets a copy
+of all inheritable events. Inherited event counts added back into main count
+on child exit or on "sync" operation.
+
+The kernel manages the PMU to share it between however many users; schedules
+hardware events onto PMU, context-switching per-task counters; round-robin
+scheduling if there are too many PMU counters (as many as will fit, then RR);
+configures PMU.
+
+This leads to a problem: count L1 cache misses and L1 cache references and use
+these numbers to calculate L1 cache hits, but if the two counters are running
+at different times, they may be recording different phases of behaviour. Use
+event groups to link to counters together so that they will be scheduled
+together. Can also "pin" a group and run it always (and error if it can't).
+
+API
+===
+
+`perf_event_open()` system call to create a new counter with a struct of
+attributes (type, periodicity, what to record, return on read, etc), a few
+flags for task, cpu, group, flags, etc. Gives back an fd which you can select,
+ioctl, etc.
+
+`ptctl()` can enable/disable all counters we've created.
+
+`sysctl()` variables for security settings and limits.
+
+[on POWER] Self counters can be read directly without a system call. If
+hardware permits. On POWER, this uses the user mode instructions to read the
+PMU registers directly.

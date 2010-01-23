@@ -1,0 +1,109 @@
+---
+layout     : post
+title      : "Talloc: Pick up your own garbage"
+tags       : [lca2010, oplm2010]
+categories : [lca]
+location   : Wellington, New Zealand
+---
+
+Talk about C. C is a language for certain tasks. If you use it for
+*everything*, you need to get out more.
+
+The Shackles of Allocation
+--------------------------
+
+A standard example:
+
+a struct with key, value and a `new_struct` helper that mallocs, assigns the
+members, and returns the new struct. The one on the slides has bugs:
+`malloc`ing the wrong amount of memory (use a `new(struct list_head)` macro to
+make this code easier to write), should be duplicating the key/values.
+
+But if duping, you need your own free(). But then you need to use it all the
+time. It fails the *hard to fail to use* test of an API.
+
+Making stuff do this properly is big (18 lines become 34).
+
+This is the poster child for GC, but if you can tolerate the properties of GC
+(stop the world, etc) why are you in C?
+
+Seeking Solutions
+-----------------
+
+Just Say No: don't free your memory. If it's a CGI script, you're going to
+terminate.
+
+Memory Pools: memory pools may work for certain situations. (JSN is just a
+great big memory pool)
+
+Talloc
+
+Talloc
+------
+
+Talloc is a hierachical allocator. Every `talloc`-returned pointer is its own
+memory pool: `talloc(NULL, struct foo)` allocs memory for a pointer. If you
+pass a talloc pointer as the first argument, then the allocation is a "child"
+of that pointer. `talloc_free(p)` will free the memory as normal, but will
+also `talloc_free()` the *children* of the `p` "pool". 
+
+`talloc_steal()` rather than duplicate.
+
+Don't bother trying to "`talloc`ise" existing code bases.
+
+This implicit freeing is bad without destructors, so `talloc` supports
+destructors. They're called children-first. `Talloc` destructors are also type
+safe!
+
+Destructors to remove refs to object (linked list removal, etc). Object
+usually know best how to clean up after themselves.
+
+Also can free fds/cleanup (Don't do this with GC). 
+
+Also get leak reporting: `talloc_total_size` and `talloc_total_blocks`. This
+gives you a really new way to see the data in your program. Lifetime
+dependancies. You can often see bugs by looking at the `talloc` relationships.
+
+See the graph of Samba4 just after booting. Generated with `dot`.
+
+Benefits
+--------
+
+Simplied cleanup, fewer bugs.
+
+Explicit documentation of lifetimes.
+
+Think about your program in a new way.
+
+Find memory leaks. Valgrind can find memory leaks in .
+
+Other Languages
+---------------
+
+If you have GC, you probably don't need `talloc` (Lols at the reference to guy
+on crack doing it for Python).
+
+But hierarchies of objects might still provide insight into running programs.
+
+CCAN
+----
+
+http://ccan.ozlabs.org/
+
+talloc, typesafe_cb, etc.
+
+Questions
+---------
+
+Talloc sits on top of `malloc`, but can go on top of other, better, `malloc`s
+if you need it to.
+
+In C++, you probably wouldn't want to use talloc's destructors. But the object
+lifetimes are still useful.
+
+Using 3rd party code: create a talloc-based wrapper and use that instead.
+
+Don't use multiple parents: if causes more pain than its worth.
+
+Talloc by itself is not thread-safe. If two threads are tallocing off the same
+parent it breaks.

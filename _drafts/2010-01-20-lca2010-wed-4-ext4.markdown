@@ -1,0 +1,247 @@
+---
+layout     : post
+title      : "Making production-ready filesystems: A case study using ext4"
+tags       : [lca2010, linux, filesystem, ext4]
+categories : [lca]
+location   : Wellington, New Zealand
+---
+
+Theodore Ts'o gave a talk titled [Making production-ready filesystems: A case
+study using ext4][talk]. The [ext4][ext4] filesystem became "stable" on
+October 11, 2008 but will probably not be production-ready until second half
+of 2010. Theodore examined this lengthy journey using a case study of ext4
+along with a number of other filesystems.
+
+[talk]: http://www.lca2010.org.nz/programme/schedule/view_talk/50291
+[ext4]: http://ext4.wiki.kernel.org/
+
+Not really about ext4 per se, its features, etc. About problems and bugs and
+how we can get rid of them and make an fs production ready (and other pieces
+of code to production ready status).
+
+What makes a function or library hard to test?
+----------------------------------------------
+
+Timing
+Users are reulctant to test it for you
+Breaks machine when it fails
+Edge cases
+Hard to require files
+Difficult to setup hard to setup environment
+Not in user space
+Fails in subtle ways you only notice a week later
+Funny hardware bugs
+
+Programs:
+
+1. Premature optimisation ("the root of all evil")
+2. Large amounts of internal state (avoid state to make it easy to test)
+3. Lots of parallelism
+
+File systems
+
+1. Optimisation demanded for many (different) workloads
+2. The entire point is to store a lot of state (and entire disc's worth)
+3. Inherently have a lot or parallelism
+
+These make filesystems really, really hard.
+
+File systems are like fine wine
+-------------------------------
+
+"We will sell no wine before it's fine"
+
+But we may not recognise it:
+
+1. It was broadcast in the '70s.
+2. It's a Californian winery.
+
+Like fine wine, a filesystem has to age. But do note that most wines aren't
+fine wines and don't improve with age (like crap wines advertised on TV).
+
+Filesystems, though, should still be aged: that's how you find (and hopefully
+fix) the bugs. You need people to use it so that they will report bugs, but
+you don't want them to loose data.
+
+Lots of time for bug fixing, but also for performance tuning and everything
+else. That's a lot of engineering effort.
+
+Bunch of them got together to try to help get btrfs more funding and support
+from corporations. Spoke to people who'd done filesystems people: compaq OSF1
+team, other systems. Between 75 and 100 person years. One person said 200
+person years. This is a lot of effort. "Every company should donate 2
+engineers." Not everyone did it due to the GFC.
+
+ZFS team: around a dozen people in the photo. Don't have exact numbers, but
+started working 2001, announce 2005, shipped 2006. Only in the last year or so
+were people (Ts'o talked to) putting critical data on ZFS volumes. One brave
+person putting their mail spool on it and it locked up and they had to back
+out.
+
+Rename from ext4-dev to ext4 in 2.6.28 Dec 25, 2008 (just over a year ago).
+Shipping in community distributions: Fedora 11 (default - previously needed
+wacky boot string), Ubuntu 9.10 (default; 9.04 as option), Open SuSE, RHEL 5,
+SLES 11 as tech preview.
+
+Will start seeing widespread adoption in data centres in 12+ months or so.
+Currently everyone is waiting for someone else to go first (and find the
+interesting bugs).
+
+Lots of bug fixes (together with cleanups, it's the majority) in each of the
+releases since the rename. More users are finding more bugs, so the count
+isn't going down. Thankfully most (now) aren't data losses.
+
+Most of the bugs are "misc", with "race", "DoS", "leaks", "sync". 
+
+DoS bugs include crashes on mount (and USB automount)
+
+Race bugs: includes automatically detected lock order differences which may
+never happen.
+
+Sync bugs: only show up if it crashes (unclean umount) and you come back up
+without the filesystem being synchronised.
+
+Leaks: often forgetting to free memory in error paths, etc.
+
+Where were the bug fixes?
+-------------------------
+
+Interaction between the new allocator (donated by Luster filesystem, later
+bought by Sun) and online resize. If you alloc while resizing.
+
+Preallocation races and ENOSPC issues. You try to put off block allocation
+until as late as possible; thus you know how large it is and you can put it
+all in one spot. Leave allocation until you know you know you need to, it's
+not a temporary file. dbench - random number generator; if you tune it, the
+HDD light will never go on (in spite of it being a filesystem benchmark). Used
+to panic on ENOSPC. 2.6.28-.29 had a bunch of issues here.
+
+Online defragmentation: no-one really used it, so it didn't get many reports.
+First real security bug here: online defrag allowed unpriv user to overwrite
+root owned (like `/etc/passwd`).
+
+Fiemap (file extend map) tells you about the physical extents used in the
+file. Only one program uses it and it was left out of the test suites.
+
+Quota - again very few people (especially fs devs) use quota.
+
+No Journal mode - Google contributed it because they wanted to use all the
+performance fixes, but they didn't want the over head of the journal (they
+have lots of duplication, etc. so they don't need a journal and fsck). All
+sorts of bugs that showed up (the Google people found them and submitted
+patches).
+
+New features?
+-------------
+
+New tracepoints and features for tune/debug
+
+Work around for non-fsyncing apps
+online defrage
+fiemap
+quota
+no-Journal mode
+
+Note the large overlap between the new features and the bugs. Thanbkfully,
+these are things that not many people use.
+
+
+Examples
+--------
+
+Fix race in ext4_inode_info.i_cached_extent in 2.6.30 took literally 6 months
+to find. In 2.6.27? its good and working lets rename, with 2.6.28+ this one
+guy would loose data with inode tables, etc. being corrupted every month. He
+stuck with it and they tracked it down.
+
+Had a single cache for last extent used without a lock protecting it. Two
+processes writing to the file at the same time with 2 CPUs might wind up
+trashing an early block (like the inode table).
+
+In production for years.
+
+Part of large code donation; lack of locking missed in the code review.
+
+Used the file system as an object store; single threaded reads and writes.
+
+The victim was using Samba to do backups (and doing multithreaded writes).
+
+Most file system writes tend to be single-threaded. Ts'o was using ext4 in for
+9 months and never notices
+
+----
+
+jdb2 write_metadata_buffer and get_write_access race
+
+The wrong data can be written into the journal, but you never notice unless
+you crash before another message is commited to the Journal.
+
+You need to lose the race, write to the journal, and crash before you'll see it.
+
+---
+
+remove bogus BUG() check in ext4_bmap()
+
+Running the `filefrag` program (which uses the FIMBAP ioctl) to trigger a
+BUG(). Didn't happen with latest e2fstools.
+
+----
+
+Avoid unnecessary spinlock in critical POSIX ACL path.
+
+----
+
+Fix discard of inode prealloc space with delayed allocation. Would tend to
+fragment the filesystem over time. Funcitonally fine, but a long term
+performance problem.
+
+----
+
+Writeback code is really, really busted right now. Adjust
+`ext4_da_writepages()` to write out larger contiguous chunks. WB asks for 1024
+blocks, actually give it 8 times more (4M). Work around the bug in writeback
+code.
+
+Conclusion
+==========
+
+Filesystems are easy! 
+
+- There are over 66 in the kernel. 
+
+- Lots of generic library support code; just provide a bmap function and add
+  water...
+
+Infact they are **hard**!
+
+1. 2. 3. from start
+
+Takes a lot more time than you might expect. The people who do it, do so as a
+labour of love. The really hard thing is justifying a new filesystem from a
+business position. For many companies it doesn't make sense to do cool
+filesystem work. That's why so many of the commercial system are nothing.
+
+Sun are the counter example: they've poured 100 engineering years into ZFS.
+That's enormously expensive and it's not immediately obvious what the return
+on the investment will be.
+
+Questions
+---------
+
+As a budding early adopter, I want to help but I'm scared? The only answer is
+to trust the developers and make lots of backups (which you should be doing
+anyway). Ts'o has been using ext4 since July 1st 2008 and Ts'o hasn't lost any
+data.
+
+Filesystems are replacing half the VFS, RAID, etc., etc. (btrfs, ZFS, etc. as
+examples). To some extent, e.g. btrfs, they are subsuming LVM functionality,
+etc. and this does risk additional bugs. In btrfs' case, they're restricted to
+a narrow case (1 and 5).
+
+Where is Linux going in optimising for solid state (vs. rotating media)
+drives? If you assume each will have its own flash translation layer, all you
+have to do is turn off a bunch of optimisations. Not a good idea to move flash
+awareness into filesystems, better to rely on the flash translation layer.
+
+Also search for Orson Wells outtakes on You Tube to see him rather deep in the
+bottle.

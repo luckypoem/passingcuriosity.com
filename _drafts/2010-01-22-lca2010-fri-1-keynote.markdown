@@ -1,0 +1,92 @@
+---
+title: 3 Lightning Keynotes
+---
+
+Technology solves problems. It doesn't and can't, the reason we can't solve
+problems is the stupid meat sacks.
+
+----
+
+**Lesson: steer the meatsacks.** 
+
+----
+
+English is an imperative programming language for controlling meatsacks. 12 of
+getting shit for the way you make the bed.
+
+Lesson: Tell the smart meatsacks what you want (not step by step
+instructions). It's a declarative programming language.
+
+Keynote 2 OSS in NZ
+===================
+
+Keynote 3 Predict the Future
+============================
+
+Can't do it like O'Reilly (lots of stats people)
+
+1. Straight lines, metaphore, etc
+
+2. Qualify
+
+Well known by science journalists (who may be fuck heads).
+
+3. Self-promote
+
+Very important, because you only need another point to draw your straight
+line.
+
+4. Exaggerate
+
+The future is probably going to be like the present (same stupid meatsack) but
+they don't want to here it.
+
+5. Mashup
+
+Take two trends, put them together and you've got a third.
+
+
+Lightning Talks
+===============
+
+Selena Deckelmann
+-----------------
+
+How a bunch of normal people to repair a rigged election.
+
+Got an email: who wants to go to Nigeria. Went to teach a bunch of new
+government workers about PostgreSQL and some apps.
+
+**Step 1**: run for political office.
+
+April 14 2007, have the election. By all accounts, it didn't go so well: it
+was pretty much rigged.
+
+**Step 2**: lose.
+
+Either accept what had happended
+
+**Step 3**: don't give up.
+
+**Step 4**: use technology.
+
+Collected 120K ballots and scanned them. Adrian Forty, British fingerprint
+expert. Found amazing consistencies in the finger prints: 84,814 were
+duplicates. 460 were exactly the same.
+
+The Church-Turing These and You
+-------------------------------
+
+Turing machine: universal, general.
+
+Discrete physics vs. continuous physics.
+
+Girlgeek dinners
+----------------
+
+Place for women who work in IT to meet other women in IT. Often they're the
+only woman.
+
+PacINET 2010
+------------
+

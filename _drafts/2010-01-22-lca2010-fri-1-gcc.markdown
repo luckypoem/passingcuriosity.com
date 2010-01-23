@@ -1,0 +1,135 @@
+---
+layout : post
+---
+
+Structure
+---------
+
+1. Front end parses a particular source language. Generates trees and passes them to the middle end.
+
+2. middle end performs a bunch of optimisations (-O1 -O2 -O3 and the various
+other optimisations take place here) and transformations through a number of
+internal formats and generates RTL
+
+3. The back end takes RTL and uses it to generate assembler for the particular
+target architecture and operating system.
+
+History
+-------
+
+* 4.2 in 2007
+* 4.3 in 2008
+* 4.4 in 2009
+
+Every GCC release will include continuous improvements in:
+
+* language support (the committees are always making languages ever more
+complex).
+* infrastructure support .
+* improvement to optimisations and new optimisation passes.
+* generally a new processor and/or new architecture.
+* occasionally drop an architecture.
+* improved and extended warnings.
+* performance and robustness improvements for GCC itself.
+
+**License**
+
+GCC didn't have any of the discussions about moving to GPLv3 because it's
+owned by the FSF. 4.2 changed the license for everything but the run-time.
+
+Took a long time for the FSF/lawyers to come up with a run-time exception that
+would work properly. The run-time *needs* and exception and it can't be GPLv3:
+no-one will use it if compiling your program (and thus linking against the
+run-time) will make it GPL.
+
+GCC is no longer just a single program with magic things happening inside it.
+Link-time optimisation records information about the program which might allow
+someone to implement proprietary optimisations, etc. Plugins have a similar
+"objection".
+
+The new run-time exception prohibits some of this stuff (Oh noes! Someone who
+wants to sell their software!) so plugins and link-time optimisations are OK
+now.
+
+Non-static inline functions (spec?) vs static inline functions (gcc patch?)
+seemed to clash, but it's fixed now.
+
+Some sort of floating point arithmetic. 
+
+GCC 4.3 `varargs.h` has gone and code needs fixing to use the standard
+mechanism.
+
+**C++**
+
+4.3 and 4.4 introduced changes that affect source compatibility: lots of
+headers included other headers, etc. This is gone and you'll need to
+`#include` them yourself now.
+
+TR1 defined a bunch of supporty stuff which has gone into 4.2, 4.3 (and maybe
+4.4). Work on C++0x is going into 4.4 (but it's all experimental and will
+change to follow the standard).
+
+**Fortran**
+
+Unlike the rest of the compiler: it's *all* done by volunteers (who use it for
+their day jobs: designing jet engines, predicting weather, etc)
+
+Fortran 2003 and 2008 work is going on.
+
+**OpenMP**
+
+Open standard for parallel programming: puts directives into programs and adds
+a run-time to support it.
+
+GCC supports OpenMP directives in C, C++, and Fortran. Support for recent
+version going in on 4.3 and 4.4.
+
+**Infrastructure**
+
+GCC hackers did "data flow analysis" that was nothing like real, PLT data flow
+analysis. This annoyed people who know about it, so they pulled it out (of
+several different places in the compiler) and replaced it with a normal data
+flow analysis system.
+
+GCC 4.4 added graphite infrastructute. Uses polyhedral models to look at loops
+and uses this to do, ATM, three optimisations.
+
+**Improved Optimisations Passes**
+
+Alias, dead code elimination, dead store elimination, domination tree
+optimisations, inline, scalar replace, value range prop, vectorisation
+
+News: sign extension elimination, vector cost model, whole program structure
+reorganisation, etc. (in 4.3).
+
+Optimisation tradeoffs include a lot of considerations (and whether they are
+included in `-O1`, `-O2` and/or `-O3`). This includes both the effect on the
+generated code (performance, memory and code size, etc.) and the compile time
+effects (compile time and space requirements). Also the type of program for
+which the optimisations are useful (and whether they degrade certain others).
+
+Because something might expose user bugs doesn't keep it out. Alias analysis:
+a lot of programs stopped working, but it brings a lot of performance (and the
+spec says that it's undefined). But this broke heaps, so they added an option
+to turn it off and 
+
+Signed integer overflow: the spec says it's undefined so assume it doesn't
+happen. Added variable range analysis `for (i=1; i > 0; i *= 2)` assume that
+`*=` never overflows (as per spec) and transform it to `while (TRUE) ;`.
+
+What's Next?
+============
+
+GCC 4.5 will be released sometime (originally planned for last December).
+
+Will include new optimisations using graphite framework, named address spaces,
+accurate debug information for optimised code (will tell you something that
+make sense or tell you "sorry"), link-time optimisation (new front end:
+compile to O+LTO info -> LTO as another go through the compiler) and plugins
+(shared library built against a version of GCC, the API moves).
+
+gcc.gnu.org
+
+Slides have notes with lots of details.
+
+GCC summit

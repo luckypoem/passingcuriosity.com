@@ -1,0 +1,186 @@
+---
+layout     : post
+title      : 
+tags       : [lca2010, keynote]
+categories : [lca]
+location   : Wellington, New Zealand
+excerpt    : |
+  The second keynote at LCA 2010
+---
+
+The firsts session on Wednesday, the first day of the conference proper, was 
+[Benjamin Mako Hill][bmh]'s [keynote][talk]
+
+[bmh]: http://mako.cc/
+[talk]: http://www.lca2010.org.nz/programme/keynotes#BenjaminMakoHill
+
+Currently a student at MIT. Sociology of F/OSS communities. Involved in many
+F/OSS projects and free culture movement. Debian, Wikimedia Foundation board,
+board of direcorts of FSF. [Unhappy Birthday][uhb]
+
+[uhb]: http://unhappybirthday.com/
+
+Quick overview: frame discussion w/ Free Software vs Open Source debate (old
+issue, but hopes to bring something new); values vs. pragmatism split is valid
+(but there are ways they come together we don't often talk about);
+antifeatures (he made the work up; bunch of examples; what they are; why the
+exist); talk about freedom.
+
+The Debate
+==========
+
+In one corner the gnu head (representing Stallman, FSF). "Free software" is
+often [though] less about software and more about freedom. The
+media/technology that we have frames and constrains how and *what* and when we
+communicate. In so far as the tech controls my comm, whomever controls the
+tech can control our mediates and controls our experience of the world. Given
+this, users should control it. Freedom is a benefit in and of itself.
+
+And in the other corner Open Source (representing the new, business friendly
+pragmatic ideas). 
+
+The normal FSF response says this is bad: we're not talking about freedom any
+more.
+
+But this is something of a false dichotomy: pragmatic benefits really do matter. 
+
+FSF camp is right to worry about talking about reliability, featureful, blah,
+blah, blah. These descriptions are often inherently wrong (hardware support).
+
+Median number of contributors of median number contributors: 1, 95th
+percentile: 5. Commits: 0. Can't have mass collaboration with yourself.
+
+Antifeatures
+============
+
+Proprietary software: world of produces controlling users for profits. Needs
+and desires come after producers' profits.
+
+Full of features that users hate. They will, if possible, *pay* to have them
+removed. These aren't bugs or lacks: they are deliberately designed, put in
+place to screw people over.
+
+Part of freedom is that antifeatures are not possible: no-one chooses to be
+exploited.
+
+Fours groups based on why they exist:
+
+1. **Extracting money from users** (easy to understand to anyone who know how
+   the Mafia works). Need to pay to *not* by listed in the phone book. They
+   get paid for numbers by telemarkets; so they want their dollar from us.
+
+   Gator (spyware) was installed on 30M? 35M? computers, but no-one ever
+   remembered installing it. It shipped with other software: peer to peer,
+   Kazaa, DivX, etc. DivX had a premium version for $19.95 that *didn't* come
+   with the spyware.
+
+   Sony config: "no fresh start" / "fresh start" ($50). They'll charge you $50
+   to remove the trials, junkware, etc. They'll get $50 to install it or $50
+   from us to remove it.
+
+2. **Market segmentation** (or, less PC, "price discrimination"). Make people
+   who will pay more, pay more. 
+
+   Windows: NT Workstation 4.0 vs NT Server 4.0. "Two very diff prod intended
+   for two very diff ..." Server unlimited TCP/IP conns, ws only 10. Other
+   than this restriction, they were bit for bit identical. One single bit in
+   the registry was the sole difference. 
+
+   But that was '96, things are better now (6 versions of Vista). The main
+   difference between the 6 versions of Vista is the amount of memory it will
+   use. Arbitrary limit set by the software. There are people who're employed
+   to make sure your software doesn't work. Starter: a few GB, 250 GB, 3
+   running applications (w/ GUI). Enforcing this limit is not a trivial
+   problem: the goal is to make a version so bad that anyone who can afford it
+   will pay to get away from it.
+
+   Not limited to computer software: Canon G7 digital camera. G1-G6 could all
+   shoot RAW (weren't sure if it was amm, prosumer, etc.) Moved to G7: faster,
+   bigger processor, etc. but couldn't do RAW anymore: trying to push pros to
+   others. RAW is raw sensor data: making this into a JPEG is harder than not.
+   Have to pay more to make it *not* convert it to JPEG. Free Software project
+   to get access to the RAW.
+
+3. **Securing monopolies** Panasonic released a f/ware update to camera.
+   Stopped many cameras dead: they now check for a 3rd party battery. Printers
+   that detect 3rd party cartridge and switch from 1200 to 300 dpi; mobiles
+   that detect 3rd party batteries and turn off power saving. TI have $1.30
+   battery authentication chip: $1.30 of the $10 battery is to stop it from
+   working properly. Using SHA256 because SHA1 wasn't strong enough. This is
+   an arms raise aimed at us. We're entirely helpless.
+
+   Subscription based services: printers are designed to make it very hard not
+   to buy cartridges from *them*. Lots of effort to turn XBox - normal
+   computer - with large amount of effort to make sure it can't run Linux.
+   TiVo is built around software, with lots of effort to lock it down so you
+   can't stop paying the subscription.
+
+4. *"Protecting" copyrights* (From whom? From us). Sim City ask a question at
+   start up that you need the manual (dark red ink on dark red paper, can't be
+   copied).
+
+   Dongles. Everyone hates dongles. There's an industry making dongles, and
+   quite literally everyone hates them. But we pay for them. Computers a
+   perfect copying machines - in recent history they've spent a fortune trying
+   to break them.
+
+   DVD, CSS, watermarks, unskippable tracks.
+
+But there is hope
+=================
+
+The ability to modify software lets us remove things we don't want. To share
+lets us collaborate and work together. 
+
+Anti-features aren't possible because we just have not to do it.
+
+Three examples
+
+1. Mobile phones - most common computers, but least likely to work like a
+   computer. Lots come locked to a network to enforce the monopoly. We all
+   know, but put up with it. The crypographic systems that prevent us from
+   installing unapproved software. 
+
+   Even Android: two versions one locked down, one $226 more which is
+   unlocked. The extra money pays to *remove* a feature.
+
+   Most trust these devices entirely controlled by companies we hate and don't
+   trust.
+
+2. Network services. GitHub: more you pay, less antifeatures you get. Access
+   to code isn't the issue: it's autonomy. We're paying for the monitoring and
+   billing systems on top of the free software that provides almost the entire
+   system.
+
+   Gitorious doesn't do everything the GitHub does, but it *is* missing all
+   the antifeatures.
+
+3. DRM ("No one admitted") Major threat to F/OSS. "Mother of all
+   antifeatures". 10K people employed in DRM industry, making features that no
+   user wants. No-one has ever said "I'd like to do less with my music
+   collection, and I'm willing to pay for it."
+
+   Many music services services advertise/d things (DRM) that they *don't* do.
+   ITMS has the freedom tax (more for DRM free).
+
+Submit your antifeatures http://wiki.mako.cc/Antifeatures
+
+Questions
+=========
+
+There are an important set of conflicts on edge cases: subsidised stuff (cheap
+phones), DRM to prevent cheating on phones, etc. 
+
+How can we help fight this? What is "civil disobedience" in this arena? There
+are people (like us) who understand these issues, but the vast majority don't.
+We can talk about antifeatures as a way to educate people and advocate for
+autonomy and F/OSS. All we need to do is *not* do things to get compelling
+advantages over proprietary systems.
+
+Thinking about camera and phone batteries. With no restrictions, we might also
+have 1mAh batteries sold as 300mAh, or that dissolve your phone? But this
+stuff already happens and is already illegal. Consumer protection is awesome,
+and that's what we're really talking about. But we already answer these
+problems with food, etc. by not going to dodgy places. These arguments are
+almost always made by people who are making enormous amounts of money by
+"protecting" us.
