@@ -1,0 +1,56 @@
+---
+layout     : post
+title      : Aegir
+tags       : [drupalsouth, drupal, drush, export, features, modules]
+categories : [drupalsouth]
+location   : Wellington, New Zealand
+excerpt    : |
+  Dave Hall gave a session about Aegir, the hosting and deployment solution
+  for Drupla. 
+---
+
+Dave Hall IT consultant, F/OSS hacker, manage Drupal sites. One client has
+2100 sites (hosting 2150 Drupal sites). [Aegir][aegir] is the solution to
+having lots of sites.
+
+[aegir]: http://groups.drupal.org/aegir-hosting-system
+
+Enterprisey, automated, infrastructure, global, etc.
+
+Several components:
+
+* Hosting (the GUI front-end)
+* Eldir theme (for the Hosting frontend)
+* Provision (which interacts with Drush)
+* Hostmaster install profile
+* Drush with Drush make
+
+
+Important things: Sites, platforms, services (Apache, MySQL, DNS, etc.),
+Servers, system administrator.
+
+A platform is: Drupal core, some modules from contrib, themes, features,
+install profile all packaged together form a platform. Examples are pressflow,
+open atrium, managing news and, to a lesser extend, Acquia Drupal.
+
+(The big client uses a 3K LOC install profile to generate a site based on
+external data that gets pulled in.)
+
+Experimental modules (when they say experimental, they mean it!).
+
+Things you can manage:
+
+* Client : let clients provision new sites
+* Database server : supports multiple backends
+* Platform : supports multiple platforms
+* Site : 
+* Web Server : supports multiple web server boxes (all running Apache)
+
+Can upgrade 2100 sites in around 24 hours (for security updates, etc.)
+
+Downsides
+---------
+
+Started with 0.2-alpha or -beta because he had an enormous number of site to
+deploy. The developers are helpful and tell you which version to use. Also claim docs are good: don't believe them.
+
