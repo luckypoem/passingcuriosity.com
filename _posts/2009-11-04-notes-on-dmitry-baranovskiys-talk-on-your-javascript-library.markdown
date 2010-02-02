@@ -8,31 +8,31 @@ excerpt : |
 ---
 
 There are my notes from [Dmitry Baranovkiy][db]'s session called *Your
-JavaScript Library*. Dmitry is a JavaScript developer at
-[Atlassian][at], creator of [Raphaël][rph] and [gRaphaël][grph]
-JavaScript libraries.
+JavaScript Library*. Dmitry is a JavaScript developer at [Atlassian][at],
+creator of [Raphaël][rph] and [gRaphaël][grph] JavaScript libraries.
 
 [db]: http://dmitry.baranovskiy.com/
 [at]: http://atlassian.com/
 [rph]: http://raphaeljs.com/
 [grph]: http://g.raphaeljs.com/
 
-You can see the [slides on slideshare](http://www.slideshare.net/Dmitry.Baranovskiy/your-javascript-library).
+You can see the [slides on
+slideshare](http://www.slideshare.net/Dmitry.Baranovskiy/your-javascript-library).
 
 # Introduction #
 
-Unlike the server-side, you don't have a choice on client-end
-development: you pretty much *must* use JavaScript.
+Unlike the server-side, you don't have a choice on client-end development: you
+pretty much *must* use JavaScript.
 
-At Atlassian, they've got a number of products and have abstracted
-their own JavaScript library out of those code bases.
+At Atlassian, they've got a number of products and have abstracted their own
+JavaScript library out of those code bases.
 
 # Why should I write a library of my own? #
 
 Everyone has snippets of JS they use on every project (`trim`,
-`$`=`getElementById`). You build your little library of snippets, you
-share it with your colleagues and friends, etc. and eventually you've
-got a library project.
+`$`=`getElementById`). You build your little library of snippets, you share it
+with your colleagues and friends, etc. and eventually you've got a library
+project.
 
 Roughly divided into:
 
@@ -44,29 +44,27 @@ Roughly divided into:
 
 # API & Functionality #
 
-The API is more important than functionality. The Twitter
-functionality, for example, is primitive, while it's API is awesome.
+The API is more important than functionality. The Twitter functionality, for
+example, is primitive, while it's API is awesome.
 
 Spend 80% on API, 20% on functionality.
 
-Your library is the answer. What is the question? If your library is
-to be the "correct" answer, you'll need to know the question, back to
-front.
+Your library is the answer. What is the question? If your library is to be the
+"correct" answer, you'll need to know the question, back to front.
 
-Who is the target? Who will use the library and how? From, Java, Ruby,
-PHP, JavaScript? 
+Who is the target? Who will use the library and how? From, Java, Ruby, PHP,
+JavaScript?
 
 A good API looks as simple as the functionality it provides.
 
-JavaScript is your friend. Don't try to "fix" it (i.e. reimplement
-class-based OO).
+JavaScript is your friend. Don't try to "fix" it (i.e. reimplement class-based
+OO).
 
 # Performance #
 
 Performance of JavaScript is usually a bottleneck. It's a cause for
-complaints, no matter what, so make it as fast as possible. Develop
-and test on IE6, because it's going to be run their and it's very,
-very, slow.
+complaints, no matter what, so make it as fast as possible. Develop and test
+on IE6, because it's going to be run their and it's very, very, slow.
 
 Some tips:
 
@@ -156,10 +154,10 @@ wrapping functions (like `setAttribute`) with local wrapper functions,
 you can use a variable for the name and use subscripting to access the
 function:
 
-<code lang="javascript">
+{% highlight javascript %}
 var setAttribute = "setAttribute";
 element[setAttribut]("width", 320);
-</code>
+{% endhighlight %}
 
 # Error Handling #
 
