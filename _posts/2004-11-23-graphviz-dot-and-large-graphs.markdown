@@ -1,10 +1,12 @@
 --- 
-wordpress_id:  1380
-wordpress_url: http://passingcuriosity.com/2004/graphviz-dot-and-large-graphs/
-layout:        post
-title:         Graphviz, Dot and Large Graphs.
+layout   : post
+title    : Graphviz, Dot and Large Graphs
+tags     : [srp, logic, graph, visualisation]
+location : Canberra, Australia
 excerpt : |
   Notes on my graph visualisation project.
+wordpress_id:  1380
+wordpress_url: http://passingcuriosity.com/2004/graphviz-dot-and-large-graphs/
 ---
 
 Today I started looking at transforming the data dumped by the theorem
