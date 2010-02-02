@@ -2,6 +2,32 @@
 wordpress_id: 1675
 layout: post
 title: Transactional memory with data invariants (DRAFT)
+tags : [papers, cs, stm, haskell]
 wordpress_url: http://passingcuriosity.com/2006/transactional-memory-with-data-invariants-draft/
 ---
-<span class="title">Transactional memory with data invariants</span> <a href="http://research.microsoft.com/%7Etharris/drafts/2006-invariants-draft.pdf">(PDF)</a> by Tim Harris and Simon Peyton Jones. Draft, under submission.<br /><br />The authors present an extension to a <acronym>software transactional memory</acronym> system (GHC with STM support) which automatically checks programmer specified data invariants and rejects transactions which break them. They present a number of examples illustrating the power of the concept:<ul><li><strong>range-limited variables</strong> — variables the values of which cannot exceed a certain limit [at the end of a transaction, when the invariants are checked];</li><li><strong>sorted lists</strong> — a list of values that are maintained in ascending order specified as an invariant on individual nodes, or one whole lists; and</li><li><strong>invariants as guards</strong> — where invariants are used as guards on operations (and can block transactions, etc.).</li></ul>This is yet another <emph>really</emph> interesting paper about software transactional memory.<br /><br /><a href="http://del.icio.us/url/4afc4540957b04cf1de705ccc49770fe">Del.icio.us</a> | <a href="http://lambda-the-ultimate.org/node/1388">LtU</a><br /><br /><strong>[Edit: </strong><emph>The final version of the paper has been released and I have posted <a href="http://troacss.blogspot.com/2006/05/transactional-memory-with-data.html">my comments</a>.</emph><strong>]</strong>
+
+*Transactional memory with data invariants* ([PDF][pdf]) by Tim Harris and
+Simon Peyton Jones. Draft, under submission.
+
+[pdf]: http://research.microsoft.com/~tharris/drafts/2006-invariants-draft.pdf
+
+The authors present an extension to a *software transactional memory* system
+(GHC with STM support) which automatically checks programmer specified data
+invariants and rejects transactions which break them. They present a number of
+examples illustrating the power of the concept:
+
+* **range-limited variables** - variables the values of which cannot exceed a
+  certain limit [at the end of a transaction, when the invariants are
+  checked];
+
+* **sorted lists** - a list of values that are maintained in ascending order
+  specified as an invariant on individual nodes, or one whole lists; and
+
+* **invariants as guards** - where invariants are used as guards on operations
+  (and can block transactions, etc.)
+
+This is yet another really interesting paper about software transactional
+memory.
+
+[Edit: The final version of the paper has been released and I have posted [my
+comments](/2006/transactional-memory-with-data-invariants/)]
