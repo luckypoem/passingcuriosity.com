@@ -11,7 +11,8 @@ excerpt    : |
 
 The fifth talk at the [Open Programming Language Miniconf 2010][oplm2010] was
 [The State of Python][talk] by [Richard Jones][rj]. Richard presented a
-somewhat meandering collection of things that people should be aware of.
+somewhat meandering collection of things that people should be aware of in
+Python 3000 (the 3.x series).
 
 [oplm2010]: http://blogs.tucs.org.au/oplm/
 [talk]: http://blogs.tucs.org.au/oplm/programme/#python3
@@ -35,34 +36,36 @@ break the most code) include:
 
 * `print` and `exec` are now functions rather than part of the syntax.
 
+* A bunch of old built-ins have been pushed into the library or removed
+  completely.
+
 * More functions and methods in the standard library (`map`, for instance)
   were changed to return iterators rather than lists.
 
-* All text is now Unicode. As a result, many I/O operations have been changed
-  to return bytes rather than strings.
+* All text is now Unicode. As a result, many I/O operations that used to
+  return strings (when "string" meant "sequence of bytes") now return arrays
+  of bytes.
 
 * Exceptions raised while handling an exception will "know" the original
   exception. This makes it possible to write more useful top-level exception
-  handlers. 
+  handlers.
 
-* Still on exceptions, string exceptions are gone: they're all objects now.
+* Still on exceptions, string exceptions are gone: all exceptions are objects
+  now.
 
 * While we're thinking about objects (and classes): old-style classes are gone
-  completely. You no longer need to explicitly inherit from object. Hooray!
+  completely. There is no need to explicitly subclass `object` any more.
 
 * The standard library has been reorganised and a number of modules have been
   made compliant with [PEP8][pep8].
 
 [pep8]: http://www.python.org/dev/peps/pep-0008/
 
-* A bunch of old built-ins have been pushed into the library or removed
-  completely.
-
 
 Stuff in 2.6
 ------------
 
-`multiprocessing` for doing concurrent stuff with multiple processes.
+New `multiprocessing` for doing concurrent stuff with multiple processes.
 
 `io` and `json` were back-ported. `io` is the core of the I/O system in py3k,
 but it's just a library in 2.6
@@ -76,37 +79,45 @@ Octal and binary literals now have syntax: `0x21 == 17`, `0b1101 == 13`.
 Class decorators which can allow you to implement things like singleton
 patterns through a decorator.
 
-Added numbers, fractions, cmath, ssl modules. The `ssl` module forms the core
-of some of the new networking modules for things like SFTP.
+Added `numbers`, `fractions`, `cmath` and `ssl` modules. The `ssl` module
+forms the core of some of the new networking modules for things like SFTP.
+It's based on a C module that uses `libssl` and `libcrypto`, so it should also
+be good for embedding in, e.g., Apache processes.
 
-New toys in `math`, `functools`, `itertools`, `collections`. These include
-`NaN` and `inf` constants; `map`, `reduce`, etc; permutations, etc; abstract
-base classes for collection sets, named tuple, etc.
+The `math`, `functools`, `itertools` and `collections` modules all provide
+some new toys. These include `NaN` and `inf` constants; `map`, `reduce`, etc;
+`permutations`, etc; abstract base classes for collection sets, named tuple,
+etc.
 
 Stuff in 3.1
 ------------
 
 `python` can now execute packages (and zip files) making it easier to package
-and distribute
+and distribute.
 
-`unittest` supports skipping tests (things not to run on a platform, for
-example).
+The new version of `unittest` makes it possible to skip particular tests
+during a run (tests for another platform, for example).
 
-Representations of floating point numbers now find the shortest consistent
+Python now uses the shortest consistent representation of a floating point
+number it can find.
 
-`io` and `json` modules rewritten in C.
+The `io` and `json` modules have been rewritten in C and are much faster than
+in previous versions.
 
-`memoryview` object is a mutable byte array.
+The new `memoryview` class makes it possible to access regions of a programs
+address space as a mutable array of bytes.
 
-A standard ordered dictionary in the collections module.
+The `collections` module now contains an ordered dictionary data structure.
+Now all the projects that implement their own ordered dictionary will be able
+to deprecate them.
 
 Also: lots and lots and lots of bugs fixed.
 
 But is still breaks old code.
 
 When 2.7 is released (expected in June), the only differences with respect to
-py3k are syntactic (which can be enabled with `from __future__ import ...`).
-Aside from bug-fixes, 2.7 will be the last release in the 2.x series.
+py3k are syntactic (which can all be enabled with `from __future__ import
+...`). Aside from bug-fixes, 2.7 will be the last release in the 2.x series.
 
 Books
 -----
@@ -148,7 +159,8 @@ Py3k, a porting mailing list, and a useful archive of differences and
 resolutions.
 
 Less than 1% of packages on the PyPI explicitly list Py3k in their
-categorisation. The graph is linear-ish, though.
+categorisation (but we probably shouldn't expect them to, so it's not clear if
+this means anything). The graph is linear-ish, though.
 
 Tools
 -----
@@ -193,8 +205,8 @@ Community
 * There's a forum
 * PyPI comments
 
-And a [PyCon AU](http://au.pycon.org/) is definitely going to happen (probably
-in Sydney).
+And a [PyCon AU](http://au.pycon.org/) is definitely going to be held in
+Sydney some time during 2010.
 
 Cool Stuff
 ----------

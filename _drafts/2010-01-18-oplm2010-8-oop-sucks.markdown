@@ -4,6 +4,9 @@ title      : Notes on Object-Oriented Programming Sucks
 tags       : [lca2010, oplm2010, notes, perl, oo]
 categories : [lca]
 location   : Wellington, New Zealand
+excerpt    : |
+  The eighth session in the Open Programming Languages Miniconf was called
+  "Object-Oriented Programming Sucks".
 ---
 
 OOP sucks in pretty much every language. 

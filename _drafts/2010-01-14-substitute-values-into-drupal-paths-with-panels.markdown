@@ -18,7 +18,6 @@ terms of a hierarchical taxonomy. I choose to implement this as a
 2. a view to display the 
 
 {% highlight php %}
-
 /**
  * Find the path for the current panel with substitutions as in $args.
  *

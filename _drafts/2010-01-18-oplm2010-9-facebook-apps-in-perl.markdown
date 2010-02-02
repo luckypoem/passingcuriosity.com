@@ -46,7 +46,7 @@ http://developers.facebook.com is Facebook "development" for dummies.
 
 http://wiki.developers.facebook.com/ is the "real" documentation.
 
-http://facebook.com/developers/ is the application to have an applications.
+http://facebook.com/developers/ is the application to have an application.
 
 Settings
 --------

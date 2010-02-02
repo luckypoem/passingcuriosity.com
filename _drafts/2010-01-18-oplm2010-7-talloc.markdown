@@ -4,10 +4,26 @@ title      : "Talloc: Pick up your own garbage"
 tags       : [lca2010, oplm2010]
 categories : [lca]
 location   : Wellington, New Zealand
+excerpt    : |
+  The seventh talk at the Open Programming Languages Miniconf 2010 was an
+  introduction to Talloc -- a hierarchical memory allocator -- by Rusty
+  Russell.
 ---
 
-Talk about C. C is a language for certain tasks. If you use it for
-*everything*, you need to get out more.
+The seventh talk at the [Open Programming Languages Miniconf 2010][oplm2001]
+was an [introduction to Talloc][talk] -- a hierarchical memory allocator for C
+programs -- by [Rusty Russell][rr].
+
+[oplm2010]: http://blogs.tucs.org.au/oplm/
+[talk]: #talk
+[rr]: #rusty
+
+Before diving into the details of [Talloc][talloc] Rusty was at pains to point
+out that it's a library for C, that C is designed for certain tasks (pretty
+much exclusively low level), and that if you use C for *everything* you
+probably need to get out more.
+
+[talloc]: #
 
 The Shackles of Allocation
 --------------------------
