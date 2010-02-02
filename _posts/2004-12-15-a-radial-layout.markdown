@@ -1,7 +1,12 @@
 --- 
+layout   : post
+title    : A Radial Layout
+tags     : [srp, logic, graph, visualisation]
+location : Canberra, Australia
+excerpt  : |
+  My first approach at generating a radial layout of the graph data logged by
+  the theorem prover.
 wordpress_id: 1385
-layout: post
-title: A Radial Layout
 wordpress_url: http://passingcuriosity.com/2004/a-radial-layout/
 ---
 
