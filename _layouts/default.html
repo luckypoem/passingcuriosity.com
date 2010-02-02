@@ -29,14 +29,12 @@
 
    <!-- Homepage CSS -->
    <link rel="stylesheet" href="/files/css/screen.css">
-   <!--link rel="stylesheet" href="/files/css/blackout.css"-->
-
 </head>
 <body id="{{ page.section }}">
 <div id="site">
 
   {{ content }}
-  
+  {% include ad.html %}
   <footer>
 	<address>
 		<span class="copyright">
@@ -55,16 +53,7 @@
 	</address>
   </footer>
 </div>
-
-<!-- Google Analytics script goes here -->
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("UA-1171151-2");
-pageTracker._trackPageview();
-</script>
+{% include analytics.html %}
 <script type="text/javascript"
     src="http://www.internetblackout.com.au/ib/blackout.js"></script>
 <!--[if IE 6]>

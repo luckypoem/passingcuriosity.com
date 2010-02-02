@@ -22,12 +22,22 @@ feed    : /atom.xml
   </address>
 
   <footer>
-    {% if page.tags %}<span class="tags">This post has been about: 
+    {% if page.tags != empty %}<p class="tags">This post has been about: 
 	{% for tag in page.tags %}
         <a href="{{ site.tagspace }}{{ tag }}" rel="tag">{{ tag }}</a>{% if forloop.last %}.{% else %}, {% endif %}
-    {% endfor %}</span>{% endif %}
-  <p>Want to comment on this post? <a href="mailto:{{ site.email }}?subject={{ page.title | xml_escape }}">Contact me by email</a>
+    {% endfor %}</p>{% endif %}
+
+    <p>Want to comment on this post? <a href="mailto:{{ site.email }}?subject={{ page.title | xml_escape }}">Contact me by email</a>
   or on <a href="http://twitter.com/thsutton">Twitter</a>.</p>
+
+    <p>You might like to read more about (potentially) similar subjects in:
+    </p>
+    <ul>
+	{% for post in site.related_posts limit:5 %}
+	  <li><a href="{{post.url}}">{{ post.title }}</a></li>
+	{% endfor %}
+	</ul>
+
 
   </footer>
   </article>
