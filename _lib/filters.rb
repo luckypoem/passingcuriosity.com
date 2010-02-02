@@ -13,6 +13,18 @@ module PC
     def url_encode(input)
         CGI::escape(input)
     end
+
+    def frob_tags(tags)
+        tags.class.name
+    end
+
+    def item_names(hash)
+        list = []
+        hash.each do |k,v|
+            list << k
+        end
+        list
+    end
     
   end
 end
