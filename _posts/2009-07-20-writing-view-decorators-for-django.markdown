@@ -1,27 +1,39 @@
 --- 
+layout   : post
+title    : Writing view decorators for Django
+tags     : [django, python, decorators, code]
+location : Perth, Western Australia
+excerpt  : |
+  Using decorators to wrap and modify Django views is quick, easy, composable,
+  and just about the most awesome thing I've seen in a while. It also takes a
+  little bit of figuring out. Here's my explanation...
 wordpress_id: 1336
-layout: post
-title: Writing view decorators for Django
 wordpress_url: http://passingcuriosity.com/?p=1336
 ---
-Using decorators to wrap and modify Django views is quick, easy, composable, and just about the most awesome thing I've seen in a while. It also takes a little bit of figuring out. Here's my explaination...
 
-<!--more-->
+Using decorators to wrap and modify Django views is quick, easy, composable,
+and just about the most awesome thing I've seen in a while. It also takes a
+little bit of figuring out. Here's my explanation...
 
 More than just decoration
-=================
+=========================
 
 Using a decorator looks (in Python) like this:
 
-<pre lang="python">
+{% highlight python %}
 @a_decorator
 def a_function(an_arg):
     return "Functionate: %s!" % (an_arg)
-</pre>
+{% endhighlight %}
 
-Where `a_decorator` is some function or other which takes an argument (`a_function`, in this particular case) and returns a value. When Python loads a module containing this code it creates a new function `a_function` as normal, but then it calls `a_decorator` on it and binds the value it returns to the name `a_function` rather than the original function created from the definition. So how do we write these decorators? Just like a normal function!
+Where `a_decorator` is some function or other which takes an argument
+(`a_function`, in this particular case) and returns a value. When Python loads
+a module containing this code it creates a new function `a_function` as
+normal, but then it calls `a_decorator` on it and binds the value it returns
+to the name `a_function` rather than the original function created from the
+definition. So how do we write these decorators? Just like a normal function!
 
-<pre lang="python">
+{% highlight python %}
 def a_decorator(the_func):
     """
     Make another a function more beautiful.
@@ -29,11 +41,14 @@ def a_decorator(the_func):
     def _decorated(*args, **kwargs):
         return the_func(*args, **kwargs)
     return _decorated
-</pre>
+{% endhighlight %}
 
-But what about parameterised decorators? It's just a little more involved. Recall that you use a decorator like this: `@the_decorator`. It turns out that such decorator statements don't just *name* a decorator to be called, but can also call a function to return a decorator to be called:
+But what about parameterised decorators? It's just a little more involved.
+Recall that you use a decorator like this: `@the_decorator`. It turns out that
+such decorator statements don't just *name* a decorator to be called, but can
+also call a function to return a decorator to be called:
 
-<pre lang="python">
+{% highlight python %}
 def wrap_in_a(tag):
     """
     Wrap the result of a function in a `tag` HTML tag.
@@ -48,18 +63,24 @@ def wrap_in_a(tag):
 @login_required
 def my_name(request):
     return request.user.first_name
-</pre>
+{% endhighlight %}
 
-The first decorator statement `@wrap_in_a('div')` calls `wrap_in_a('div')` which returns a function (`_dec`). This function is then applied to the following definition (`@login_required` applied to `my_name`). Simple!
+The first decorator statement `@wrap_in_a('div')` calls `wrap_in_a('div')`
+which returns a function (`_dec`). This function is then applied to the
+following definition (`@login_required` applied to `my_name`). Simple!
 
-It's probably a good idea to add a few more bits and pieces to the function returned by a decorator (copying `__doc__` and `__dict__`, for instance), but that's the core of it.
+It's probably a good idea to add a few more bits and pieces to the function
+returned by a decorator (copying `__doc__` and `__dict__`, for instance), but
+that's the core of it.
 
 Using it in Django
-============
+==================
 
-So this is all pretty cool, but how do we use it in Django? We'll here's a `anonymous_required` decorator that you can use to redirect authenticated users to their home page if they try to login again:
+So this is all pretty cool, but how do we use it in Django? We'll here's a
+`anonymous_required` decorator that you can use to redirect authenticated
+users to their home page if they try to login again:
 
-<pre lang="python">
+{% highlight python %}
 def anonymous_required(function=None, home_url=None, redirect_field_name=None):
     """Check that the user is NOT logged in.
 
@@ -96,16 +117,19 @@ def anonymous_required(function=None, home_url=None, redirect_field_name=None):
         return _dec
     else:
         return _dec(function)
-</pre>
+{% endhighlight %}
 
-It's probably not very Django-ish, but you get the impression. Just use it like Django's built-in `login_required` decorator:
+It's probably not very Django-ish, but you get the impression. Just use it
+like Django's built-in `login_required` decorator:
 
-<pre lang="python">
+{% highlight python %}
 @anonynous_required
 def a_view(request):
     return HttpResponse("We are anonymous! We are legion!")
-</pre>
+{% endhighlight %}
 
 Comments and suggestions welcome!
 
-**Update:** Amended the example decorator above to work correctly as `@anonymous_required`, `@anonymous_required(...)` or `foo = anonymous_required(foo)`.
+**Update:** Amended the example decorator above to work correctly as
+`@anonymous_required`, `@anonymous_required(...)` or `foo =
+anonymous_required(foo)`.
