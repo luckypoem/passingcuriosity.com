@@ -38,7 +38,7 @@ img { -ms-interpolation-mode:bicubic; }
 
 /* IE6 ignores this and uses default size of 16pt */
 html>body { font-size:16px; }
-p { margin: 0 0 1.5em 0; text-align: justify; }
+ol,ul,p { margin: 0 0 1.5em 0; text-align: justify; }
 
 a:link { text-decoration: none; color: #339; }
 a:link:hover { text-decoration: underline; color: #33f; }
