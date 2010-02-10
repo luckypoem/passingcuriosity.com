@@ -11,6 +11,8 @@ completely breaking my Haskell environment. **I've managed to resolve all of
 the problems that I encountered and have noted the various solutions here. See
 the end of this post for notes.**
 
+Thanks to HowManyFiles you can now read a Japanese Translation:  [日本語訳](http://haskell.g.hatena.ne.jp/HowManyFiles/20100211).
+
 First, there's the matter of getting GHC to compile anything. The problem is
 that Snow Leopard, and all it's compilers, are now 64-bit by default. Alas,
 the code GHC generates on on Mac OS X is 32-bit and thus the assembler and
