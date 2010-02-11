@@ -2,15 +2,15 @@
 name        : Passing Curiosity
 tagline     : Just some stuff
 uri         : http://passingcuriosity.com
-tagspace    : http://delicious.com/tag/
+tagspace    : /tag/
 email       : comment@passingcuriosity.com
 lang        : en
 charset     : UTF-8
-destination : _site
+destination : public
 server_port : 4567
 auto        : false
 lsi         : false
 pygments    : true
 permalink   : /:year/:title/
 markdown    : rdiscount
-exclude     : [htdocs, jekyll, README.markdown, config.ru]
+exclude     : [public, tmp, README.markdown, config.ru]

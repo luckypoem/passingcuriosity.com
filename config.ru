@@ -1,3 +1,6 @@
-require "rack/jekyll"
+$:.unshift File.join(File.dirname(__FILE__), '_lib')
 
-run Rack::Jekyll.new
+require 'sinatra'
+require 'search/app'
+
+run Sinatra::Application

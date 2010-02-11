@@ -1,5 +1,7 @@
 htdocs
 _site
+public
+tmp
 .DS_Store
 ._*
 .*.swp
