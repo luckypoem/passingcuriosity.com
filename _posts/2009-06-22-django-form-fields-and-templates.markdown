@@ -37,18 +37,12 @@ The only way, as far as I (and [the replies on django-users@](http://groups.goog
 
 I can use the above filter to add a class to my form markup:
 
-{% highlight html+django %}
-    {% for field in form %}
-        {% if field.is_visible %}
+{% highlight django %}
             <div class="form-field form-{{ field|field_type }}">
                 {{ field.label_tag}}
                 {{ field.errors }}
                 {{ field }}
             </div>
-        {% else %}
-                {{ field }}
-        {% endif %}
-    {% endfor %}
 {% endhighlight %}
 
 Which I can then use in my CSS to style particular widgets without having to do them one-by-one using ID's:

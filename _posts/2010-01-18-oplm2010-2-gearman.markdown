@@ -4,7 +4,7 @@ title      : Notes on Introducing Gearman
 categories : [lca]
 tags       : [lca, oplm, lca2010, oplm2010, notes]
 location   : Wellington, New Zealand
-exception  : |
+excerpt    : |
   My notes on Giuseppe Maxia's talk at Open Programming Language Miniconf
   2010: Introducing Gearman -- Distributed server for all languages.
 ---

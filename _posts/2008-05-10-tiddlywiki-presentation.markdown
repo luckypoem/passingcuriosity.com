@@ -1,7 +1,9 @@
 --- 
+layout   : post
+title    : TiddlyWiki presentation
+tags     : [bcperth09]
+location : Perth, Western Australia
 wordpress_id: 6
-layout: post
-title: TiddlyWiki presentation
 wordpress_url: http://barcamp2.wordpress.com/?p=6
 ---
 By Kate Quinn.

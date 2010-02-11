@@ -1,7 +1,9 @@
 --- 
+layout   : post
+title    : Starting your own web-business
+tags     : [bcperth09]
+location : Perth, Western Australia
 wordpress_id: 5
-layout: post
-title: Starting your own web-business
 wordpress_url: http://barcamp2.wordpress.com/?p=5
 ---
 Talk by Paul Faix.

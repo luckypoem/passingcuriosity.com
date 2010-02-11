@@ -1,7 +1,9 @@
 --- 
+layout   : post
+title    : Notes on Perth Barcamp 3
+tags     : [bcperth09]
+location : Perth, Western Australia
 wordpress_id: 1307
-layout: post
-title: Notes on Perth Barcamp 3
 wordpress_url: http://passingcuriosity.com/?p=1307
 ---
 I'm currently at [Perth Barcamp 3](http://barcamp.port80.asn.au/Main/BarCamp3) waiting for things to kick off. During the course of the day, I'll be posting notes and links on the sessions I attend. 

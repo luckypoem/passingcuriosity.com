@@ -1,12 +1,17 @@
 --- 
+layout   : post
+title    : Notes on "Statecharts and Numbats"
+tags     : [bcperth09]
+location : Perth, Western Australia
 wordpress_id: 1312
-layout: post
-title: Notes on "Statecharts and Numbats"
 wordpress_url: http://passingcuriosity.com/?p=1312
 ---
-This post consists of my notes on the *Statecharts and Numbats* presentation by Harry McNally at *Perth Barcamp 3.0*. As Harry notes in his [comment](/2009/statecharts-and-numbats/#comment-144) below, his slides are available online: [slides for Statecharts and Numbats presentation](http://www.decisions-and-designs.com.au/harry/barcamp09.pdf).
 
-<!--more-->
+This post consists of my notes on the *Statecharts and Numbats* presentation
+by Harry McNally at *Perth Barcamp 3.0*. As Harry notes in his
+[comment](/2009/statecharts-and-numbats/#comment-144) below, his slides are
+available online: [slides for Statecharts and Numbats
+presentation](http://www.decisions-and-designs.com.au/harry/barcamp09.pdf).
 
 Motivation
 =======

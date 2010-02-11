@@ -1,7 +1,9 @@
 --- 
+layout   : post
+title    : Model View Controller
+tags     : [bcperth09]
+location : Perth, Western Australia
 wordpress_id: 9
-layout: post
-title: Model View Controller
 wordpress_url: http://barcamp2.wordpress.com/?p=9
 ---
 (In ASP.net)
@@ -14,7 +16,7 @@ Mark, Vinnie, Carmella.
 
 Carmella (the controller) recieves phone orders. Tells Mark (the model) to make it. He gives is to her and she passes it on to Vinnie (the view) to delivers it to the user.
 
-<h3>Details…</h3>
+<h3>DetailsÃ–</h3>
 
 Lots of rather thin metaphores for invariant interfaces allowing you to modify/replace specific components.
 

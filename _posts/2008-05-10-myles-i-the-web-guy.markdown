@@ -1,7 +1,9 @@
 --- 
+layout   : post
+title    : Myles-i the web guy
+tags     : [bcperth09]
+location : Perth, Western Australia
 wordpress_id: 1063
-layout: post
-title: Myles-i the web guy
 wordpress_url: http://barcamp2.wordpress.com/?p=10
 ---
 

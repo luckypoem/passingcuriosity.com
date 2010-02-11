@@ -200,7 +200,7 @@ ul.compact li a {
 /* @end */
 
 /* @group Header */
-header, header a { color: silver; }
+header, header a, header a:link { color: silver; }
 header .hover { color: transparent; }
 header:hover a { color: black; text-shadow: #aaa 2px 2px 3px;}
 header:hover a:hover { text-decoration: none; }
@@ -262,7 +262,8 @@ body#Play header a.play,
 body#Info header a.info,
 body#Code header a.code,
 body#Past header a.past,
-body#Kith header a.kith
+body#Kith header a.kith,
+body#Search header a.search
 { 
 	border-bottom: 2px solid silver; 
 }

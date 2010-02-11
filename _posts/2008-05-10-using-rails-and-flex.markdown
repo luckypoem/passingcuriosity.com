@@ -1,7 +1,9 @@
 --- 
+layout   : post
+title    : Using Rails and Flex
+tags     : [bcperth09]
+location : Perth, Western Australia
 wordpress_id: 3
-layout: post
-title: Using Rails and Flex
 wordpress_url: http://barcamp2.wordpress.com/?p=3
 ---
 

@@ -1,7 +1,9 @@
 --- 
+layout   : post
+title    : AWIA Edge of the Web
+tags     : [bcperth09]
+location : Perth, Western Australia
 wordpress_id: 7
-layout: post
-title: AWIA Edge of the Web
 wordpress_url: http://barcamp2.wordpress.com/?p=7
 ---
 Myles is talking about BarCamp2, it's an AWIA thingy, just like port80, barcamps, blog awards.
