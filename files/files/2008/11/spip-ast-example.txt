@@ -1,0 +1,96 @@
+Champ Object
+(
+    [type] => champ
+    [nom_champ] => NOW
+    [nom_boucle] => 
+    [avant] => Array
+        (
+            [0] => Texte Object
+                (
+                    [type] => texte
+                    [texte] => before 
+                    [avant] => 
+                    [apres] => 
+                    [ligne] => 1
+                )
+
+        )
+
+    [apres] => Array
+        (
+            [0] => Texte Object
+                (
+                    [type] => texte
+                    [texte] =>  after
+                    [avant] => 
+                    [apres] => 
+                    [ligne] => 1
+                )
+
+        )
+
+    [etoile] => 
+    [param] => Array
+        (
+            [0] => Array
+                (
+                    [0] => 
+                    [1] => Array
+                        (
+                            [0] => Texte Object
+                                (
+                                    [type] => texte
+                                    [texte] => arg1
+                                    [avant] => 
+                                    [apres] => 
+                                    [ligne] => 0
+                                )
+
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [0] => strtoupper
+                )
+
+        )
+
+    [fonctions] => Array
+        (
+            [0] => Array
+                (
+                    [0] => 
+                    [1] => {arg1}
+                )
+
+            [1] => Array
+                (
+                    [0] => strtoupper
+                    [1] => 
+                )
+
+        )
+
+    [id_boucle] => 
+    [boucles] => Array
+        (
+        )
+
+    [type_requete] => 
+    [code] => 
+    [interdire_scripts] => 1
+    [descr] => Array
+        (
+            [nom] => html_bb944316b7140316933cfaddc09c8e1e
+            [sourcefile] => dist/sommaire.html
+            [squelette] => 	[before (#NOW{arg1}|strtoupper) after]
+
+            [id_mere] => 
+            [niv] => 1
+        )
+
+    [ligne] => 1
+)
+

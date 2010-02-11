@@ -15,7 +15,7 @@ regularity on the Haskell mailing lists, and that if I don't write it down,
 I'm liable to forget, this post will describe accessing SQL databases
 using the `HSQL` package and one or more of its driver packages.
 
-This post is literate Haskell ([download the original](/wp-content/uploads/2008/12/using-hsql.lhs)) and was tested with GHC 6.10.1.
+This post is literate Haskell ([download the original](/files/files/2008/12/using-hsql.lhs)) and was tested with GHC 6.10.1.
 
 <!--more-->
 
@@ -191,7 +191,7 @@ If you run into trouble getting this to work, try the following links, or leave 
 * [Real World Haskell chapter on databases](http://book.realworldhaskell.org/read/using-databases.html) (suggested by alexeyr on [reddit](http://www.reddit.com/r/haskell/comments/7imga/accessing_sql_databases_with_haskell/))
 
 
-[pc-installing]: http://passingcuriosity.com/index.php/2008-12/installing-hsql-hdbc-ghc-6-10-1/
+[pc-installing]: /2008/installing-hsql-hdbc-ghc-6-10-1/
 [bb-CRUD]:  http://berlinbrowndev.blogspot.com/2008/02/haskell-snippet-crud-operations-with.html
 [sqlite-docs]: http://www.sqlite.org/docs.html
 [hsql-docs]: http://hackage.haskell.org/packages/archive/hsql/1.7/doc/html/Database-HSQL.html "HSQL documentation on Hackage"

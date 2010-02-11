@@ -22,8 +22,9 @@ The enabled binding expects its bound value to be a boolean: a widget is either 
 
 To solve our problem then, we should bind "Enabled" for the "open employee window" button to "People.selection.@count". Now the button should be disabled when no people are selected and enabled when there are people are selected.
 
-<img src="http://passingcuriosity.com/wp-content/uploads/2008/07/no-selection-disabled.png" alt="Button disabled with no selection" title="Button disabled with no selection" width="500" height="225" class="aligncenter size-full wp-image-11" />
+<img src="/files/files/2008/07/no-selection-disabled.png" alt="Button disabled with no selection" title="Button disabled with no selection" width="500" height="225" class="aligncenter size-full wp-image-11" />
 
-<img src="http://passingcuriosity.com/wp-content/uploads/2008/07/selection-enabled.png" alt="Button enabled with selection" title="Button enabled with selection" width="500" height="225" class="aligncenter size-ful wp-image-12" />
+<img src="/files/files/2008/07/selection-enabled.png" alt="Button enabled with selection" title="Button enabled with selection" width="500" height="225" class="aligncenter size-ful wp-image-12" />
 
-Alas, the rest of the set and array operators (`@sum`, etc.) don't seem to work. See more on this problem in [Computed Attributes in Core Data, How?](/index.php/2008-07/computed-properties-with-core-data) and one (not entirely pleasing) solution in [Emulating Operators for Core Data](/index.php/2008-07/emulating-operators-for-core-data).
+Alas, the rest of the set and array operators (`@sum`, etc.) don't seem to work. See more on this problem in [Computed Attributes in Core Data,
+How?](/2008/computed-attributes-in-core-data-how/)and one (not entirely pleasing) solution in [Emulating Operators for Core Data](/2008/emulating-operators-for-core-data/).

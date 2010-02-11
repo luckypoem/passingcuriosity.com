@@ -6,7 +6,7 @@ wordpress_url: http://passingcuriosity.com/?p=249
 ---
 The SPIP template language has two constructions: loops (which determine the objects to be "output") and tags (which actually output particular values). The reasonably simple syntax of tags -- most look like ''#THE_TAG'' -- belies their power and flexibility and the ease with which we can use them to extend SPIP with additional features and integrate it with other PHP-based packages.
 
-In this post, I'll describe how to create your own static SPIP tags. In a future post, I'll cover dynamic tags, and how to package your tags (and other code) as a plug-in. Before reading this post, you should be familiar with [SPIP](http://www.spip.net/) and it's [template language](/index.php/2008-07/spip-template-languag/), and with programming in PHP.
+In this post, I'll describe how to create your own static SPIP tags. In a future post, I'll cover dynamic tags, and how to package your tags (and other code) as a plug-in. Before reading this post, you should be familiar with [SPIP](http://www.spip.net/) and it's [template language](/2008/spip-template-languag/), and with programming in PHP.
 
 <!--more-->
 
@@ -56,7 +56,7 @@ There a numerous fields in the `Champ` object (the class is defined in [`ecrire/
 
 <pre lang="spip">[before (#HELLO_WORLD{arg1}|strtoupper) after]</pre>
 
-might result in the following AST being passed to `balise_HELLO_WORLD` above ([download the full SPIP AST](http://passingcuriosity.com/wp-content/uploads/2008/11/spip-ast-example.txt)):
+might result in the following AST being passed to `balise_HELLO_WORLD` above ([download the full SPIP AST](/files/files/2008/11/spip-ast-example.txt)):
 
     type => "champ"
     nom_champ => "HELLO_WORLD"
