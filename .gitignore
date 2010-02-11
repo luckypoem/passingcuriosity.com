@@ -1,7 +1,8 @@
 htdocs
-_site
 public
 tmp
+_site
+_index
 .DS_Store
 ._*
 .*.swp
