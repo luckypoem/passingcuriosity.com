@@ -2,7 +2,7 @@
 <html lang="{{ site.lang }}">
 <head>
     <meta charset="{{ site.charset }}">
-    <title>{{ page.title }} &larr; {{ page.top }}</title>
+    <title>{% if page.title %}{{ page.title }} &larr; {% endif %}{{ page.top }}</title>
     <meta name="author" content="Thomas Sutton">
 
     <link rel="start" href="/">
