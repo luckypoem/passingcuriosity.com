@@ -1,0 +1,18 @@
+---
+layout   : post
+title    : Explaining my "Science: it works bitches" t-shirt
+tags     : [science, tshirt, education, outreach, cosmology, physics]
+location : Perth, Western Australia
+---
+
+I love [xkcd][xkcd] and late last year I finally got around to ordering a few
+of Randall's excellent t-shirts and posters. My favourite is [Science: it 
+works, bitches][siwb]. On the front is the catchy slogan ("Science: it works
+bitches", for those who're a bit slow on the uptake) and on the back is one of
+the most compelling graphs in the history of science.
+
+http://en.wikipedia.org/wiki/COBE
+http://en.wikipedia.org/wiki/Cosmic_microwave_background_radiation
+
+[xkcd]: http://xkcd.com/ "xkcd: a webcomic of romance, sarcasm, math, and language"
+[siwb]: http://store.xkcd.com/xkcd/#Science
