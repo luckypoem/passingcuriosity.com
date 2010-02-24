@@ -1,33 +1,40 @@
 --- 
 wordpress_id: 450
-layout: post
-title: Hierarchical Rights in Drupal
 wordpress_url: http://passingcuriosity.com/?p=450
+layout   : post
+title    : Hierarchical Rights in Drupal
+tags     : [drupal, authorisation, permissions, ideas]
+location : Perth, Western Australia
+excerpt  : |
+  There's been a bit of noise about alternatives to the rather limited 
+  permissions system in Drupal. Here are a few of my thoughts about one 
+  proposal.
 ---
+
 I discovered a blog post called [More flexible rights
 management?](http://www.garfieldtech.com/blog/hierarchical-acls) by Larry
-Garfield at some point over the last three days (that being how long Safari has been running). Having a few thoughts about it and
-a pressing need to write a blog post for today, I'll get them down "on paper"
-and call it a job done. Larry references Markus Wolff and his description (in
-a post called [A pragmatic approach to rights
+Garfield at some point over the last three days (that being how long Safari
+has been running). Having a few thoughts about it and a pressing need to write
+a blog post for today, I'll get them down "on paper" and call it a job done.
+Larry references Markus Wolff and his description (in a post called [A
+pragmatic approach to rights
 management](http://blog.wolff-hamburg.de/archives/25-A-pragmatic-approach-to-rights-management.html))
 of an permissions management system. Markus' system (he in turn references a
 former boss, but I shall ascribe it to him anyway) looks like this:
 
-<!--more-->
-
 * Rights are denoted by dot-separated, reverse hierarchical names (e.g:
   ''Application.Component.Subcomponent.Right'').
+
 * Permissions can specify rights with wild-cards (e.g. ''Application.*'').
+
 * Rights can also be negated (e.g. ''-Application.Shutdown'').
 
 Thus a user who can do anything *except* shut the application down might have
 a permissions list like:
 
-<pre lang="php">
-    <?php
+{% highlight php %}
     $user->perm = array("Application.*", "-Application.Shutdown");
-</pre>
+{% endhighlight %}
 
 As such schemes go this one is adequate, but as a replacement for Drupal's
 current system it's not that crash hot. In fact, all it brings to the table is
@@ -67,4 +74,3 @@ would be more complex. It would make core more powerful, but it wouldn't
 obviate the need for third-party modules to augment or replace the system when
 it can't implement a required policy. In fact it's a stupid idea, so forget
 about it and lets all just pretend that I didn't say anything.
-
