@@ -1,9 +1,0 @@
-
-1. Use git (or svn, mercurial, etc.) from the start.
-3. Never, ever, ever use an app name twice. Do not be tempted to create your own "auth" app (with extensions, etc.) if you're going to be using django.contrib.auth. All you'll do is cause yourself pain.
-4. Use a single platform for development and testing. Nothing is more annoying than replacing code that works in Python 2.6 on your Mac, but not in Python 2.5 on your Debian server.
-6. There is nothing more painful than trying to modify your schema. Use South
-5. Deploy only complete finished apps.
-2. Making your apps reusable is no harder than not bothering, and makes them easier as well.
-
-1. Any forms, models, or views module with more than one form,model,view and more than a screen of code can be split out into sub-modules.
