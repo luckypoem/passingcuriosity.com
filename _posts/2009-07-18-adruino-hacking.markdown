@@ -5,6 +5,8 @@ layout     : post
 title      : Notes on "Adruino hacking"
 categories : [barcamp]
 location   : Perth, Western Australia
+excerpt    : |
+  Notes from a session on Arduino hacking are Barcamp Perth.
 ---
 
 [Trent "lathiat" Lloyd](http://lathiat.net/) (MySQL support engineer, Linux guy, avahi developer) talking about embedded hardware with [Arduino](http://arduino.cc/).

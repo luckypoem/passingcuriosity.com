@@ -6,6 +6,8 @@ title      : Using Rails and Flex
 tags       : [bcperth09]
 categories : [barcamp]
 location   : Perth, Western Australia
+excerpt    : |
+  Notes from a talk on Using Rails and Flex at Barcamp Perth 2009.
 ---
 
 Short talk about using Flex (the *other* way to create .swf, aimed explicitly

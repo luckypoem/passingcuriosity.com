@@ -6,6 +6,9 @@ title      : Myles-i the web guy
 tags       : [bcperth09]
 categories : [barcamp]
 location   : Perth, Western Australia
+excerpt    : |
+  Notes from a question and answer session with Myles Eftos at Barcamp Perth
+  3.0.
 ---
 
 ### The Questions

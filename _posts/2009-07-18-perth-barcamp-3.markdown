@@ -6,6 +6,8 @@ title      : Notes on Perth Barcamp 3
 tags       : [bcperth09]
 categories : [barcamp]
 location   : Perth, Western Australia
+excerpt    : |
+  Some notes about Barcamp Perth 3.0.
 ---
 
 I'm currently at [Perth Barcamp 3](http://barcamp.port80.asn.au/Main/BarCamp3) waiting for things to kick off. During the course of the day, I'll be posting notes and links on the sessions I attend. 

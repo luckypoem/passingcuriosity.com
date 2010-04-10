@@ -4,7 +4,6 @@ wordpress_url: http://passingcuriosity.com/2008/live-blog-barcamp2/
 layout     : post
 title      : Live blogging BarCamp2
 tags       : [bcperth09]
-categories : [barcamp]
 location   : Perth, Western Australia
 ---
 

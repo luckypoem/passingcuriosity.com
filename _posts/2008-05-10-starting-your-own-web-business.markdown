@@ -6,6 +6,9 @@ title      : Starting your own web-business
 tags       : [bcperth09]
 categories : [barcamp]
 location   : Perth, Western Australia
+excerpt    : |
+  Notes from a Barcamp Perth 3.0 talk on starting your own web business by
+  Paul Faix. 
 ---
 
 Talk by Paul Faix.

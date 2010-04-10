@@ -6,6 +6,8 @@ title      : Model View Controller
 tags       : [bcperth09]
 categories : [barcamp]
 location   : Perth, Western Australia
+excerpt    : |
+  Some notes from a Barcamp talk about Model-View-Controller in ASP.Net.
 ---
 
 (In ASP.net)

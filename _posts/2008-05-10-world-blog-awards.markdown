@@ -6,6 +6,9 @@ title      : World Blog Awards
 tags       : [bcperth09]
 categories : [barcamp]
 location   : Perth, Western Australia
+excerpt    : |
+  Notes from an announcement at Barcamp Perth 2009 about the "World Blog
+  Awards".
 ---
 
 Talk about the "World Blog Awards", a blog awards event to be held in Perth,
