@@ -1,9 +1,10 @@
 --- 
 wordpress_id: 2038
-layout: post
-title: UML Statecharts meeting in Perth
 wordpress_url: http://passingcuriosity.com/?p=2038
+layout     : post
+title      : UML Statecharts meeting in Perth
 ---
+
 Last night I went to my second (or third, does the first "yes, we should" meeting count?) meeting of the [Perth UML State Charts reading group][1]. Curtin University is a bit of a trek for me (two busses out and three busses back; each trip takes around an hour), but at least I didn't wind up walking after getting off half way there! Unlike the first meeting (which was primarily about the book), we spent most of *this* meeting talking about projects and interesting things that we've seen around. What follows is in no particular order, and just a taste of the discussions (hooray for a poor memory).
 
 I'd just installed the [Arduino][2], so I got that up on the projector for those who hadn't seen it before and talked a little bit about the goals of the Arduino project and how that has affected the implementation. Talking about the libraries and the "shield" approach helped solidify it in my mind a little and it's an interesting approach to this sort of development that seems new to some of the others (who're familiar with *real* embedded development). I also explained a few things about Haskell and the approach (as I understand it; i.e. "poorly") used in the [atom][3] library. I'm planning to have some more to say (*show*!) about using Haskell to implement hierarchical state-machines next fortnight.

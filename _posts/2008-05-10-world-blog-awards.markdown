@@ -1,10 +1,11 @@
 --- 
-layout   : post
-title    : World Blog Awards
-tags     : [bcperth09]
-location : Perth, Western Australia
 wordpress_id: 4
 wordpress_url: http://barcamp2.wordpress.com/?p=4
+layout     : post
+title      : World Blog Awards
+tags       : [bcperth09]
+categories : [barcamp]
+location   : Perth, Western Australia
 ---
 
 Talk about the "World Blog Awards", a blog awards event to be held in Perth,

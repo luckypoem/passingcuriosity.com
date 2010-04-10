@@ -1,11 +1,13 @@
 --- 
-layout   : post
-title    : Starting your own web-business
-tags     : [bcperth09]
-location : Perth, Western Australia
 wordpress_id: 5
 wordpress_url: http://barcamp2.wordpress.com/?p=5
+layout     : post
+title      : Starting your own web-business
+tags       : [bcperth09]
+categories : [barcamp]
+location   : Perth, Western Australia
 ---
+
 Talk by Paul Faix.
 
 Biggest things at the start: confidence that you can deliver on your promises, and marketing; both are a problem as a one-man-band just getting starting.

@@ -1,9 +1,12 @@
 --- 
 wordpress_id: 1318
-layout: post
-title: Notes on "Adruino hacking"
 wordpress_url: http://passingcuriosity.com/?p=1318
+layout     : post
+title      : Notes on "Adruino hacking"
+categories : [barcamp]
+location   : Perth, Western Australia
 ---
+
 [Trent "lathiat" Lloyd](http://lathiat.net/) (MySQL support engineer, Linux guy, avahi developer) talking about embedded hardware with [Arduino](http://arduino.cc/).
 
 <!--more-->

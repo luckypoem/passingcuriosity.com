@@ -1,11 +1,13 @@
 --- 
-layout   : post
-title    : Model View Controller
-tags     : [bcperth09]
-location : Perth, Western Australia
 wordpress_id: 9
 wordpress_url: http://barcamp2.wordpress.com/?p=9
+layout     : post
+title      : Model View Controller
+tags       : [bcperth09]
+categories : [barcamp]
+location   : Perth, Western Australia
 ---
+
 (In ASP.net)
 
 Separation of concerns. Model does data stuff. View is presentation. Controller plumbs data from the models and views.

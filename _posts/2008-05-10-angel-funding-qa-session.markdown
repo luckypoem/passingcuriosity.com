@@ -1,13 +1,14 @@
 --- 
-layout   : post
-title    : Angel Funding Q & A session
-tags     : [bcperth09]
-location : Perth, Western Australia
-excerpt  : |
-  Some questions and answers about angel funding and venture capital for web
-  projects and about Silicon Valley.
 wordpress_id: 8
 wordpress_url: http://barcamp2.wordpress.com/?p=8
+layout     : post
+title      : Angel Funding Q & A session
+categories : [barcamp]
+tags       : [bcperth09, bcperth3]
+location   : Perth, Western Australia
+excerpt    : |
+  Some questions and answers about angel funding and venture capital for web
+  projects and about Silicon Valley.
 ---
 
 By Clay...? (raised ~1.6M, then ~1.2M) and Richard Giles (raised 250K).

@@ -1,10 +1,11 @@
 --- 
-layout   : post
-title    : Notes on "Statecharts and Numbats"
-tags     : [bcperth09]
-location : Perth, Western Australia
 wordpress_id: 1312
 wordpress_url: http://passingcuriosity.com/?p=1312
+layout     : post
+title      : Notes on "Statecharts and Numbats"
+tags       : [bcperth09]
+categories : [barcamp]
+location   : Perth, Western Australia
 ---
 
 This post consists of my notes on the *Statecharts and Numbats* presentation

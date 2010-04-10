@@ -1,10 +1,11 @@
 --- 
-layout   : post
-title    : Using Rails and Flex
-tags     : [bcperth09]
-location : Perth, Western Australia
 wordpress_id: 3
 wordpress_url: http://barcamp2.wordpress.com/?p=3
+layout     : post
+title      : Using Rails and Flex
+tags       : [bcperth09]
+categories : [barcamp]
+location   : Perth, Western Australia
 ---
 
 Short talk about using Flex (the *other* way to create .swf, aimed explicitly
