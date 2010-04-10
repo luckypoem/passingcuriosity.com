@@ -72,7 +72,7 @@ function balise_HELLO_WORLD($p) {
     $p->code = "'Hello World!'";
     return $p;
 }
-{% endhighlight $}
+{% endhighlight %}
 
 As you can see there are a few more details than just the name, namely, this
 `$p` thing. The parameter to the function implementing the tag is a reference
