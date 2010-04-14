@@ -46,6 +46,9 @@ past self if I could.
    make sure that you set `Meta.app_label` on the models and import them all
    where Django expects to find them.
 
+8. Conventions are cool and you should follow them. In particular, try to 
+   write code like that found in `django.contrib`.
+
 I'm sure there are many more things that I've missed, but I'm still just a
 novice at Django (as with everything else I do). If you want to suggest away,
 see the contact details below.
