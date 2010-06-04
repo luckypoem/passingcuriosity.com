@@ -14,7 +14,10 @@ standards; and beverages containing either alcohol or caffeine (but not both).
 I blog here at [Passing Curiosity][pc], I post photographs at [Flickr][fl] and
 tweets (we're still calling them "tweets" aren't we?) at [Twitter][tw]. I use
 [Delicious][dl] to bookmark pages I'll want to see later and [GitHub][gh] to
-store my Git repository.
+store my Git repository. I've recently begun learning Japanese and am
+documenting my progress at [Learning 日本語](http://www.learning日本語.com/) (or, if
+your browser doesn't support IDN,
+[http://xn--learning-y73g0hognl.com](http://xn--learning-y73g0hognl.com)).
 
 Once in a blue moon I visit [Reddit][rd], [Digg][di], and [Hacker News][hn]. I
 rarely use [LinkedIn][li] and will close my [Facebook][fb] account one of
