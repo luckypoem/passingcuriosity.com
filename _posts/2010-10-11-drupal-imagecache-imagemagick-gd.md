@@ -43,6 +43,7 @@ Thankfully, there's an easy fix: when you update `$image`, make sure you
 update everything that needs fixing. Here's the amended code:
 
 {% highlight php %}
+<?php
 // "Thumbnail" the image
 $width = 600;
 if (!_imageapi_imagemagick_convert($image->source, $image->source.'.png', array(0 => '-thumbnail '.$width))) return FALSE;
@@ -66,6 +67,7 @@ $image->info = array(
 file_delete($image->source.'.png');
 
 return $image;
+?>
 {% endhighlight %}
 
 Make sure that you've enabled the ImageMagick toolkit, drop this code in a
