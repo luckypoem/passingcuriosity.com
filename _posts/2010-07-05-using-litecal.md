@@ -1,4 +1,5 @@
 ---
+layout   : post
 title    : Using Litecal
 category : [drupal]
 tags     : [drupal, views, date, calendar]
