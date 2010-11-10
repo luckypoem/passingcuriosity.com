@@ -74,7 +74,7 @@ wrong when I though that filters weren't to blame: [Microsoft's
 being displayed not the stylesheet it is defined in (unlike every other
 reference to an external resource in a stylesheet). One such error might not
 be a problem: a silly, preventable mistake, but not critical (beyond the
-resource not being loaded and used). A dozen means that IE stalls for
+resource not being loaded and used). A dozen means that IE stalls for 
 `12 URLs / 2 connections * load time` which can be ages if your slowish CMS 
 is serving the 404 pages.
 
@@ -83,7 +83,7 @@ afraid) and the load time dropped by some 20 seconds. Job done.
 
 All that yellow looked a bit dodgy though, so I kept going. Most of that is
 indicating requests that could have been cached on the client but weren't
-because of configuration issues. I added some [`ExpiresDefault'][ed] server
+because of configuration issues. I added some [`ExpiresDefault`][ed] server
 directives and pretty much all that yellow went away:
 
 ![A much faster site!](/files/files/2010/11/ie-performance-finish.png)
