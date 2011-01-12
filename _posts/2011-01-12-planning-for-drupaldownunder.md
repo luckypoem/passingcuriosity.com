@@ -1,4 +1,4 @@
-----
+---
 layout      : post
 title       : Planning for DrupalDownunder
 categories  : [drupal, ddu2011]
@@ -8,7 +8,7 @@ excerpt     : |
   I'm off to Brisbane later this month for DrupalDownunder (and LCA). This is 
   a quick overview of the things I'm looking forward to.
 
-----
+---
 
 While Brisbane and Queensland are in the grip of some fairly serious flooding
 (please consider donating to the [Queensland state government relief
