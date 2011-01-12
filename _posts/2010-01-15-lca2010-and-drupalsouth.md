@@ -1,7 +1,7 @@
 ---
 layout    : post
 title     : In Wellington for LCA2010 and DrupalSouth
-categories: [lca, lca2010, drupal]
+categories: [lca, drupalsouth, lca2010, drupal]
 tags      : [lca2010, drupalsouth, travel]
 location  : Perth, Western Australia
 ---
