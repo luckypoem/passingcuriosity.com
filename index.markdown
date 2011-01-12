@@ -26,8 +26,10 @@ This site currently plays host to my blog. Over the years I've
 maintained a few and almost everything I posted to any of them can be
 found here. 
 
-You might like to view my [Linux.conf.au](/lca/), [Drupal](/drupal/),
-[Barcamp](/barcamp/) or [SPIP](/spip) posts.
+You might like to view my [Drupal](/drupal/), [Barcamp](/barcamp/) or
+[SPIP](/spip/) posts. You can also view posts related to various
+[Conferences](/conferences/) including [linux.conf.au
+2011](/conferences/lca2011/) and [DrupalDownunder 2011](/conferences/ddu2011/).
 
 The most recent posts are:
 
