@@ -43,11 +43,6 @@ Git](http://drupaldownunder.org/session/keynote-goodbye-centralization-hello-dis
 is an introduction to git (which I already use and am relatively familiar
 with).
 
-4. [Using Drupal for Corporate
-Intranets](http://drupaldownunder.org/session/using-drupal-corporate-intranets)
-by [Brian Gilbert][brian-gilbert] will be interesting, especially combined
-with John Zornig's talk on document management the next morning.
-
 5. Given the number of times I've been asked about options for paid
 membership, the [Paid Membership
 Sites](http://drupaldownunder.org/session/paid-membership-sites) session by
