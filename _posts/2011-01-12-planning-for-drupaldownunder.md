@@ -37,15 +37,16 @@ keynote and sounds interesting enough, if not quite my cup of tea.
 again, help in my quest for standardisation and automation to simplify
 workflows.
 
-4. [Using Drupal for Corporate
-Intranets](http://drupaldownunder.org/session/using-drupal-corporate-intranets)
-by [Brian Gilbert][brian-gilbert] will be interesting, especially combined
-with John Zornig's talk on document management the next morning. This choice
-was made easier by the impression that [Josh Waihi][josh-waihi]'s keynote
-[Goodbye Centralization, Hello Distribution: An Introduction to
+4. [Josh Waihi][josh-waihi]'s keynote [Goodbye Centralization, Hello
+Distribution: An Introduction to
 Git](http://drupaldownunder.org/session/keynote-goodbye-centralization-hello-distribution-introduction-git),
 is an introduction to git (which I already use and am relatively familiar
 with).
+
+4. [Using Drupal for Corporate
+Intranets](http://drupaldownunder.org/session/using-drupal-corporate-intranets)
+by [Brian Gilbert][brian-gilbert] will be interesting, especially combined
+with John Zornig's talk on document management the next morning.
 
 5. Given the number of times I've been asked about options for paid
 membership, the [Paid Membership
