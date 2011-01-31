@@ -21,38 +21,39 @@ The first thing many new contacts say is that they hate Drupal,
 it doesn't work as expected
 ---------------------------
 
-It can be hard to bridge the gap between client expectations ("I want a forum",
-which means phpBB2 with every extension ever known) with developer expectations
-("I want a forum" which means enabling the forum module).
+It can be hard to bridge the gap between client expectations ("I want a
+forum", which means phpBB2 with every extension ever known) with developer
+expectations ("I want a forum" which means enabling the forum module).
 
 
 it's expensive to customise
 ---------------------------
 
-Rocking up to a restaurant with a photo of a meal and saying "I'd like this" is a
-big problem; many Drupal projects face similar challenges from the client side.
+Rocking up to a restaurant with a photo of a meal and saying "I'd like this"
+is a big problem; many Drupal projects face similar challenges from the client
+side.
 
 Good help is hard to find
 -------------------------
 
-The ease of use, miscommunications, etc. often happen when the person making use
-of the power of Drupal isn't experienced in the ways of Drupal. "Certified to
-Rock" type sites to find people, but comes with issues of its own ("I need to
-hire a rockstar?")
+The ease of use, miscommunications, etc. often happen when the person making
+use of the power of Drupal isn't experienced in the ways of Drupal. "Certified
+to Rock" type sites to find people, but comes with issues of its own ("I need
+to hire a rockstar?")
 
 It does things I don't care about
 ---------------------------------
 
-All I want is a blog/site/etc. but Drupal does so much stuff I don't care about.
-
+All I want is a blog/site/etc. but Drupal does so much stuff I don't care
+about.
 
 Drupal is Good for Business
 ===========================
 
-Good for site owners: you get much, most, or more than all of the functionality
-of your site for free using Drupal. Dropping Drupal in the face of challenges is
-throwing the baby out with the bath water: you can build $100,000 worth of
-functionality in an afternoon.
+Good for site owners: you get much, most, or more than all of the
+functionality of your site for free using Drupal. Dropping Drupal in the face
+of challenges is throwing the baby out with the bath water: you can build
+$100,000 worth of functionality in an afternoon.
 
 Community, collaboration, etc.
 
@@ -89,12 +90,12 @@ supporting the people actually doing the development.
 Building a Drupal career: Using what we've learned
 ==================================================
 
-**Find the place you fit within the community** -- trainers, developers, themers,
-project managers and evangelists all have places in the community. 
+**Find the place you fit within the community** -- trainers, developers,
+themers, project managers and evangelists all have places in the community.
 
-**Acknowledge and support other participants** -- create a process that supports
-people, keeps goals in mind, etc. Which process you use doesn't matter
-(waterfall, agile, etc.) having one that works is key.
+**Acknowledge and support other participants** -- create a process that
+supports people, keeps goals in mind, etc. Which process you use doesn't
+matter (waterfall, agile, etc.) having one that works is key.
 
 **Budget your time** -- many developers increase their hourly rate after the
 first few projects. You need to spend time learning best practices, doing
@@ -103,9 +104,9 @@ non-billable development.
 **Explain the long-term costs** -- acknowledge and manage long-term costs in
 meeting the goals. Back to the issue with shortcuts.
 
-**Make the community work for you** -- know contributors, pay attention to people
-(good karma), do support, etc. Then you'll be able to reap the rewards with
-support, etc.
+**Make the community work for you** -- know contributors, pay attention to
+people (good karma), do support, etc. Then you'll be able to reap the rewards
+with support, etc.
 
 **Giving back** -- thinking about it in terms of "charity" doesn't make sense
 (all these big businesses wouldn't be doing it). Focus on what you get out of
