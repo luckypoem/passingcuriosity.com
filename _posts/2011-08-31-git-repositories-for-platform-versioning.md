@@ -46,6 +46,7 @@ once so don't worry too much if you find it confusing.
 
     # Initialise a new empty repo and add the origin I'll push the result to
     mkdir platform
+    cd platform
     git init
     git remote add origin git@gorilla:/platforms/drupal.git
 
