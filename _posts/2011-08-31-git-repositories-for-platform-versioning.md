@@ -44,30 +44,28 @@ it's structured exactly as I want it. In particular, I want every branch to be
 correspond to one of my platforms. This is a little tricky but it only happens
 once so don't worry too much if you find it confusing.
 
-~~~~{.sh}
-# Initialise a new empty repo and add the origin I'll push the result to
-mkdir platform
-git init
-git remote add origin git@gorilla:/platforms/drupal.git
+    # Initialise a new empty repo and add the origin I'll push the result to
+    mkdir platform
+    git init
+    git remote add origin git@gorilla:/platforms/drupal.git
 
-# First, let's create the Drupal 6 branch.
-git symbolic-ref HEAD refs/heads/6.x
-rm .git/index
-git clean -fdx
-drush dl --yes --drupal-project-rename=htdocs drupal-6
-git add htdocs
-git commit -m 'drupal-6'
-git push origin 6.x
+    # First, let's create the Drupal 6 branch.
+    git symbolic-ref HEAD refs/heads/6.x
+    rm .git/index
+    git clean -fdx
+    drush dl --yes --drupal-project-rename=htdocs drupal-6
+    git add htdocs
+    git commit -m 'drupal-6'
+    git push origin 6.x
 
-# Now, let's take care of the Drupal 7 branch.
-git symbolic-ref HEAD refs/heads/7.x
-rm .git/index
-git clean -fdx
-drush dl --yes --drupal-project-rename=htdocs drupal-7
-git add htdocs
-git commit -m 'drupal-7'
-git push origin 7.x
-~~~~
+    # Now, let's take care of the Drupal 7 branch.
+    git symbolic-ref HEAD refs/heads/7.x
+    rm .git/index
+    git clean -fdx
+    drush dl --yes --drupal-project-rename=htdocs drupal-7
+    git add htdocs
+    git commit -m 'drupal-7'
+    git push origin 7.x
 
 This sequence is a little verbose (the `rm` and `git clean` for Drupal 6
 aren't strictly necessary) but it should be obvious how I can add additional
@@ -90,11 +88,9 @@ Now that my platforms are available in git I can use them as the starting
 point for a new project. I just clone the right branch from the platform repo
 and I'm off!
 
-~~~~{.sh}
-git clone --origin platform --branch 6.x git@gorilla:/platforms/drupal example.com
-cd example.com
-git checkout -b master
-~~~~
+    git clone --origin platform --branch 6.x git@gorilla:/platforms/drupal example.com
+    cd example.com
+    git checkout -b master
 
 It's a bit confusing at first glance, so I'll break that down a bit. First I
 clone the platform repository with the `git clone` command. Instead of letting
@@ -118,13 +114,11 @@ Upgrading a project to run on the latest version of it's platform should be a
 simple matter of pulling the appropriate branch and merging the changes into
 `master`.
 
-~~~~{.sh}
-cd example.com
-git checkout 6.x
-git pull
-git checkout master
-git merge 6.x
-~~~~
+    cd example.com
+    git checkout 6.x
+    git pull
+    git checkout master
+    git merge 6.x
 
 Here I checkout the "platform" branch (`6.x` as in the example above) and pull
 in any remote changes. Then I checkout the `master` branch and merge the
