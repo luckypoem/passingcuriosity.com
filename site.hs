@@ -50,22 +50,21 @@ main = hakyll $ do
         >>> relativizeUrlsCompiler
 
     -- Index
-    match (list ["index.md", "about.md", "contact.md"]) $ do
+    match (list ["about.md", "contact.md"]) $ do
       route $ setExtension "html"
       compile $ pageCompiler
         >>> applyTemplateCompiler "templates/default.html"
         >>> relativizeUrlsCompiler
     
-    {-
-    match "index.html" $ route idRoute
-    create "index.html" $ constA mempty
+    match "index.md" $ do
+      route $ setExtension "html"
+      compile $ pageCompiler
         >>> arr (setField "title" "Home")
         >>> requireA "tags" (setFieldA "tagcloud" (renderTagCloud'))
         >>> requireAllA "posts/*" (id *** arr (take 3 . reverse . chronological) >>> addPostList)
         >>> applyTemplateCompiler "templates/index.html"
         >>> applyTemplateCompiler "templates/default.html"
         >>> relativizeUrlsCompiler
-    -}
 
     -- Tags
     create "tags" $

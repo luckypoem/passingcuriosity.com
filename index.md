@@ -1,8 +1,5 @@
 ---
-layout: main
-title: Home
-section: Home
-feed: /atom.xml
+title: Welcome
 ---
 
 Welcome
@@ -19,6 +16,12 @@ I read. Dead time, no more!
 Alas, I got distracted. Nearly three years have passed and *Passing
 Curiosity* is still just a neglected blog.
 
+> $title$
+
+or
+
+> $posts$
+
 Blog
 ====
 
@@ -28,20 +31,6 @@ found here.
 
 The most recent posts are:
 
-{% for post in site.posts limit:5 %}
-<div class="section list">
-  <h1>{{ post.date | date_to_string }}</h1>
-  <p class="line">
-    <a class="title" href="{{ post.url }}">{{ post.title }}</a>
-  </p>
-  <p class="excerpt">
-	{% if post.excerpt %}
-	  {{ post.excerpt }}
-    {% else %}
-      {{ post.content | html_truncate }}
-    {% endif %}
-  </p>
-</div>
-{% endfor %}
+$posts$
 
 The rest, you can find in [the archives](/archives/).
