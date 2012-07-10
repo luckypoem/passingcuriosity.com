@@ -1,0 +1,41 @@
+---
+layout      : post
+title       : Building hpaste with cabal-dev
+categories  : [haskell]
+tags        : [haskell, cabal-dev, sandbox, configuration]
+location    : Perth, Western Australia
+excerpt     : |
+  I think using cabal-dev (or a similar tool) is essential for working with
+  Haskell. Here are the steps I used to build hpaste in a cabal-dev sandbox.
+---
+
+Assuming you have `cabal-dev` (it's just a `cabal install cabal-dev` away if
+you don't) and `git` installed, you should be able to do something like this:
+
+    # Clone 
+    git clone https://github.com/chrisdone/hpaste.git
+    cd hpaste 
+    git clone https://github.com/chrisdone/pgsql-simple.git 
+    cabal-dev add-source pgsql-simple
+    cabal-dev install
+
+On my machine (a Macbook Air running OS X Lion) this took quite a long time
+and resulted in a `./cabal-dev/` directory some 370 MB large. But it also
+generated a working hpaste executable (called `amelie`).
+
+To be able to run it you need to:
+
+1. Create a PostgreSQL user (call it `amelie` to make step two easier) and
+   database.
+
+2. Import the database schema in `amelie.schema`. If you didn't call your user
+`amelie` in step one you will need to edit the file first.
+
+3. Duplicate `amelie.conf.sample` as `amelie.conf` and edit the file. You
+might need to add a section like the following:
+
+        [IRC]
+        log_dir = /tmp/
+
+4. Run the command: `./cabal-dev/bin/amelie amelie.conf` and, if it works,
+visit `http://localhost:10000/`.
