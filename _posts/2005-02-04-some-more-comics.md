@@ -1,7 +1,7 @@
 --- 
 layout: post
 title: Some More Comics
-tags: [comics]
+tags: comics
 location: Canberra, Australia
 excerpt: |
   Notes on a few new comics and manga: Dead@17, Aria, and Remote.

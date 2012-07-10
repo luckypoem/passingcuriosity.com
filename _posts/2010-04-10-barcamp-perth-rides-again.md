@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Barcamp Perth rides again
-tags: [bcperth4, barcamp]
+tags: bcperth4, barcamp
 categories: [barcamp]
 location: Perth, Western Australia
 excerpt: |

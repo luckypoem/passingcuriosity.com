@@ -1,7 +1,7 @@
 --- 
 layout: post
 title: A Comics Update
-tags: [comics]
+tags: comics
 locations: Canberra, Australia
 excerpt: |
   Notes on a few new comics including Nightmares & Fairy Tales, Courtney

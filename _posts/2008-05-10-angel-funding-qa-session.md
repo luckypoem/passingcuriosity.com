@@ -4,7 +4,7 @@ wordpressurl: http://barcamp2.wordpress.com/?p=8
 layout: post
 title: Angel Funding Q & A session
 categories: [barcamp]
-tags: [bcperth09, bcperth3]
+tags: bcperth09, bcperth3
 location: Perth, Western Australia
 excerpt: |
   Some questions and answers about angel funding and venture capital for web

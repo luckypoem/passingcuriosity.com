@@ -1,7 +1,7 @@
 --- 
 layout: post
 title: Django form fields and templates
-tags: [django, html, web, forms]
+tags: django, html, web, forms
 location: Perth, Western Australia
 excerpt: |
   Determining the type of a form field object from a Django template requires

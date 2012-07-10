@@ -3,7 +3,7 @@ wordpressid: 925
 wordpressurl: http://passingcuriosity.com/?p=925
 layout: post
 title: SPIP tags with multiple aliases
-tags: [spip, php, code]
+tags: spip, php, code
 location: Perth, Western Australia
 excerpt: |
   This post describes creating SPIP tags with multiple "names" (like #INCLURE

@@ -1,7 +1,7 @@
 --- 
 layout: post
 title: Graphviz, Dot and Large Graphs
-tags: [srp, logic, graph, visualisation]
+tags: srp, logic, graph, visualisation
 location: Canberra, Australia
 excerpt: |
   Notes on my graph visualisation project.

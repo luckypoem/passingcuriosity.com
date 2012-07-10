@@ -3,7 +3,7 @@ wordpressid: 1307
 wordpressurl: http://passingcuriosity.com/?p=1307
 layout: post
 title: Notes on Perth Barcamp 3
-tags: [bcperth09]
+tags: bcperth09
 categories: [barcamp]
 location: Perth, Western Australia
 excerpt: |

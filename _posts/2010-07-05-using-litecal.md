@@ -2,7 +2,7 @@
 layout: post
 title: Using Litecal
 category: [drupal]
-tags: [drupal, views, date, calendar]
+tags: drupal, views, date, calendar
 location: Perth, Western Australia
 excerpt: |
   This is a quick introduction to using the litecal module to display month

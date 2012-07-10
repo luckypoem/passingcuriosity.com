@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Providing default settings for Django applications
-tags: [programing, python, django, application, settings]
+tags: programing, python, django, application, settings
 categories: [programing]
 location: Perth, Western Australia
 excerpt: |

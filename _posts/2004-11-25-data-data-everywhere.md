@@ -1,7 +1,7 @@
 --- 
 layout: post
 title: Data, Data, Everywhere
-tags: [srp, logic, graph, visualisation, data processing]
+tags: srp, logic, graph, visualisation, data processing
 location: Canberra, Australia
 excerpt: |
   The amount of data produced by the problems may pose a problem. LCL005

@@ -1,7 +1,7 @@
 --- 
 layout: post
 title: A Radial Layout
-tags: [srp, logic, graph, visualisation]
+tags: srp, logic, graph, visualisation
 location: Canberra, Australia
 excerpt: |
   My first approach at generating a radial layout of the graph data logged by

@@ -3,7 +3,7 @@ wordpressid: 1063
 wordpressurl: http://barcamp2.wordpress.com/?p=10
 layout: post
 title: Myles-i the web guy
-tags: [bcperth09]
+tags: bcperth09
 categories: [barcamp]
 location: Perth, Western Australia
 excerpt: |

@@ -3,7 +3,7 @@ wordpressid: 1312
 wordpressurl: http://passingcuriosity.com/?p=1312
 layout: post
 title: Notes on "Statecharts and Numbats"
-tags: [bcperth09]
+tags: bcperth09
 categories: [barcamp]
 location: Perth, Western Australia
 excerpt: |

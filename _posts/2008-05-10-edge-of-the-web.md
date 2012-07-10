@@ -1,7 +1,7 @@
 --- 
 layout: post
 title: AWIA Edge of the Web
-tags: [bcperth09]
+tags: bcperth09
 location: Perth, Western Australia
 wordpressid: 7
 wordpressurl: http://barcamp2.wordpress.com/?p=7

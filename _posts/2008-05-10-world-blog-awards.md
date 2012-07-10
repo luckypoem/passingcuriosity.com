@@ -3,7 +3,7 @@ wordpressid: 4
 wordpressurl: http://barcamp2.wordpress.com/?p=4
 layout: post
 title: World Blog Awards
-tags: [bcperth09]
+tags: bcperth09
 categories: [barcamp]
 location: Perth, Western Australia
 excerpt: |

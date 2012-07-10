@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Converting to Jekyll
-tags: [blog, meta, jekyll]
+tags: blog, meta, jekyll
 location: Perth, Western Australia
 excerpt: |
   This blog has been languishing for months now, nearly

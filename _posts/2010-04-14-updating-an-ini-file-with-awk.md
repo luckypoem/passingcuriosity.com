@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Updating an INI file with AWK
-tags: [programing, awk, text]
+tags: programing, awk, text
 categories: [programing]
 location: Perth, Western Australia
 excerpt: |

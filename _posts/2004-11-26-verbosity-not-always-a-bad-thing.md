@@ -1,7 +1,7 @@
 --- 
 layout: post
 title: "Verbosity: Not always a bad thing!"
-tags: [srp, logic, graph, visualisation]
+tags: srp, logic, graph, visualisation
 location: Canberra, Australia
 excerpt: |
   It appears that we need to set `very_verbose` to get the prover to output

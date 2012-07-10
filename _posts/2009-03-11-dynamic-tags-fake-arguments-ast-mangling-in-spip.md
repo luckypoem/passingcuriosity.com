@@ -3,7 +3,7 @@ wordpressid: 460
 wordpressurl: http://passingcuriosity.com/?p=460
 layout: post
 title: Dynamic tags, fake arguments, and AST mangling in SPIP
-tags: [spip, php, code, syntax, ast, mangling]
+tags: spip, php, code, syntax, ast, mangling
 location: Perth, Western Australia
 excerpt: |
   Sometimes a dynamic SPIP tag (one evaluated at request time) needs details

@@ -3,7 +3,7 @@ wordpressid: 1155
 wordpressurl: http://passingcuriosity.com/?p=1155
 layout: post
 title: Specifying a UNIX socket using MySQL with Django
-tags: [mysql, django, unix, socket, configuration]
+tags: mysql, django, unix, socket, configuration
 location: Perth, Western Australia
 excerpt: |
   Configuring Django to connect to MySQL with a socket according to the 

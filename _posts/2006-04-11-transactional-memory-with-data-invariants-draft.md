@@ -2,7 +2,7 @@
 wordpressid: 1675
 layout: post
 title: Transactional memory with data invariants (DRAFT)
-tags: [papers, cs, stm, haskell]
+tags: papers, cs, stm, haskell
 wordpressurl: http://passingcuriosity.com/2006/transactional-memory-with-data-invariants-draft/
 excerpt: |
   A few thoughts about a draft paper Transactional memory with data

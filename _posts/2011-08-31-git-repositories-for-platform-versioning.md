@@ -2,7 +2,7 @@
 layout: post
 title: Using git repositories for platform versioning
 categories: [git]
-tags: [git, drupal, workflow, platforms, distribution]
+tags: git, drupal, workflow, platforms, distribution
 location: Perth, Western Australia
 excerpt: |
   This is a guide to my current thoughts on using git to maintain and

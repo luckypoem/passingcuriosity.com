@@ -3,7 +3,7 @@ wordpressid: 1
 wordpressurl: http://passingcuriosity.com/2008/live-blog-barcamp2/
 layout: post
 title: Live blogging BarCamp2
-tags: [bcperth09]
+tags: bcperth09
 location: Perth, Western Australia
 ---
 

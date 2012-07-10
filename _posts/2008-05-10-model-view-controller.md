@@ -3,7 +3,7 @@ wordpressid: 9
 wordpressurl: http://barcamp2.wordpress.com/?p=9
 layout: post
 title: Model View Controller
-tags: [bcperth09]
+tags: bcperth09
 categories: [barcamp]
 location: Perth, Western Australia
 excerpt: |
