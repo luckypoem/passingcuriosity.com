@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1392
+wordpressid: 1392
 layout: post
 title: A Traditional Adjacency Matrix
-wordpress_url: http://passingcuriosity.com/2005/a-traditional-adjacency-matrix/
+wordpressurl: http://passingcuriosity.com/2005/a-traditional-adjacency-matrix/
 ---
 
 John just raised the point that the size problem would be solved by using a

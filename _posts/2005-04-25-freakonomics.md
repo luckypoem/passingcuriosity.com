@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1584
+wordpressid: 1584
 layout: post
 title: Freakonomics
-wordpress_url: http://passingcuriosity.com/2005/freakonomics/
+wordpressurl: http://passingcuriosity.com/2005/freakonomics/
 ---
 <a style="font-style: italic;" href="http://www.freakonomics.com/">Freakonomics</a>
 <br />

@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 377
+wordpressid: 377
 layout: post
 title: Installing hsql and HDBC on GHC 6.10.1
-wordpress_url: http://passingcuriosity.com/?p=377
+wordpressurl: http://passingcuriosity.com/?p=377
 ---
 I've become more interesting in using Haskell for web development lately, so I've started playing around with it a bit. As so much of web development is CRUD, that means I'll need a database access library. There are a two real options[^1] to consider when it comes to accessing SQL databases from Haskell: [hsql](http://hackage.haskell.org/cgi-bin/hackage-scripts/package/hsql) and [HDBC](http://software.complete.org/hdbc). The former has a native MySQL driver and the latter is actually maintained, but neither will build with the current GHC and Cabal without assistance. The rest of this post describes the [small] changes necessary to get both packages built and installed with GHC 6.10.1.
 

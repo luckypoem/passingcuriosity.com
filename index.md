@@ -1,8 +1,8 @@
 ---
-layout  : main
-title   : Home
-section : Home
-feed    : /atom.xml
+layout: main
+title: Home
+section: Home
+feed: /atom.xml
 ---
 
 Welcome

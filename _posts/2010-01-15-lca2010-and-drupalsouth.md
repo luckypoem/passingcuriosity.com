@@ -1,9 +1,9 @@
 ---
-layout    : post
-title     : In Wellington for LCA2010 and DrupalSouth
+layout: post
+title: In Wellington for LCA2010 and DrupalSouth
 categories: [lca, drupalsouth, lca2010, drupal]
-tags      : [lca2010, drupalsouth, travel]
-location  : Perth, Western Australia
+tags: [lca2010, drupalsouth, travel]
+location: Perth, Western Australia
 ---
 
 I'm currently in Wellington, New Zealand for [linux.conf.au 2010][lca2010] and

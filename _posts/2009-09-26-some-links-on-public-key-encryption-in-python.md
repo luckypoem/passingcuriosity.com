@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 2031
+wordpressid: 2031
 layout: post
 title: Some links on public key encryption in Python
-wordpress_url: http://passingcuriosity.com/?p=2031
+wordpressurl: http://passingcuriosity.com/?p=2031
 ---
 This is the text of the first answer I've posted on [Stack Overflow](http://stackoverflow.com). You can see it in context [](http://stackoverflow.com/questions/1320671/how-to-encrypt-a-string-using-the-key/#1480380), but I've posted it here with *all* the links:
 

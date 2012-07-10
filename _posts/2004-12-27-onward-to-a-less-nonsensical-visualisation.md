@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1390
+wordpressid: 1390
 layout: post
 title: Onward, to a less nonsensical visualisation!
-wordpress_url: http://passingcuriosity.com/2004/onward-to-a-less-nonsensical-visualisation/
+wordpressurl: http://passingcuriosity.com/2004/onward-to-a-less-nonsensical-visualisation/
 ---
 
 ![SET012-clip2.png](/matrix/initial/SET012-clip2.png)

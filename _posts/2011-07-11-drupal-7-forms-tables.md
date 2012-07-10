@@ -1,10 +1,10 @@
 ---
-layout      : post
-title       : "Drupal 7: theming forms with tables"
-categories  : [drupal]
-tags        : [drupal7, theme, render, forms, tables, ajax, ahah]
-location    : Perth, Western Australia
-excerpt     : |
+layout: post
+title: "Drupal 7: theming forms with tables"
+categories: [drupal]
+tags: [drupal7, theme, render, forms, tables, ajax, ahah]
+location: Perth, Western Australia
+excerpt: |
   This is a quick guide to using tables for layout of forms in Drupal 7
   without being naughty.
 ---

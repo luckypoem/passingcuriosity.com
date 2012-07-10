@@ -1,0 +1,19 @@
+Name:                pc
+Version:             0.1
+Synopsis:            Hakyll-based site generator.
+Description:         Project Description Here
+License:             AllRightsReserved
+Author:              Thomas Sutton
+Maintainer:          me@thomas-sutton.id.au
+Stability:           Experimental
+Category:            Web
+Build-type:          Simple
+Cabal-version:       >=1.9.2
+
+Executable pc
+  main-is: site.hs
+
+  Build-depends:
+    base >= 4 && < 5,
+    hakyll
+

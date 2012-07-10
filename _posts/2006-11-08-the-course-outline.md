@@ -1,10 +1,11 @@
 --- 
-wordpress_id: 1415
+wordpressid: 1415
 layout: post
 title: The Course Outline
-wordpress_url: http://passingcuriosity.com/2006/the-course-outline/
+wordpressurl: http://passingcuriosity.com/2006/the-course-outline/
 ---
-<p>The first lecture began with the distribution (in three locations several hundred  kilometres apart) of textbooks, questionnaires, course outlines, and a sheet of useful data and formulæ. The skeleton of the course is described below, with more detail to come in subsequent posts.</p>
+
+The first lecture began with the distribution (in three locations several hundred  kilometres apart) of textbooks, questionnaires, course outlines, and a sheet of useful data and formulae. The skeleton of the course is described below, with more detail to come in subsequent posts.
 
 <div class="inset">
 <h3><a href="http://physics-notes.blogspot.com/search/label/Week%201">Week One - Introduction</a></h3>
@@ -56,4 +57,4 @@ wordpress_url: http://passingcuriosity.com/2006/the-course-outline/
 </ol>
 </div>
 
-<p>There are readings and several problems from the course textbook (Walding, Rapkins and Rossiter's <a class="title" href="http://isbn.nu/0195510844">New Century Senior Physics</a>) for each topic covered.</p>
+There are readings and several problems from the course textbook (Walding, Rapkins and Rossiter's <a class="title" href="http://isbn.nu/0195510844">New Century Senior Physics</a>) for each topic covered.

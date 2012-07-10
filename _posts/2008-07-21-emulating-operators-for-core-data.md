@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 130
+wordpressid: 130
 layout: post
 title: Emulating Operators for Core Data
-wordpress_url: http://passingcuriosity.com/?p=56
+wordpressurl: http://passingcuriosity.com/?p=56
 ---
 My last Cocoa post described a problem I encountered extending a Core Data tutorial by using bindings operators to aggregate a property of Core Data entities through a relationship. With a bit of grovelling through documentation and some help and guidance from [Tim Isted](http://www.timisted.net/) I've managed to get it to work, sort of.
 

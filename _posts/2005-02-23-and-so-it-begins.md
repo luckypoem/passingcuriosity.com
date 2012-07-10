@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1562
+wordpressid: 1562
 layout: post
 title: And so it begins...
-wordpress_url: http://passingcuriosity.com/2005/and-so-it-beings/
+wordpressurl: http://passingcuriosity.com/2005/and-so-it-beings/
 ---
 On Friday, Pietro gave me a few papers and chapters to read regarding the theoretical aspect of my Honours project: techniques for extracting counter-models from open tableaux and implementing these techniques (or at least support for them) in the Tableau Work Bench. I've just finished my first reading of the first of these papers, and I'll note some points below.
 

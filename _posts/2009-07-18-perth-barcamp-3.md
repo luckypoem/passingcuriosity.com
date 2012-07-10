@@ -1,12 +1,12 @@
 --- 
-wordpress_id: 1307
-wordpress_url: http://passingcuriosity.com/?p=1307
-layout     : post
-title      : Notes on Perth Barcamp 3
-tags       : [bcperth09]
-categories : [barcamp]
-location   : Perth, Western Australia
-excerpt    : |
+wordpressid: 1307
+wordpressurl: http://passingcuriosity.com/?p=1307
+layout: post
+title: Notes on Perth Barcamp 3
+tags: [bcperth09]
+categories: [barcamp]
+location: Perth, Western Australia
+excerpt: |
   Some notes about Barcamp Perth 3.0.
 ---
 

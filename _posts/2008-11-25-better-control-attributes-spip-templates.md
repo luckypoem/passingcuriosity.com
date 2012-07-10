@@ -1,11 +1,11 @@
 --- 
-wordpress_id: 325
-wordpress_url: http://passingcuriosity.com/?p=325
-layout   : post
-title    : A better way to control attributes in SPIP templates
-tags     : [spip, php, code, html, attributes]
-location : Perth, Western Australia
-excerpt  : |
+wordpressid: 325
+wordpressurl: http://passingcuriosity.com/?p=325
+layout: post
+title: A better way to control attributes in SPIP templates
+tags: [spip, php, code, html, attributes]
+location: Perth, Western Australia
+excerpt: |
   This post describes a PHP function to replace SPIP's inserer_attribut and
   extraire_attribut filters with a single jQuery-inspired attr filter.
 ---

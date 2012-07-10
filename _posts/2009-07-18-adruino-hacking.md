@@ -1,11 +1,11 @@
 --- 
-wordpress_id: 1318
-wordpress_url: http://passingcuriosity.com/?p=1318
-layout     : post
-title      : Notes on "Adruino hacking"
-categories : [barcamp]
-location   : Perth, Western Australia
-excerpt    : |
+wordpressid: 1318
+wordpressurl: http://passingcuriosity.com/?p=1318
+layout: post
+title: Notes on "Adruino hacking"
+categories: [barcamp]
+location: Perth, Western Australia
+excerpt: |
   Notes from a session on Arduino hacking are Barcamp Perth.
 ---
 

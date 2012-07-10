@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1549
+wordpressid: 1549
 layout: post
 title: The Code Book (Simon Singh)
-wordpress_url: http://passingcuriosity.com/2005/the-code-book-simon-singh/
+wordpressurl: http://passingcuriosity.com/2005/the-code-book-simon-singh/
 ---
 
 [The Code Book](http://www.harpercollins.co.uk/books/default.aspx?id=19274&amp;subject=Fourth%20Estate) by [Simon Singh](http://www.simonsingh.net/)

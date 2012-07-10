@@ -1,11 +1,11 @@
 --- 
-wordpress_id: 460
-wordpress_url: http://passingcuriosity.com/?p=460
+wordpressid: 460
+wordpressurl: http://passingcuriosity.com/?p=460
 layout: post
-title    : Dynamic tags, fake arguments, and AST mangling in SPIP
-tags     : [spip, php, code, syntax, ast, mangling]
-location : Perth, Western Australia
-excerpt  : |
+title: Dynamic tags, fake arguments, and AST mangling in SPIP
+tags: [spip, php, code, syntax, ast, mangling]
+location: Perth, Western Australia
+excerpt: |
   Sometimes a dynamic SPIP tag (one evaluated at request time) needs details
   about the template, but this information is not available. This post 
   describes a technique for passing data from the AST into the tag's static

@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 440
+wordpressid: 440
 layout: post
 title: Extending Lua in C
-wordpress_url: http://passingcuriosity.com/?p=440
+wordpressurl: http://passingcuriosity.com/?p=440
 ---
 Lua is a small, portable, and fast scripting language designed for embedding in other software. Being designed for embedding, it has a simple but powerful API which makes it easy to communicate both ways: from C into Lua and from Lua into C. In this post, I'll describe the process of writing a small module adding support for OpenSSL's hashing functions to Lua.
 

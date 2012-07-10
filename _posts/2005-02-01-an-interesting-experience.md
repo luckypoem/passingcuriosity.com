@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1459
+wordpressid: 1459
 layout: post
 title: An Interesting Experience
-wordpress_url: http://passingcuriosity.com/2005/an-interesting-experience/
+wordpressurl: http://passingcuriosity.com/2005/an-interesting-experience/
 ---
 
 It struck me today, that this year is going to be an interesting experience.

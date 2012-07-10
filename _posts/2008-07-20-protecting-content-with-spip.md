@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 125
+wordpressid: 125
 layout: post
 title: Protecting Content with SPIP
-wordpress_url: http://passingcuriosity.com/?p=42
+wordpressurl: http://passingcuriosity.com/?p=42
 ---
 SPIP is a great CMS with lots of powerful features, but it does embed quite a lot of policy within its workings. One aspect of this is the difficulty of restricting access to content to authenticated users. Doing so is not particularly difficult, but doesn't appear to be documented in any great detail anywhere, so I'll describe the approach I used for one client's site.
 

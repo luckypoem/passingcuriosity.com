@@ -1,9 +1,9 @@
 --- 
-wordpress_id: 1707
+wordpressid: 1707
 layout: post
 title: Long time no blog
 tags: [Books, TAPL, ATTAPL, Logic]
-wordpress_url: http://passingcuriosity.com/2006/long-time-no-blog/
+wordpressurl: http://passingcuriosity.com/2006/long-time-no-blog/
 ---
 
 It's been quite a while since last I posted (here, or anywhere else), so I

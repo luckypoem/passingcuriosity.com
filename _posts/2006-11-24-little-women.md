@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1713
+wordpressid: 1713
 layout: post
 title: Little Women
-wordpress_url: http://passingcuriosity.com/2006/little-women/
+wordpressurl: http://passingcuriosity.com/2006/little-women/
 ---
 Just watched [Little Women](http://imdb.com/title/tt0110367/). Beth recovered (after a fashion, and for a while), but I wonder what happened to the baby (which introduced the [scarlet fever](http://en.wikipedia.org/wiki/Scarlet_fever))?
 

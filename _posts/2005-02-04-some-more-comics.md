@@ -1,12 +1,12 @@
 --- 
-layout   : post
-title    : Some More Comics
-tags     : [comics]
-location : Canberra, Australia
-excerpt  : |
+layout: post
+title: Some More Comics
+tags: [comics]
+location: Canberra, Australia
+excerpt: |
   Notes on a few new comics and manga: Dead@17, Aria, and Remote.
-wordpress_id: 1560
-wordpress_url: http://passingcuriosity.com/2005/some-more-comics/
+wordpressid: 1560
+wordpressurl: http://passingcuriosity.com/2005/some-more-comics/
 ---
 
 I've just been to the comic shop spending the money I should be saving for

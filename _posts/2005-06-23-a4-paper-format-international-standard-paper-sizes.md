@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1609
+wordpressid: 1609
 layout: post
 title: A4 paper format / International standard paper sizes
-wordpress_url: http://passingcuriosity.com/2005/a4-paper-format-international-standard-paper-sizes/
+wordpressurl: http://passingcuriosity.com/2005/a4-paper-format-international-standard-paper-sizes/
 ---
 <a href="http://www.cl.cam.ac.uk/~mgk25/iso-paper.html">A4 paper format / International standard paper sizes</a> by Markus Kuhn.
 

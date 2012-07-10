@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1545
+wordpressid: 1545
 layout: post
 title: Cooking (and Blogging Software)
-wordpress_url: http://passingcuriosity.com/2006/cooking-and-blogging-software/
+wordpressurl: http://passingcuriosity.com/2006/cooking-and-blogging-software/
 ---
 I made some <a href="http://en.wikipedia.org/wiki/Baklava">baklava</a> yesterday and, as I do occasionally, I took some photographs of the process and posted them on Flickr. I just noticed that Google have a photo web-site too, so I'm posting this as a demo.
 

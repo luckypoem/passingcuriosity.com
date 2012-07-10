@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1419
+wordpressid: 1419
 layout: post
 title: Significant Figures &amp; Rounding
-wordpress_url: http://passingcuriosity.com/2006/significant-figures-rounding/
+wordpressurl: http://passingcuriosity.com/2006/significant-figures-rounding/
 ---
 The concept of significant figures, which came up toward the end of the previous post on <a href="http://physics-notes.blogspot.com/2006/11/scientific-notation.html">scientific notation</a>, deserves a bit more of an explanation. when writing a number, particularly a very small or very large number, it is common to write a number of zeros at its start or end, respectively. These leading/following zeros convey no information other than "move along, there's nothing to see here", you might even say that they are rather 'insignificant' when compared to the other digits, which we call *significant digits*, or *significant figures*.
 

@@ -1,11 +1,11 @@
 --- 
-wordpress_id: 925
-wordpress_url: http://passingcuriosity.com/?p=925
+wordpressid: 925
+wordpressurl: http://passingcuriosity.com/?p=925
 layout: post
-title    : SPIP tags with multiple aliases
-tags     : [spip, php, code]
-location : Perth, Western Australia
-excerpt  : |
+title: SPIP tags with multiple aliases
+tags: [spip, php, code]
+location: Perth, Western Australia
+excerpt: |
   This post describes creating SPIP tags with multiple "names" (like #INCLURE
   and #INCLUDE) and taking the technique further to implement families of 
   related tags.

@@ -1,13 +1,13 @@
 --- 
-layout   : post
-title    : Django form fields and templates
-tags     : [django, html, web, forms]
-location : Perth, Western Australia
-excerpt  : |
+layout: post
+title: Django form fields and templates
+tags: [django, html, web, forms]
+location: Perth, Western Australia
+excerpt: |
   Determining the type of a form field object from a Django template requires
   writing a new filter.
-wordpress_id: 1271
-wordpress_url: http://passingcuriosity.com/?p=1271
+wordpressid: 1271
+wordpressurl: http://passingcuriosity.com/?p=1271
 ---
 
 I've been working with [Django][django] for the last little while (or long

@@ -1,7 +1,7 @@
 --- 
-wordpress_id: 1644
+wordpressid: 1644
 layout: post
 title: "Interpreting the Data: Parallel Analysis with Sawzall (Draft)"
-wordpress_url: http://passingcuriosity.com/2006/interpreting-the-data-parallel-analysis-with-sawzall-draft/
+wordpressurl: http://passingcuriosity.com/2006/interpreting-the-data-parallel-analysis-with-sawzall-draft/
 ---
 <a class="title" href="http://labs.google.com/papers/sawzall.html" title="Interpreting the Data: Parallel Analysis with Sawzall (Draft)">Interpreting the Data: Parallel Analysis with Sawzall (Draft)</a><br /><br />While <a href="http://labs.google.com/papers/mapreduce.html" title="MapReduce: Simplified Data Processing on Large Clusters">MapReduce</a> and <a href="http://labs.google.com/papers/gfs.html" title="The Google File System">GFS</a> allow Google to use their massive computer <a href="http://labs.google.com/papers/googlecluster.html" title="Web Search for a Planet: The Google Cluster Architecture">clusters</a> effectively, the use of C++ can make programming for such a systems more difficult than it needs to be. Cue Sawzall, a new language that Google use to write distributed, parallel data-processing programs for use on their clusters. While the language isn't particularly attractive (I've never liked C-style syntax's), the approach is very interesting and the implementation issues they describe are enlightening.<br /><br /><a href="http://lambda-the-ultimate.org/node/916">LtU</a> | <a href="http://www.citeulike.org/article/227597">CiteULike</a> | <a href="http://del.icio.us/url/948265aed2dcc94467755d7e6d932de5">Del.icio.us</a>

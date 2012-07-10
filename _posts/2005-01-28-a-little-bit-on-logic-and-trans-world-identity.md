@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1556
+wordpressid: 1556
 layout: post
 title: A little bit on logic and trans-world identity
-wordpress_url: http://passingcuriosity.com/2005/a-little-bit-on-logic-and-trans-world-identity/
+wordpressurl: http://passingcuriosity.com/2005/a-little-bit-on-logic-and-trans-world-identity/
 ---
 
 I've just posted a little bit about modal logic (more specifically the idea of

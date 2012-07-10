@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1627
+wordpressid: 1627
 layout: post
 title: Open Letter
-wordpress_url: http://passingcuriosity.com/2005/open-letter/
+wordpressurl: http://passingcuriosity.com/2005/open-letter/
 ---
 <a href="http://www.venganza.org/">Open Letter</a>
 <br />

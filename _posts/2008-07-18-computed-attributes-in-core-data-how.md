@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 109
+wordpressid: 109
 layout: post
 title: Computed Attributes in Core Data, How?
-wordpress_url: http://passingcuriosity.com/?p=17
+wordpressurl: http://passingcuriosity.com/?p=17
 ---
 I've worked through a few Core Data and Cocoa tutorials in the last few weeks and most of them are exceedingly awesome. That fact that there are so many capable Cocoa developers out there who spend time creating tutorials and sharing their hard earned experience is fantastic and speaks volumes about the Cocoa and the wider Mac communities. To (not really) give a little back and (more) attempt to solicit suggestions I'll be posting about some of the problems that I've run into trying to move beyond the "getting started" tutorials and ways to solve them. First up is computed attributes in Core Data applications.
 

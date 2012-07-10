@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1559
+wordpressid: 1559
 layout: post
 title: More on the Seikai Trilogy
-wordpress_url: http://passingcuriosity.com/2005/more-on-the-seikai-trilogy/
+wordpressurl: http://passingcuriosity.com/2005/more-on-the-seikai-trilogy/
 ---
 <a href="http://shopcdsbooks.com/Merchant2/merchant.mvc?&Store_Code=TKP&Screen=CTGY&Category_Code=SRCRE">The Seikai Trilogy</a>
 

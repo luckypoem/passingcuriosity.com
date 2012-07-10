@@ -1,11 +1,11 @@
 --- 
-wordpress_id: 194
-wordpress_url: http://passingcuriosity.com/?p=96
-layout   : post
-title    : Matching Brackets in Cocoa
-tags     : [cocoa, objective c]
-location : Perth, Western Australia
-excerpt  : |
+wordpressid: 194
+wordpressurl: http://passingcuriosity.com/?p=96
+layout: post
+title: Matching Brackets in Cocoa
+tags: [cocoa, objective c]
+location: Perth, Western Australia
+excerpt: |
   Once you've got a piece of code to check that a string uses correctly 
   matched brackets, hooking it up to widgets in Interface Builder is pretty
   simple.

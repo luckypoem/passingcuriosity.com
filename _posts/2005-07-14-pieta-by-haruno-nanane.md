@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1610
+wordpressid: 1610
 layout: post
 title: "Pieta by Haruno Nanane"
-wordpress_url: http://passingcuriosity.com/2005/pieta-by-haruno-nanane/
+wordpressurl: http://passingcuriosity.com/2005/pieta-by-haruno-nanane/
 ---
 
 I love Lililicious. They have done translations of some great manga and Pieta

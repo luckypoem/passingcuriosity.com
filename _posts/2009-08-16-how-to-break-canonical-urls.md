@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1883
+wordpressid: 1883
 layout: post
 title: Reversing the arrow; or how to break canonical URLs
-wordpress_url: http://passingcuriosity.com/?p=1883
+wordpressurl: http://passingcuriosity.com/?p=1883
 ---
 
 My colleagues and I have recently been working to improve our practices when

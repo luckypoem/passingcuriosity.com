@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1555
+wordpressid: 1555
 layout: post
 title: Tools for reading
-wordpress_url: http://passingcuriosity.com/2005/tools-for-reading/
+wordpressurl: http://passingcuriosity.com/2005/tools-for-reading/
 ---
 
 Since I got my iBook, I've been using

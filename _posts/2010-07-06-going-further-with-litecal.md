@@ -1,10 +1,10 @@
 ---
-layout   : post
-title    : Going Further with Litecal
-category : drupal
-tags     : [drupal, views, calendar, litecal]
-location : Perth, Western Australia
-excerpt  : |
+layout: post
+title: Going Further with Litecal
+category: drupal
+tags: [drupal, views, calendar, litecal]
+location: Perth, Western Australia
+excerpt: |
   This article builds on my last by adding additional features to a calendar 
   view based on litecal.
 ---

@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1579
+wordpressid: 1579
 layout: post
 title: Another interesting post on LtU
-wordpress_url: http://passingcuriosity.com/2005/another-interesting-post-on-ltu/
+wordpressurl: http://passingcuriosity.com/2005/another-interesting-post-on-ltu/
 ---
 <a href="http://lambda-the-ultimate.org/node/view/607#comment-5255">programmatic nature of subatomic make up | Lambda the Ultimate</a>
 <br />

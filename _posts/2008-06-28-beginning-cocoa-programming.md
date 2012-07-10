@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 86
+wordpressid: 86
 layout: post
 title: Beginning Cocoa Programming
-wordpress_url: http://passingcuriosity.com/blog/?p=4
+wordpressurl: http://passingcuriosity.com/blog/?p=4
 ---
 I made the switch to Apple computers nearly four years ago when I used part of a scholarship to by an iBook for use at work. Like pretty much everyone else I knew, the idea of a UNIX-based system that Just Works and does the Right Thing was intriguing. The first thing I did when I got it home was connect it to power, and the second was install the developer tools. Since that time I have done almost nothing to forward my goal of developing software for the Mac platform. This is changing...
 

@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1437
+wordpressid: 1437
 layout: post
 title: Parsing and Patterns
-wordpress_url: http://passingcuriosity.com/2005/parsing-and-patterns/
+wordpressurl: http://passingcuriosity.com/2005/parsing-and-patterns/
 ---
 
 The logic compiler generates Haskell code to implement a calculus. This

@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 163
+wordpressid: 163
 layout: post
 title: A List Apart Survey for People Who Make Web Sites 2008
-wordpress_url: http://passingcuriosity.com/?p=101
+wordpressurl: http://passingcuriosity.com/?p=101
 ---
 I just finished the [A List Apart](http://www.alistapart.com/) [Survey for People Who Make Web Sites, 2008](http://alistapart.com/articles/survey2008). They told me I ought to post this on my blog and I do find the results interesting to look over, so why don't you follow the link below and do of yourself (if you make web-sites)?
 

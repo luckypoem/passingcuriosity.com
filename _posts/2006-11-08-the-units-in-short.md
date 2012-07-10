@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1417
+wordpressid: 1417
 layout: post
 title: The Units in Short
-wordpress_url: http://passingcuriosity.com/2006/the-units-in-short/
+wordpressurl: http://passingcuriosity.com/2006/the-units-in-short/
 ---
 
 To ensure that all students are starting at the same point, the first topic to be covered is the [International System or Units](http://en.wikipedia.org/wiki/International_System_of_Units), or SI. The SI specifies units to measure every conceivable quantity and a range of prefixes to help make these measurements more manageable.

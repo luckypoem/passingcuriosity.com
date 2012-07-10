@@ -1,8 +1,8 @@
 --- 
 layout: post
 title: More on Modal Logic
-wordpress_id: 1552
-wordpress_url: http://passingcuriosity.com/2005/more-on-modal-logic/
+wordpressid: 1552
+wordpressurl: http://passingcuriosity.com/2005/more-on-modal-logic/
 ---
 
 Whilst I appreciate and, I hope, understand the pedagogical value of using

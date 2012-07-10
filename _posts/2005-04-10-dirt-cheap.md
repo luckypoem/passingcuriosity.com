@@ -1,7 +1,7 @@
 --- 
-wordpress_id: 1580
+wordpressid: 1580
 layout: post
 title: Dirt Cheap
-wordpress_url: http://passingcuriosity.com/2005/dirt-cheap/
+wordpressurl: http://passingcuriosity.com/2005/dirt-cheap/
 ---
 <a href="http://www.panmacmillan.com.au/display_title.asp?ISBN=1405036443&Author=Wynhausen,%20Elisabeth">Dirt Cheap</a> by <span style="font-style: italic;">Elisabeth Wynhausen</span><br /><br />I've just finished reading Dirt Cheap, a book detailing the author's attempt to live on the minimum wage. A well written and engaging book, it has reinforced exactly how revolting Australia (and Australians) are. Some of the statistics included (and referenced in the end notes) are truly disturbing:<ul><li>Not only does Australia have the third highest quality of life, but also the third highest percentage of people living below the poverty line.</li><li>One in five families is jobless, including more than 660,000 children</li></ul>This trend looks set to continue with the Howard government gaining control of the Senate thanks to the election of last year, guided no doubt by the wisdom of the free market. The question remains however of who will consume the market's produce? Surely the Centrelink executives, who are paid (I doubt that they earn it) $128,165p.a. (up over $40,000p.a. from 1997/8) can't consume ALL of the domestic and imported product.<br /><br />An enthralling book that I would recommend to anyone with an ounce of humanity, or the ability to see beyond the next fiscal year or federal election.

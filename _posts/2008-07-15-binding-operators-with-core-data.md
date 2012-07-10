@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 92
+wordpressid: 92
 layout: post
 title: Binding Operators With Core Data
-wordpress_url: http://passingcuriosity.com/?p=10
+wordpressurl: http://passingcuriosity.com/?p=10
 ---
 
 Tim Isted posted an excellent tutorial on building [Core Data applications

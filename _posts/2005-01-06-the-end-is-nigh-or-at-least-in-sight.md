@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1391
+wordpressid: 1391
 layout: post
 title: The end is nigh. Or at least in sight.
-wordpress_url: http://passingcuriosity.com/2005/the-end-is-nigh-or-at-least-in-sight/
+wordpressurl: http://passingcuriosity.com/2005/the-end-is-nigh-or-at-least-in-sight/
 ---
 
 The end is nigh, or in sight, depending on which way you look at it. There are

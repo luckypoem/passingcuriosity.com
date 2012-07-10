@@ -1,12 +1,11 @@
 --- 
-wordpress_id: 249
-wordpress_url: http://passingcuriosity.com/?p=249
-layout   : post
-title    : Creating custom tags for SPIP - Static tags
-tags     : [spip, php, code, template, tags]
-location : Perth, Western Australia
-excerpt  : |
-
+wordpressid: 249
+wordpressurl: http://passingcuriosity.com/?p=249
+layout: post
+title: Creating custom tags for SPIP - Static tags
+tags: [spip, php, code, template, tags]
+location: Perth, Western Australia
+excerpt: |
 ---
 
 The SPIP template language has two constructions: loops (which determine the

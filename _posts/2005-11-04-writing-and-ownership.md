@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1458
+wordpressid: 1458
 layout: post
 title: Writing and Ownership
-wordpress_url: http://passingcuriosity.com/2005/writing-and-ownership/
+wordpressurl: http://passingcuriosity.com/2005/writing-and-ownership/
 ---
 My thesis was due last Friday (delayed to last Monady) and I have an extension (or, rather, an I-don't-have-it-done) until today. Unfortunately, it doesn't look like I'll have it done by my deadline today either. For some reason, I just haven't wanted, or been able to, write.
 

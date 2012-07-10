@@ -1,12 +1,12 @@
 --- 
-wordpress_id: 6
-wordpress_url: http://barcamp2.wordpress.com/?p=6
-layout     : post
-title      : TiddlyWiki presentation
-tags       : [bcperth09]
-categories : [barcamp]
-location   : Perth, Western Australia
-excerpt    : |
+wordpressid: 6
+wordpressurl: http://barcamp2.wordpress.com/?p=6
+layout: post
+title: TiddlyWiki presentation
+tags: [bcperth09]
+categories: [barcamp]
+location: Perth, Western Australia
+excerpt: |
   Notes on a talk about TiddlyWiki at Barcamp Perth 2009.
 ---
 

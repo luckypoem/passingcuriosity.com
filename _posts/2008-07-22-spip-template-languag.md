@@ -1,11 +1,11 @@
 --- 
-wordpress_id: 139
-wordpress_url: http://passingcuriosity.com/?p=62
-layout   : post
-title    : The SPIP Template Language
-tags     : [spip]
-location : Perth, Western Australia
-excerpt  : |
+wordpressid: 139
+wordpressurl: http://passingcuriosity.com/?p=62
+layout: post
+title: The SPIP Template Language
+tags: [spip]
+location: Perth, Western Australia
+excerpt: |
   
 ---
 

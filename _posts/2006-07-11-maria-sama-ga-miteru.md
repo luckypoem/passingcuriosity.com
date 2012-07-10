@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1706
+wordpressid: 1706
 layout: post
 title: Maria-sama ga Miteru
-wordpress_url: http://passingcuriosity.com/2006/maria-sama-ga-miteru/
+wordpressurl: http://passingcuriosity.com/2006/maria-sama-ga-miteru/
 ---
 <a href="http://photos1.blogger.com/blogger/5615/352/1600/mariam.0.jpg"><img style="margin: 0pt 10px 10px 0pt; float: left; cursor: pointer; width: 59px; height: 88px;" src="http://photos1.blogger.com/blogger/5615/352/200/mariam.jpg" alt="" border="0" /></a>
 

@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1528
+wordpressid: 1528
 layout: post
 title: Resources for Teaching Pythagoras' Theorem
-wordpress_url: http://passingcuriosity.com/2006/resources-for-teaching-pythagoras-theorem/
+wordpressurl: http://passingcuriosity.com/2006/resources-for-teaching-pythagoras-theorem/
 ---
 I've decided to make the lesson plans, materials and such I write freely available under an <a href="http://creativecommons.org/licenses/by-nc-sa/2.1/au/">Attribution, NonCommerical, ShareAlike license</a> from <a href="http://www.creativecommons.org/">Creative Commons</a>.
 

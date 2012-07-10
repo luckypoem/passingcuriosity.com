@@ -1,10 +1,10 @@
 ---
-layout      : post
-title       : Getting rid of Boot Camp volumes
-categories  : [apple]
-tags        : [osx, boot camp, ubuntu]
-location    : Perth, Western Australia
-excerpt     : |
+layout: post
+title: Getting rid of Boot Camp volumes
+categories: [apple]
+tags: [osx, boot camp, ubuntu]
+location: Perth, Western Australia
+excerpt: |
   A short overview of my last few hours fighting to get rid of the Boot Camp,
   Ubuntu Linux and rEFIt volumes on my Macbook Pro with Snow Leopard. It was a 
   struggle, but I got there.

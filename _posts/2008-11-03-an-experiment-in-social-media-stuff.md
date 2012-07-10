@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 233
+wordpressid: 233
 layout: post
 title: An Experiment in Social Media Stuff
-wordpress_url: http://passingcuriosity.com/?p=185
+wordpressurl: http://passingcuriosity.com/?p=185
 ---
 I'm a member of the [Perth Atheists meet-up](http://www.perthatheists.org/) and we had our monthly get together at the [Flying Scotsman](http://flyingscotsman.com.au/) in Mount Lawley tonight. Instead of the usual short talk (which are always entertaining, informative, excellent and awesome) this week was for "housekeeping" -- namely talking about what sort of group we want to be. The "housekeeping" label might have had something to do with the slightly reduced numbers, but the discussion was good nonetheless, with some excellent views and ideas of who and what and how our little group can grow and be and do *something*.
 

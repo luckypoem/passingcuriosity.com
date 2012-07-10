@@ -1,8 +1,8 @@
 --- 
 layout: post
 title: Alternative Visualizations and Pseudo-semantic Orderings
-wordpress_id: 1386
-wordpress_url: http://passingcuriosity.com/2004/alternative-visualizations-and-pseudo-semantic-orderings/
+wordpressid: 1386
+wordpressurl: http://passingcuriosity.com/2004/alternative-visualizations-and-pseudo-semantic-orderings/
 ---
 
 I've started thinking about alternative visualisation methods in the last

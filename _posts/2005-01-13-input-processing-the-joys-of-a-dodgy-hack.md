@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1393
+wordpressid: 1393
 layout: post
 title: "Input Processing: The Joys of a Dodgy Hack"
-wordpress_url: http://passingcuriosity.com/2005/input-processing-the-joys-of-a-dodgy-hack/
+wordpressurl: http://passingcuriosity.com/2005/input-processing-the-joys-of-a-dodgy-hack/
 ---
 
 Just finished a rewrite of the input processing scripts. I now have a single

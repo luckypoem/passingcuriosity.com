@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1408
+wordpressid: 1408
 layout: post
 title: "Resolution for 2007: no more books!"
-wordpress_url: http://passingcuriosity.com/2007/1408/
+wordpressurl: http://passingcuriosity.com/2007/1408/
 ---
 One of my resolutions for 2007 is to beat my book buying habit. Too often I find myself buying a new book, reading the first few chapters, and abandoning it in favour of another new purchase. I have a deck of playing cards which I used a bookmarks and almost all of them are in books, some of which I began reading more than two years ago. I therefore resolve not to buy another book (excepting required textbooks) until I've finished those I already own. To start with, I've selected twelve shorter unread books:
 

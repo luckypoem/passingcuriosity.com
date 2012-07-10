@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 389
+wordpressid: 389
 layout: post
 title: Accessing SQL databases with Haskell -- HSQL
-wordpress_url: http://passingcuriosity.com/?p=389
+wordpressurl: http://passingcuriosity.com/?p=389
 ---
 (Or "Connecting to SQL databases with Haskell" as per DoeL's suggestion, it was getting a bit long)
 

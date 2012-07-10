@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1462
+wordpressid: 1462
 layout: post
 title: Public Speaking
-wordpress_url: http://passingcuriosity.com/2005/public-speaking/
+wordpressurl: http://passingcuriosity.com/2005/public-speaking/
 ---
 I used to hate public speaking, now I just dislike it. I've had to give presentations on a number of occasions and, normally, my mind goes blank, I forget to so much as look at my notes and I manage to muddle through whatever I was supposed to say without screwing up too badly, but without the level of technical detail I should be able to impart.
 <br />

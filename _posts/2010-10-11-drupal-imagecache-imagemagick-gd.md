@@ -1,10 +1,10 @@
 ---
-layout      : post
-title       : Using ImageMagick and GD2 together with Drupal ImageCache
-category    : drupal
-tags        : [php, images, resize, imagemagick, gd]
-location    : Perth, Western Australia
-excerpt     : |
+layout: post
+title: Using ImageMagick and GD2 together with Drupal ImageCache
+category: drupal
+tags: [php, images, resize, imagemagick, gd]
+location: Perth, Western Australia
+excerpt: |
   A quick (working!) introduction to using ImageMagick in custom ImageCache 
   actions while using GD as your default toolkit.
 ---

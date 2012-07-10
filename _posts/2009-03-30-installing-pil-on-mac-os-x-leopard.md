@@ -1,15 +1,17 @@
 --- 
-wordpress_id: 1045
+wordpressid: 1045
 layout: post
 title: Installing the Python Imaging Library on Mac OS X Leopard
-wordpress_url: http://passingcuriosity.com/?p=1045
+wordpressurl: http://passingcuriosity.com/?p=1045
 ---
-Like many other developers, I work on a variety of UNIX-like operating systems 
-including Linuxen, BSDs, and Mac OS X. While it's generally pretty easy to 
-build and install new software on Linux and BSD-based systems, it can be 
-something of a pain in the arse to get some things to build on OS X, 
-particularly when the multiple-architectures stuff comes into play. The most 
-recent trouble I've had is in installing [Python Imaging Library](http://www.pythonware.com/products/pil/) (henceforth PIL).
+
+Like many other developers, I work on a variety of UNIX-like operating systems
+including Linuxen, BSDs, and Mac OS X. While it's generally pretty easy to
+build and install new software on Linux and BSD-based systems, it can be
+something of a pain in the arse to get some things to build on OS X,
+particularly when the multiple-architectures stuff comes into play. The most
+recent trouble I've had is in installing [Python Imaging
+Library](http://www.pythonware.com/products/pil/) (henceforth PIL).
 
 *[PIL]: Python Imaging Library
 
@@ -105,4 +107,4 @@ I used the following references in tracking this information down:
 1. [a comment](http://www.p16blog.com/p16/2008/05/appengine-installing-pil-on-os-x-1053.html#comment-6a00e54fa872f38833010535c1c365970c) on a blog post about 
    [Installing PIL on OS X 10.5.3](http://www.p16blog.com/p16/2008/05/appengine-installing-pil-on-os-x-1053.html).
 1. a [message by Christopher Barker to the Image-SIG list](http://mail.python.org/pipermail/image-sig/2008-April/004939.html).
-3. If you're a fink person, you might find [Kill PIL – The Python Imaging Library Headache or Building PIL on Mac OS X](http://blog.tlensing.org/2008/12/04/kill-pil-–-the-python-imaging-library-headache/) helpful.
+3. If you're a fink person, you might find [Kill PIL - The Python Imaging Library Headache or Building PIL on Mac OS X](http://blog.tlensing.org/2008/12/04/kill-pil-the-python-imaging-library-headache/) helpful.

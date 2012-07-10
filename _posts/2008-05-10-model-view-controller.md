@@ -1,12 +1,12 @@
 --- 
-wordpress_id: 9
-wordpress_url: http://barcamp2.wordpress.com/?p=9
-layout     : post
-title      : Model View Controller
-tags       : [bcperth09]
-categories : [barcamp]
-location   : Perth, Western Australia
-excerpt    : |
+wordpressid: 9
+wordpressurl: http://barcamp2.wordpress.com/?p=9
+layout: post
+title: Model View Controller
+tags: [bcperth09]
+categories: [barcamp]
+location: Perth, Western Australia
+excerpt: |
   Some notes from a Barcamp talk about Model-View-Controller in ASP.Net.
 ---
 

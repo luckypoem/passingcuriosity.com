@@ -1,7 +1,7 @@
 --- 
-wordpress_id: 1448
+wordpressid: 1448
 layout: post
 title: Stupidity or How Dumb Can I Get
-wordpress_url: http://passingcuriosity.com/2005/stupidity-or-how-dumb-can-i-get/
+wordpressurl: http://passingcuriosity.com/2005/stupidity-or-how-dumb-can-i-get/
 ---
 I've just been trying to install <a href="http://www.cse.unsw.edu.au/~dons/hs-plugins/"><span style="font-family: monospace;">hs-plugins</span></a> on my iBook with <a href="http://www.haskell.org/ghc/">GHC</a> 6.4. Sorting out the dependancies, getting stuff to build and getting the libraries installed has been ridiculously complex.<br /><br />Now that I've got it built and installed (part of which required using <span style="font-family: monospace;">hugs</span> because <span style="font-family: monospace;">runghc</span> refused to run the setup programme), it doesn't appear to have registered the package, which means I need to manually provide the details to <span style="font-family: monospace;">GHC</span> every time I compile some code using <span style="font-family: monospace;">System.Plugins</span> (rather than just tell the compiler to use the package: <span style="font-family: monospace;">-package plugins</span>).<br /><br />I need to figure out what it going wrong with my environment and fix it. Perhaps by tearing some capabilities out...<br /><br /><strong>Update:</strong> I've got that problem fixed (<span style="font-family: monospace;">make install</span> doesn't appear to update the package database). Now all I need to do is work out a way to be able to specify the data-types in the plug-ins.

@@ -1,10 +1,10 @@
 ---
-layout      : post
-title       : Tweaking the configuration of cabal-dev 
-categories  : [haskell]
-tags        : [haskell, cabal-dev, sandbox, configuration]
-location    : Perth, Western Australia
-excerpt     : |
+layout: post
+title: Tweaking the configuration of cabal-dev 
+categories: [haskell]
+tags: [haskell, cabal-dev, sandbox, configuration]
+location: Perth, Western Australia
+excerpt: |
   While cabal-dev is great, I need to make a few tweaks to its default
   configuration before it's useful.
 ---

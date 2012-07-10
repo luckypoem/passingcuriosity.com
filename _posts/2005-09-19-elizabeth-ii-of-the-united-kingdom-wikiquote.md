@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1503
+wordpressid: 1503
 layout: post
 title: Elizabeth II of the United Kingdom - Wikiquote
-wordpress_url: http://passingcuriosity.com/2005/elizabeth-ii-of-the-united-kingdom-wikiquote/
+wordpressurl: http://passingcuriosity.com/2005/elizabeth-ii-of-the-united-kingdom-wikiquote/
 ---
 <a href="http://en.wikiquote.org/wiki/Elizabeth_II_of_the_United_Kingdom">Elizabeth II of the United Kingdom - Wikiquote</a>
 <br />

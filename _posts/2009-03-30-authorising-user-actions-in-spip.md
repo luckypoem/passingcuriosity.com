@@ -1,11 +1,11 @@
 --- 
-wordpress_id: 1051
-wordpress_url: http://passingcuriosity.com/?p=1051
-layout   : post
-title    : Authorising user actions in SPIP
-location : Perth, Western Australia
-tags     : [spip, php, code, authorisation, security]
-excerpt  : |
+wordpressid: 1051
+wordpressurl: http://passingcuriosity.com/?p=1051
+layout: post
+title: Authorising user actions in SPIP
+location: Perth, Western Australia
+tags: [spip, php, code, authorisation, security]
+excerpt: |
   One of the APIs that many SPIP plug-ins will need to use is `autoriser()` --
   the function which determines whether a user should be permitted to perform
   a given operation. As I couldn't find any document on using this function, 

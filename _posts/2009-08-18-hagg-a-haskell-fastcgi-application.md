@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1977
+wordpressid: 1977
 layout: post
 title: "HAgg: a Haskell FastCGI application (in development)"
-wordpress_url: http://passingcuriosity.com/?p=1977
+wordpressurl: http://passingcuriosity.com/?p=1977
 ---
 I've had just about as much of PHP as I can take. I distrust the language itself and most of the packages written in it and have finally had enough. Rather than throwing in the towel and taking up garbage collection as a profession, I'm going to migrating at least my personal sites to Haskell. 
 

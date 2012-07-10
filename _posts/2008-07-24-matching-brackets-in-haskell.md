@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 155
+wordpressid: 155
 layout: post
 title: Matching Brackets in Haskell
-wordpress_url: http://passingcuriosity.com/?p=78
+wordpressurl: http://passingcuriosity.com/?p=78
 ---
 I have no idea where I came across the link (someone's solution in PHP?), but I stumbled on [A Programming Job Interview Challenge #13 - Brackets](http://www.dev102.com/2008/07/21/a-programming-job-interview-challenge-13-brackets/) the other day. It's a pretty trivial problem but I was bored tonight, so I hacked up a quick solution in [Haskell](http://haskell.org/). Haskell is a statically typed, non-strict, purely functional programming language that has whole great big piles of awesome built right in. What follows is pretty routine, but in world dominated by the likes of Java, C, .Net and the other misfits, Haskell is pretty strange so I'll try to explain.
 

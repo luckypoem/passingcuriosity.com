@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 2025
+wordpressid: 2025
 layout: post
 title: A complaint regarding the ABC's uncritical dissemination of anti-vaccine propaganda
-wordpress_url: http://passingcuriosity.com/?p=2025
+wordpressurl: http://passingcuriosity.com/?p=2025
 ---
 Here is my complaint to the ABC regarding one of their recent articles regurgitating anti-vaccine propaganda from the AVN loons. 
 

@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1866
+wordpressid: 1866
 layout: post
 title: AES encryption in Python with M2Crypto
-wordpress_url: http://passingcuriosity.com/?p=1866
+wordpressurl: http://passingcuriosity.com/?p=1866
 ---
 
 I've needed to write some Python code to handle encryption and decryption

@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1324
+wordpressid: 1324
 layout: post
 title: Notes on "Building scalable web apps (and why no-one really bothers)"
-wordpress_url: http://passingcuriosity.com/?p=1324
+wordpressurl: http://passingcuriosity.com/?p=1324
 ---
 A presentation by [Adrian Chadd](http://www.creative.net.au/) (adrian@creative.net.au) on building scalable web applications.
 

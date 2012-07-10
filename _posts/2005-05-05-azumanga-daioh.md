@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1587
+wordpressid: 1587
 layout: post
 title: Azumanga Daioh
-wordpress_url: http://passingcuriosity.com/2005/azumanga-daioh/
+wordpressurl: http://passingcuriosity.com/2005/azumanga-daioh/
 ---
 I got the first volume of ADV Manga's translation of Azumanga Daioh today and, having just read about half of it, I much prefer  the scanlations to the licensed product. Why can't the American companies that buy the rights to translate anime and manga into English resist the urge to re-interpret the characters and their lines?
 

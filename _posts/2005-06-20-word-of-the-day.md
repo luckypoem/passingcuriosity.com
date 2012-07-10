@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1603
+wordpressid: 1603
 layout: post
 title: Word of the Day
-wordpress_url: http://passingcuriosity.com/2005/word-of-the-day/
+wordpressurl: http://passingcuriosity.com/2005/word-of-the-day/
 ---
 Today's Word of the Day is: <a href="http://dictionary.reference.com/search?q=unbosom">unbosom</a>.
 <br />

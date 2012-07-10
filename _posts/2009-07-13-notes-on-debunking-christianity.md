@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1302
+wordpressid: 1302
 layout: post
 title: Notes on "Debunking Christianity"
-wordpress_url: http://passingcuriosity.com/?p=1302
+wordpressurl: http://passingcuriosity.com/?p=1302
 ---
 This post is some notes I took during a presentation at the [Perth Atheist Meetup](http://www.meetup.com/PerthAtheists/) given by Aaron Alderman. They were taken at speed (and without the overhead presentation which we were supposed to see as well) and are certain to contain errors.
 

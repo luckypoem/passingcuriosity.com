@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1388
+wordpressid: 1388
 layout: post
 title: Alternative Relations on Graphs
-wordpress_url: http://passingcuriosity.com/2004/alternative-relations-on-graphs/
+wordpressurl: http://passingcuriosity.com/2004/alternative-relations-on-graphs/
 ---
 
 This project has, so far, focused on visualising graphs of only one relation

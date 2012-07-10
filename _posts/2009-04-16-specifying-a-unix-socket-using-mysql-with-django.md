@@ -1,11 +1,11 @@
 --- 
-wordpress_id: 1155
-wordpress_url: http://passingcuriosity.com/?p=1155
+wordpressid: 1155
+wordpressurl: http://passingcuriosity.com/?p=1155
 layout: post
-title    : Specifying a UNIX socket using MySQL with Django
-tags     : [mysql, django, unix, socket, configuration]
-location : Perth, Western Australia
-excerpt  : |
+title: Specifying a UNIX socket using MySQL with Django
+tags: [mysql, django, unix, socket, configuration]
+location: Perth, Western Australia
+excerpt: |
   Configuring Django to connect to MySQL with a socket according to the 
   official documentation works fine (for me), but it breaks the dbshell 
   command (for me). This is how I configured it so that Django works and so

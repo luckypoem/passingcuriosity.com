@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 87
+wordpressid: 87
 layout: post
 title: Resources for Learning Cocoa
-wordpress_url: http://passingcuriosity.com/blog/?p=6
+wordpressurl: http://passingcuriosity.com/blog/?p=6
 ---
 While Cocoa is nowhere near as large as some other APIs, it does cover an enormous amount of ground and it can be difficult to know how and where to get started. Thankfully, there is no paucity of information out there. Some of the resources that I've found particularly useful are listed here, partially so that I can find them again and partially so that other who stumble onto this page can do so too.
 

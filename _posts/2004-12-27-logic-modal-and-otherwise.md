@@ -1,8 +1,8 @@
 --- 
 layout: post
 title: Logic, modal and otherwise.
-wordpress_id:  1548
-wordpress_url: http://passingcuriosity.com/2004/logic-modal-and-otherwise/
+wordpressid:  1548
+wordpressurl: http://passingcuriosity.com/2004/logic-modal-and-otherwise/
 ---
 
 Attending the [Logic Summer School][1] at the Australian National University has encouraged me to continue my studies of formal logic begun with the unit [HPA292: Logic and Philosophy][2]> more informally on my own.

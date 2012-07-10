@@ -1,8 +1,8 @@
 --- 
-wordpress_id: 1864
+wordpressid: 1864
 layout: post
 title: Security and SPIP
-wordpress_url: http://passingcuriosity.com/?p=1864
+wordpressurl: http://passingcuriosity.com/?p=1864
 ---
 [SPIP](http://www.spip.net/) is an open source content management system written in PHP. It was originally designed to use a MySQL, but now supports [a number of SQL databases](http://www.spip.net/en_article3837.html) including PostgreSQL and SQLite. Like most software systems, it sometimes has bugs and flaws and, like many web-based systems, these can sometimes lead to exploitable security holes. This post describes the latest security problem in SPIP (which [resulted in the released of SPIP 2.0.9](http://www.spip-contrib.net/SPIP-Security-Alert-new-version)) and how to help reduce the risk of your SPIP sites being hacked using similar flaws in the future.
 
