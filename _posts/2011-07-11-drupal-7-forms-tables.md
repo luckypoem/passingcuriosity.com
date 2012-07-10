@@ -1,6 +1,6 @@
 ---
 layout      : post
-title       : Drupal 7: theming forms with tables
+title       : "Drupal 7: theming forms with tables"
 categories  : [drupal]
 tags        : [drupal7, theme, render, forms, tables, ajax, ahah]
 location    : Perth, Western Australia
