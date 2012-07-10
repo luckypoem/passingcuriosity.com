@@ -1,0 +1,36 @@
+Ægir
+=====
+
+- mig5
+- Dpl hosting system to **provision** and **manage** Drupal sites.
+- Web based control panel (built with Drupal) and Drush (with other bits)
+- Represents *sites*, *codebases*, and *servers* as nodes.
+- These are managed with *Tasks*
+
+Parts
+=====
+
+- Front-end: web interface. Stores and displays data for the user.
+
+- Backend: drush. Actually does the work of performing tasks.
+
+This means that it won't work on shared hosting, etc. It pretty much needs a dedicated system (but only pretty much).
+
+Demo
+====
+
+Create platforms. Using `drush make`
+
+Notes
+=====
+
+Use `provision-import` to tell the front-end that the backend has changed
+something (migrated a site).
+
+Use Jenkins to poll git and then fabric (or Capistrano or something else) to
+control the building, migration, etc. of platforms or sites.
+
+Conclusion
+==========
+
+Ægir is pretty awesome.

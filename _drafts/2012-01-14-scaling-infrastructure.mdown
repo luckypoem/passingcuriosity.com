@@ -1,0 +1,98 @@
+% Scaling Infrastructure
+% Arjen Lentz
+
+Some tips about running infrastructure -- particularly MySQL -- that may help
+save time and money.
+
+Don't "do" emergencies; unnecessary; time consuming; expensive; distraction;
+indicative of poor design or incomplete work.
+
+Prevention is better than cure. Is there a cure? How much down time can you
+afford? Insurance can't get your database (and most support contracts are like
+insurance). Suing someone doesn't save your business. 
+
+Build redundancy and resilience into systems so that failures don't result in
+time zone.
+
+You need a backup strategy. Both logical (mysqldump) and physical (file
+system) backups. Replication, RAID and SAN are not backup strategies.
+
+*Multi-master* for resilience and maintenance; dual masters with MMM and
+automatic failover. Works with Drupal 6.
+
+*Replication* over slaves for read-scalability; D7 support.
+
+"SAN can't fail" is bullshit.
+
+MySQL Replication
+=================
+
+Replicate statements and/or row changes. Statements is pretty unusual and
+great for, e.g., replication to geographically/network distributed servers.
+
+Uses logs/buffers to de-coupled shipping and application. Now large queries
+don't cause the slave to fall behind.
+
+Topologies
+==========
+
+- Master: has a slave reading from it.
+- Slave: connects to a master to read from it.
+
+More than two masters is possible, but fixing problems is tricky and annoying.
+Generally only have two masters these days.
+
+Any number of slaves can be used; reporting, backup, read distribution, etc.
+are common use cases.
+
+Steps
+=====
+
+0. MySQL baseline tuning (switch to InnoDB and more)
+1. Split web and database to different servers
+2. Memcached & Varnish, Solr/SphinxSearch
+3. Backups (logical & physical)
+4. Single DB -> MySQL dual masters
+5. Monitoring and trending
+6. Security and penetration testing
+7. Puppet
+8. Migrate from Apache to nginx
+9. Use multiple web servers
+10. MySQL slaves
+11. Failover between data-centres
+
+Notes
+=====
+
+Use ionice to throttle backups under InnoDB. Otherwise the disk I/O to write
+the backup will impact server performance.
+
+MySQL default installs are pretty crappy.
+
+MySQL pretty much needs 64-bit.
+
+Databases are hideously bad at full-text search. Use Solr or SphinxSearch for
+search. (MySQL fulltext indexing is only supported on SyISAM; ditch the
+indexes and switch all the way to InnoDB).
+
+MMM needs virtual IP addresses. Linode have good support for this.
+
+Dual masters lets you take single nodes offline for upgrades, maintenance,
+etc.
+
+Monitor trends rather than receiving alerts. MySQL, in particular, will start
+trending downward and then, after a bit, plummet through the floor.
+
+- MariaDB now.
+
+- Percona Toolkit
+
+- Zabbix
+
+- Debian/Ubuntu
+
+- Puppet
+
+- Git/bzr/hg
+
+- Linode

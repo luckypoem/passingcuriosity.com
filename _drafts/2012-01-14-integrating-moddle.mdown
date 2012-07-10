@@ -1,0 +1,114 @@
+Moodle/Drupal Integration
+=========================
+
+Alex Lawn - Catalyst IT
+
+Moodle - OSS LMS. Online courses, quizzes, courses, results, etc. Making
+inroads with enterprise. Lots in common with Drupal: PHP 5.2/5.2, MySQL,
+Apache (/nginx), etc.
+
+Integration
+===========
+
+What sort of integration is possible?
+
+- Sharing accounts between both.
+- Single sign on
+- Pull course information into Drupal
+- Sell courses from Drupal (Ubercart/Commerce)
+- Manage enrolments
+- Shared profiles
+- Moodle content (forums, etc.)
+
+Sypport
+=======
+
+Moodle module for Drupal
+
+- drupal.org/project/moodle
+- Uses RESTful API provided by the QAPI Moodle plugin.
+- Only provides a certain information.
+- Only Moodle 1.9 and Drupal 6.
+
+Drupal plugin for Moodle
+
+- SSO with shared cookies
+- Moodle 1.9-2, Drupal 6 (D7 in progress)
+- Sync some profile fields
+- Account creation
+- Language settings
+- Moodle needs direct access to the Drupal database
+
+mNet
+
+- Half-baked implementation for Drupal
+- Would work, but too much work and mNet is being dropped in future
+
+Sharing accounts
+
+- Use Moodle's external database authentication
+- Requires direct DB access
+- Still have to login twice
+
+Open ID
+
+- Drupal as OpenID provider
+
+- Moodle as OpenID consumer
+
+- SSL (HTTP vs HTTPS are two endpoints)
+
+- Moodle 1.9 only
+
+- Need to allow authentication from single OpenID provider (otherwise everyone
+  can auth)
+
+Simple SAML
+
+- simplesaml.org
+- Drupal as identity consumer.
+- SSO from Google, FB, Y!, others
+- Various types of SSO: OAuth, OpenID, CAS
+- 3rd web app involved in the process.
+- Generates usernames that are awful
+
+Courses
+=======
+
+- Show courses
+- Selling courses
+- Creating enrolments
+- Expiring enrolments
+
+### Multiple Databases
+
+Add the Moodle DB in `settings.php`, use DB switching and run whatever queries
+you like.
+
+### Moodle Web Services
+
+Moodle has some XMLRPC published, but often need to add more.
+
+Use Drupal XMLRPC client to fetch the data, etc.
+
+Enrolments
+==========
+
+- External database enrolments
+- Similar to external db auth
+- Drupal records enrolments into a custom table
+- Use Rules or whatever in Ubercart, Commerce, hook_user, etc. to record
+  enrolments into the table
+- Moodle checks the custom table
+- `check_enrolment_plugins($user);` to hack core so already authenticated
+  users get need enrolments.
+
+Mahara
+======
+
+- OSS e-portfolio
+- Compliments Moodle, etc.
+- Same stack
+- Similar SSO: LDAP, shared db, OpenID, Simple Saml PHP
+- Web services: profiles, artefacts, users, forum subs, etc.
+- 

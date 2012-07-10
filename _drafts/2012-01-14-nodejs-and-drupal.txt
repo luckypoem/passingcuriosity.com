@@ -1,0 +1,118 @@
+% Node.js and Drupal
+
+- [beejeebus][] at Acquia.
+
+- "Javascript on the server" based on V8.
+
+- Event driven.
+
+- Asynchronous I/O operations.
+
+[beejeebus]: http://twitter.com/beejeebus
+
+- Single process, multi-threaded module.
+- Main event loop on single thread.
+- C++ extensions.
+
+- *Socket.IO* module takes the pain out of using Web Sockets. Falls back to
+  other transports. Also adds extra crap that isn't in the spec. Why do people
+  do that? Why not just implement the spec.
+
+Apache's Shortcoming
+====================
+
+One thread (usually a process) per connection. Generally these use enormous
+amounts of memory. They *must* be used sparingly. Persistent connections are
+massive fail. Doing push with this model is massive fail; polling is shit no
+matter what.
+
+Clearly [chatroom][] needs something else.
+
+[chatroom]: http://drupal.org/project/chatroom
+
+Node.js is good for
+===================
+
+- Concurrency!
+- Asynchronous I/O
+- Low overhead for connections
+
+Somehow node.js is magic and doesn't need concurrency specified in the code
+(as though the mess of callbacks is natural?)
+
+
+
+Combination
+===========
+
+- [Node.js Integration][nodejs] glues Drupal and Node together.
+- Provides a Node server script and a Drupal module. 
+- Plumbs them both together.
+
+[nodejs]: http://drupal.org/project/nodejs
+
+Aims to be plumbing to support other modules.
+
+Process
+=======
+
+1. Load Drupal page with auth token[^1].
+
+2. JS on client connects to node with auth token.
+
+3. Node sends the auth token to Drupal, where it is verified, etc.
+
+4. Drupal returns a list of channels for the user.
+
+5. Node sends client the OK (caching the result so it doesn't bootstrap Drupal
+twice for every page load).
+
+6. Use the magic of callbacks to update UI, etc.
+
+[^1]: Like a session cookie.
+
+And a sequence diagram makes it more clear.
+
+Using
+=====
+
+Sending:
+
+~~~~{.php}
+$msg = (object) array(
+  'channel' => 'exampe',
+  // Data received as JSON
+  'data' => array(
+    'key' => 'val',
+    'some other key' => 'some other value',
+  ),
+  // optional
+  'callback' => 'JSCallbackID', 
+);
+nodejs_enqueue_message($message);
+~~~~
+
+Receiving:
+
+~~~~{.js}
+Druapl.Nodejs.callbacks.example = {
+  callback: function(message) {
+    if (message.channel = 'example') {
+      window.alert(message.data);
+    }
+  }
+}
+~~~~
+
+Channels
+========
+
+`hook_nodejs_user_channels()` allows modules to return channels that a user is
+permitted to access.
+
+Notes
+=====
+
+Supervisord to run node servers.
+
+

@@ -1,0 +1,47 @@
+% Creating Distributions
+% Steward Clark
+
+The details of this talk are described at http://realityloop.com/blog/2012/01/07/ezy-bake-drupal-cooking-sites-distributions
+
+- Open Atrium
+- Acquia Drupal
+- Managing News
+- COD
+- Pressflow
+
+See [drupaldistrowatch.com](http://drupaldistrowatch.com/) for a list of
+available Drupal distributions.
+
+Building "personal" distributions to codify our own standards and best
+practices. This saves time and money by reducing the work involved in building
+projects (all the boring cruft -- boring because it's the same on each and
+every site -- goes away).
+
+Overview
+========
+
+A stub makefile is the top-level of any distro. It just needs to choose a core
+and profile.
+
+The profile itself is the core of the distro. It contains:
+
+- Makefile to download modules, themes, libraries, etc.
+- Installation and customisation code, etc.
+- The makefile should specify version numbers!
+- Distributions should have a release process!
+- Use specific git revisions if you need to use dev code.
+- patches
+
+Features
+========
+
+Every site needs a feature. ("a" feature?)
+
+WYSIWYG is now (in dev) exportable!
+
+Two "types" of feature modules:
+
+- "Core" features which go into an install profile and used across a bunch of
+  sites.
+
+- "Site" features 

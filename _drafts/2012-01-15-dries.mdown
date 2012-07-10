@@ -1,0 +1,87 @@
+% Dries
+
+Standardisation and cost reduction are amongst the key opportunities. This is a marketing challenge for the Drupal community.
+
+Enterprises still have problems with configuration management, content
+management workflows, etc.
+
+Drupal 8
+========
+
+Four focus areas:
+
+1. Multi-channel -- Web services (WSCCI), HTML5 output as default, responsive
+design (images & other resources per device) (Mobile initiative)
+
+    Mostly high-end concerns.
+
+    Doing reasonably well; nice progress on HTML5, mobile initiative; WSCCI is
+    struggling a little.
+
+2. Editorial experience -- media management, in-line editing, WYSIWYG, useful
+content admin overview page, everything a block/entity.
+
+    Affects everyone.
+
+    Bad; almost no-one is working on these issues; no core initiatives. We
+    should care about this, but no-one has stepped forward.
+
+3. Deployability -- configuration management, content staging (not just nodes:
+blocks, menus, themes, etc), UUIDs.
+
+    Mid- to high-level concerns.
+
+    Good; configuration management is nearly there.
+
+4. Technical housekeeping -- more OOP & patterns, better separation (small
+core!), UX (field admin interfaces).
+
+   Primarily small to mid-level concerns.
+
+   OK, but we're not there yet.
+
+When we improve in all four sections, the Drupal sweat spot will have expanded
+to encompass more of both ends of the market.
+
+Discussion
+==========
+
+Move to **OOP** mainly because its the done thing (and it works now). One of
+the key challenges is the lack of Drupal talent, and the old-fashioned
+procedural paradigm scares some people off.
+
+**Commercial offerings** -- modules and/or SaaS -- are big in WP and Joomla.
+Dries is happy that we don't have the commercial modules that WP and J have
+(and noted that they are both trying to get rid of that).
+
+Seeing a growth in Drupal service companies, especially in the mid- to
+high-end of the market is good.
+
+Would like to see more people specialising. There seems to be an idea that
+there can only be one specialist (Four Kitchens for performance, etc.) There
+is a lot of opportunity for more competition in all of the specialisations.
+People like Pantheon are great; SaaS is good (Drupal Gardens!), especially for
+entry level. SaaS helps to eliminate pain-points that we'll never be able to
+fix (installation, upgrading, etc.) All of this can help bring people into the
+community (hopefully some of them will stay and contribute).
+
+**Problems** with Drupal 7: performance regressed on average (and was
+something of a afterthought; we should do more performance testing in D8); a
+lot of usability issues that could have been fixed; a lot of APIs that could
+have been better (a lot of time on Entity API and already talking about
+redesigning it from scratch); mobile (should have been sooner, we need it
+now).
+
+**Backward compatibility** is deliberately broken. The short term pain is bad,
+but the ability to stay cutting edge is worth more in the long term. Maybe
+Drupal should follow the Python model of maintaining compatibility layers for,
+e.g, one major version after breaking an API?
+
+Putting **functionality into core** removes the risks for using functionality
+for the user community but also slows innovation. See the forum module in D6
+for example. Perhaps there should be some middle ground between core and
+contrib where these modules can live?
+
+Backward compatibility, development models, core/contrib are all related to
+some degree. This is a discussion the Drupal community needs to have.
+

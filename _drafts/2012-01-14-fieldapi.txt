@@ -1,0 +1,108 @@
+% Field API
+
+- Rowlands Group - Queensland.
+- [larowlan](http://drupal.org/user/395439)
+
+What
+====
+
+The module formerly known as CCK. Now in core.
+
+Key terms
+
+- Field type
+- Field
+- Instance
+- Bundle
+- Entity Type
+- Widget
+
+Why
+===
+
+- Flexible
+- Extensible
+- Reusable components and logic.
+- Automatic views integration - nice to have
+- Widgets - nice to have
+
+Alternatives
+============
+
+- Use `hook_nodeapi`, `hook_form_alter`, views integration, theming, etc.,
+  etc.
+- 
+
+Steps
+=====
+
+## Create module
+
+## Implement `hook_field_info`
+
+Described the field type.
+
+## Implement `hook_field_schema`
+
+Describe the schema used to store instances of the field.
+
+## Implement `hook_field_widget_info`
+
+Describe the widgets available to format instances of the field.
+
+## Implement `hook_field_settings_form`
+
+Allow users to configure global settings for a field.
+
+## Implement `hook_field_instance_settings_form`
+
+Allow users to configure per-instance settings for a field.
+
+## Implement `hook_field_widget_form`
+
+Handle displaying the widget for a field in a form. This implementation handles every widget defined in the module! So split it up.
+
+## Validation and error handling
+
+Follow the standard pattern for validation and error handling
+
+- `hook_field_validate` - detects errors in user input
+- `hook_field_widget_error` - handles errors in the user input.
+
+## Saving
+
+Don't do any saving yourself (or, e.g., alternate storage support won't work).
+
+Implement `hook_field_is_empty` so Drupal can decide not to save non-values.
+
+## Implement `hook_field_formatter_info`
+
+Describe the formatters supported by the module.
+
+## Implement `hook_field_formatter_view`
+
+Again, this hook handles *all* formatters supported by the module so follow
+the pattern.
+
+Returns a render array.
+
+See `#attach` in render arrays.
+
+## Note
+
+You can define fields without widgets and vice versa. Reusing widgets
+(`hook_field_widget_info_alter` to add your type to the widget).
+
+Field Info
+==========
+
+Before dropping into 
+
+Field CRUD
+==========
+
+`field_create_field` and `field_create_instance` to create fields and
+instances in code. Use the field API to build your bundles during
+installation.
+
+
