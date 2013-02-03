@@ -4,20 +4,14 @@
 .DS_Store
 ._*
 404.html
-_extensions
-_index
-_layouts
-_lib
-_site
+# Ignore Hakyll output
+/_*/
 files/css
 files/js
 htdocs
 public
 tmp
-_includes
 /cabal-dev/
-/_cache/
-/_site/
 /dist/
 /dist_*/
 /.hsenv*/
