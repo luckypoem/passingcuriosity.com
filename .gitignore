@@ -1,17 +1,23 @@
+# Editors
 *~
 .#*
 .*.swp
+
+# OS X
 .DS_Store
 ._*
-404.html
+
 # Ignore Hakyll output
 /_*/
-files/css
-files/js
-htdocs
-public
-tmp
-/cabal-dev/
+/htdocs
+/log
+
+# Cabal
 /dist/
-/dist_*/
+
+# Cabal dev
+/cabal-dev/
+
+# HS Env
 /.hsenv*/
+/dist_*/
