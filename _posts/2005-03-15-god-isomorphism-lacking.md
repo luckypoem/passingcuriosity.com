@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1576
 layout: post
 title: God - Isomorphism Lacking

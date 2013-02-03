@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1977
 layout: post
 title: "HAgg: a Haskell FastCGI application (in development)"

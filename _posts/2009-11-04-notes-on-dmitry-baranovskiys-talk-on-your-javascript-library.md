@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 2109
 layout: post
 title: Dmitry Baranovskiy's talk on Your JavaScript Library

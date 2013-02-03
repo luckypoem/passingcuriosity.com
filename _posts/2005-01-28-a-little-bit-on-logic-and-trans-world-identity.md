@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1556
 layout: post
 title: A little bit on logic and trans-world identity

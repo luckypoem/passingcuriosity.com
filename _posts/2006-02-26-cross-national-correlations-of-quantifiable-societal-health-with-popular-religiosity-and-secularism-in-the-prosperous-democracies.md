@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1647
 layout: post
 title: Cross-National Correlations of Quantifiable Societal Health with Popular Religiosity and Secularism in the Prosperous Democracies

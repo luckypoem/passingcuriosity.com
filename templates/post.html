@@ -1,9 +1,26 @@
 <article>
-  <h1>$title$</h1>
 
-  <p>by <em>$author$</em> on <strong>$date$</strong></p>
+  <div class="page-header">
+    <h1>$title$
+      <small>$date$</small>
+    </h1>
+  </div>
+  
+<!--
+  <ul class="breadcrumb">
+    <li><a href="#">Home</a> <span class="divider">/</span></li>
+    <li><a href="#">Library</a> <span class="divider">/</span></li>
+    <li class="active">Data</li>
+  </ul>
+-->
 
-  <p>Tagged as: $prettytags$.</p>
+  <div class="well">
+    <p>$excerpt$</p>
+    <p>by <em>$author$</em> on <strong>$date$</strong></p>
+    <p>Tagged as: $tags$.</p>
+  </div>
+
+
 
 $body$
 

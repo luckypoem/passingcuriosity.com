@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1497
 layout: post
 title: More Tai Chi

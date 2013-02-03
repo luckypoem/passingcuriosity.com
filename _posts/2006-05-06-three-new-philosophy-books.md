@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1691
 layout: post
 title: Three new philosophy books

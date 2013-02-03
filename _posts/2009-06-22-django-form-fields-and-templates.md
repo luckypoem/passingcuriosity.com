@@ -1,4 +1,4 @@
---- 
+---
 layout: post
 title: Django form fields and templates
 tags: django, html, web, forms

@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 2102
 layout: post
 title: Lachlan Hardy's session The Open Web

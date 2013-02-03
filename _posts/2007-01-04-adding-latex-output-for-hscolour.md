@@ -1,4 +1,4 @@
---- 
+---
 layout: post
 title: Adding LaTeX output to HsColour
 wordpressid: 1409

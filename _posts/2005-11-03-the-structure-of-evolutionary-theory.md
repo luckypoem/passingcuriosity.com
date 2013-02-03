@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1641
 layout: post
 title: The Structure of Evolutionary Theory

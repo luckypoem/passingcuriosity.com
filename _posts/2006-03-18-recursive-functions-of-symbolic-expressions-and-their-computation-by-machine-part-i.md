@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1656
 layout: post
 title: Recursive functions of symbolic expressions and their computation by machine, Part I

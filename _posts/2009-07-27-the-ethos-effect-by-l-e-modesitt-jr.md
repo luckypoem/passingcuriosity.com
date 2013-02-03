@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1764
 layout: post
 title: The Ethos Effect by L. E. Modesitt Jr

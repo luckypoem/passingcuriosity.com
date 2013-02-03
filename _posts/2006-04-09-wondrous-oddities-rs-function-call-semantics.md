@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1673
 layout: post
 title: "Wondrous oddities: R's function-call semantics"

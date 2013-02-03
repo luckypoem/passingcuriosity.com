@@ -1,4 +1,4 @@
---- 
+---
 layout: post
 title: Data, Data, Everywhere
 tags: srp, logic, graph, visualisation, data processing

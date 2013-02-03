@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1566
 layout: post
 title: Tableau Methods for Modal Logics

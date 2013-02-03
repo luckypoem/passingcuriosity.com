@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1607
 layout: post
 title: Deriving Backtracking Monad Transformers

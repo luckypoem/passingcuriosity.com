@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1541
 layout: post
 title: The Teaching Begins

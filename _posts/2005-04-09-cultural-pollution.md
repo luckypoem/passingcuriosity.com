@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1473
 layout: post
 title: Cultural Pollution

@@ -2,9 +2,6 @@
 title: Welcome
 ---
 
-Welcome
-=======
-
 I registered the domain *Passing Curiosity* with the intention that it
 become a productive outlet for my rather short attention span. Rather
 than waste man-years clicking "Open Link in New Tab" on
@@ -15,12 +12,6 @@ I read. Dead time, no more!
 
 Alas, I got distracted. Nearly three years have passed and *Passing
 Curiosity* is still just a neglected blog.
-
-> $title$
-
-or
-
-> $posts$
 
 Blog
 ====

@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1391
 layout: post
 title: The end is nigh. Or at least in sight.

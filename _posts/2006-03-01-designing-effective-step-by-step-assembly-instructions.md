@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1652
 layout: post
 title: Designing Effective Step-By-Step Assembly Instructions

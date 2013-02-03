@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 83
 layout: post
 title: Treatments, Typography, and Markdown for SPIP

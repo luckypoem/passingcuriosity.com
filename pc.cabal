@@ -11,9 +11,13 @@ Build-type:          Simple
 Cabal-version:       >=1.9.2
 
 Executable pc
+  hs-source-dirs: src
   main-is: site.hs
 
   Build-depends:
     base >= 4 && < 5,
-    hakyll
+    binary,
+    hakyll,
+    filepath,
+    pandoc
 

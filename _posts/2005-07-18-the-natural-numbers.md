@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1440
 layout: post
 title: The Natural Numbers

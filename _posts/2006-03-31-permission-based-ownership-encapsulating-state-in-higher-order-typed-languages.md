@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1664
 layout: post
 title: "Permission-based ownership: encapsulating state in higher-order typed languages"

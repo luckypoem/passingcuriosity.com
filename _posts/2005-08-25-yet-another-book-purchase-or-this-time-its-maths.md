@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1631
 layout: post
 title: Yet Another Book Purchase or This Time, It's Maths

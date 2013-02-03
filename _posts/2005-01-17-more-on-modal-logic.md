@@ -1,4 +1,4 @@
---- 
+---
 layout: post
 title: More on Modal Logic
 wordpressid: 1552

@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1690
 layout: post
 title: The Fun of Programming

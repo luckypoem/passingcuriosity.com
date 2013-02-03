@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1415
 layout: post
 title: The Course Outline

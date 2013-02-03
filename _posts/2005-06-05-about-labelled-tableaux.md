@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1422
 layout: post
 title: About Labelled Tableaux

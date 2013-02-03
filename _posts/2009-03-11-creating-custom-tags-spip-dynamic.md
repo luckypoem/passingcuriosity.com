@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 286
 layout: post
 title: Creating custom tags for SPIP - Dynamic Tags

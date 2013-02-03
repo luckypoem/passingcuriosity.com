@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1486
 layout: post
 title: Stupid QANTAS

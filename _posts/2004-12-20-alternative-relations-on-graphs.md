@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1388
 layout: post
 title: Alternative Relations on Graphs

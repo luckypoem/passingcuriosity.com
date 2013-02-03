@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 389
 layout: post
 title: Accessing SQL databases with Haskell -- HSQL

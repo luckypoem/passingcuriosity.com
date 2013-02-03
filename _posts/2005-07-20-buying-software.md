@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1489
 layout: post
 title: Buying Software

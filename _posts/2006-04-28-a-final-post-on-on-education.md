@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1686
 layout: post
 title: A Final Post On 'On Education'

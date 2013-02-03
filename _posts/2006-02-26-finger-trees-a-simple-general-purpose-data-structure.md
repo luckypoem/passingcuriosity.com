@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1646
 layout: post
 title: "Finger Trees: A Simple General-purpose Data Structure"

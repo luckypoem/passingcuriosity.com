@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1392
 layout: post
 title: A Traditional Adjacency Matrix

@@ -1,4 +1,4 @@
---- 
+---
 layout: post
 title: "Verbosity: Not always a bad thing!"
 tags: srp, logic, graph, visualisation

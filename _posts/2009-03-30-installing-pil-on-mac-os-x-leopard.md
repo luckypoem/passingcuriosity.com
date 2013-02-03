@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1045
 layout: post
 title: Installing the Python Imaging Library on Mac OS X Leopard

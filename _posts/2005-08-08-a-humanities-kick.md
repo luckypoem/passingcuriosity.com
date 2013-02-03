@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1626
 layout: post
 title: A Humanities Kick...

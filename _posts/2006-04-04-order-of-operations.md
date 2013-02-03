@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1517
 layout: post
 title: Order of Operations

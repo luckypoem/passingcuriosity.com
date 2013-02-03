@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1402
 layout: post
 title: Programming language design ideas

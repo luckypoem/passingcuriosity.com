@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1452
 layout: post
 title: Purely Functional Data Structures

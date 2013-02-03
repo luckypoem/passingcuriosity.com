@@ -16,6 +16,8 @@ public
 tmp
 _includes
 /cabal-dev/
-/dist/
 /_cache/
 /_site/
+/dist/
+/dist_*/
+/.hsenv*/

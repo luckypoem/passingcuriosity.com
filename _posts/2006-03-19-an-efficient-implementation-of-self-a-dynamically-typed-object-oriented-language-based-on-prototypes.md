@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1659
 layout: post
 title: An efficient implementation of SELF a dynamically-typed object-oriented language based on prototypes

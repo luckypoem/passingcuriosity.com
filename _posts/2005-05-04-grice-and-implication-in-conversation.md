@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1586
 layout: post
 title: Grice and Implication in Conversation

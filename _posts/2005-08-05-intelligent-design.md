@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1494
 layout: post
 title: Intelligent Design

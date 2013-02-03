@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1658
 layout: post
 title: "Jingle Bells: Solving the Santa Claus Problem in Polyphonic C#"

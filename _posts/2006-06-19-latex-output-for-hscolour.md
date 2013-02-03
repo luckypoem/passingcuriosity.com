@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1526
 layout: post
 title: LaTeX output for HsColour

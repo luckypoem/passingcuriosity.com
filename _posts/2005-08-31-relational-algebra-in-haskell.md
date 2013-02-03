@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1455
 layout: post
 title: Relational Algebra in Haskell

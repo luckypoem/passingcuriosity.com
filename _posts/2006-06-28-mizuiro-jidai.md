@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1704
 layout: post
 title: Mizuiro Jidai

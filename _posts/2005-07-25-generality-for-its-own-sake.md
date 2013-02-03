@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1446
 layout: post
 title: Generality for its own sake

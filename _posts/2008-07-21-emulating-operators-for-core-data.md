@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 130
 layout: post
 title: Emulating Operators for Core Data

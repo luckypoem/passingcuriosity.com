@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1643
 layout: post
 title: Lock-Free Data Structures using STMs in Haskell

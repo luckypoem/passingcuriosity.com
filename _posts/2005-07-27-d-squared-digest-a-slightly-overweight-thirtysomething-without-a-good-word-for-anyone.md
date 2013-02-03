@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1619
 layout: post
 title: D-squared Digest -- A slightly overweight thirtysomething without a good word for anyone

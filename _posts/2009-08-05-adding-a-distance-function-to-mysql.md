@@ -1,4 +1,4 @@
---- 
+---
 layout: post
 title: Adding a distance function to MySQL
 tags: mysql, django, geographical, gis, distance

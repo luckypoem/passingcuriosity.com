@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1418
 layout: post
 title: Scientific Notation

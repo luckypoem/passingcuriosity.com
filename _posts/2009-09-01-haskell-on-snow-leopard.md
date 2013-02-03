@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1997
 layout: post
 title: Haskell on Snow Leopard

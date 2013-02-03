@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1500
 layout: post
 title: What sort of person?

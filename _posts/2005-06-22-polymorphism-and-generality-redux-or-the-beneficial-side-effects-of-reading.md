@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1429
 layout: post
 title: Polymorphism and Generality Redux; or The Beneficial Side Effects of Reading

@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 249
 wordpressurl: http://passingcuriosity.com/?p=249
 layout: post

@@ -1,7 +1,7 @@
---- 
-wordpressid: 1599
+---
 layout: post
-title: "&quot;That's Dr. Rex to you, buddy&quot;"
+title: "That's Dr. Rex to you, buddy"
+wordpressid: 1599
 wordpressurl: http://passingcuriosity.com/2005/thats-dr-rex-to-you-buddy/
 ---
 

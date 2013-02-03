@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1648
 layout: post
 title: Putting Curry-Howard to Work

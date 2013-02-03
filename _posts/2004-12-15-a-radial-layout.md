@@ -1,4 +1,4 @@
---- 
+---
 layout: post
 title: A Radial Layout
 tags: srp, logic, graph, visualisation

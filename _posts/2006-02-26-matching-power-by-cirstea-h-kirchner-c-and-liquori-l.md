@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1645
 layout: post
 title: Matching Power by Cirstea H, Kirchner C and Liquori L.

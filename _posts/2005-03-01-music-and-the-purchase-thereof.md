@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1467
 layout: post
 title: Music and the Purchase Thereof

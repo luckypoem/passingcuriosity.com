@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1518
 layout: post
 title: Even Spammers Need Subsidising

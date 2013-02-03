@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1432
 layout: post
 title: Reusing Throwaway Code

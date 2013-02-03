@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1679
 layout: post
 title: More on &quot;On Education&quot;

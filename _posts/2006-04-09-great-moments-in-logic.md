@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1672
 layout: post
 title: Great Moments in Logic...

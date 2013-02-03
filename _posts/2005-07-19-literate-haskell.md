@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1442
 layout: post
 title: Literate Haskell

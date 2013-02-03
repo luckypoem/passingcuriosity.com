@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1443
 layout: post
 title: Thoughts on Hypergraphs

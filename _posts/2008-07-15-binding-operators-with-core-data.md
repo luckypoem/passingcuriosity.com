@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 92
 layout: post
 title: Binding Operators With Core Data

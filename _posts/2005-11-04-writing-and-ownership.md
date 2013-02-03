@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1458
 layout: post
 title: Writing and Ownership

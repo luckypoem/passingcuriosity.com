@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1414
 layout: post
 title: Notes on a Course in Physics

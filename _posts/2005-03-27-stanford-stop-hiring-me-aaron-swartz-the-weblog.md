@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1471
 layout: post
 title: "Stanford: Stop Hiring Me (Aaron Swartz: The Weblog)"

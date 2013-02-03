@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1675
 layout: post
 title: Transactional memory with data invariants (DRAFT)

@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1654
 layout: post
 title: Maria-sama ga Miteru Novel English Translation Project

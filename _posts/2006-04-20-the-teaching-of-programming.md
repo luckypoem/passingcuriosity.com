@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1682
 layout: post
 title: The Teaching of Programming

@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1577
 layout: post
 title: Branching Time Temporal Logic

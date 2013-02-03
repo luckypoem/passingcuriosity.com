@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1460
 layout: post
 title: The Co-op Bookshop

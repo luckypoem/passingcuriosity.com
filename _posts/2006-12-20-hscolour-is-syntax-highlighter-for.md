@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1405
 layout: post
 title: A patch adding latex support to HsColour

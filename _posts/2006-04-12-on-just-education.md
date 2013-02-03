@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1677
 layout: post
 title: On Just Education?

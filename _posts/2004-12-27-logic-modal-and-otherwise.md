@@ -1,4 +1,4 @@
---- 
+---
 layout: post
 title: Logic, modal and otherwise.
 wordpressid:  1548

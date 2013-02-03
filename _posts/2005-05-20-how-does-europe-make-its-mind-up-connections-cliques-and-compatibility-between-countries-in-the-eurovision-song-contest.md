@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1592
 layout: post
 title: How does Europe Make Its Mind Up? Connections, cliques, and compatibility between countries in the Eurovision Song Contest

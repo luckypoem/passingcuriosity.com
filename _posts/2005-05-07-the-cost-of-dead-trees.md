@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1588
 layout: post
 title: The Cost of Dead Trees

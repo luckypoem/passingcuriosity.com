@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1587
 layout: post
 title: Azumanga Daioh

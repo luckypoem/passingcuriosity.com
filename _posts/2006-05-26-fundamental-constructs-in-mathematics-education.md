@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1694
 layout: post
 title: Fundamental Constructs in Mathematics Education

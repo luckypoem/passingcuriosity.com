@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1520
 layout: post
 title: Teaching; A First Reaction

@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1472
 layout: post
 title: Stupid Apple!

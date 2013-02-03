@@ -1,4 +1,4 @@
---- 
+---
 layout: post
 title: Haskell FastCGI with Apache
 tags: haskell, web, fastcgi

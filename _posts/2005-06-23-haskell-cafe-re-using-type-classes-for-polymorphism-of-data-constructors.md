@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1431
 layout: post
 title: "[Haskell-cafe] Re: Using type classes for polymorphism of data constructors"

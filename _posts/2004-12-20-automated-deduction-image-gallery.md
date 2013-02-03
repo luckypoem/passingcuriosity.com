@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1387
 layout: post
 title: Automated Deduction Image Gallery

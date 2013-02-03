@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1551
 layout: post
 title: More on Composable Memory Transactions

@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1425
 layout: post
 title: Data Structures

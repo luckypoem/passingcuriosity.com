@@ -1,4 +1,4 @@
---- 
+---
 layout: post
 title: A Comics Update
 tags: comics

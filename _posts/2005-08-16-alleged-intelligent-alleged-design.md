@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1499
 layout: post
 title: Alleged &quot;Intelligent&quot;, Alleged &quot;Design&quot;

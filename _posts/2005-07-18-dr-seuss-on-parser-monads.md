@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1613
 layout: post
 title: Dr. Seuss on Parser Monads

@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1528
 layout: post
 title: Resources for Teaching Pythagoras' Theorem

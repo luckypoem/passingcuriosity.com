@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1543
 layout: post
 title: A well-rounded practical experience

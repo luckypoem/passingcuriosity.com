@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 109
 layout: post
 title: Computed Attributes in Core Data, How?

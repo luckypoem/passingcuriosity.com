@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1540
 layout: post
 title: A Week Accompli

@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1590
 layout: post
 title: The Logic of Communicating Processes

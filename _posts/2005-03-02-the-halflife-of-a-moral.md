@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1568
 layout: post
 title: The Halflife of a Moral

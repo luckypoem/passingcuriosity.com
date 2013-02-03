@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1642
 layout: post
 title: "Wanted: A feed module for iPhoto"

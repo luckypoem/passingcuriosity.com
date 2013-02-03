@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1603
 layout: post
 title: Word of the Day

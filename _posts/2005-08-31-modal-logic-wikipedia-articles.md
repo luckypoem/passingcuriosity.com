@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1454
 layout: post
 title: Modal Logic Wikipedia Articles

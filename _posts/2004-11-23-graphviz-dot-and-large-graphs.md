@@ -1,12 +1,10 @@
---- 
+---
 layout: post
 title: Graphviz, Dot and Large Graphs
+author: Thomas Sutton
 tags: srp, logic, graph, visualisation
 location: Canberra, Australia
-excerpt: |
-  Notes on my graph visualisation project.
-wordpressid:  1380
-wordpressurl: http://passingcuriosity.com/2004/graphviz-dot-and-large-graphs/
+excerpt: Notes on my graph visualisation project.
 ---
 
 Today I started looking at transforming the data dumped by the theorem

@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1883
 layout: post
 title: Reversing the arrow; or how to break canonical URLs

@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1495
 layout: post
 title: The B&amp;G Public Speaking Competition

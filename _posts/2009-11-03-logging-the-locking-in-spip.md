@@ -1,4 +1,4 @@
---- 
+---
 layout: post
 title: Logging the locking in SPIP
 wordpressid: 2077

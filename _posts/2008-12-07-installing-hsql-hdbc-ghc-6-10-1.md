@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 377
 layout: post
 title: Installing hsql and HDBC on GHC 6.10.1

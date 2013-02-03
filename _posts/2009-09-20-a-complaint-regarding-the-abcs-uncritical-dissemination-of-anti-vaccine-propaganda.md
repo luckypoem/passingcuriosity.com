@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 2025
 layout: post
 title: A complaint regarding the ABC's uncritical dissemination of anti-vaccine propaganda

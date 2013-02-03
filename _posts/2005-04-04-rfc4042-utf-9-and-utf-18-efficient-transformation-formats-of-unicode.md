@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1578
 layout: post
 title: "RFC4042: UTF-9 and UTF-18 Efficient Transformation Formats of Unicode"

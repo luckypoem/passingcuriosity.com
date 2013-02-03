@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 367
 layout: post
 title: Stability for the win?

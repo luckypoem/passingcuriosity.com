@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 125
 layout: post
 title: Protecting Content with SPIP

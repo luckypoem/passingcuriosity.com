@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1439
 layout: post
 title: A Delay or Murphy Strikes

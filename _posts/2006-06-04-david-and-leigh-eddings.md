@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1698
 layout: post
 title: David and Leigh Eddings

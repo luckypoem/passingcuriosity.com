@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 6
 wordpressurl: http://barcamp2.wordpress.com/?p=6
 layout: post

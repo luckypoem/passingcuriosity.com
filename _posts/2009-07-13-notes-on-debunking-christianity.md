@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1302
 layout: post
 title: Notes on "Debunking Christianity"

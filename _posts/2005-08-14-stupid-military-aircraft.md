@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1498
 layout: post
 title: Stupid Military Aircraft

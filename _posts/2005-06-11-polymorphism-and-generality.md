@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1426
 layout: post
 title: Polymorphism and Generality

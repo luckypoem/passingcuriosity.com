@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1630
 layout: post
 title: Pharyngula::Is this elitism?

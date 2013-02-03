@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1395
 layout: post
 title: On the Benefits of Documentation and Its Reading

@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1687
 layout: post
 title: Teachers, students &amp; the law

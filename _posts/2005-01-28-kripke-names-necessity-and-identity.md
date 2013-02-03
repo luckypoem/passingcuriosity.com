@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1557
 layout: post
 title: "Kripke: Names, necessity, and identity"

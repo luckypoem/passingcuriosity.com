@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1411
 layout: post
 title: Bought "Myth of Ability"

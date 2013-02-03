@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1
 wordpressurl: http://passingcuriosity.com/2008/live-blog-barcamp2/
 layout: post

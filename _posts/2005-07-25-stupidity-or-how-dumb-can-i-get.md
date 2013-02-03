@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1448
 layout: post
 title: Stupidity or How Dumb Can I Get

@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1553
 layout: post
 title: Thoughts on a Programming Language

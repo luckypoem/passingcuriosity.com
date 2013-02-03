@@ -1,4 +1,4 @@
---- 
+---
 layout: post
 title: Alternative Visualizations and Pseudo-semantic Orderings
 wordpressid: 1386

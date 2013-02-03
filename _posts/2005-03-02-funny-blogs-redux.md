@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1570
 layout: post
 title: Funny 'Blogs, Redux

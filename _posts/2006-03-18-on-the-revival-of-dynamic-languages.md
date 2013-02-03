@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1655
 layout: post
 title: On the Revival of Dynamic Languages

@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1468
 layout: post
 title: The Bank, Redux

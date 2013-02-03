@@ -1,4 +1,4 @@
---- 
+---
 layout: post
 title: Writing view decorators for Django
 tags: django, python, decorators, code

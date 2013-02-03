@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1506
 layout: post
 title: A Change in Focus

@@ -1,4 +1,4 @@
---- 
+---
 wordpressid: 1558
 layout: post
 title: The Seikai Trilogy
