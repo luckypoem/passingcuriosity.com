@@ -1,17 +1,15 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Main where
 
-import           Control.Arrow ((>>>), (***), arr)
-import           Control.Applicative ((<$>))
-import           Data.Monoid         (mappend, mconcat)
+import           Control.Applicative           (Alternative (..), (<$>))
+import           Control.Arrow ((>>>), (>>^), (***), arr)
+import           Control.Monad                 (msum)
+import           Data.Monoid         (Monoid (..), mappend, mconcat, mempty)
 import           Prelude             hiding (id)
-import           System.FilePath     (replaceExtension, takeDirectory, takeFileName, joinPath)
+import           System.FilePath
 import qualified Text.Pandoc         as Pandoc
+import           Hakyll
 
-import Hakyll
--- import Hakyll.Web.Pagination
-
-resizeImageCompiler = copyFileCompiler
 
 
 --------------------------------------------------------------------------------
@@ -54,12 +52,10 @@ main = hakyllWith config $ do
     -- Build tags
     tags <- buildTags "posts/*" (fromCapture "tags/*.html")
 
-    -- Post tags
     tagsRules tags $ \tag pattern -> do
         let title = "Posts tagged " ++ tag
 
-        -- Copied from posts, need to refactor
-        route idRoute
+        route routeTags
         compile $ do
             list <- postList tags pattern recentFirst
             makeItem ""
@@ -70,16 +66,16 @@ main = hakyllWith config $ do
                 >>= loadAndApplyTemplate "templates/default.html" defaultContext
                 >>= relativizeUrls
 
-        -- Create RSS feed as well
+        -- Create an Atom feed as well
         version "rss" $ do
-            route   $ setExtension "xml"
+            route   $ routeTags `composeRoutes` setExtension "xml"
             compile $ loadAllSnapshots pattern "content"
                 >>= return . take 10 . recentFirst
-                >>= renderAtom (feedConfiguration) feedCtx
+                >>= renderAtom (feedConfiguration) (feedCtx tags)
 
-    -- Render each and every post
+    -- Posts
     match "posts/*" $ do
-        route   $ setExtension "html"
+        route   $ routePosts
         compile $ do
             pandocCompiler
                 >>= saveSnapshot "content"
@@ -88,17 +84,11 @@ main = hakyllWith config $ do
                 >>= loadAndApplyTemplate "templates/default.html" defaultContext
                 >>= relativizeUrls
 
-    {-
-    create "posts.html" $ constA mempty
-        >>> applyTemplateCompiler "templates/posts.html"
-        >>> applyTemplateCompiler "templates/default.html"
-    -}
-
-    -- Post list
     create ["posts.html"] $ do
         route idRoute
         compile $ do
             list <- postList tags "posts/*" recentFirst
+            let indexCtx = field "posts" $ \_ -> postList tags "posts/*" recentFirst
             makeItem ""
                 >>= loadAndApplyTemplate "templates/posts.html"
                         (constField "title" "All Posts" `mappend`
@@ -110,79 +100,89 @@ main = hakyllWith config $ do
     match "index.md" $ do
       route $ setExtension "html"
       compile $ do
-        list <- postList tags "posts/*" (take 5 . recentFirst)
-        pandocCompiler
-          >>= loadAndApplyTemplate "templates/index.html" 
-                (constField "posts" list `mappend` defaultContext)
-          >>= loadAndApplyTemplate "templates/default.html" defaultContext
-          >>= relativizeUrls
+        let indexCtx = field "posts" $ \_ -> postList tags "posts/*" (take 10 . recentFirst)
 
-{-
-    -- Archive
-    create "archives" $
-      requireAll "posts/*" (\_ ps -> readArchives defaultPager ps :: Archives String)
-      
-    -- Add an archive page for every tag.
-    match "archives/*" $ route $ setExtension ".html"
-    metaCompile $ require_ "archives"
-      >>> arr archivePages
-      >>> arr (map (\(p,t,ps) -> (archiveIdentifier p, makeArchivePage p t ps)))
--}
+        -- Work around Pandoc processing maths by applying the $posts$ context,
+        -- then manually processing with Pandoc.
+        getResourceBody
+            >>= applyAsTemplate indexCtx
+            >>= return . renderPandoc
+            >>= loadAndApplyTemplate "templates/index.html" defaultContext
+            >>= loadAndApplyTemplate "templates/default.html" defaultContext
+            >>= relativizeUrls
 
-{-
-    -- Render RSS feed
-    match "rss.xml" $ route idRoute
-    create "rss.xml" $ requireAll_ "posts/*"
-      >>> mapCompiler (arr $ copyBodyToField "description")
-      >>> renderRss feedConfiguration
-
-    -- Render Atom feed
-    match "atom.xml" $ route idRoute
-    create "atom.xml" $ requireAll_ "posts/*"
-      >>> mapCompiler (arr $ copyBodyToField "description")
-      >>> renderAtom feedConfiguration
--}
-
-    -- Read templates
-    match "templates/*" $ compile templateCompiler
+--------------------------------------------------------------------------------
 
 -- | Route dated posts.
-routePosts = matchRoute "posts/[0-9]{4}-[0-9]{2}-[0-9]{2}-" $ customRoute prettify
-  where dropDate = drop 11
-        getDate = take 4
-        prettify pid = let fn = takeFileName . toFilePath $ pid
-                           slug = dropDate fn
-                           date = getDate fn
-                       in joinPath ["posts", date, slug, "index.html"]
+routePosts :: Routes
+routePosts = customRoute fileToDirectory
+  where fileToDirectory :: Identifier -> FilePath
+        fileToDirectory ident = let p = toFilePath ident
+                                    fn = takeFileName p
+                                    bn = drop 11 $ dropExtension fn
+                                    y = take 4 fn
+                                in joinPath [y, bn, "index.html"]
 
+-- | Route tag pages.
+routeTags :: Routes
+routeTags = customRoute tagPath
+    where tagPath ident = let p = toFilePath ident
+                              fn = takeFileName p
+                              t = dropExtension fn
+                          in joinPath ["tags", t, "index.html"]
+
+-- | Absolute url to the resulting item
+strippedUrlField :: String -> Context a
+strippedUrlField key = field key $
+    fmap (maybe empty strippedUrl) . getRoute . itemIdentifier
+    where strippedUrl = dropFileName . toUrl
 
 --------------------------------------------------------------------------------
-postList :: Tags -> Pattern -> ([Item String] -> [Item String])
+
+postList :: Tags -- ^ Collection of tags in the site.
+         -> Pattern -- ^ Pattern to identify appropriate posts.
+         -> ([Item String] -> [Item String]) -- ^ Filter for posts.
          -> Compiler String
-postList tags pattern preprocess' = do
-    postItemTpl <- loadBody "templates/postitem.html"
-    posts       <- preprocess' <$> loadAll pattern
-    applyTemplateList postItemTpl (postCtx tags) posts
+postList tags pattern sortFilter = do
+    posts   <- sortFilter <$> loadAll pattern
+    itemTpl <- loadBody "templates/postitem.html"
+    list    <- applyTemplateList itemTpl (postCtx tags) posts
+    return list
 
 --------------------------------------------------------------------------------
+
 -- | Build a post template context.
 postCtx :: Tags -> Context String
 postCtx tags = mconcat
     [ modificationTimeField "mtime" "%U"
+    , strippedUrlField "url"
+    , urlField "urllol"
     , dateField "date" "%B %e, %Y"
     , tagsField "tags" tags
     , constField "author" "Thomas Sutton"
     , constField "excerpt" ""
-    , constField "previous" ""
-    , constField "next" ""    
     , defaultContext
     ]
 
---------------------------------------------------------------------------------
+-- | Build a tag template context.
+tagCtx :: Context String
+tagCtx = mconcat
+    [ strippedUrlField "url"
+    , defaultContext
+    ]
+
 -- | Build a feed template context.
-feedCtx :: Context String
-feedCtx = mconcat
+--
+-- XXXTODO: Add categories, etc.
+feedCtx :: Tags -> Context String
+feedCtx _ = mconcat
     [ bodyField "description"
     , defaultContext
     ]
 
+--------------------------------------------------------------------------------
+-- Compilers
+--------------------------------------------------------------------------------
+
+-- | Compile images
+resizeImageCompiler = copyFileCompiler
