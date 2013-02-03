@@ -1,31 +1,21 @@
-PassingCuriosity.com
-====================
+Passing Curiosity
+=================
 
-This repository contains the content for my personal site at
-<http://passingcuriosity.com/>. The content is intended to be used
-with [Jekyll][jekyll], but it's all text files so it should be
-accessible without any special software. 
+This repository contains the code and content for my personal web-site at
+<http://passingcuriosity.com/>. The code (see `src/`) is based on
+[Hakyll][hakyll], a static site generator library written in Haskell.
 
-[jekyll]: http://jekyllrb.com/
+[hakyll]: http://jaspervdj.be/hakyll
 
 License
-=======
+-------
 
-The design -- including all HTML and other templates, CSS and
-JavaScript --  is now in [another repository][style] released under a
-Creative Commons ([Attribution-Noncommercial-Share Alike 3.0
-Unported][cc-by-nc-sa] licence. 
+The Haskell source code in `src/` is based on the Hakyll library and licensed
+under the same BSD3 license.
 
-[style]: http://github.com/thsutton/pc-styling/
-[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/3.0/
+The CSS code in `css/` and Javascript code in `js/` include the Bootstrap and
+jQuery, which are covered by their own license terms.
 
-The content stored in this repository -- include all Markdown, source
-code offered for download, and all other files -- are copyright Thomas
+All other content in this repository -- include all Markdown, all images,
+source code offered for download, and all other files -- are copyright Thomas
 Sutton and may not be used without permission.
-
-Thanks
-======
-
-A huge thanks to Tom Preston-Werner for creating Jekyll. And also to
-Mark Reid for licensing his excellent design under the CC license
-above.
