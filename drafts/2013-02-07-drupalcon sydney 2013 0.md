@@ -1,8 +1,7 @@
 ---
 layout:       post
 title:        Drupalcon Sydney 2013
-categories:   [drupalcon]
-tags:         [drupal, conference, open-source]
+tags:         drupalcon, drupal, conference, open-source
 location:     Sydney, New South Wales
 excerpt:      This is the first in a series of posts about DrupalCon Sydney 2013 which happened last week in Sydney, Australia.
 ---
