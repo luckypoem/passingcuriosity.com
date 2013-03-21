@@ -6157,11 +6157,10 @@ a.badge:focus {
   position: fixed;
 }
 
-
-small.date,
-em.date {
+em.date,
+em.location {
   display: block;
 }
 em.date {
-  margin: 20px;
+  margin-top: 20px;
 }
