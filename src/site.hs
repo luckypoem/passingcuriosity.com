@@ -59,8 +59,17 @@ main = hakyllWith config $ do
         route routeTags
         compile $ do
             list <- postList tags pattern recentFirst
+            let number = "<!-- unknown number of -->"
+
+            -- Work around Pandoc processing maths by applying the $posts$ context,
+            -- then manually processing with Pandoc.
+            -- Wrap the post list with the correct template.
+            body <- makeItem "" >>= loadAndApplyTemplate "templates/posts.html" 
+                (field "posts" $ \_ -> return list)
+            let postsCtx = field "body" $ \_ -> return $ itemBody body
+
             makeItem ""
-                >>= loadAndApplyTemplate "templates/posts.html" (constField "posts" list `mappend` defaultContext)
+                >>= loadAndApplyTemplate "templates/tag.html" (mconcat [constField "title" title, constField "tag" tag, constField "number" number, postsCtx, defaultContext])
                 >>= loadAndApplyTemplate "templates/default.html" defaultContext
                 >>= relativizeUrls
 
@@ -122,7 +131,7 @@ main = hakyllWith config $ do
         getResourceBody
             >>= applyAsTemplate postsCtx
             >>= return . renderPandoc
-            >>= loadAndApplyTemplate "templates/page.html" defaultContext
+            >>= loadAndApplyTemplate "templates/index.html" defaultContext
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
