@@ -4,11 +4,12 @@ module Main where
 import           Control.Applicative           (Alternative (..), (<$>))
 import           Control.Arrow ((>>>), (>>^), (***), arr)
 import           Control.Monad                 (msum)
+import qualified Data.Map                      as M
 import           Data.Monoid         (Monoid (..), mappend, mconcat, mempty)
 import           Prelude             hiding (id)
 import           System.FilePath
 import qualified Text.Pandoc         as Pandoc
-import           Hakyll
+import           Hakyll hiding (defaultContext)
 
 
 
@@ -59,10 +60,7 @@ main = hakyllWith config $ do
         compile $ do
             list <- postList tags pattern recentFirst
             makeItem ""
-                >>= loadAndApplyTemplate "templates/posts.html"
-                        (constField "title" title `mappend`
-                            constField "posts" list `mappend`
-                            defaultContext)
+                >>= loadAndApplyTemplate "templates/posts.html" (constField "posts" list `mappend` defaultContext)
                 >>= loadAndApplyTemplate "templates/default.html" defaultContext
                 >>= relativizeUrls
 
@@ -84,34 +82,60 @@ main = hakyllWith config $ do
                 >>= loadAndApplyTemplate "templates/default.html" defaultContext
                 >>= relativizeUrls
 
-    create ["posts.html"] $ do
-        route idRoute
+    match "archives.md" $ do
+        route $ routeFileToDirectory
         compile $ do
-            list <- postList tags "posts/*" recentFirst
-            let indexCtx = field "posts" $ \_ -> postList tags "posts/*" recentFirst
-            makeItem ""
-                >>= loadAndApplyTemplate "templates/posts.html"
-                        (constField "title" "All Posts" `mappend`
-                            constField "posts" list `mappend`
-                            defaultContext)
+            -- Work around Pandoc processing maths by applying the $posts$ context,
+            -- then manually processing with Pandoc.
+            -- Wrap the post list with the correct template.
+            body <- makeItem "" >>= loadAndApplyTemplate "templates/posts.html" 
+                (field "posts" $ \_ -> postList tags "posts/*" recentFirst)
+            let postsCtx = field "posts" $ \_ -> return $ itemBody body
+
+            getResourceBody
+                >>= applyAsTemplate postsCtx
+                >>= return . renderPandoc
+                >>= loadAndApplyTemplate "templates/page.html" defaultContext
                 >>= loadAndApplyTemplate "templates/default.html" defaultContext
                 >>= relativizeUrls
+
+    match "about.md" $ do
+      route $ routeFileToDirectory
+      compile $ do
+        pandocCompiler
+            >>= saveSnapshot "content"
+            >>= return . fmap demoteHeaders
+            >>= loadAndApplyTemplate "templates/page.html" defaultContext
+            >>= loadAndApplyTemplate "templates/default.html" defaultContext
+            >>= relativizeUrls
 
     match "index.md" $ do
       route $ setExtension "html"
       compile $ do
-        let indexCtx = field "posts" $ \_ -> postList tags "posts/*" (take 10 . recentFirst)
+        -- Wrap the post list with the correct template.
+        body <- makeItem "" >>= loadAndApplyTemplate "templates/posts.html" 
+            (field "posts" $ \_ -> postList tags "posts/*" (take 10 . recentFirst))
+        let postsCtx = field "posts" $ \_ -> return $ itemBody body
 
         -- Work around Pandoc processing maths by applying the $posts$ context,
         -- then manually processing with Pandoc.
         getResourceBody
-            >>= applyAsTemplate indexCtx
+            >>= applyAsTemplate postsCtx
             >>= return . renderPandoc
-            >>= loadAndApplyTemplate "templates/index.html" defaultContext
+            >>= loadAndApplyTemplate "templates/page.html" defaultContext
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
 --------------------------------------------------------------------------------
+
+-- | Route files to directory indexes.
+routeFileToDirectory :: Routes
+routeFileToDirectory = customRoute fileToDirectory
+  where fileToDirectory :: Identifier -> FilePath
+        fileToDirectory ident = let p = toFilePath ident
+                                    fn = takeFileName p
+                                    bn = dropExtension fn
+                                in joinPath [bn, "index.html"]
 
 -- | Route dated posts.
 routePosts :: Routes
@@ -129,7 +153,7 @@ routeTags = customRoute tagPath
     where tagPath ident = let p = toFilePath ident
                               fn = takeFileName p
                               t = dropExtension fn
-                          in joinPath ["tags", t, "index.html"]
+                          in joinPath ["tag", t, "index.html"]
 
 -- | Absolute url to the resulting item
 strippedUrlField :: String -> Context a
@@ -160,7 +184,31 @@ postCtx tags = mconcat
     , dateField "date" "%B %e, %Y"
     , tagsField "tags" tags
     , constField "author" "Thomas Sutton"
-    , constField "excerpt" ""
+    , defaultContext
+    , maybeMetadataField
+    ]
+
+defaultContext :: Context String
+defaultContext =
+    bodyField     "body"     `mappend`
+    metadataField            `mappend`
+    urlField      "url"      `mappend`
+    pathField     "path"     `mappend`
+    titleField    "title"
+
+
+--------------------------------------------------------------------------------
+-- | Map any field to its metadata value, if present
+maybeMetadataField :: Context String
+maybeMetadataField = Context $ \k i -> do
+    metadata <- getMetadata $ itemIdentifier i
+    maybe (return "") return $ M.lookup k metadata
+
+
+-- | Build a tag template context.
+pageCtx :: Context String
+pageCtx = mconcat
+    [ strippedUrlField "url"
     , defaultContext
     ]
 
