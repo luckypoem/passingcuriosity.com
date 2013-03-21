@@ -3,8 +3,7 @@ layout: post
 title: A Comics Update
 tags: comics
 locations: Canberra, Australia
-excerpt: |
-  Notes on a few new comics including Nightmares & Fairy Tales, Courtney
+excerpt: Notes on a few new comics including Nightmares & Fairy Tales, Courtney
   Crumrin, and Gloom Cookie.
 wordpressid: 1581
 wordpressurl: http://passingcuriosity.com/2005/a-comics-update/

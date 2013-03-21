@@ -1,3 +1,9 @@
+---
+title: PyconAU 2012: Continuous Deployment
+tags: PyconAU 2012, Python, continuous deployment
+location: Hobart, Tasmania
+excerpt: Notes from a talk about continuous deployment at Pycon AU 2012.
+---
 
 Continuous deployment. The same thing as continuous delivery for our purposes
 here.

@@ -1,3 +1,10 @@
+---
+title: PyconAU 2012: Server performance
+tags: PyconAU 2012, Python, performance
+location: Hobart, Tasmania
+excerpt: Notes from a talk about server performance at Pycon AU 2012.
+---
+
 The low-hanging fruit when improving perceived performance is on the
 front-end, not the back-end, and certainly not the small overhead of the HTTP
 server.

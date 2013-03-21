@@ -3,8 +3,7 @@ layout: post
 title: Data, Data, Everywhere
 tags: srp, logic, graph, visualisation, data processing
 location: Canberra, Australia
-excerpt: |
-  The amount of data produced by the problems may pose a problem. LCL005
+excerpt: The amount of data produced by the problems may pose a problem. LCL005
   produces more than 600MB of output and generates over 6,000,000 events.
   Processing this data into a graph description is the next phase of the
   project.

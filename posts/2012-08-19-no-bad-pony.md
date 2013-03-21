@@ -1,3 +1,9 @@
+---
+title: PyconAU 2012: No, Bad Pony!
+tags: PyconAU 2012, Python, django
+location: Hobart, Tasmania
+excerpt: Notes from a talk about Django feature requests and why they don't get implemented at Pycon AU 2012.
+---
 
 What turns an idea into a bad pony? 
 

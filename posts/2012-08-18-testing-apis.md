@@ -1,5 +1,8 @@
 ---
-title: Testing and being lazy and stuff
+title: PyconAU 2012: Testing and being lazy and stuff
+tags: PyconAU 2012, Python, performance
+location: Hobart, Tasmania
+excerpt: Notes from a talk about testing Python web projects at Pycon AU 2012.
 ---
 
 Diminishing returns on quality assurance activity. We, as engineers, need to

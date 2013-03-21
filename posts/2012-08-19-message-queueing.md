@@ -1,4 +1,10 @@
-Message queueing
+---
+title: PyconAU 2012: Message queueing
+tags: PyconAU 2012, Python, messaging, queues
+location: Hobart, Tasmania
+excerpt: Notes from a talk about message queue solutions at Pycon AU 2012.
+---
+
 
 PyMQ
 ----
