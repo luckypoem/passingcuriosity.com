@@ -2,6 +2,7 @@
 layout: post
 title: Injection avoidance in Haskell
 tags: haskell, ghc, security, static
+location: Perth, Western Australia
 excerpt: A proof of concept technique for writing injection-proof APIs in Haskell.
 ---
 
