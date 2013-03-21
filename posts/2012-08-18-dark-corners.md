@@ -1,6 +1,8 @@
 ---
-title: Python's dark corners
-tags: programming languages, python, corner cases
+title: PyconAU 2012: Python's dark corners
+tags: PyconAU 2012, programming languages, python, corner cases
+location: Hobart, Tasmania
+excerpt: Notes from a talk at Pycon AU 2012.
 ---
 
 Peter Lovett is a programmer and trainer.
