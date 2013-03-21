@@ -4,7 +4,7 @@ title: Planning for DrupalDownunder
 categories: [drupal, ddu2011]
 tags: web, drupal, drupaldownunder
 location: Perth, Western Australia
-excerpt: |
+excerpt: 
   I'm off to Brisbane later this month for DrupalDownunder (and LCA). This is 
   a quick overview of the things I'm looking forward to.
 ---

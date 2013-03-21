@@ -5,7 +5,7 @@ layout: post
 title: Creating custom tags for SPIP - Static tags
 tags: spip, php, code, template, tags
 location: Perth, Western Australia
-excerpt: |
+excerpt: 
 ---
 
 The SPIP template language has two constructions: loops (which determine the

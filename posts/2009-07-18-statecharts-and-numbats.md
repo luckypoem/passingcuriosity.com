@@ -6,7 +6,7 @@ title: Notes on "Statecharts and Numbats"
 tags: bcperth09
 categories: [barcamp]
 location: Perth, Western Australia
-excerpt: |
+excerpt: 
   This post consists of my notes on the Statecharts and Numbats presentation
   by Harry McNally at Perth Barcamp 3.0.
 ---

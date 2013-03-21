@@ -4,7 +4,7 @@ title: IE performance problem turns out to be images not found
 category: web
 tags: web, performance, ie, filter, images
 location: Perth, Western Australia
-excerpt: |
+excerpt: 
   A quick post describing a performance problem I encountered in Internet
   Explorer and what it turned out to be.
 ---

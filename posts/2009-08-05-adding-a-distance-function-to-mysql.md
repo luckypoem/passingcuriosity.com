@@ -3,7 +3,7 @@ layout: post
 title: Adding a distance function to MySQL
 tags: mysql, django, geographical, gis, distance
 location: Perth, Western Australia
-excerpt: |
+excerpt: 
   This is a quick and rather hackish way to add a "distance" function to MySQL
   and call it from the Django ORM framework.
 wordpressid: 1217

@@ -3,7 +3,7 @@ layout: post
 title: Converting to Jekyll
 tags: blog, meta, jekyll
 location: Perth, Western Australia
-excerpt: |
+excerpt: 
   This blog has been languishing for months now, nearly
   untouched. I'm changing that now, by throwing WordPress away and
   replacing it with Jekyll.

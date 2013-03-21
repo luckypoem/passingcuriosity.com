@@ -2,7 +2,7 @@
 wordpressid: 2109
 layout: post
 title: Dmitry Baranovskiy's talk on Your JavaScript Library
-excerpt: |
+excerpt: 
   My notes on Dmitry Baranovskiy's talk "Your JavaScript Library" at
   Edge of the Web, 2009.
 ---

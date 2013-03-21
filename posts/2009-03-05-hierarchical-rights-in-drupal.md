@@ -5,7 +5,7 @@ layout: post
 title: Hierarchical Rights in Drupal
 tags: drupal, authorisation, permissions, ideas
 location: Perth, Western Australia
-excerpt: |
+excerpt: 
   There's been a bit of noise about alternatives to the rather limited 
   permissions system in Drupal. Here are a few of my thoughts about one 
   proposal.

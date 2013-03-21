@@ -6,7 +6,7 @@ title: TiddlyWiki presentation
 tags: bcperth09
 categories: [barcamp]
 location: Perth, Western Australia
-excerpt: |
+excerpt: 
   Notes on a talk about TiddlyWiki at Barcamp Perth 2009.
 ---
 

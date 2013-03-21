@@ -3,7 +3,7 @@ layout: post
 title: Writing view decorators for Django
 tags: django, python, decorators, code
 location: Perth, Western Australia
-excerpt: |
+excerpt: 
   Using decorators to wrap and modify Django views is quick, easy, composable,
   and just about the most awesome thing I've seen in a while. It also takes a
   little bit of figuring out. Here's my explanation...

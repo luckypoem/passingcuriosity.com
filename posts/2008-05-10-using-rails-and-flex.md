@@ -6,7 +6,7 @@ title: Using Rails and Flex
 tags: bcperth09
 categories: [barcamp]
 location: Perth, Western Australia
-excerpt: |
+excerpt: 
   Notes from a talk on Using Rails and Flex at Barcamp Perth 2009.
 ---
 

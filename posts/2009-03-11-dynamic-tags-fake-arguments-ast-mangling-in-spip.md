@@ -5,7 +5,7 @@ layout: post
 title: Dynamic tags, fake arguments, and AST mangling in SPIP
 tags: spip, php, code, syntax, ast, mangling
 location: Perth, Western Australia
-excerpt: |
+excerpt: 
   Sometimes a dynamic SPIP tag (one evaluated at request time) needs details
   about the template, but this information is not available. This post 
   describes a technique for passing data from the AST into the tag's static

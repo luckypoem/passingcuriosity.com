@@ -3,7 +3,7 @@ wordpressid: 2102
 layout: post
 title: Lachlan Hardy's session The Open Web
 wordpressurl: http://passingcuriosity.com/?p=2102
-excerpt: |
+excerpt: 
   My notes on Lachlan Hardy's presentation "The Open Web" at Edge of
   the Web, 2009.
 ---

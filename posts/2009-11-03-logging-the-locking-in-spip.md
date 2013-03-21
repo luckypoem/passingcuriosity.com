@@ -4,7 +4,7 @@ title: Logging the locking in SPIP
 wordpressid: 2077
 wordpressurl: http://passingcuriosity.com/?p=2077
 categories: [code, spip, php, syslog]
-excerpt: |
+excerpt: 
   The rather hackish way I instrumented SPIP to record debugging
   information about its file locking to a remote syslog server.
 ---

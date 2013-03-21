@@ -3,7 +3,7 @@ wordpressid: 2096
 layout: post
 title: Anil Dash's keynote on "Next Year's Web"
 wordpressurl: http://passingcuriosity.com/?p=2096
-excerpt: |
+excerpt: 
   My notes on Anil Dash's keynot speech on "Next Year's Web" at Edge
   of the Web, 2009.
 ---

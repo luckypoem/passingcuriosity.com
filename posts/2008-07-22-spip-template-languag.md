@@ -5,7 +5,7 @@ layout: post
 title: The SPIP Template Language
 tags: spip
 location: Perth, Western Australia
-excerpt: |
+excerpt: 
   
 ---
 

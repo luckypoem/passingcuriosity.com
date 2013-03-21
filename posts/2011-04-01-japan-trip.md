@@ -4,7 +4,7 @@ title: Trip to Japan
 categories: [travel]
 tags: japan, holiday
 location: Nagasaki, Japan
-excerpt: |
+excerpt: 
   I'm on holiday in Japan right now.
 ---
 

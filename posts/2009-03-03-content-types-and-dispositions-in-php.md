@@ -4,7 +4,7 @@ wordpressurl: http://passingcuriosity.com/?p=446
 layout: post
 title: Content types and dispositions in PHP
 location: Perth, Western Australia
-excerpt: |
+excerpt: 
   Exporting data as CSV is pretty run of the mill for most web developers 
   (though generating "valid" CSV is not exactly trivial), but every time I do
   I find myself figuring out how to force the browsers to save it to a file.

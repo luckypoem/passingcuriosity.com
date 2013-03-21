@@ -4,7 +4,7 @@ layout: post
 title: Transactional memory with data invariants
 tags: CS, Papers, Haskell
 wordpressurl: http://passingcuriosity.com/2006/transactional-memory-with-data-invariants/
-excerpt: |
+excerpt: 
   A few thoughts about a Transactional memory with data invariants by Tim
   Harris and SPJ.
 ---

@@ -4,7 +4,7 @@ title: Fixing the "Reformat Quoted Text" command in TextMate
 category: development
 tags: textmate, intel, mac, commands, architecture
 location: Perth, Western Australia
-excerpt: |
+excerpt: 
   How to fix the "Reformat Quoted Text" command in TextMate so that it works 
   on Intel Macs (without installing Rosetta).
 ---

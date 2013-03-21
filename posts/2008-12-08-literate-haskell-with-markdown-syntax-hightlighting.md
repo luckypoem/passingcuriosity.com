@@ -5,7 +5,7 @@ layout: post
 title: Literate Haskell with Markdown and Syntax Highlighting
 tags: haskell, literate programming, markdown, syntax, pandoc, latex
 location: Perth, Western Australia
-excerpt: |
+excerpt: 
   This post describes the scripts I (used to) use to turn a literate Haskell
   programme (with Markdown formatted literate comments) into HTML and PDFs
   using Pandoc.

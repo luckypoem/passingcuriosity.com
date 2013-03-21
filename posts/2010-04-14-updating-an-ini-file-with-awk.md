@@ -4,7 +4,7 @@ title: Updating an INI file with AWK
 tags: programing, awk, text
 categories: [programing]
 location: Perth, Western Australia
-excerpt: |
+excerpt: 
   A colleague asked if I knew a way to edit a line in a particular section of 
   a .ini file in a shell script. There are plenty of ways to do this, but my
   answer is in AWK.

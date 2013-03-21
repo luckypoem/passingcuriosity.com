@@ -3,7 +3,7 @@ layout: post
 title: Progress with Jekyll
 tags: web, development, jekyll, meta
 location: Perth, Western Australia
-excerpt: |
+excerpt: 
   I've made a bit of progress hacking on this blog the last few nights...
 ---
 

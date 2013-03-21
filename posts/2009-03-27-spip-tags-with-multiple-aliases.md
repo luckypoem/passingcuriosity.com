@@ -5,7 +5,7 @@ layout: post
 title: SPIP tags with multiple aliases
 tags: spip, php, code
 location: Perth, Western Australia
-excerpt: |
+excerpt: 
   This post describes creating SPIP tags with multiple "names" (like #INCLURE
   and #INCLUDE) and taking the technique further to implement families of 
   related tags.

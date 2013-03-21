@@ -6,7 +6,7 @@ title: World Blog Awards
 tags: bcperth09
 categories: [barcamp]
 location: Perth, Western Australia
-excerpt: |
+excerpt: 
   Notes from an announcement at Barcamp Perth 2009 about the "World Blog
   Awards".
 ---

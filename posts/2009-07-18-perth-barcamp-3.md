@@ -6,7 +6,7 @@ title: Notes on Perth Barcamp 3
 tags: bcperth09
 categories: [barcamp]
 location: Perth, Western Australia
-excerpt: |
+excerpt: 
   Some notes about Barcamp Perth 3.0.
 ---
 

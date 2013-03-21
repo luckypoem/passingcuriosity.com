@@ -4,7 +4,7 @@ title: Barcamp Perth rides again
 tags: bcperth4, barcamp
 categories: [barcamp]
 location: Perth, Western Australia
-excerpt: |
+excerpt: 
   Barcamp Perth 4.0 (or 2010, there seems to be some confusion) was held today
   at the Central Institute of Technology. Here are some notes about the day.
 ---

@@ -5,7 +5,7 @@ layout: post
 title: Notes on "Adruino hacking"
 categories: [barcamp]
 location: Perth, Western Australia
-excerpt: |
+excerpt: 
   Notes from a session on Arduino hacking are Barcamp Perth.
 ---
 
