@@ -19,5 +19,5 @@
 /cabal-dev/
 
 # HS Env
-/.hsenv*/
-/dist_*/
+/.hsenv*
+/dist_*
