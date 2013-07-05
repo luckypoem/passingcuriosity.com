@@ -22,10 +22,12 @@ and such. I'll come back and tidy them up later. Maybe.
 
 # Alex Gaynor on the Divided Web and the Role of Frameworks
 
-[Alex Gaynor on the Divided Web and the Role of Frameworks][2]. First person to
-have spoken at DjangoCons on three continents (for a hour or two).
+[Alex Gaynor on the Divided Web and the Role of Frameworks][2]
+([slides][alex-s]). First person to have spoken at DjangoCons on three
+continents (for a hour or two).
 
 [2]: http://2013.pycon-au.org/programme/miniconfs/djangocon#gaynor
+[alex-s]: https://speakerdeck.com/alex/a-divided-web-and-the-role-of-frameworks
 
 History of the web: the big bang, ENIAC, Apple II, T.B.L. and Mosaic.
 
@@ -698,9 +700,11 @@ where it's required to make things happen.
 
 ## What will the replacement for Django be?
 
-Alex: wertzoig?
+Alex: [werkzeug](http://werkzeug.pocoo.org/)?
 
-Jacob: Have you watched the metero screencast?
+Jacob: Have you watched the [Meteor](http://meteor.com/) screencast? The RoR
+video in 2004 was a "holy shit" moment because "we have this" (hence open
+sourcing Django). This is a "holy shit" moment because we have nothing.
 
 ## What should people sprint on?
 
@@ -781,3 +785,56 @@ Pyramid is pretty much the opposite of pyramids:
 - Extensible and flexible (not unchanging for centuries)
 - Small to big (not big to small)
 
+# Lightning Talks
+
+## Tim Ansell talking about Tim's Finance
+
+[Tim's Finance](https://github.com/mithro/timsfinance/) is an interface to do
+various financial things.
+
+## Jacob Haslehurst on Permission Migrations
+
+Writers, editors, administrators, developers have different permissions.
+
+django-permission-migrations is a small package they've pulled out of their
+code base. Put permissions in the `Meta` of the model classes, create a
+permissions app for your project and add/remove permissions in the migrations,
+define groups in settings, then add migrations which control the permissions.
+
+## Chris on Navigation Menus
+
+Lot's of Django navigation menus have classes and models and database stuff.
+Chris has a simple template tag for doing doing navigation menus. Basically a
+helper to write code like:
+
+    {% if current == 'apple' %} class="active" {% endif %}
+
+http://djangosnippets.org/snippets/1729
+
+## PANDAS loves Ponies
+
+PANDAS is an R-like stats/data processing package for Python.
+
+pandas-loves-ponies is a library which helps to interface Django with PANDAS
+(carry model field names into data frames and similar things).
+
+## Humphrey on form rendering
+
+Rendering forms isn't very DRY. Simple app with a template filter to render a
+form with a specific tempate.
+
+https://github.com/humphrey/django_formrenderer
+
+## Danielle Madeley on Crisper keeps Crispy Forms crisper longer
+
+Currently working on a form heavy app. [django-crispy-forms][crispy] is a
+django app to make forms a little DRYer. Crisper is an additional - related -
+template tag to help detect potential problems with forms, etc. Looks pretty
+cool.
+
+[crispy]: http://django-crispy-forms.readthedocs.org/en/latest/
+
+# Thanks
+
+Thanks to all the speakers, sponsors, organisers, volunteers, AV team (the
+videos will be at [pyvideo.org](http://pyvideo.org) at some point).
