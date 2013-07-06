@@ -65,7 +65,7 @@ main = hakyllWith config $ do
             -- then manually processing with Pandoc.
             -- Wrap the post list with the correct template.
             body <- makeItem "" >>= loadAndApplyTemplate "templates/posts.html" 
-                (field "posts" $ \_ -> return list)
+                (field "posts" $ \_ -> return "hello")
             let postsCtx = field "body" $ \_ -> return $ itemBody body
 
             makeItem ""
@@ -107,6 +107,16 @@ main = hakyllWith config $ do
                 >>= loadAndApplyTemplate "templates/page.html" defaultContext
                 >>= loadAndApplyTemplate "templates/default.html" defaultContext
                 >>= relativizeUrls
+
+    match "contact.md" $ do
+      route $ routeFileToDirectory
+      compile $ do
+        pandocCompiler
+            >>= saveSnapshot "content"
+            >>= return . fmap demoteHeaders
+            >>= loadAndApplyTemplate "templates/page.html" defaultContext
+            >>= loadAndApplyTemplate "templates/default.html" defaultContext
+            >>= relativizeUrls
 
     match "about.md" $ do
       route $ routeFileToDirectory
