@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PyCon Australia 2013, Day One
-tags: python, conference
+tags: python, conference, engineering, packaging, security, testing, performance, procrastination
 location: Hobart, Tasmania
 excerpt: 
   These are my notes from day one of PyCon Australia 2013 in Hobart, Tasmania.
@@ -1079,4 +1079,12 @@ the file. Yay!
 
 If you are going to procrastinate, do something new and learn from it. Use your
 constraints to learn something new.
+
+## Q&A
+
+Did some Python and Cython comparisons and saw the 100x speedup. Then tried PyPy
+with the plain Python and also saw a 100x speedup.
+
+> Yeah, haven't looked at it. Didn't wind up doing as much Cython as expected as
+> it wasn't needed (only 6 characters of the MD5 needed).
 
