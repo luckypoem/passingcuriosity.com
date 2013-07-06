@@ -806,3 +806,27 @@ revenue).
 
 ## Q&A
 
+Using django-debug-toolbar has performance impacts and other issues.
+
+> Yes, you might want to turn it off all the time.
+
+Eager streaming will have issues with exceptions, etc.
+
+> Yes, it was one of the points. You'll basically be stuck sending some HTML
+> with an error message rather than proper HTTP responses.
+>
+> Maybe APIs and one-page apps which can handle errors properly will be better?
+
+Russell: Is there anything in Django which is problematic for performance?
+
+> Not really, especially considering the good caching facilities.
+
+I love django-debug-toolbar, is there anything similar which is useful for APIs
+or AJAX requests?
+
+> Not yet, but there might be something coming in django-debug-toolbar.
+
+?
+
+> You can install the webpagetest.org software locally (it's open source) and
+> include it in some sort of integration testing setup.
