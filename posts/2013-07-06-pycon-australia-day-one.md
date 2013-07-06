@@ -581,3 +581,96 @@ security issues?
 
 > No, all the frameworks are pretty good. The issues are minor and can be
 > addressed.
+
+# Todd Owen on Testing Tools
+
+WA Health Department software for standardising and matching data about people
+from disparate systems. Lots of dirty data, etc. Solving problems is fun,
+creating problems (unmaintainable tests, etc.) isn't fun.
+
+> Test design is a problem worth solving. It'll may well be different from one
+> project to the next.
+
+## `get_latest_tweet()`
+
+- Use mocks if you know what objects it collaborates with.
+- Write a fake server.
+- Record and replay a real session.
+- Create a real twitter account with a know latest tweet.
+
+All have pros and cons, some are "unit" and others aren't.
+
+The Way of Testivus:
+
+> Dogma is inflexible, testing needs flexibility.
+>
+> Dogma kills creativity, testing needs creativity.
+
+## Asynchronous I/O
+
+Synchronous implementation can be called and the result checked in a unit test.
+
+Asynchronous implementation makes this difficult. In a unit test, the Twisted
+event loop won't be running, so the deferred will never be realised.
+
+Twisted provides its own `TestCase` which can manage the event loop, etc. Adding
+a callback to the deffered is OK, but it also supports using `yeild` to wait
+until the deferred value is realised. Using this the test code looks like normal
+straight-line code.
+
+## User Interfaces
+
+It's difficult to automate "point and click" testing and, if you do, you'll be
+surprised at how often GUI layouts change. This makes many approaches to GUI
+testing brittle.
+
+Using GUI components (particular frames and UI components) within semi-automated
+tests: users are asked to perform specific actions in the UI, the test case
+verifies that the UI actions effected the correct changes. Uses a custom test
+runner.
+
+This is good for supporting test-drive development but doesn't help with
+regression testing.
+
+This interface had strong requirement for keyboard accessibility. Used this
+cabability to implement regression testing by sending keyboard events to the
+components being tested. Again, a custom test runner, but this can be used in
+automated testing. This won't test graphical and design defects, but can catch
+many UI logic, etc.
+
+## FIT and PyFIT
+
+Ward Cunningham invented FIT (for Java) ages ago. The Python embodiment is
+[PyFIT](https://pypi.python.org/pypi/PyFIT). Test written in tabular format,
+accessible to non-programmers and can be very concise. They can also include
+non-tabular information, allowing you to make them nice report-y documents.
+
+Each table row contains some input/s and output/s (which have a `?` at the end
+of the column header). Column names match the property names on the fixture
+classes and the table header matched the fixture class to use.
+
+## From Specific to General
+
+- Assertions
+
+- Design by contract
+
+- Property-based testing (like QuickCheck) which has become popular in
+  functional programming.
+
+- Load testing which evaluates general properties rather than deterministic
+  outcomes.
+
+Round trip testing
+
+New system and legacy system interactions mean tests of new application logic
+don't give confidence w.r.t. the interactions.
+
+Invertible operations mean that you can compare round trips and ensure, for
+example, that the input and round-trip output are identical.
+
+    assert untranslate(translate(data)) == data
+
+This can help to validate properties such as the conservation of data transfered
+and translated between systems.
+
