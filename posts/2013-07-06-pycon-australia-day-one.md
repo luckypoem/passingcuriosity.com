@@ -674,3 +674,26 @@ example, that the input and round-trip output are identical.
 This can help to validate properties such as the conservation of data transfered
 and translated between systems.
 
+## Q&A
+
+Methodologies of load testing.
+
+> Wait for the next talk.
+
+Russell: Intrigued by the human-in-the-loop in the GUI testing. How do you
+account for human issues into this process?
+
+> The human-in-the-loop testing was done in test-driven development, not for
+> acceptance testing.
+
+You haven't really investigated making non-developers into the human robot role?
+
+> No, never tried worked with that.
+
+[Sikuli](http://www.sikuli.org/) can help with automated testing of GUIs.
+
+> The record/replay approach is the maintainability of tests; when the menu
+> changes, all the tests break.
+>
+> Maybe some of these tools support good factoring and reuse of test aspects,
+> but without it they'll have these problems.
