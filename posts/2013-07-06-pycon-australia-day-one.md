@@ -1027,6 +1027,56 @@ How do you go about including the correct data for your testing?
 
 [testtools]: http://pypi.python.org/pypi/testtools
 
+# Tom Eastman on Using Cython for distributed-multiprocess steganographic md5sum-collision generation
 
+Started at Catalyst IT about 18 months ago as a Python developer, then project
+got cancelled. Moved to other stuff and had to do Python in spare time; this is
+the result.
 
+One of their internal apps is a pastebin which uses an MD5 of a paste to
+generate the URL. Wrote a script to pipe command output into the pastebin.
+Wanted to put the script into the pastebin (with the URL for the pastebin page
+in the script). *Then* decided to put a choose-your-own-adventure story in the
+pastebin. Procrastination!
+
+But the links -- based on the MD5 -- change depending on content. Add the URL of
+a "next" page and this page changes. You have to paste in reverse order. Wrote a
+script to put a directed acyclic graph into the pastebin; but acyclic.
+
+Cython compiles a dialect of Python to a C extension. Write Python-ish code, get
+speedups of C. Just compiling normal Python code will get you a 30% speedup;
+adding types and making it funny-looking C will get 100%+ speedup.
+
+## How do you get the MD5 checksum you want with the file you want?
+
+1. MD5 your content
+2. Copy the MD5 object and, while no collision, add more crap to the end of the
+   message.
+
+Takes 10 minutes, and results in gibberish at the end of the file.
+
+## How do I use the 8 cores in my desktop?
+
+MD5 is eminently parallelisable, if you're not doing it, why bother?
+
+> Threading is bad because pythons have gills, or something.
+
+The multiprocessing library uses forks (not threads) so you avoid the GIL, etc.
+
+Eight cores running eight processors, with no GIL getting in the way. Generates
+collisions in 2+ seconds.
+
+## How do I hide the gibberish?
+
+Rather than append random integers, map the values being generated to a set of
+symbols to append. Like the ASCII whitespace characters!
+
+There are five whitespace characters; convert your integers to base five and use
+the characters as numerals. Now you have invisible random content at the end of
+the file. Yay!
+
+## Lessons
+
+If you are going to procrastinate, do something new and learn from it. Use your
+constraints to learn something new.
 
