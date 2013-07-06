@@ -10,7 +10,7 @@ excerpt:
 I'm attending [PyCon Australia][1] 2013 in Hobart, Tasmania. If [DjangoCon
 Australia yesterday][dca] and PyCon Australia 2012 are any guide it's going to
 be a pretty awesome weekend! I'll try to update this post over the course of
-the day. Not real live blogging, more delayed telecast blogging. At some po
+the day. Not real live blogging, more delayed telecast blogging.
 
 [1]: http://2013.pycon-au.org/
 [dca]: /2013/pyconau-and-djangoconau/
