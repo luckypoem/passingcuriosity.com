@@ -799,7 +799,8 @@ revenue).
 - Perhaps we should be writing faster APIs, websockets and Javascript? Who knows
   where the web is going?
 
-- SPDY doesn't have much on impact on applications.
+- SPDY is, essentially, an issue for web servers and doesn't have much on impact
+  on applications themselves.
 
 - Full-stack ownership is important, ensuring that your application development
   process includes and cares about performance.
@@ -1088,3 +1089,88 @@ with the plain Python and also saw a 100x speedup.
 > Yeah, haven't looked at it. Didn't wind up doing as much Cython as expected as
 > it wasn't needed (only 6 characters of the MD5 needed).
 
+# Lightning Talks
+
+## One
+
+eatthismuch.com
+
+You can't manage what you don't measure.
+
+Fitocracy.com - gamification of fitness. Integrates with runkeeper.
+
+## Two: Frank
+
+Compassion, please donate money to worthy causes. Pick a good one.
+
+## Three: Tim
+
+http://goo.gl/3E1kR
+
+5 projects in 5 minutes:
+
+1. You should be using python-datetime-tz if you care about dates and timezones.
+
+2. iPython Notebook is pretty great. 
+
+3. bpython is a "graphical" console thing wrapped around ipython.
+
+4. Please help with timvideos.us - platform for putting conference videos
+   online. See code.timvideos.us
+
+5. Please help with timsfinance
+
+6. zookeepr web site for pyconau, LCA and more.
+
+## Four: Dylan Jay
+
+[PyCon APAC](http://pycon.jp/) 2013 is in Japan. Maybe go?
+
+[Robot Framework](http://robotframework.org/)
+
+## Five: How to start a war
+
+Josh Deprez (the other Josh).
+
+> Programmers wade through no documentation and anti-patterns all day, so they
+> must like it.
+
+## Six: Venture Capital
+
+Some sort of equity agreement template.
+
+## Seven: The C-ification of Python
+
+Quoted the INTERCAL reference manual.
+
+Oh Guido:
+
+    from __future__ import braces
+
+## Eight: Samantha
+
+Not many people want to study IT past grade 10. Everyone uses technology so why
+don't they want to study it.
+
+In Samantha's opinion, teachers may be misinformed about careers in IT. There
+are a lot of misconceptions out there.
+
+Robots are cool and sexy. RoboRadio radio show, robotics workshops for kids and
+young people.
+
+## Nine: Nathan
+
+Lot of talk about iPython notebooks, which is pretty fantastic. Here's a related
+thing: [nbviewer.ipython.org](http://nbviewer.ipython.org/) allows you to share
+your iPython notebook on GitHub (repo or gist; all you need is the raw link for
+the notebook file).
+
+PS: Nathan is not affiliated with nbviewer.x
+
+## Ten
+
+Talking to a few people at lunch time and realised some people don't understand
+`super()` and `__mro__`. `__mro__` returns a tuple of classes which will be
+inspected during resolution.
+
+Here's a quick demo.
