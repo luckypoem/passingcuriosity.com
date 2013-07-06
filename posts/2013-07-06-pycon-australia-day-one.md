@@ -925,4 +925,108 @@ FunkLoad has problems with generating predicatable, reliable load.
 > Even without that there's value in just thumping on a service and seeing what
 > happens.
 
+# Andy Todd on py.test
+
+A better descripton of this talk is probably better titled "how to start unit
+testing".
+
+"how to start unit testing": 113,000,000 hits on Google.
+
+## What is unit testing?
+
+> Any repeatable activity that checks that the individual units of code within a
+> module or application work as expected.
+>
+> - Wikipedia
+
+The key concept is *repeatable*.
+
+Zealots will insist that every test be completely isolated but sharing some
+aspects, especially setup and teardown, might be useful.
+
+Automation is important; allowing you to run tests automatically as code is
+written, committed, etc.
+
+Grouping tests into batches helps to reduce the overhead of testing, allowing
+you to test *changes* as you make them. If you must run the whole suite every
+time, you probably won't run it.
+
+## Tools
+
+The `unittest` library is included in the standard library, so it's free. Very
+traditional approach to writing test cases as code.
+
+The `doctest` library, also in the standard library, allows you to embed test
+cases in documentation strings in a literate-programming style.
+
+The `py.test` library is younger than many other options and, while featureful,
+makes it easy to get started. Worth particular mention is the ability to
+parameterise tests.
+
+## Why py.test?
+
+- Unit test discovery is very simple. Just run the `py.test` command.
+
+- Setup can be specified at module, class and test level. This can help make
+  your test suite faster (run expensive setup and teardown once) but does break
+  isolation between tests.
+
+- Requires less boilerplate, but still provides a full feature set.
+
+Some of these benefits are available in other libraries. `unittest` 2, in
+particular, has the first two points.
+
+## Example
+
+[Sample test with unittest](https://gist.github.com/andy47/5893154)
+
+[py.test version of the same test](http://gist.github.com/andy47/5893180)
+
+The py.test version has less than 50% the code lines than the unittest version.
+
+## How do I start testing?
+
+Analysis paralysis is a common problem: getting stuck trying to find the best
+tests to start with.
+
+> Just start writing test. But which ones?
+
+Bug triage unit testing: when a bug report comes in, write a test then fix the
+bug. Regression testing the driver of unit test development. Eventually you'll
+have a large-enough test suite. You'll also need to add tests for new features,
+of course.
+
+Only change your code *until* your test passes.
+
+"Avoid premature optimisation" applies to your test suite as much as to your
+software: don't try adding tests to code that you aren't touching until you
+need to. If nothing else, you may not know enough about how it works to test
+effectively.
+
+Testing complex code is difficult; testing tends to make your code smaller and
+less complex.
+
+Keep your tests seperate to your module or application.
+
+LibreOffice retrofitted tests into their code base for their 4.0 release.
+
+There's a lot more detail to testing. Mocking will become important if you're
+interacting with external services, `coverage.py` will help you keep track of
+what code you're testing.
+
+http://obeythetestinggoat.com/
+
+## Q&A
+
+How do you go about including the correct data for your testing?
+
+> There are a number of libraries for managing fixtures.
+>
+> [testtools][] (on PyPI), for example, has a number of tools for doing things
+> like that.
+
+[testtools]: http://pypi.python.org/pypi/testtools
+
+
+
 
