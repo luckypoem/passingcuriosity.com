@@ -830,3 +830,99 @@ or AJAX requests?
 
 > You can install the webpagetest.org software locally (it's open source) and
 > include it in some sort of integration testing setup.
+
+# Ryan Kelly on Testing for Graceful Failure with Vaurien and Marteau
+
+Let's assume that you have a web application, you're confident that it works
+(i.e. you have good testing) and a solid deployment and monitoring setup. How
+can you cope with failures when you get slashdotted, etc.
+
+Mozilla Services runs Firefox Sync, FirefoxOS Marketplace, etc. This is a demo
+of some of the tools and techniques they are using.
+
+## Firefox Sync
+
+An application under gunicorn talks to MySQL databases. Application does some
+sharding of users each to a particular DB server.
+
+Workers that talk to a dead DB server don't come back and, eventually, you run
+out of worker processes and your system dies for all users, not just those on
+the ill server.
+
+## Do it live!
+
+The only way to test these issues is to do it live: deploy the application as it
+will be live, then stress it and test the functionality.
+
+[FunkLoad](http://funkload.nuxeo.org) is a functional and load testing tool,
+with report generation. It's a bit clunky, but works.
+
+Looks a bit like unittest: you extend a class and provide setup and test
+methods. Then configure how it'll be run, with testing cycles, numbers of users,
+etc.
+
+Firefox Sync has 24-hour test cycles before going live. This helps to detect
+problems like file descriptor limits, etc.
+
+Combining a tool like FunkLoad with server-side instrumentation and monitoring
+is a great idea.
+
+## Marteau
+
+Marteau is a front-end for running FunkLoad which can create and manage AWS
+workers, manage a job queue, etc. The name is French for "hammer".
+
+Configured with a YAML file in your repo, then feed the repo URL to your Marteau
+instance (a la Travis CI).
+
+Getting it installed and running is a little involved (Redis, etc.)
+
+## Break it
+
+Unless you are very good at your job, you won't have to do anything at all to
+make your application break under load.
+
+Once you've sorted out your broken code, try restarting your database in the
+middle of a load test. They discovered a problem in SQLAlchemy's connection
+pooling logic by doing precisely this.
+
+Vaurien (French for "rapscallion") is a TCP proxy which can be configured to
+induce various types of error into TCP sockets, HTTP, memcached, MySQL
+connections. This allows you to test your application with broken and poorly
+behaved external dependencies, etc.
+
+Ideas:
+
+- Switch it on and throw some load at your application and see what happens.
+  Does a 5% induced error rate cause a 5% observed error rate? Or are they
+  cacading through your application?
+
+- Turn errors off and make sure your application recovers.
+
+Take home throughs:
+
+- How does your application interact with the outside world?
+
+- What happens when the outside world misbehaves?
+
+- How can you simulate these issues in your testing under controlled conditions?
+
+`loads` is a better FunkLoad; easier to write tests, higher concurrency per
+node, more real-time feedback.
+
+## Q&A
+
+Mark: Is there something in this toolset which can record a workload for use in
+test?
+
+> I have the feeling I've heard of something like this, but can't remember it.
+
+FunkLoad has problems with generating predicatable, reliable load.
+
+> There's two aspects to load testing: server load and client load. You'll need
+> server-side monitoring to keep track of performance, etc.
+>
+> Even without that there's value in just thumping on a service and seeing what
+> happens.
+
+
