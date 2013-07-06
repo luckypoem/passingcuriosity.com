@@ -697,3 +697,112 @@ You haven't really investigated making non-developers into the human robot role?
 >
 > Maybe some of these tools support good factoring and reuse of test aspects,
 > but without it they'll have these problems.
+
+# Roger Barnes on Measuring and improving Django application performance
+
+[Slides will be available on slideshare](http://slideshare.net/mindsocket/)
+
+Will cover aspects of site performance, measuring things, fixing the right
+thing. Focus on user perspective (so no load testing).
+
+We should care about this because: engagement, bounce rate, conversion rates,
+search ranking, revenue. All impacted by perceived performance.
+
+Apps are all getting bigger.
+
+httparchive.org survey of a bunch of sites found that 1.3 MB and 85 requests per
+page.
+
+Users are increasinly mobile (on less capable devices), with increased
+expectations.
+
+Django site in Australia:
+
+- 202ms for a primary request.
+- With a redirect: +61ms
+- With CSS, images, etc. rendering starts at 1.6s
+- Whole document took 8.6s 9.0s to fully loaded. 2.6 MB of data.
+- On a good connection.
+
+> 80-90% of the end-user response time is spent on the front end. Start there.
+>
+> - Steve Souders
+
+There are a few ways to measure some of these aspects.
+
+Monitor performance for real users:
+
+- Google Analytics
+- New Relic
+- Instrument front-end
+
+Synthetic testing:
+
+- Chrome Developer tools, Firefox (Firebug, Y!Slow)
+- [WebPageTest.org](http://www.webpagetest.org/)
+
+- Modern browsers include navigation timing object accessible in JS
+  (django-debug-toolbar repo includes this data)
+
+Offenders
+
+- static resources
+- lack of caching and compression
+- 3rd-party resources like social media widgets, etc.
+- Overdownloading (too much in the page).
+
+Use tools like:
+
+- Minification tools (django-pipeline)
+- Image formats, compression levels, metadata, sprites, etc.
+- Configure caching headers, etc. correctly.
+- CDNs can help (but may make things worse).
+- Google's PageSpeed modules may help automate some of this.
+
+Once you've taken care of these issues, *then* it's time to focus on the
+backend.
+
+- Instrument using tools like django-statsd and log to graphite.
+
+- django-debug-toolbar contains a wealth of useful information.
+
+- Profiling Python. django-extensions contains runprofileserver (kcachegrind
+  output means you can use all the usual tools).
+
+Performance problems are usually in the middle-layers of request handling: your
+own view and template code.
+
+1. Caching should be your first port of call.
+
+   > Read and know the caching documention on the Django web-site.
+
+2. Compression.
+
+3. Query performance. django-debug-toolbar can help detect n+1 queries and other
+   workload problems.
+
+4. Defer work out of request (celery in even handlers).
+
+## Getting faster
+
+Django 1.5+ has StreamingHttpResponse, which allows you to return data as soon
+as it *starts* becoming available (rather than when it's *finished* becoming
+available). Some middleware won't like a stream, exception handling, etc.
+
+Eager streaming starts sending, e.g., the page header before calling the view
+function. This let's your browser begin parsing, download CSS, etc. and
+improve perceived performance (which is what most of the studies find impact on
+revenue).
+
+## Future
+
+- Perhaps we should be writing faster APIs, websockets and Javascript? Who knows
+  where the web is going?
+
+- SPDY doesn't have much on impact on applications.
+
+- Full-stack ownership is important, ensuring that your application development
+  process includes and cares about performance.
+
+## Q&A
+
