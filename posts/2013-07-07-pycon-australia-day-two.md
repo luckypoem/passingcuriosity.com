@@ -673,4 +673,217 @@ There are a few broker options in celery.
 
 # Lightning Talks
 
+## One: Russell Stuart
+
+Write lrparsing.py; another parsing library, supports LR(1) parsers. Wrote it
+to parse SQL statements. 821 parsing modules on PyPI. Everyone uses ply (it's
+number 506).
+
+lrparsing.py is fast (twice as fast as nearest competitor).
+
+Pyparsing has sample code and a book, lrparsing.py has Sphinx documentation
+including a tutorial.
+
+Comes with an SQLite3 SQL parser (tested against their test suite). And a lua
+to Python compiler.
+
+Order of magnitude simpler code.
+
+## Two: Engineering
+
+Intersection of science, technology and society. How can *we* help society.
+
+Book *Citizen Engineer*. We need to engage, communicate, lead as engineers. We
+can make differences as individuals and as a profession.
+
+- Children: help teach and make things accessible to kids.
+- Community: 
+- Our rights: lobby and help with technological protections
+- Computing: user groups, open source, conferences, advocacy, etc.
+- World: science, research, etc. all need support from technologists.
+
+## Three: Russell Keith-Magee
+
+Django user groups around Australia and the world.
+
+User groups:
+
+- Perth
+- Melbourne
+- Sydney
+- Brisbane only has a Python users group
+- Adelaide doesn't have any groups.
+- Hobart doesn't have any groups.
+- Canberra
+
+DjangoCon US in Chicago this year, PyCon US 2014 in Montreal, DjangoCon EU 2014
+on the French Riviera, DjangoCon Australia 2014 will happen (please volunteer).
+
+[DjangoCon Australia 2013 t-shirt](http://teespring.com/dcau2013)
+
+## Four: Frank
+
+Version 3 of the talk. Global climate change. Thunderbirds were really good
+puppets, saved people.
+
+Crowdsourcing information about climate change.
+
+Taiga serves NetCDF files (similar to the mapping system described in Brianna
+Laugher's talk).
+
+## Five: Flask Analytics
+
+Rhys Elsmore - @rhyselsmore
+
+> Buffet is like a worker queue, except celary has never run out of chocolate
+> cake.
+
+Flask Analytics captures every request, no JS involved.
+
+Lots of funny jokes.
+
+## Six: David Beitey
+
+@davidjb_
+
+Useful Python tools:
+
+- meme package.
+
+- natural convert raw data values into "human". Dates, time deltas, sizes, etc.
+
+- dogpile.caching is a successor to the caching functionality in Beaker.
+
+- fanstatic does stuff for JS/CSS resources.
+
+- TileStache is a tile cache.
+
+- uWSGI container
+
+## Seven: Jacon Kaplan-Moss
+
+    pip install python-nation
+
+Doesn't send Facebook updates; didn't search disk for naked photos; didn't steal
+private keys; didn't take a picture.
+
+## Eight: art
+
+I don't like art theory, conceptual art, etc. so I turned off, sorry. All I got
+was the obligatory mention of Fountain with the inevitable joke about taking
+the piss.
+
+## Nine: Appium
+
+Appium is Selenium for apps (iOS and Android).
+
+appium.io fjords
+
+## Ten: COMPCON2013
+
+Computing student conference.
+
+LOLs
+
+## Eleven: Moore's Cloud
+
+The people who hacked on the light thing did some cool things.
+
+## Twelve: Even Brumley
+
+Python and the Playstation Move. There's a good public API to play with.
+
+The world's first RESTful API for interpretive dance.
+
+Bluetooth device with a bunch of sensors and a few outputs (RGB LED, rumble,
+etc.)
+
+https://github.com/thp/psmoveapi/
+
+http://jshoust.com/
+
+API in C with SWIG bindings in Python, etc. Installation involves Cmake, so
+don't bother unless you have time and animals to sacrifice.
+
+Made a RESTful API for it last night after Mark's talk.
+https://github.com/evanbrumley/psmove-restful
+
+## Thirteen: Brett
+
+Having a favourite language is cool, limiting yourself to that one language
+isn't cool. *Practical Object-Oriented Design in Ruby*
+
+Try:
+
+- Ruby
+- Golang
+- Rust
+- Clojure
+- Prolog
+
+Try something different.
+
+## Fourteen: Tim Ansell
+
+PyCon Australia was pretty great. We should all go to the sprints too.
+
+Linux Australia does lots of things (it's more "Open Source Australia").
+
+- linux.conf.au
+- Drupal Downunder
+- Wordcamp
+- Joomla day
+
+Also go to Barcamps.
+
+Also OSDC.
+
+Also user groups.
+
+Videos from this and other Python conferences and events are at pyvideo.org
+
+# Closing
+
+Thanks to all the speakers, volunteers, organisers, sponsors and attendees.
+
+Yay for Google, ACS, Tasmania Department of Economic Development, TASICT, PSF,
+Anchor, CSIRO, DSF, Aptira, Secret Lab, New Relic, Heroku, Biarri, Redhat,
+Rackspace, Github, Freelancer, Infoxchange, and others.
+
+Linux.conf.au 2014 Jan 6-10 in Perth, CFP closes on July 20th.
+
+NCSS challenge for high school students http://ncss.edu.au/
+
+Kiwi PyCon Sept 7-9 in Auckland http://nz.pycon.org
+
+PyCon Australia 2014 & 2015 will be in Brisbane. From the city that flooded LCA
+2011. First week of August.
+
+## Special Thanks
+
+- Wrest Point was a great venue.
+
+- Ritual Coffee Tasmania did great coffee. (BeautifulPlumage)
+
+- Next Day Video did the recording.
+
+- Tim Ansell is the godfather of PyCon Australia.
+
+- Kate and Neil Davenport did the t-shirts.
+
+- The volunteers and session chairs.
+
+- The speakers
+
+- The miniconf organisers (Tristan Goode and Tim Fifield; Russell Keith-Magee)
+
+- Chris Neugebauer (Co-organiser), Richard Jones (programme committee chair),
+  Josh Deprez (Code Wars), Casey Farrell (Miniconfs), Matthew D'Orazio
+  (Treasurer), Joshua Hesketh (Co-organiser).
+
+## Not finished yet!
+
+- The after party is a Jack Greene from 18:30 tonight.
+
+- Sprints start tomorrow at 09:00.
 
