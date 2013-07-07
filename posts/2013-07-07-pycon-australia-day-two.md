@@ -433,3 +433,244 @@ lines of Python, need to put it in an iframe w/ b64 encoded source (iframe for
 JS isolation; b64 or, if external, just URL).
 
 See also: [github.com/nfaggian/leafvis](htts://github.com/nfaggian/leafvis).
+
+# Russell Keith-Magee on Tinkering with Tkinter
+
+Trades Cloud, Django core developer, Django Software Foundation president.
+
+Introduction (or, for the old people, re-introduction) to a neglected corner of
+the Python standard library: `tkinter`, Python's interface to TK (from TCL/TK).
+Extremely simple interface based on passing strings around.
+
+TK had truly awful UI (nothing like system defaults), limited UI widgets, poor
+documentation, poor layout engine. All this changed in tk 8.5: new theme layer
+and layout system which match native widgets (some *are* native widgets) make
+sense, the [docs don't suck](http://tkdocs.com/) any more (and give examples in
+multiple languages, not just TCL).
+
+Rich text widget (syntax highlighting, etc.), canvas, raw access to TK bindings.
+
+1988 Borland TurboPascal w/ excellent compilers and user interface, 1994 UNIX
+w/ gcc and gdb, 2000 working with Python but pdb is awful, 2013 still no useful
+interface for debuggers, etc. Open source software development tools have not
+improved (in UI terms) in 25 years, if anything they're worse.
+
+The UNIX philosophy says "do one thing well"; not "do one thing with a horrible
+user interface". We can fix this!
+
+Cricket is a UI to discover and run test suites:
+
+    pip install cricket
+	python -m cricket.django
+
+# Andrew Walker on Managing scientific simulations with Python with RQ (Redis Queue)
+
+The complexity of simulations can vary significantly. This presentation focusses
+on cases when the task is too large for a single process, to big for a single
+machine, too small for a super computer, inappropriate for the cloud. Ideally
+about 20-50 cores.
+
+## Python tools
+
+- iPython Parallel - this is the first place to go for parallelisation if you're
+  an experiences developer. Supports a bunch of communication methods.
+
+- celery - work queue for workers to consume. See Ian Oswelds? HPC notes.
+
+Challenges of these tools include lots of one-off configuration with transport
+mechanisms, storage, etc. They can be difficult to get right (more moving parts)
+and more effort to monitor.
+
+Was looking for a solution that can be picked up in a single afternoon, with no
+configuration files to edit.
+
+## Redis Queue
+
+Redis is a "data-structure server" which lets you associate keys with a range of
+value types. Written in C with bindings in most popular languages. Supported
+types include lists, maps, sets, etc.
+
+Redis Queue is a pure Python package for doing job queuing using Redis to store
+the queue data.
+
+- The `rqworker` command allows you to start a worker.
+
+- The `rqinfo` command allows you to see the status of a queue.
+
+- `rq-dashboard` is a web interface to the queue.
+
+- Calling `q.enqueue('operator.add', 2, 3)` adds a job to the queue to run the
+  `operator.add` function with the specified arguments.
+
+## The travelling salesman problem
+
+A naive solution (enumerate all permutations, calculate lengths, sort) is fine
+for 8 nodes, 20 is too slow. This is pretty characteristic behaviour in these
+simulation problems.
+
+A better approach might be to randomly generate permutations and calculate
+their lengths. This will let you approximate a good enough answer in an amount
+of time that you control.
+
+Use Redis Queue to distibute the algorithm.
+
+Caveats:
+
+- Need to intervene to add robustness
+
+- Need to distribute source code to workers
+
+- Everything must be serializable
+
+- Potentially memory hungry (pickled 500 copies of a graph and stuff them into
+  Redis)
+
+- Overhead of spinning up many Python processes (though if you leak resources
+  this could be a pro).
+
+- There's some cleanup required (`.pid` files, etc.)
+
+- Make sure it will help enough.
+
+- Make sure you can't solve the problem better (algorithms)
+
+- Understand the costs (maintenance, resources)
+
+# Q&A
+
+Picking functions, etc.
+
+> Use function names and let Python resolve the names. Don't try pickling
+> functions, callables, etc.
+
+Synchronisation?
+
+> Try to design relatively independent parallel units of work.
+
+Perhaps there's some parallel with test cases in a testing framework?
+
+> Yes.
+
+Debugging, break points, etc.
+
+> Almost certainly won't work at all. Usually develop and debug on a smaller
+> case, then distribute working code using thr queue.
+
+PyCloud library has an extended pickle which can handle some cases of sending
+code around.
+
+> iPython Parallel does some of that too. If you need it, the other tools are
+> probably more suitable.
+
+# Roger Barnes on Building data flows with Celery and SQLAlchemy
+
+11 years at a business intelligence vendor; this is based on a reporting
+system built as a contractor.
+
+Data warehouring (AKA data integration); providing a framework for data
+processing in Python rather than a heavy-duty big data analytics stuff.
+
+Data warehousing involves processing and integrating data for reporting purposes
+in ways that are timely, unambiguous, accurate, complete from the disparate
+sources across an organisation.
+
+Focusing here on extracting, transforming and storing data.
+
+Python for rapid prototyping, code re-user, leveraging existing libraries. Also
+good for decoupling data flow management, data processing, business logic from
+each other. Alas, there aren't many systems in the Python space which address
+these issues (most people roll their own): [Bubbles][]
+
+[Bubbles]: http://bubbles.databrewery.org/
+
+## Moving data around
+
+- Flat files
+- NoSQL databases
+- Relational databases.
+
+## SQLAlchemy
+
+Python library providing SQL database access and, separately, ORM functionality.
+Very widely used with good support for various databases and Python
+environments.
+
+ORM layer is unnecessary when doing the sort of work involved in the systems
+we're building.
+
+## Units of work
+
+Single units of work should be encapsulated as processors. Such tasks might
+include reading data from a CSV file, selecting out of a database, etc.
+
+An example might be
+
+    class SalesHistoryProcessor(CSVExtractMixin, DatabaseProcessor):
+		"Read data from a CSV into a database table."
+
+	class AbstractDeriveTransform(DBProcessor):
+		table_name = None
+		key_columns = None
+		select_columns = None
+		target_columns = None
+
+	class DeriveFooTransform(AbstractDeriveTransform):
+		table_name = 'Sales'
+		key_columns = ['txn_id']
+		select_columns = ['name', 'location']
+		target_columns = ['foo']
+
+	    def process(self):
+			return derive_foo(...)
+
+## Celery
+
+Celery is a distributed task queue. [Canvas][] is a workflow system built on
+top of Celery. Combines tasks in groups, chains, etc.
+
+[Canvas]: http://docs.celeryproject.org/en/latest/userguide/canvas.html
+
+## Pipeline
+
+Organised into layers:
+
+1. Extraction layer finds and imports data.
+2. Transform layer cleans and normalises data.
+3. Output aggregared data into reporting structures.
+
+Can be useful to keep copies of data in each layer, especially during
+development.
+
+## Q&A
+
+Are there any tools to help with schema migration with SQLAlchemy?
+
+> There are two libraries for use with SQLAlchemy.
+>
+> One thing I've done in this system is having new columns in the source
+> automatically carry through to the end.
+
+There seems to be a lot of structure here?
+
+> The 11 years in BI was a Java shop.
+>
+> The project was originally using functions, but it changed into classes as
+> common code was refactored, etc. The layering, shared code and mixins seems
+> to work properly.
+
+How do you pass information through the system?
+
+> You can pass parameters to tasks, etc. but we aren't using any thing like
+> that. The system uses a single database and we let the data speak for itself.
+>
+> Some tables have timestamps (per column, even) which are used to filter for
+> incremental processing, etc.
+
+There are a few broker options in celery. 
+
+> Redis and Rabbit both worked just fine for this (not SQLAlchemy, not getting
+> events and monitoring, etc.) 
+
+# Lightning Talks
+
+
