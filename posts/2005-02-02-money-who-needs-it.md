@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Money: Who Needs It?"
+title: Money: Who Needs It?
 wordpressid: 1461
 wordpressurl: http://passingcuriosity.com/2005/money-who-needs-it/
 ---

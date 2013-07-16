@@ -1,7 +1,7 @@
 ---
 wordpressid: 1557
 layout: post
-title: "Kripke: Names, necessity, and identity"
+title: Kripke: Names, necessity, and identity
 wordpressurl: http://passingcuriosity.com/2005/kripke-names-necessity-and-identity/
 ---
 

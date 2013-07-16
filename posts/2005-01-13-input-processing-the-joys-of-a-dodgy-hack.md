@@ -1,7 +1,7 @@
 ---
 wordpressid: 1393
 layout: post
-title: "Input Processing: The Joys of a Dodgy Hack"
+title: Input Processing: The Joys of a Dodgy Hack
 wordpressurl: http://passingcuriosity.com/2005/input-processing-the-joys-of-a-dodgy-hack/
 ---
 
