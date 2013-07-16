@@ -26,9 +26,9 @@ project settings file[^1]:
 [^1]: See, for example, the [documentation for
 DATABASE_HOST](http://docs.djangoproject.com/en/dev/ref/settings/#database-host)
 
-{% highlight python %}
+``````python
 DATABASE_HOST = '/tmp/mysql.dev.sock'
-{% endhighlight %}
+``````
 
 This works properly and reliably for Django itself but, on my system at least,
 it also breaks the `manage.py dbshell` command: rather than starting and
@@ -43,11 +43,11 @@ The correct way to specify a UNIX socket for the MySQL client libraries to
 connect to is using the `DATABASE_OPTIONS` ([most of] the options can be seen
 in the [MySQLdb API documentation][mysqldb-opts]):
 
-{% highlight python %}
+``````python
 DATABASE_OPTIONS = {
     'unix_socket' : '/tmp/mysql.dev.sock',
 }
-{% endhighlight %}
+``````
 
 Doing so ensures that Django is able to connect (using a UNIX socket on the
 local host) *and* that the `mysql` shell is able to connect (also using a UNIX

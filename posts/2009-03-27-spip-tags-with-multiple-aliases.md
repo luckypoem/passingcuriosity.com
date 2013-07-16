@@ -48,7 +48,7 @@ make your API more user friendly and is easy enough to do: just define a
 second tag function that calls the first (notice that I check for an
 overriding version of my original tag implementation and call that instead):
 
-{% highlight php %}
+``````php
     /* The original tag */
     function balise_FOO_dist($p) {
         $p->code = "'This is foo'";
@@ -63,7 +63,7 @@ overriding version of my original tag implementation and call that instead):
              return balise_FOO_dist($p);
         }
     }
-{% endhighlight %}
+``````
 
 ## Similar but different
 

@@ -31,13 +31,17 @@ publishing. The [Haskell 98 report][literate98] describes two ways to denote
 code chunks in a literate Haskell file: the TeX way and with "Bird tracks". In
 the TeX way, each block of code is wrapped with TeX macros:
 
-    \begin{code}
-    -- Some Haskell
-    \end{code}
+``````latex
+\begin{code}
+-- Some Haskell
+\end{code}
+``````
 
 whereas with "Bird tracks" each code line begins with a `>`:
 
-    > -- Some Haskell
+``````literatehaskell
+> -- Some Haskell
+``````
 
 TeX style code chunks are excellent when my document is a TeX (common for
 academic papers), and "Bird tracks" are more convenient when I'm writing
@@ -55,9 +59,9 @@ chunks using [hscolour][]. `hscolour` can generate its output in several
 formats, but we'll use HTML with CSS styles. I'm a UNIX person, so I usually
 use `hscolour` as a filter:
 
-{% highlight shell %}
+``````bash
     cat blah.lhs | hscolour -lit -css > blah.mkd
-{% endhighlight %}
+``````
 
 This pipeline takes `blah.lhs`, performs syntax highlighting on it
 (interpreting it as literate Haskell), generates HTML for use with CSS and
@@ -74,9 +78,9 @@ Markdown](http://michelf.com/projects/php-markdown/)), etc. `pandoc` is a
 Haskell program, very fast, and can generate more than just HTML output, so I
 use it quite a bit. Again, I tend to use `pandoc` as a filter:
 
-{% highlight shell %}
+``````bash
     cat blah.mkd | pandoc -sS --no-wrap -c hscolour.css > blah.html
-{% endhighlight %}
+``````
 
 This pipeline takes `blah.mkd`, translates it from Markdown to HTML (both
 options are the implicit defaults) and puts the result into `blah.html`. It
@@ -88,29 +92,29 @@ displayed incorrectly.
 
 I often combine both steps into a single pipeline:
 
-{% highlight shell %}
+``````bash
 cat blah.lhs | hscolour -lit -css | pandoc --no-wrap -sS -c hscolour.css \
 > blah.html
-{% endhighlight %}
+``````
 
 Generating a PDF by way of LaTeX is simple -- just change the output format
 for both `hscolour` and `pandoc`:
 
-{% highlight shell %}
+``````bash
 cat blah.lhs | hscolour -lit -latex | pandoc --no-wrap -sS -t latex \
 > blah.tex
-{% endhighlight %}
+``````
 
 and then do whatever you normally do to get a PDF:
 
-{% highlight shell %}
+``````bash
 pdflatex blah.tex && pdflatex blah.tex && pdflatex blah.tex 
-{% endhighlight %}
+``````
 
 
 But I usually cram all of this into a `Makefile`:
 
-{% highlight make %}
+``````makefile
 .SUFFIXES: .lhs .mkd .html .tex .pdf
 
 PANDOC := pandoc --no-wrap -sS
@@ -127,13 +131,13 @@ HSCOLOUR := hscolour -lit
 
 .tex.pdf:
     pdflatex $< && pdflatex $< && pdflatex $<
-{% endhighlight %}
+``````
 
 And call `make` to sort it all out for me:
 
-{% highlight make %}
-    make blah.html
-{% endhighlight %}
+``````bash
+make blah.html
+``````
 
 [haddock]: http://haskell.org/haddock/ "Haddock: A Haskell Documentation Tool"
 [literate98]: http://www.haskell.org/onlinereport/literate.html "Haskell 98 Report -- 9.6 Literate comments"

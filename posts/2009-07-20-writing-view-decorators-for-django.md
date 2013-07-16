@@ -20,11 +20,11 @@ More than just decoration
 
 Using a decorator looks (in Python) like this:
 
-{% highlight python %}
+``````python
 @a_decorator
 def a_function(an_arg):
     return "Functionate: %s!" % (an_arg)
-{% endhighlight %}
+``````
 
 Where `a_decorator` is some function or other which takes an argument
 (`a_function`, in this particular case) and returns a value. When Python loads
@@ -33,7 +33,7 @@ normal, but then it calls `a_decorator` on it and binds the value it returns
 to the name `a_function` rather than the original function created from the
 definition. So how do we write these decorators? Just like a normal function!
 
-{% highlight python %}
+``````python
 def a_decorator(the_func):
     """
     Make another a function more beautiful.
@@ -41,14 +41,14 @@ def a_decorator(the_func):
     def _decorated(*args, **kwargs):
         return the_func(*args, **kwargs)
     return _decorated
-{% endhighlight %}
+``````
 
 But what about parameterised decorators? It's just a little more involved.
 Recall that you use a decorator like this: `@the_decorator`. It turns out that
 such decorator statements don't just *name* a decorator to be called, but can
 also call a function to return a decorator to be called:
 
-{% highlight python %}
+``````python
 def wrap_in_a(tag):
     """
     Wrap the result of a function in a `tag` HTML tag.
@@ -63,7 +63,7 @@ def wrap_in_a(tag):
 @login_required
 def my_name(request):
     return request.user.first_name
-{% endhighlight %}
+``````
 
 The first decorator statement `@wrap_in_a('div')` calls `wrap_in_a('div')`
 which returns a function (`_dec`). This function is then applied to the
@@ -80,7 +80,7 @@ So this is all pretty cool, but how do we use it in Django? We'll here's a
 `anonymous_required` decorator that you can use to redirect authenticated
 users to their home page if they try to login again:
 
-{% highlight python %}
+``````python
 def anonymous_required(function=None, home_url=None, redirect_field_name=None):
     """Check that the user is NOT logged in.
 
@@ -117,16 +117,16 @@ def anonymous_required(function=None, home_url=None, redirect_field_name=None):
         return _dec
     else:
         return _dec(function)
-{% endhighlight %}
+``````
 
 It's probably not very Django-ish, but you get the impression. Just use it
 like Django's built-in `login_required` decorator:
 
-{% highlight python %}
+``````python
 @anonynous_required
 def a_view(request):
     return HttpResponse("We are anonymous! We are legion!")
-{% endhighlight %}
+``````
 
 Comments and suggestions welcome!
 

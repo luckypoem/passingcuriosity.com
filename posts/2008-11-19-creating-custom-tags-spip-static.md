@@ -6,6 +6,8 @@ title: Creating custom tags for SPIP - Static tags
 tags: spip, php, code, template, tags
 location: Perth, Western Australia
 excerpt: 
+  A short introduction to creating custom template tags in the SPIP content
+  management system.
 ---
 
 The SPIP template language has two constructions: loops (which determine the
@@ -66,12 +68,13 @@ tag. This tag simply outputs the string "Hello World!" (To use the code,
 simply copy the function into the file `mes_fonctions.php` in the root of your
 SPIP installation):
 
-{% highlight php %}
+``````php
+<?php
 function balise_HELLO_WORLD($p) {
     $p->code = "'Hello World!'";
     return $p;
 }
-{% endhighlight %}
+``````
 
 As you can see there are a few more details than just the name, namely, this
 `$p` thing. The parameter to the function implementing the tag is a reference
@@ -158,7 +161,8 @@ Using what I've described so far, it's pretty to write a `#HELLO` tag which
 output's a message "Hello *name*" when given a name, and "Hello World!"
 otherwise (again, this code goes in `mes_fonctions.php`):
 
-{% highlight php %}
+``````php
+<?php
 function balise_HELLO($p) {
     $name = interprete_argument_balise(1, $p);
     if (! $name) {
@@ -167,7 +171,7 @@ function balise_HELLO($p) {
     $p->code = "'Hello $name'";
     return $p;
 }
-{% endhighlight %}
+``````
 
 There are a number of other issues involved in writing static templates. It's
 good practice to make sure that your tags (and everything else, for that

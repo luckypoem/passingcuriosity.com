@@ -54,7 +54,7 @@ it. Once it's figured that out, it uses a static instance of the
 Syslog class to send the message to the log server. The code is
 simple:
 
-{% highlight php %}
+``````php
 <?php
 
 require_once('syslog.php');
@@ -81,7 +81,7 @@ function logtrace() {
 	$from = $caller['function'].'('. $caller['args'][0] .')';
 	$log->Send(_SYSLOG_SERVER, "$func from $from");
 }
-{% endhighlight %}
+``````
 
 With that defined, it's just a matter of adding a call to `logtrace()` to `spip_fopen_lock()` and `spip_fclose_unlock()` in `/ecrire/inc/flock.php` and we get log messages something like this[^2]:
 

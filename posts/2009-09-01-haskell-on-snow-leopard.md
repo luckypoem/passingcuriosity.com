@@ -60,9 +60,9 @@ that you pass a bunch of flags to `Setup` and cabal if the code you're
 compiling links against external libraries (libcurl or libpq, for example). My
 command lines look like this:
 
-{% highlight sh %}
+``````sh
 ./Setup configure --ld-options="-arch i386" --gcc-option=-m32
-{% endhighlight %}
+``````
 
 The `--gcc-option=-m32` probably isn't necessary (the `-optc-m32` inserted in
 `/usr/bin/ghc` does the very same thing), but the other option is required to
@@ -89,8 +89,8 @@ mentioned above and then force macports to rebuild everything as
 [suggested](http://weblog.rubyonrails.org/2009/8/30/upgrading-to-snow-leopard)
 by the Ruby on Rails people:
 
-{% highlight sh %}
+``````sh
 sudo port selfupdate
 sudo port sync
 sudo port upgrade --force installed
-{% endhighlight %}
+``````

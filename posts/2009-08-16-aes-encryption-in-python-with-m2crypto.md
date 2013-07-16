@@ -30,10 +30,10 @@ implementations of the encryption algorithms.
 The padding algorithm seems pretty simple. If I understand correctly, it'd go
 something like this in Python:
 
-{% highlight python %}
+``````python
 pad = lambda s: s + (BS - len(s) % BS) * chr(BS - len(s) % BS)
 unpad = lambda s : s[0:-ord(s[-1])]
-{% endhighlight %}
+``````
 
 But I've got better things to do than convince myself that I've implemented it
 correctly.
@@ -57,7 +57,7 @@ in the [EVP tests][evptst] invaluable.
 
 Without further ado, the code:
 
-{% highlight python %}
+``````python
 from base64 import b64encode, b64decode
 from M2Crypto.EVP import Cipher
 
@@ -107,4 +107,4 @@ def decryptor(key, iv=None):
         del cipher
         return v
     return decrypt
-{% endhighlight %}
+``````

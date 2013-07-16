@@ -49,7 +49,7 @@ and produces the appropriate output.
 
 The code to implement the `#HITS` tag might look like this:
 
-{% highlight php %}
+``````php
 function balise_HITS($p, $nom='HITS') {
     $args = array('id_article');
     return calculer_balise_dynamique($p, $nom, $args);
@@ -63,7 +63,7 @@ function balise_HITS_dyn($id_article) {
     $now = date('c');
     return "Article $id_article has had 1,000,000 hits as of $now!";
 }
-{% endhighlight %}
+``````
 
 One way this can fall down is if I want to access details of, for example, the
 SPIP templates in determining my static parameters. By the time I'm
@@ -102,7 +102,7 @@ pretty simple, just construct it and set it's `type` and `texte` members. The
 following example adds a new parameter containing the name of the template
 file:
 
-{% highlight php %}
+``````php
 function balise_TEMPLATE($p, $nom='TEMPLATE') {
     $file = $p->descr['sourcefile'];
 
@@ -123,7 +123,7 @@ function balise_TEMPLATE($p, $nom='TEMPLATE') {
     $args = array();
     return calculer_balise_dynamique($p, $nom, $args);
 }
-{% endhighlight %}
+``````
 
 First the previous code gets the name of the template file from the AST node
 for the tag being processed. Then it creates a new `Texte` object with the

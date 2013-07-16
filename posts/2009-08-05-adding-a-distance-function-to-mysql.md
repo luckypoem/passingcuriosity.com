@@ -44,7 +44,7 @@ run the following command somehow -- I prefer the `mysql` command-line, others
 a rule engine which is called as part of a semi-automated deployment process
 (these are the people that enjoy using Java):
 
-{% highlight sql %}
+``````sql
 -- Switch delimiter so the ; will work in the function body
 DELIMITER $$
 
@@ -58,7 +58,7 @@ CREATE FUNCTION `distance`(a POINT, b POINT) RETURNS double
 
 -- Switch the delimiter back to ;
 DELIMITER ;
-{% endhighlight %}
+``````
 
 You'll notice that this is calling both `asbinary` (to convert WKB values into
 internal MySQL values) and then `linestringfromwkb` (to convert WKB into
@@ -74,10 +74,10 @@ list](http://groups.google.com/group/geodjango/browse_thread/thread/8f3e66b03c12
 for a little more information) and just used the `extra()` method to add a
 call to the function as a new column and `order by` it:
 
-{% highlight python %}
+``````python
 pc = Postcode.objects.get(postcode='0200')
 sel = SortedDict([('distance', 'distance(location, geomfromtext(%s))')])
 sel_p = (pc.location.wkt,)
 locations = Locations.objects.extra(select=sel, select_params=sel_p, 
     order_by=['distance'])
-{% endhighlight %}
+``````

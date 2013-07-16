@@ -34,9 +34,9 @@ operation).
 
 First, though, lets look at `autoriser`'s arguments:
 
-{% highlight php %}
+``````php
 function autoriser_dist($faire, $type='', $id=0, $qui = NULL, $opt = NULL)
-{% endhighlight %}
+``````
 
 This first (and only required) argument is `$faire` (French, I'm told, for "to
 do") which takes a string: the name of the operation. The second argument
@@ -75,7 +75,7 @@ call it when appropriate.
 
 From `aplugin_fonctions.php` or some other file:
 
-{% highlight php %}
+``````php
 /**
  * Perform authorisation checks for "elephant" objects.
  */
@@ -85,7 +85,7 @@ function autoriser_elephant($faire, $type='elephant', $id=0, $qui=NULL, $opt=NUL
    }
    return false;
 }
-{% endhighlight %}
+``````
 
 With this code in place, only administrators will be able to perform actions
 (or, strictly speaking, perform actions checked with the `autoriser` function)
@@ -94,13 +94,13 @@ above function to determine if the operation should proceed.
 
 In `exec/anaction.php` or similar, we might use code like this:
 
-{% highlight php %}
+``````php
 if ( autoriser('kill', 'elephant', $id_elephant) ) {
    launch_missiles_at('elephant', $id_elephant);
 } else {
    echo _T('aplugin:cannot_shoot_elephant'), _T('aplugin:permission_denied');
 }
-{% endhighlight %}
+``````
 
 
 Which will try the following functions, in order, to decide whether or not to

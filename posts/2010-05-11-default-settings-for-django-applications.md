@@ -39,7 +39,7 @@ with your default values).
 
 The code itself is pretty simple. From `app/__init__.py`:
 
-{% highlight python %}
+``````python
 def inject_app_defaults(application):
 	"""Inject an application's default settings"""
 	try:
@@ -65,7 +65,7 @@ def inject_app_defaults(application):
 		pass
 
 inject_app_defaults(__name__)
-{% endhighlight %}
+``````
 
 You can see the code in a proof of concept application in my
 [django-application-settings][gh] project on GitHub.

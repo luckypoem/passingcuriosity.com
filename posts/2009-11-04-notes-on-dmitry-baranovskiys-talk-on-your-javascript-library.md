@@ -154,10 +154,10 @@ wrapping functions (like `setAttribute`) with local wrapper functions,
 you can use a variable for the name and use subscripting to access the
 function:
 
-{% highlight javascript %}
+``````javascript
 var setAttribute = "setAttribute";
-element[setAttribut]("width", 320);
-{% endhighlight %}
+element[setAttribute]("width", 320);
+``````
 
 # Error Handling #
 

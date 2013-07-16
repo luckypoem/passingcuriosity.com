@@ -3,10 +3,11 @@ wordpressid: 139
 wordpressurl: http://passingcuriosity.com/?p=62
 layout: post
 title: The SPIP Template Language
-tags: spip
+tags: spip, cms, template, language
 location: Perth, Western Australia
 excerpt: 
-  
+  A quick introduction to the template language of the SPIP content management
+  system.
 ---
 
 SPIP, like many content management systems, provides a templating facility
@@ -40,7 +41,7 @@ each loop has :
 
 An example will help illustrate:
 
-{% highlight html %}
+``````html
     <B_aloop>
         <ol>
         <BOUCLE_aloop(ARTICLES){id_article IN 1,2,3,5,7,11}>
@@ -50,7 +51,7 @@ An example will help illustrate:
     </B_aloop>
         <p>There are no matching articles.</p>
     <//B_aloop>
-{% endhighlight %}
+``````
 
 Upon seeing this code SPIP does the following (along with some other stuff in
 the database and caching layers). It retrieves all of the articles with an ID

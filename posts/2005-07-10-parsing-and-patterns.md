@@ -3,6 +3,7 @@ wordpressid: 1437
 layout: post
 title: Parsing and Patterns
 wordpressurl: http://passingcuriosity.com/2005/parsing-and-patterns/
+location: Launceston, Tasmania
 ---
 
 The logic compiler generates Haskell code to implement a calculus. This
@@ -40,9 +41,9 @@ appropriate snippets of code which we use for pattern-matching in the Haskell
 code implementing the calculus. For example, the rule above would be
 translated to the Haskell code 
 
-{% highlight haskell %}
+``````haskell
 resolve (Impl a b) = Or [(Neg a), b]
-{% endhighlight %}
+``````
 
 Once we've parsed the pattern and generated a function, we get the pattern
 matching at run-time for free from Haskell.

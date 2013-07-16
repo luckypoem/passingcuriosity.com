@@ -32,9 +32,9 @@ former boss, but I shall ascribe it to him anyway) looks like this:
 Thus a user who can do anything *except* shut the application down might have
 a permissions list like:
 
-{% highlight php %}
+``````php
     $user->perm = array("Application.*", "-Application.Shutdown");
-{% endhighlight %}
+``````
 
 As such schemes go this one is adequate, but as a replacement for Drupal's
 current system it's not that crash hot. In fact, all it brings to the table is

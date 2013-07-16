@@ -27,11 +27,11 @@ application: Apache with `mod_fastcgi`, and the Haskell FastCGI library. You
 should install Apache as you normally do. This probably involves one of the
 following commands:
 
-{% highlight sh %}
+``````sh
     sudo pacman -S apache # On Arch Linux
     sudo aptitude install apache2 # On Debian, Ubuntu, etc.
     sudo port install apache2 # On Mac OS X with Macports
-{% endhighlight %}
+``````
 
 ### Installing the FastCGI module
 
@@ -55,27 +55,27 @@ like to spread this out over some three or four files.
 Edit your Apache configuration (mine was in `/etc/httpd/conf/httpd.conf`) to
 load the module:
 
-{% highlight apache %}
+``````apache
     LoadModule fastcgi_module modules/mod_fastcgi.so
-{% endhighlight %}
+``````
 
 There are a number of ways to configure the module, but the easiest is to add
 it as a handler for `.fcgi` files. Add the following snippet to `httpd.conf`:
 
-{% highlight apache %}
+``````apache
     <IfModule fastcgi_module>
         AddHandle fastcgi-script .fcgi
     </IfModule>
-{% endhighlight %}
+``````
 
 You'll still need to add the `ExecCGI` option to the directories which contain
 the `.fcgi` files to be run. I'm planning to use my `~/public_html/`
 directory, so I amended the `<Directory>` section in
 `/etc/httpd/conf/extras/httpd-userdir.conf`:
 
-{% highlight apache %}
+``````apache
     Options +ExecCGI
-{% endhighlight %}
+``````
 
 Restart Apache and you're good to go. If anything goes wrong, try looking at the [`mod_fastcgi` documentation](http://www.fastcgi.com/mod_fastcgi/docs/mod_fastcgi.html).
 
@@ -105,7 +105,7 @@ A simple Haskell FastCGI application looks like this (largely cribbed from
 
 [blog]: <http://mult.ifario.us/p/wiring-haskell-into-a-fastcgi-web-server
 
-{% highlight haskell %}
+``````haskell
     module Main ( main ) where
 
     import Control.Concurrent
@@ -124,21 +124,21 @@ A simple Haskell FastCGI application looks like this (largely cribbed from
 
     main :: IO ()
     main = runFastCGIConcurrent' forkIO 10 action
-{% endhighlight %}
+``````
 
 Copy and paste that code into a file (I'll call it `Main.hs`) and compile it:
 
-{% highlight sh %}
+``````sh
     ghc -threaded --make -o ~/test.fcgi Main.hs
-{% endhighlight %}
+``````
 
 You'll now have a file `~/public_html/test.fcgi` which you can call using
 `curl`. The first request might be a little slow, but subsequent requests
 should be much faster:
 
-{% highlight sh %}
+``````sh
     curl --include http://localhost/~$USER/test.fcgi
-{% endhighlight %}
+``````
 
 Congratulations! You now have a working Haskell FastCGI application hosted
 under Apache. If you have any suggestions, comments, or questions, please

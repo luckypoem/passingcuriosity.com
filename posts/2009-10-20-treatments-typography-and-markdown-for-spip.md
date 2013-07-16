@@ -35,12 +35,12 @@ value of a column from the current row[^1]. If all you want to do is
 loop over the contents of a database table and output some values then
 you don't have to "do" anything: 
 
-{% highlight html %}
+``````html
 <BOUCLE_aloop(my_table){par acolumn}>
     #ACOLUMN
     #ANOTHER_COLUMN
 </BOUCLE_aloop>
-{% endhighlight %}
+``````
 
 SPIP will do what you want without any additional code of
 configuration (assuming that your table is called `my_table` and has
@@ -55,20 +55,20 @@ display. Perhaps some special characters need to be escaped or some
 formatting applied before the data it is suitable for output. You
 *could* just apply a filter to the tag each and every time you use it:
 
-{% highlight html %}
+``````html
 [(#ANOTHER_COLUMN|process_data)]
-{% endhighlight %}
+``````
 
 Or implement the tag in PHP:
 
-{% highlight php %}
+``````php
 function balise_ANOTHER_COLUMN_dist($p) {
     $p->code = 'process_data('
         .champ_sql('another_column', $p) 
         .')';
     return $p;
 }
-{% endhighlight %}
+``````
 
 Thankfully, you don't have to filter the tag in every template, or
 implement the tag in PHP to use such "treatments": you can just tell
@@ -94,19 +94,19 @@ but lets consider the trivial example of removing the leading number
 from all `#TITRE`s  with the `supprimer_numero` filter (completely
 ignoring the normal processing): 
 
-{% highlight php %}
+``````php
 global $table_des_traitements;
 $table_des_traitements['TITRE'][] = 'supprimer_numero(%s)';
-{% endhighlight %}
+``````
 
 Another trivial example might be to transform the `#TEXTE` of all
 sections (but not articles, etc) to uppercase[^2] (again ignoring the
 normal processing):
 
-{% highlight php %}
+``````php
 global $table_des_traitements;
 $table_des_traitements['TEXTE']['rubriques'] = 'strtoupper(%s)';
-{% endhighlight %}
+``````
 
 Getting back to my goal of replacing SPIP's built-in typographical
 shortcuts language with the [PHP
@@ -118,13 +118,13 @@ typographical shortcuts) is simply a matter of installing the
 `markdown.php` and `smartypants.php` scripts and adding a similar line
 to our `mes_options.php` file:
 
-{% highlight php %}
+``````php
 global $table_des_traitements;
 
 include_once "markdown.php";
 include_once "smartypants.php";
 $table_des_traitements['TEXTE'][] = 'SmartyPants(Markdown(%s))';
-{% endhighlight %}
+``````
 
 Now the value set in `interfaces.php` will be
 `$table_des_traitements['TEXTE'][1]` instead of

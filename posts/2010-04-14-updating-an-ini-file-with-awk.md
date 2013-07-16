@@ -14,7 +14,7 @@ The problem is simple: update a specific line in a specific section of a
 `.ini` file in a shell script. The file (a configuration file for Gitosis)
 looks something like this:
 
-{% highlight ini %}
+``````ini
 [gitosis]
 
 
@@ -37,7 +37,7 @@ members = auser anotheruser
 [group managers]
 writable = docs
 readonly = repo1
-{% endhighlight %}
+``````
 
 The goal is to append a value to the `writable` line in the `group developers`
 section (leaving the rest of the lines alone). Any solution will need to do
@@ -56,35 +56,37 @@ This is simple to do in AWK:
 
 Here's the code:
 
-	# Clear the flag
-	BEGIN {
-	    processing = 0;
-	}
+``````awk
+# Clear the flag
+BEGIN {
+	processing = 0;
+}
 
-	# Entering the section, set the flag
-	/^\[group developers/ {
-	    processing = 1;
+# Entering the section, set the flag
+/^\[group developers/ {
+	processing = 1;
+}
+	
+# Modify the line, if the flag is set
+/^writable = / {
+	if (processing) {
+	    print $0" foo";
+		skip = 1;
 	}
+}
 
-	# Modify the line, if the flag is set
-	/^writable = / {
-	    if (processing) {
-	        print $0" foo";
-	        skip = 1;
-	    }
-	}
+# Clear the section flag (as we're in a new section)
+/^\[$/ {
+	processing = 0;
+}
 
-	# Clear the section flag (as we're in a new section)
-	/^\[$/ {
-	    processing = 0;
-	}
-
-	# Output a line (that we didn't output above)
-	/.*/ {
-	    if (skip)
-	        skip = 0;
-	    else
-	        print $0;
-	}
+# Output a line (that we didn't output above)
+/.*/ {
+	if (skip)
+	    skip = 0;
+	else
+		print $0;
+}
+``````
 
 Easy!

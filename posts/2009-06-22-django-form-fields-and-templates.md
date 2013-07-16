@@ -21,7 +21,7 @@ pick such elements out, but I found it very difficult to do so.
 
 The only way, as far as I (and [the replies on django-users@](http://groups.google.com/group/django-users/browse_thread/thread/16493dd43303efd3)), is to write a template filter to extract a such a value for you. Thankfully, this it pretty easy:
 
-{% highlight python %}
+``````python
     @register.filter
     def field_type(field):
         """
@@ -33,21 +33,21 @@ The only way, as far as I (and [the replies on django-users@](http://groups.goog
         s = s.rpartition('Input')[0]
         s = s.lower()
         return s
-{% endhighlight %}
+``````
 
 I can use the above filter to add a class to my form markup:
 
-{% highlight django %}
+``````django
             <div class="form-field form-{{ field|field_type }}">
                 {{ field.label_tag}}
                 {{ field.errors }}
                 {{ field }}
             </div>
-{% endhighlight %}
+``````
 
 Which I can then use in my CSS to style particular widgets without having to do them one-by-one using ID's:
 
-{% highlight css %}
+``````css
 .form-field label {
     display: block;
     width: 15%;
@@ -63,4 +63,4 @@ div.form-checkbox input {
     float: left;
     margin-left: 12%;
 }
-{% endhighlight %}
+``````

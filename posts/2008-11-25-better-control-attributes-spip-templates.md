@@ -59,7 +59,8 @@ value (`FALSE` or `NULL`, for example) because some user may genuinely want to
 use that value (perhaps `NULL` will mean delete the attribute in a future
 version?) and silently ignoring user input is never good.
 
-{% highlight php %}
+``````php
+<?php
 include_spip("inc/filtres");
 
 /**
@@ -88,18 +89,18 @@ function attr($tag, $name){
                 return extraire_attribut($tag, $name);
         }
 }
-{% endhighlight %}
+``````
 
 Simply copy the code into the `mes_fonctions.php` file for your site (see
 "Adding your own filters" in [SPIP's
 Filters](http://www.spip.net/en_article2465.html)) and use `attr` in your SPIP
 templates:
 
-{% highlight html %}
+``````html
 <a href="[(#FICHIER|attr{src})]" class="lightbox" title="#TITRE">
     [(#FICHIER|image_reduire{100,100}|attr{alt,#TITRE})]
 </a>
-{% endhighlight %}
+``````
 
 There are a few changes that could be made to this function: passing `$args`
 directly to `inserer_attribut` and `extraire_attribut` rather than the

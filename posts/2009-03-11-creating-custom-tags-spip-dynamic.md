@@ -40,7 +40,7 @@ into HTML fit for a client goes like this:
 [^1]: SPIP also does a second round of caching here, but we'll ignore it for
 the time being.
 
-{% highlight php %}
+``````php
 // Handle the #DYNAMIC_EXAMPLE tag.
 function balise_DYNAMIC_EXAMPLE($p) {
         $args = array();
@@ -74,7 +74,7 @@ function balise_DYNAMIC_EXAMPLE_dyn($then) {
 
         return $s;
 }
-{% endhighlight %}
+``````
 
 When we use `#DYNAMIC_EXAMPLE` in a template, SPIP calls out gathers up all
 the values we asked for in `$args` (nothing, in this case), and passes them to
@@ -104,7 +104,7 @@ containing three elements:
 
 The previous example modified to use a template might look like this:
 
-{% highlight php %}
+``````php
 function balise_DYNAMIC_EXAMPLE_dyn($then) {
         $now = date('Y-m-d H:i:s');
 
@@ -114,14 +114,14 @@ function balise_DYNAMIC_EXAMPLE_dyn($then) {
         );
         return array('formulaires/dynamic_example', 0, $env);
 }
-{% endhighlight %}
+``````
 
 With a template called `squelettes/formulaires/dynamic_example.html` like so:
 
-{% highlight spip %}
+``````spip
     Page generated: #ENV{then}<br />
     Now: #ENV{now}
-{% endhighlight %}
+``````
 
 # Going Further
 

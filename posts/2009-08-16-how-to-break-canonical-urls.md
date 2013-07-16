@@ -41,9 +41,9 @@ The problem, and the topic of this post, is our support for canonical URLs. The 
 
 Our plug-in currently includes markup like this on every page it generates:
 
-{% highlight html %}
+``````html
 <link rev="canonical" href="http://example.com/An-Article.html" />
-{% endhighlight %}
+``````
 
 If your familiar with [X]HTML, you may have noticed a problem with this: we've
 used the `@rev` attribute instead of a `@rel`. This is a small difference --

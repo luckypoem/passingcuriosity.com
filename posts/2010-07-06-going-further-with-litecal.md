@@ -139,7 +139,7 @@ Fill in the three blanks (you can almost always use `phptemplate` for the
 prefix and expect it to work!) and add a function like this to the
 `template.php` in your theme:
 
-{% highlight php %}
+``````php
 function phptemplate_views_view_field__events_calendar__attachment__field_event_location_value_1($view, $field, $row)
 {
   // Get the "key". This is just the value that would be displayed in the 
@@ -153,7 +153,7 @@ function phptemplate_views_view_field__events_calendar__attachment__field_event_
   
   return $r;
 }
-{% endhighlight %}
+``````
 
 Once this new function is in place you will need to refresh your theme caches
 (just hitting "Save" on `/admin/build/themes` will do the trick). And now your

@@ -69,7 +69,7 @@ I'll do so. Note that I've elided the actual bracket matching as it isn't
 particularly interesting and the tedium of processing strings in C-like
 languages cannot be understated:
 
-{% highlight objc %}
+``````objectivec
 @implementation NSString (MatchBrackets)
 
 - (BOOL)bracketsAreMatched {
@@ -79,13 +79,13 @@ languages cannot be understated:
 	return YES;
 }
 @end
-{% endhighlight %}
+``````
 
 The first version of `PCMatchedBacketFormatter` will use
 `stringForObjectValue:` and `getObjectValue:forString:errorDescription:` to
 make sure that the user can only enter strings of validly nested brackets.
 
-{% highlight objc %}
+``````objectivec
 // -------- PCMatchBracketFormatter.h --------
 @interface PCMatchBracketFormatter : NSFormatter
 @end
@@ -111,7 +111,7 @@ make sure that the user can only enter strings of validly nested brackets.
 	}
 }
 @end
-{% endhighlight %}
+``````
 
 Now we can add a custom object instance in Interface Builder, set it's class
 to `PCMatchBracketFormatter` and point the `formatter` outlet of, e.g., an

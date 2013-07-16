@@ -22,15 +22,15 @@ wire format.
 
 ### Interesting Rails extras
 
-{% highlight ruby %}
+``````ruby
 self.find_text_attributes = [ name, surname, nickname, email, description, ... ]
-{% endhighlight %}
+``````
 
 Override the attributes that will be searched when `find_text` is called.
 
-{% highlight ruby %}
+``````ruby
 self.attribute_group :narrow, [id, customer_name]
-{% endhighlight %}
+``````
 
 Comes from the REST controller. What does it do?
 

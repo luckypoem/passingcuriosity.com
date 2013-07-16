@@ -23,7 +23,7 @@ imagecache and ImageMagick while GD is still the default
 toolkit](http://drupal.org/node/641372) which supplies the following code
 (simplified a little by removing the PDF-y bits):
 
-{% highlight php %}
+``````php
 <?php
 $w = 246; // change to your preferred thumbnail width
 if (!_imageapi_imagemagick_convert($image->source.'[0]', $image->source.'.png', array(0 => '-thumbnail '.$w))) return FALSE;
@@ -34,7 +34,7 @@ $image->toolkit = 'imageapi_gd';
 $image->info = array('extension' => 'jpeg');
 return TRUE;
 ?>
-{% endhighlight %}
+``````
 
 Alas, this code it pretty useless: because it stomps on `$image->info` any
 further actions on this `$image` will probably break.
@@ -42,7 +42,7 @@ further actions on this `$image` will probably break.
 Thankfully, there's an easy fix: when you update `$image`, make sure you
 update everything that needs fixing. Here's the amended code:
 
-{% highlight php %}
+``````php
 <?php
 // "Thumbnail" the image
 $width = 600;
@@ -68,7 +68,7 @@ file_delete($image->source.'.png');
 
 return $image;
 ?>
-{% endhighlight %}
+``````
 
 Make sure that you've enabled the ImageMagick toolkit, drop this code in a
 custom action and you'll be on externally processing images in no time!

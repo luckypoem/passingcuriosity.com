@@ -30,11 +30,10 @@ really the least important aspect of the whole thing.
 That said, I normally don't bother with any of that and just (being, of
 necessity, a PHP user):
 
-{% highlight php %}
-    <?php
+``````php
+<?php
     echo implode(",", $values), "\n";
-    ?>
-{% endhighlight %}
+``````
 
 It's probably just a bunch of integers anyway, so there won't be any commas
 anyway.
@@ -48,10 +47,8 @@ which the egg) and given us a mechanism to specify exactly this: the
 
 A *Content-Disposition* header looks something like this (from [RFC2183][]):
 
-<pre><code lang="http">
     Content-Disposition: attachment; filename=genome.jpeg;
       modification-date="Wed, 12 Feb 1997 16:29:51 -0500";
-</code></pre>
 
 Like many headers, the value (the bit after the colon) can have several parts
 separated with a semicolon. The first part (`attachment` in the example above)
@@ -69,11 +66,12 @@ Sending *Content-Disposition* is as easy as sending any other header with
 HTTP. In PHP, my code generally looks a little something like this (Notice
 that the `filename` parameter is quoted, as [RFC2616][] describes):
 
-{% highlight php %}
-    $filename = "thingo-". date('Y-m-d H:i') .".csv;
-    header("Content-Type: text/csv");
-    header("Content-Disposition: attachment; filename=\"$filename\""
-{% endhighlight %}
+``````php
+<?php
+$filename = "thingo-". date('Y-m-d H:i') .".csv;
+header("Content-Type: text/csv");
+header("Content-Disposition: attachment; filename=\"$filename\"");
+``````
 
 After which, I'm ready to loop and `echo` away.
 
@@ -90,5 +88,5 @@ have [security implications](http://tools.ietf.org/html/rfc2183#page-9)
 (though these generally boil down to: some users are stupid and trust things
 that come through the intertubes).
 
-[RFC2183]: http://tools.ietf.org/html/rfc2183 [RFC2616]:
-http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1
+[RFC2183]: http://tools.ietf.org/html/rfc2183
+[RFC2616]: http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1
