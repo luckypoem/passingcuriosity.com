@@ -16,6 +16,6 @@ Where `NSMutableSet`, `NSArray`, their subclasses, and assorted others allow the
 
 The new problem then is to convert this `_NSFaultingMutableSet` into something the widget can display. Looking at the binding inspector in Interface Builder, the most obvious option is that *Value Transformer* box. Thankfully, value transforms are reasonably simple, especially when they are one way. After you subclass `NSValueTransformer` to do what you need, create an instance, and register it with a given name (I did it in `[MyDocument init]` as suggested by Tim, how ever you do it, it probably needs to be done before the NIB is loaded). Then entering the name in the *Value Transformer* box in IB gets it called. A little bit of code using an `NSEnumerator` to emulate `@sum` and it now works:
 
-<img src="/files/files/2008/07/emulating-operators-with-value-transformers.png" alt="Emulating Operators with an NSValueTransformer" title="Emulating Operators with an NSValueTransformer" width="478" height="210" class="size-full wp-image-57" />
+<img src="/files/2008/07/emulating-operators-with-value-transformers.png" alt="Emulating Operators with an NSValueTransformer" title="Emulating Operators with an NSValueTransformer" width="478" height="210" class="size-full wp-image-57" />
 
 Thanks to Tim Isted for his help, guidance, and sample code. Suggestions are welcome as to other, perhaps better, ways to get this to work.

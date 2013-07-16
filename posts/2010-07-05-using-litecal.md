@@ -46,7 +46,7 @@ step.
 Before you can display events on a calendar, you'll need somewhere to store
 them so the first step is creating a new content type. 
 
-![Create an event content type](/files/files/2010/07/litecal-event-type.jpg)
+![Create an event content type](/files/2010/07/litecal-event-type.jpg)
 
 Next you'll need to add a few fields to it. You can store the event name and
 description in the `title` and `body` fields, but you'll need to add a new
@@ -58,14 +58,14 @@ text field for the location and a new date field for the date. Make sure that:
 
 When you're done you should have something like the following:
 
-![Manage fields on calendar event](/files/files/2010/07/litecal-type-fields.jpg)
+![Manage fields on calendar event](/files/2010/07/litecal-type-fields.jpg)
 
 Now that you've got a *Calendar Event* node type, create a few dummy nodes so
 that there's something to display on the calendar. Four or five should do it,
 but make sure that a few are *this month* and one or two in past or future
 months, or your calendar will be a bit empty!
 
-![Create some Calendar Event nodes](/files/files/2010/07/litecal-create-nodes.jpg)
+![Create some Calendar Event nodes](/files/2010/07/litecal-create-nodes.jpg)
 
 ## Creating the view
 
@@ -83,25 +83,25 @@ Create a new view for nodes and add the following:
    
 Your view should look something like this:
 
-![Create a view](/files/files/2010/07/litecal-create-view.jpg)
+![Create a view](/files/2010/07/litecal-create-view.jpg)
 
 Now add a new `Page` display to the view, set its *Name* to `Calendar`, the
 *Path* to `calendar`, and override the *Style* and set it to `Litecal` (leave
 the style options as the default values).
 
-![Add a calendar display](/files/files/2010/07/litecal-calendar-display.jpg)
+![Add a calendar display](/files/2010/07/litecal-calendar-display.jpg)
 
 Save the view, then select the correct display under *Live Preview* and you
 should see the dummy nodes you created earlier on a calendar of the current
 month. If not, then you've missed a step above (perhaps the default value or 
 granularity for the argument?).
 
-![The calendar in live preview](/files/files/2010/07/litecal-preview.jpg)
+![The calendar in live preview](/files/2010/07/litecal-preview.jpg)
 
 You should also be able to visit `/calendar` and see the same calendar as a
 page:
 
-![The calendar in a page](/files/files/2010/07/litecal-calendar-page.jpg)
+![The calendar in a page](/files/2010/07/litecal-calendar-page.jpg)
 
 ## Conclusion
 

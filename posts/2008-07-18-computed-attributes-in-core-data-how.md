@@ -15,11 +15,11 @@ operators with Core Data](/2008/binding-operators-with-core-data/) we'll first e
 
 This is pretty simple: just add a second column to the departments `NSTableView`, title it "Staff" and bind it to the `Departments.arrangedObjects` with the path `employees.@count`. You'll probably also want to make sure it is *not* editable (it'd be a strange use case indeed in which it *would* be editable).
 
-<img src="/files/files/2008/07/counting-department-employees-ib.png" alt="Adding department staff numbers" width="500" height="470" class="aligncenter size-full wp-image-27" />
+<img src="/files/2008/07/counting-department-employees-ib.png" alt="Adding department staff numbers" width="500" height="470" class="aligncenter size-full wp-image-27" />
 
 As in my last post, we're using bindings to call `count:` on the array of employees for each department. Last time we just used it as a flag, but this time we're actually displaying it. Save the NIB (or XIB) and rebuild the app. You should now get employee counts like this:
 
-<img src="/files/files/2008/07/counting-department-employees.png" alt="Counting department employees" width="500" height="291" class="aligncenter size-full wp-image-23" />
+<img src="/files/2008/07/counting-department-employees.png" alt="Counting department employees" width="500" height="291" class="aligncenter size-full wp-image-23" />
 
 Great! We made the change we were after: the user now gets to see (and use) the number of employees in each department. If our employment practices were more complex we might have part-time and job-sharing employees and need to display Full Time Equivalent staff members: this should be pretty easy too. We could add an 'fte' field between `0.0`&mdash;`1.0` to the *Person* entity and rather than just counting the number of staff we could total up their fte values fields by binding to `employees.@sum.fte`. At least, we might expect to be able to. Alas, I couldn't get it too work.
 

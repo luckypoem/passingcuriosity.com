@@ -134,7 +134,7 @@ with this:
     [before (#HELLO_WORLD{arg1}|strtoupper) after]
 
 might result in the following AST being passed to `balise_HELLO_WORLD` above
-([download the full SPIP AST](/files/files/2008/11/spip-ast-example.txt)):
+([download the full SPIP AST](/files/2008/11/spip-ast-example.txt)):
 
     type => "champ"
     nom_champ => "HELLO_WORLD"

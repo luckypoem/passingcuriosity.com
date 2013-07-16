@@ -159,4 +159,4 @@ Once this new function is in place you will need to refresh your theme caches
 (just hitting "Save" on `/admin/build/themes` will do the trick). And now your
 calendar page should look something like this:
 
-![The finished calendar](/files/files/2010/07/litecal-themed-calendar.jpg)
+![The finished calendar](/files/2010/07/litecal-themed-calendar.jpg)

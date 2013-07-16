@@ -60,7 +60,7 @@ site. Like most such things you get a screen shot, but more usefully
 *WebPagetest* provides a timeline of fetching and rendering the page. Here's
 an edited screenshot of that first report:
 
-![A clear performance problem!](/files/files/2010/11/ie-performance-start.png)
+![A clear performance problem!](/files/2010/11/ie-performance-start.png)
 
 Notice, if you will, all that red and yellow and the fact that the initial
 request took 53 seconds and subsequent requests took 31 seconds! A closer look
@@ -86,7 +86,7 @@ indicating requests that could have been cached on the client but weren't
 because of configuration issues. I added some [`ExpiresDefault`][ed] server
 directives and pretty much all that yellow went away:
 
-![A much faster site!](/files/files/2010/11/ie-performance-finish.png)
+![A much faster site!](/files/2010/11/ie-performance-finish.png)
 
 Resolving a few 404 errors that slipped through the obviously gaping cracks in
 our QA procedure and correcting some server configuration oversights took this

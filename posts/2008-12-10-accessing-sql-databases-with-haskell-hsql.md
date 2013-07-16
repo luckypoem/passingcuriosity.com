@@ -15,7 +15,7 @@ regularity on the Haskell mailing lists, and that if I don't write it down,
 I'm liable to forget, this post will describe accessing SQL databases
 using the `HSQL` package and one or more of its driver packages.
 
-This post is literate Haskell ([download the original](/files/files/2008/12/using-hsql.lhs)) and was tested with GHC 6.10.1.
+This post is literate Haskell ([download the original](/files/2008/12/using-hsql.lhs)) and was tested with GHC 6.10.1.
 
 <!--more-->
 
