@@ -4,6 +4,9 @@ title: In Wellington for LCA2010 and DrupalSouth
 categories: [lca, drupalsouth, lca2010, drupal]
 tags: lca2010, drupalsouth, travel
 location: Perth, Western Australia
+excerpt: 
+  I'm currently in Wellington, New Zealand for linux.conf.au 2010 and
+  DrupalSouth.
 ---
 
 I'm currently in Wellington, New Zealand for [linux.conf.au 2010][lca2010] and

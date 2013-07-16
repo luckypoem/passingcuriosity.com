@@ -2,13 +2,17 @@
 wordpressid: 440
 layout: post
 title: Extending Lua in C
+tags: lua, c, openssl, hash, development
 wordpressurl: http://passingcuriosity.com/?p=440
+excerpt: 
+  Wrapping OpenSSL hash algorithms for use in Lua.
 ---
+
 Lua is a small, portable, and fast scripting language designed for embedding in other software. Being designed for embedding, it has a simple but powerful API which makes it easy to communicate both ways: from C into Lua and from Lua into C. In this post, I'll describe the process of writing a small module adding support for OpenSSL's hashing functions to Lua.
 
 
 Hashing data with OpenSSL
----------------------
+-------------------------
 
 Generating hashes of data is an relatively simple problem to address in a library: is has a small, simple interface which can be implemented using any of a large number of hashing libraries. Rather than locate, evaluate and include one of the many open source or public domain hashing libraries, I've decided to wrap the hashing functions from [OpenSSL](http://www.openssl.org/). This provides a number of benefits:
 
@@ -19,7 +23,8 @@ Generating hashes of data is an relatively simple problem to address in a librar
 
 Before I can write a Lua wrapper for the OpenSSL functions, I'll need to know how they work. The `man` pages help immeasurably, especially as they contain code demonstrating [how to hash data using OpenSSL](http://www.openssl.org/docs/crypto/EVP_DigestInit.html#EXAMPLE). Following the example in that man page, a first cut of my code will look like this:
 
-{% highlight c %}
+
+``` c
 unsigned char *digest(char *algorithm, void *data, size_t len) {
     // The hash context
     const EVP_MD *md;
@@ -63,7 +68,7 @@ unsigned char *digest(char *algorithm, void *data, size_t len) {
     // Return the hex string of the hash
     return hash_str;
 }
-{% endhighlight %}
+```
 
 Easy! Variable arguments are a pain in the arse in C, so I've omitted them from the code above but it'd be great if the Lua module will accept any number of input values and hash them all. Thanks to the great OpenSSL API, doing so is just a matter of calling `EVP_DigestUpdate()` in a loop over each of the input values. It couldn't be simpler!
 
@@ -78,7 +83,7 @@ Now that I can hash values with the OpenSSL functions, it's time to think about 
 
 As simple example may help illustrate. The following function inspects the stack to see how many parameters it was invoked with, and returns a message state such. Unlike the stacks used in many other systems, the Lua stack is indexed (you can access any item by its index, rather than only the top item) and these indexes start from 1 (instead of the traditional 0). As a consequence, the index of the top of the stack is the number of items on it.
 
-{% highlight c %}
+```c
 static int example(lua_State *L) {
     unsigned int n = 0;
 
@@ -92,13 +97,13 @@ static int example(lua_State *L) {
     // Return the number of return values pushed onto the stack.
     return 1;
 }
-{% endhighlight %}
+```
 
 Using just few more functions from the API, I can modify the OpenSSL code above to be called from Lua. All it requires is a change of signature, a call to `lua_tolstring()` to get the algorithm name, a call to `lua_gettop()` to get the number of inputs, a loop calling `lua_tolstring()`  to get each of them in turn and feed them to the hashing code, and a call to `lua_pushstring()` to push the return value onto the stack.
 
 The revised code looks like this:
 
-{% highlight c %}
+```c
 static int hash_hash (lua_State *L) {
     EVP_MD_CTX mdctx;
     const EVP_MD *md;
@@ -155,17 +160,16 @@ static int hash_hash (lua_State *L) {
     // Return the number of return values
     return(1);
 }
-{% endhighlight %}
-
+```
 
 With the function itself written, registering it so that it can be called by Lua code is simple too. Each C module (whether compiled into Lua or loaded as a shared object library) has a `luaopen_*()` function that is responsible for initialising the library and registering the resources it provides. There are utility functions to automatically register entire modules based on arrays of function pointers, but I've only got one function and there's no point cramming it into a table, so I'll go it alone. Again, it's really easy:
 
-{% highlight c %}
+```c
 LUALIB_API int luaopen_hash(lua_State *L) {
     lua_register(L, "hash", hash_hash);
     return 0;
 }
-{% endhighlight %}
+```
 
 An elegant API
 ------------
@@ -184,7 +188,7 @@ Using this facility along with closures and anonymous functions I can hide my `h
 
 The first task is to create a closure of `hash_hash()` along with the algorithm name. Bearing in mind that this function is going to be called as the **index** operation, it will need to take two parameters: the table and the key. Given that it'll only be called for my module table, I'll just ignore the table argument.
 
-{% highlight c %}
+```c
 static int hash(lua_State *L) {
     char *algorithm = NULL;
 
@@ -197,22 +201,23 @@ static int hash(lua_State *L) {
 
     return 1;
 }
-{% endhighlight %}
+```
 
 This code just reads the key from the stack as a string and pushes it back onto the stack (this may not be necessary, I'm not sure). Then it pushes a closure of this one value with `hash_hash()` onto the stack.
 
 Modifying `hash_hash()` to use this closure value is just as ease. I just need to modify the `lua_tostring()` call that gets the algorithm name to get the first value from the closure instead of the first argument on the stack:
 
-{% highlight c %}
+```c
 algorithm = (char *)lua_tostring(L, lua_upvalueindex(1));
-{% endhighlight %}
+```
 
 and modify the `for` loop to start at first argument instead of the second:
 
-{% highlight c %}
+```c
 for ( i = 1; i <= arguments; i++ ) {
     // ...
-{% endhighlight %}
+}
+```
 
 Now I'm ready to build and install the meta-table for my module and my powerful new API will be complete.
 
@@ -228,7 +233,7 @@ Binding this all up as an API is a little involved. As everything needs to pass 
 
 This isn't much longer in code. The body of `luaopen_hash()` now looks like:
 
-{% highlight c %}
+```c
 // Create the table
 lua_createtable(L,0,0);
 
@@ -244,7 +249,7 @@ lua_setmetatable(L, -2);
 
 // Set the global hash
 lua_setfield(L, LUA_GLOBALSINDEX, "hash");
-{% endhighlight %}
+```
 
 A few notes might help make the above a little clearer. The stack can be
 accessed with negative indices which count from the top rather than the bottom
@@ -274,9 +279,9 @@ class functions) that a user might get a reference to a hash function and not
 call it until much later in the program. It would be nice if, instead of
 happily returning a closure, code like
 
-{% highlight lua %}
+```lua
 f = hash.nonsense
-{% endhighlight %}
+```
 
 would fail immediately, rather than waiting until the program tries to call
 `f`. To make it so, I need only to make to the code is to copy and paste the

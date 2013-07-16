@@ -1,9 +1,10 @@
 ---
 wordpressid: 1977
 layout: post
-title: "HAgg: a Haskell FastCGI application (in development)"
+title: HAgg: a Haskell FastCGI application (in development)
 wordpressurl: http://passingcuriosity.com/?p=1977
 ---
+
 I've had just about as much of PHP as I can take. I distrust the language itself and most of the packages written in it and have finally had enough. Rather than throwing in the towel and taking up garbage collection as a profession, I'm going to migrating at least my personal sites to Haskell. 
 
 Before I can do so, I need to get a firm handle on Haskell web development. I've tried this before but usually get lost in trying to build the perfect web application monad with configuration loading, database connection, error handling, etc. built in. Usually, I'm also trying to brush the cobwebs off my knowledge of Haskell at the same time, so it only lasts a few days before I get distracted by something shiny.
