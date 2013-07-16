@@ -15,6 +15,6 @@ everything I posted to any of them can be found here.
 
 The most **recent posts** are:
 
-$posts$
+$partial("templates/post-list.html")$
 
 The rest, you can find in [the archives](/archives/).

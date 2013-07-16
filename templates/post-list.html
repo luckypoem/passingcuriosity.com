@@ -1,0 +1,10 @@
+$if(posts)$
+<div class="posts post list">
+$for(posts)$
+  <div class="row-fluid marketing post item">
+    <div class="span3"><em class="date">$date$</em></div>
+    <div class="span9"><h3><a href='$url$'>$title$</a></h3><p>$excerpt$</p></div>
+  </div>
+$endfor$
+</div>
+$endif$
