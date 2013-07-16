@@ -123,7 +123,7 @@ main = hakyllWith hakyllConf $ do
     match "index.md" $ do
       route $ setExtension "html"
       compile $ do
-        posts <- fmap (take 3) . recentFirst =<< loadAll "posts/*"
+        posts <- fmap (take 10) . recentFirst =<< loadAll "posts/*"
         let indexCtx =
               listField "posts" (postCtx tags) (return posts) `mappend`
               defaultContext
