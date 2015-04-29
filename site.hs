@@ -10,6 +10,7 @@ import           Data.List
 import qualified Data.Map                        as M
 import           Data.Maybe
 import           Data.Monoid
+import           Data.String
 import           Hakyll                          hiding (defaultContext)
 import           Network.URL
 import           System.FilePath
@@ -82,7 +83,7 @@ main = hakyllWith hakyllCfg $ do
 
     match "assets/js/*" $ do
         route   idRoute
-        compile $ getResourceLBS >>= withItemBody (unixFilterLBS "./bin/js-opt" [])
+        compile compressJsCompiler
 
     match "assets/fonts/*" $ do
         route   idRoute
@@ -91,11 +92,11 @@ main = hakyllWith hakyllCfg $ do
     match "assets/img/*" $ do
         version "large" $ do
             route   $ routeImage "large"
-            compile $ getResourceLBS >>= withItemBody (unixFilterLBS "./bin/jpeg-opt" [])
+            compile   largeImageCompiler
 
         version "small" $ do
             route   $ routeImage "small"
-            compile $ getResourceLBS >>= withItemBody (unixFilterLBS "./bin/jpeg-scale" [])
+            compile   smallImageCompiler
 
     --
     -- Tags
@@ -114,10 +115,10 @@ main = hakyllWith hakyllCfg $ do
     match "errors/*" $ do
         route $ setExtension "html"
         compile $ do
-            let ctx = defaultCtx
+            let ctx = sectionField "error" <>
+                      defaultCtx
 
             contentCompiler
-                >>= return . fmap demoteHeaders
                 >>= loadAndApplyTemplate "templates/error.html" ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
 
@@ -127,83 +128,54 @@ main = hakyllWith hakyllCfg $ do
             let ctx = postCtx
 
             contentCompiler
-                >>= return . fmap demoteHeaders
                 >>= saveSnapshot "content"
                 >>= loadAndApplyTemplate "templates/post.html" ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
 
-    match "about.md" $ do
-        route routeFileToDirectory
-        compile $ do
-            let ctx = sectionField "about" <>
-                      defaultCtx
-
-            contentCompiler
-                >>= loadAndApplyTemplate "templates/page.html" ctx
-                >>= loadAndApplyTemplate "templates/default.html" ctx
-                >>= relativizeUrls
-
-    match "contact.md" $ do
-        route routeFileToDirectory
-        compile $ do
-            let ctx = sectionField "contact" <>
-                      defaultCtx
-
-            contentCompiler
-                >>= loadAndApplyTemplate "templates/page.html" ctx
-                >>= loadAndApplyTemplate "templates/default.html" ctx
-                >>= relativizeUrls
+    --
+    -- Index
+    --
 
     match "index.md" $ do
-        route   $ setExtension "html"
+
+        -- HTML page
+        route routePage
         compile $ do
             posts <- fmap (take 3) . recentFirst =<<
                 loadAll ("posts/*" .&&. hasNoVersion)
 
-            let indexCtx =
+            let ctx =
+                    sectionField "about" <>
                     numberedListField "posts" postCtx (return posts) <>
-                    sectionField "home" <>
+                    tagCloudField' "tagcloud" 75.0 300.0 tags <>
                     defaultCtx
 
             getResourceBody
-                >>= applyAsTemplate indexCtx
-                >>= return . renderPandoc
-                >>= loadAndApplyTemplate "templates/page.html"   indexCtx
-                >>= loadAndApplyTemplate "templates/default.html" indexCtx
+                >>= applyAsTemplate ctx
+                >>= return . renderPandoc -- contentCompiler
+                >>= loadAndApplyTemplate "templates/page.html" ctx
+                >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
 
-    match "tags.md" $ do
-        route routeFileToDirectory
+    match ("about.md" .||. "contact.md" .||. "tags.md") $ do
+        route routePage
         compile $ do
-            let ctx = tagCloudField' "tagcloud" 75.0 300.0 tags <>
-                      sectionField "tags" <>
-                      defaultCtx
+            let ctx =
+                    sectionField "about" <>
+                    tagCloudField' "tagcloud" 75.0 300.0 tags <>
+                    defaultCtx
 
             getResourceBody
                 >>= applyAsTemplate ctx
-                >>= return . renderPandoc
+                >>= return . renderPandoc -- contentCompiler
                 >>= loadAndApplyTemplate "templates/page.html" ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
 
     --
-    -- Generated
+    -- Archives
     --
-
-    create ["feed.rss"] $ do
-        route idRoute
-        compile $ do
-            posts <- fmap (take 10) . recentFirst =<<
-                loadAllSnapshots "posts/*" "content"
-            renderRss feedCfg feedCtx posts
-
-    create ["atom.xml"] $ do
-        route idRoute
-        compile $ do
-            posts <- fmap (take 10) . recentFirst =<<
-                loadAllSnapshots "posts/*" "content"
-            renderAtom feedCfg feedCtx posts
 
     paginated_archives <- buildPaginateWith
         (sortRecentFirst >=> return . paginateEvery pageSize)
@@ -211,6 +183,23 @@ main = hakyllWith hakyllCfg $ do
         (\n -> fromFilePath $ if n == 1 then "archives.md" else "archives" </> show n <> ".md")
 
     paginateRules paginated_archives $ \page_number pattern -> do
+        -- Build feeds of the archives.
+        when (1 == page_number) $ do
+            -- Atom feed
+            version "atom" $ do
+                route $ customRoute (const "atom.xml")
+                compile $
+                    loadAllSnapshots pattern "content"
+                        >>= renderAtom feedCfg feedCtx
+
+            -- RSS feed
+            version "rss" $ do
+                route $ customRoute (const "feed.rss")
+                compile $
+                    loadAllSnapshots pattern "content"
+                        >>= renderRss feedCfg feedCtx
+
+        -- Build the archive pages.
         route routeFileToDirectory
         compile $ do
             posts <- recentFirst =<< loadAll pattern
@@ -219,9 +208,9 @@ main = hakyllWith hakyllCfg $ do
                     then "Archives"
                     else "Archives: Page " <> show page_number
             let ctx =
-                    constField "title" title <>
-                    constField "layout" "page" <>
                     sectionField "archive" <>
+                    constField "layout" "page" <>
+                    constField "title" title <>
                     numberedListField "posts" postCtx (return posts) <>
                     paginateContext paginated_archives page_number <>
                     defaultCtx
@@ -230,6 +219,10 @@ main = hakyllWith hakyllCfg $ do
                 >>= loadAndApplyTemplate "templates/archive.html" ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
                 >>= relativizeUrls
+
+    --
+    -- Tags
+    --
 
     tagsRules tags $ \tag tag_pattern -> do
 
@@ -242,8 +235,6 @@ main = hakyllWith hakyllCfg $ do
                 then "tags" </> tag </> "index.html"
                 else "tags" </> tag </> show n </> "index.html")
 
-        let p1_id = paginatePage paginated_tags 1
-        let path = joinPath ["tags", tag, tag <> ".xml"]
         let feed = specialFeed tag
 
         paginateRules paginated_tags $ \page_number pattern -> do
@@ -251,56 +242,40 @@ main = hakyllWith hakyllCfg $ do
             when (1 == page_number) $ do
                 -- Atom feed
                 version "atom" $ do
-                    route $ customRoute (const path)
+                    route $ setExtension "xml"
                     compile $ loadAllSnapshots tag_pattern "content"
-                        >>= fmap (take 10) . recentFirst
                         >>= renderAtom feed feedCtx
 
                 -- RSS feed
                 version "rss" $ do
-                    route $ customRoute (const path)
+                    route $ setExtension "rss"
                     compile $ loadAllSnapshots tag_pattern "content"
-                        >>= fmap (take 10) . recentFirst
                         >>= renderRss feed feedCtx
 
             -- Make the current page.
-            route idRoute
-            compile $ do
-                all_posts <- recentFirst =<< loadAll (tag_pattern .&&. hasNoVersion)
-                let number = length (all_posts :: [Item String])
+            version ("page" <> show page_number) $ do
+                route idRoute
+                compile $ do
+                    all_posts <- recentFirst =<< loadAll (tag_pattern .&&. hasNoVersion)
+                    let number = length (all_posts :: [Item String])
 
-                posts <- recentFirst =<< loadAll (pattern .&&. hasNoVersion)
+                    posts <- recentFirst =<< loadAll (pattern .&&. hasNoVersion)
 
-                let excerpt = "There are " <> show number <> " posts tagged with "
-                            <> tag <> "."
-                let ctx = constField "title" title <>
-                        constField "tag" tag <>
-                        constField "number" (show number) <>
-                        constField "excerpt" excerpt <>
-                        numberedListField "posts" postCtx (return posts) <>
-                        tagFeedCtx p1_id <>
-                        paginateContext paginated_tags page_number <>
-                        tagCtx tag
+                    let excerpt = "There are " <> show number <> " posts tagged with "
+                                <> tag <> "."
+                    let ctx = constField "title" title <>
+                            constField "tag" tag <>
+                            constField "number" (show number) <>
+                            constField "excerpt" excerpt <>
+                            numberedListField "posts" postCtx (return posts) <>
+                            paginateContext paginated_tags page_number <>
+                            feedsField (Just . fromString $ "tags" </> tag </> "index.html") <>
+                            tagCtx tag
 
-                makeItem ""
-                    >>= loadAndApplyTemplate "templates/tag.html" ctx
-                    >>= loadAndApplyTemplate "templates/default.html" ctx
-                    >>= relativizeUrls
-
-paginatePage :: Paginate -> PageNumber -> Maybe Identifier
-paginatePage pag pageNumber
-    | pageNumber < 1                      = Nothing
-    | pageNumber > (M.size . paginateMap $ pag) = Nothing
-    | otherwise                           = Just $ paginateMakeId pag pageNumber
-
-tagFeedCtx :: Maybe Identifier -> Context a
-tagFeedCtx ident = case ident of
-    Nothing -> mempty
-    Just pid -> feedField "rss" pid <> feedField "atom" pid
-  where
-    feedField name an_id = field
-        (name <> "_feed")
-        (\_ -> fmap (maybe empty toUrl) . getRoute . setVersion (Just name) $ an_id)
+                    makeItem ""
+                        >>= loadAndApplyTemplate "templates/tag.html" ctx
+                        >>= loadAndApplyTemplate "templates/default.html" ctx
+                        >>= relativizeUrls
 
 --------------------------------------------------------------------------------
 -- * Routing
@@ -312,6 +287,21 @@ routeImage size = customRoute fn
     fn :: Identifier -> FilePath
     fn i = let (p,f) = splitFileName $ toFilePath i
            in p </> size </> f
+
+-- | Route top-level pages to the appropriate URL.
+--
+-- The @index.md@ page is routed to the top-level @/index.html@ URL, all other
+-- pages are routed to @/$name/index.html@.
+routePage :: Routes
+routePage = customRoute pageR
+  where
+    pageR :: Identifier -> FilePath
+    pageR ident =
+        case toFilePath ident of
+            "index.md" -> "index.html"
+            p -> let (dir,fn) = splitFileName p
+                     bn = dropFileName fn
+                 in joinPath [dir, bn, "index.html"]
 
 -- | Route files to directory indexes.
 routeFileToDirectory :: Routes
@@ -356,6 +346,7 @@ feedContext tags =
     postContext tags <>
     bodyField "description"
 
+
 tagContext :: Tags -> b -> Context String
 tagContext tags _ =
     tagCloudField' "tagcloud" 75.0 300.0 tags <>
@@ -371,7 +362,6 @@ defaultContext _ =
     strippedUrlField "url"   <>
     pathField     "path"     <>
     titleField    "title"    <>
-    titleField    "title-meta" <>
 
     imageField "image" <>
 
@@ -380,13 +370,9 @@ defaultContext _ =
     constField "twitter_creator" twitterUser <>
     titleField "twitter_title" <>
 
-    -- Default to main feeds
-    constField "atom_feed" "/atom.xml" <>
-    constField "rss_feed" "/feed.rss" <>
+    feedsField (Just "archives.md") <>
 
     sectionField  "page" <>
-    functionField "dropFileName" dropFN <>
-    functionField "first" firstFN <>
     missingField
   where
     dropFN :: [String] -> Item a -> Compiler String
@@ -421,6 +407,18 @@ listNumberField key items = field key $
     getNumber ident = do
         idents <- items
         return . fmap (+1) . elemIndex ident $ fmap itemIdentifier idents
+
+-- | Feeds URL field.
+feedsField :: Maybe Identifier -> Context a
+feedsField ident = case ident of
+    Nothing  -> mempty
+    Just pid -> feedField "atom" pid <>
+                feedField "rss"  pid
+  where
+    feedField name an_id = field
+        (name <> "_feed")
+        (\_ -> fmap (maybe empty toUrl) . getRoute . setVersion (Just name) $ an_id)
+
 
 tagsField' :: String -> Tags -> Context a
 tagsField' =
@@ -495,7 +493,7 @@ imageField name =
     getImages :: Pattern -> Compiler [FilePath]
     getImages p = do
         items <- loadAll p :: Compiler [Item LBS.ByteString]
-        urls <- mapM (getRoute . itemIdentifier) $ items
+        urls  <- mapM (getRoute . itemIdentifier) $ items
         return $ catMaybes urls
 
 --------------------------------------------------------------------------------
@@ -506,6 +504,7 @@ imageField name =
 contentCompiler :: Compiler (Item String)
 contentCompiler =
     pandocCompilerWith read_opts write_opts
+        >>= return . fmap demoteHeaders
         >>= return . fmap embedKMLImages
         >>= shill
   where
@@ -514,6 +513,21 @@ contentCompiler =
         { writerHTMLMathMethod = MathJax mathjax
         }
     mathjax = "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+
+-- | Compress JavaScript files.
+compressJsCompiler :: Compiler (Item LBS.ByteString)
+compressJsCompiler =
+    getResourceLBS >>= withItemBody (unixFilterLBS "./bin/js-opt" [])
+
+-- | Optimise large JPEG image files.
+largeImageCompiler :: Compiler (Item LBS.ByteString)
+largeImageCompiler =
+    getResourceLBS >>= withItemBody (unixFilterLBS "./bin/jpeg-opt" [])
+
+-- | Scale and optimise small JPEG image files.
+smallImageCompiler :: Compiler (Item LBS.ByteString)
+smallImageCompiler =
+    getResourceLBS >>= withItemBody (unixFilterLBS "./bin/jpeg-scale" [])
 
 -- | Compile a post to its table of contents.
 tocCompiler :: Compiler (Item String)
@@ -524,7 +538,6 @@ tocCompiler = pandocCompilerWith
     , writerTemplate = "$toc$"
     , writerStandalone = True
     }
-
 
 -- | Sprinkle affiliate links, etc. over a blog.
 shill :: Item String -> Compiler (Item String)
@@ -538,6 +551,13 @@ shill item = return $ fmap (withUrls amazon) item
 --------------------------------------------------------------------------------
 -- * Utility
 --------------------------------------------------------------------------------
+
+-- Calculate the page 'Identifier' of a paginated resource.
+paginatePage :: Paginate -> PageNumber -> Maybe Identifier
+paginatePage pag pageNumber
+    | pageNumber < 1 = Nothing
+    | pageNumber > (M.size . paginateMap $ pag) = Nothing
+    | otherwise = Just $ paginateMakeId pag pageNumber
 
 -- | Add a query parameter to a URL.
 urlAddQuery :: (String, String) -> String -> Maybe String
